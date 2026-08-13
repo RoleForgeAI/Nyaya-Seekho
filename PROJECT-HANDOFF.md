@@ -37,12 +37,21 @@ not yet started, likely 500+ sections), BSA (Bharatiya Sakshya Adhiniyam — evi
 and eventually Indian Contract Act / Constitution, per the ACTS structure already built in.
 
 ## Files
-- `bare-act-navigator.jsx` — the source React component. Edit this one.
-- `bare-act-navigator-laptop.html` — a fully self-contained, pre-bundled standalone build
-  (React + ReactDOM + app code all inlined via esbuild, zero external dependencies).
-  This was a manual workaround built in a chat sandbox with no real dev environment.
-  **Replace this entire workflow with a real Vite project + npm build** now that you're
-  in an actual dev environment. Don't keep manually re-bundling with esbuild by hand.
+This is now a real Vite + React project — no more manual esbuild bundling.
+- `src/App.jsx` — the source React component (all 298 sections + UI). Edit this one.
+- `src/main.jsx` — Vite/React entrypoint, mounts `App.jsx` into `index.html`.
+- `src/lib/storage.js` — thin wrapper over `window.localStorage` (async `get`/`set`,
+  mirrors the `{ key, value, shared }` shape the component expects). This replaces the
+  old `window.storage` calls that only worked inside a Claude-artifact sandbox — notes
+  now persist via real browser `localStorage`, per-browser/per-device as before.
+- `index.html` / `vite.config.js` / `package.json` — standard Vite scaffolding.
+
+### Build commands
+- `npm install` — install dependencies.
+- `npm run dev` — local dev server with hot reload.
+- `npm run build` — production build to `dist/` (static, deployable as-is to
+  GitHub Pages / Netlify / Vercel — no backend required).
+- `npm run preview` — serve the production build locally to sanity-check it.
 
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
@@ -91,14 +100,14 @@ Also present: `DEFINITIONS` (click-to-define terms from Section 2, e.g. "good fa
 `CONTENT_LAST_VERIFIED` date constant shown in the UI footer — update this whenever a
 real verification pass is done.
 
-## Build process used so far (manual chat-sandbox workaround — replace this)
-1. Strip `import` lines, replace lucide-react icons with plain text/unicode
-2. Bundle with esbuild (`--bundle --minify --format=iife`) against local react/react-dom
-3. Inline the bundle into a minimal HTML shell — zero external network dependencies
-
-**In Claude Code:** set up a real Vite (or similar) project with `npm run build`,
-push to GitHub, deploy via Netlify/Vercel. This removes the manual bundling entirely
-and enables incremental builds instead of full-file regeneration on every change.
+## Build process (Vite — replaces the old manual esbuild workaround)
+Done: a real Vite project now lives at the repo root (`npm install && npm run dev` /
+`npm run build`). `lucide-react` is a normal npm dependency again (no more manual
+icon-to-unicode substitution), and the app builds incrementally instead of full-file
+regeneration on every change. The previous `bare-act-navigator (1).jsx` /
+`bare-act-navigator-laptop (1).html` standalone files have been removed — their
+content lives on in git history if ever needed, but `src/App.jsx` is now the single
+source of truth.
 
 ## Deployment status
 Not yet live. Plan: GitHub Pages or Netlify, static hosting (no backend needed yet).
@@ -115,7 +124,7 @@ Opus for genuinely hard judgment calls (tricky bugs, architectural decisions) ra
 routine chapter-building.
 
 ## Known limitations
-- Notes persistence uses `localStorage` in the standalone build — personal/per-browser,
+- Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
   justifies building one.
 - Chapters VIII and IX section ranges above are estimates — verify against a reliable
