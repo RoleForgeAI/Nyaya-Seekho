@@ -5,7 +5,7 @@ An interactive, cross-referenced study tool for Indian law students, starting wi
 Bharatiya Nyaya Sanhita (BNS), 2023. Built for a solo, non-engineer law student builder.
 Every session so far has been done conversationally in Claude chat — no code written by hand.
 
-## Current status: 298 of 358 BNS sections — 13 of 20 chapters complete
+## Current status: 309 of 358 BNS sections — 14 of 20 chapters complete
 - Chapter I — Preliminary (§§1–3)
 - Chapter II — Of Punishments (§§4–13)
 - Chapter III — General Exceptions (§§14–44)
@@ -13,6 +13,7 @@ Every session so far has been done conversationally in Claude chat — no code w
 - Chapter V — Offences Against Woman and Child (§§63–99)
 - Chapter VI — Offences Affecting the Human Body (§§100–146)
 - Chapter VII — Offences Against the State (§§147–158)
+- Chapter X — Coin, Currency-Notes, Bank-Notes and Government Stamps (§§178–188)
 - Chapter XI — Offences Against Public Tranquillity (§§189–197)
 - Chapter XIII — Contempts of the Lawful Authority of Public Servants (§§206–226)
 - Chapter XIV — False Evidence and Offences Against Public Justice (§§227–269)
@@ -21,12 +22,11 @@ Every session so far has been done conversationally in Claude chat — no code w
 - Chapter XIX — Criminal Intimidation, Insult, Annoyance, Defamation (§§351–357)
 
 **Landmark cases curated (verified citations only — a deliberately small, high-value set,
-not exhaustive):** Sections 22, 35, 38, 45, 61, 63, 85, 100, 101, 303, 356.
+not exhaustive):** Sections 22, 35, 38, 45, 61, 63 (2 cases), 85, 100, 101, 124, 303, 356.
 
-**Remaining BNS chapters (~60 sections):**
+**Remaining BNS chapters (~49 sections):**
 - Chapter VIII — Army/Navy/Air Force offences (~159–168, unverified exact range)
 - Chapter IX — Election offences (~169–177, unverified exact range)
-- Chapter X — Coin, Currency-Notes, Bank-Notes & Govt. Stamps (178–188, confirmed)
 - Chapter XII — Offences by/Relating to Public Servants (198–205, confirmed)
 - Chapter XVI — Offences Relating to Religion (~298–302, confirmed range, short)
 - Chapter XVIII — Documents & Property Marks (~335–350, confirmed range)
@@ -38,7 +38,7 @@ and eventually Indian Contract Act / Constitution, per the ACTS structure alread
 
 ## Files
 This is now a real Vite + React project — no more manual esbuild bundling.
-- `src/App.jsx` — the source React component (all 298 sections + UI). Edit this one.
+- `src/App.jsx` — the source React component (all 309 sections + UI). Edit this one.
 - `src/main.jsx` — Vite/React entrypoint, mounts `App.jsx` into `index.html`.
 - `src/lib/storage.js` — thin wrapper over `window.localStorage` (async `get`/`set`,
   mirrors the `{ key, value, shared }` shape the component expects). This replaces the

@@ -17,7 +17,7 @@ const ACTS = [
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "soon" },
 ];
 
-const CONTENT_LAST_VERIFIED = "11 August 2026";
+const CONTENT_LAST_VERIFIED = "14 August 2026";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -27,6 +27,7 @@ const CHAPTERS = [
   { id: "V", act: "BNS", label: "Chapter V — Offences Against Woman and Child", range: "63–99" },
   { id: "VI", act: "BNS", label: "Chapter VI — Offences Affecting the Human Body", range: "100–146" },
   { id: "VII", act: "BNS", label: "Chapter VII — Offences Against the State", range: "147–158" },
+  { id: "X", act: "BNS", label: "Chapter X — Of Coin, Currency-Notes, Bank-Notes and Government Stamps", range: "178–188" },
   { id: "XI", act: "BNS", label: "Chapter XI — Offences Against the Public Tranquillity", range: "189–197" },
   { id: "XIII", act: "BNS", label: "Chapter XIII — Contempts of the Lawful Authority of Public Servants", range: "206–226" },
   { id: "XIV", act: "BNS", label: "Chapter XIV — False Evidence and Offences Against Public Justice", range: "227–269" },
@@ -63,6 +64,7 @@ const CATEGORIES = [
   { id: "R", chapter: "VI", label: "Criminal Force & Assault", range: "128–136" },
   { id: "S", chapter: "VI", label: "Kidnapping, Abduction, Slavery & Forced Labour", range: "137–146" },
   { id: "AA", chapter: "VII", label: "Offences Against the State", range: "147–158" },
+  { id: "YY", chapter: "X", label: "Coin, Currency-Notes & Government Stamps", range: "178–188" },
   { id: "BB", chapter: "XI", label: "Unlawful Assembly, Rioting & Public Tranquillity", range: "189–197" },
   { id: "CC", chapter: "XIX", label: "Criminal Intimidation, Insult & Public Mischief", range: "351–355" },
   { id: "DD", chapter: "XIX", label: "Defamation & Breach of Duty to Helpless Person", range: "356–357" },
@@ -450,7 +452,10 @@ const SECTIONS = [
     illustrations: [], crossRefs: [64],
     cases: [{ name: "Independent Thought v. Union of India", cite: "(2017) 10 SCC 800", year: 2017,
       ratio: "The Supreme Court read down the marital-rape exception, holding that sexual intercourse with a wife under eighteen is rape regardless of marriage — this ruling is why Exception 2 is worded 'not being under eighteen years of age' rather than the older, lower age threshold.",
-      url: "https://indiankanoon.org/doc/87705010/" }] },
+      url: "https://indiankanoon.org/doc/87705010/" },
+      { name: "State of Punjab v. Gurmit Singh", cite: "(1996) 2 SCC 384 (also reported as 1996 AIR 1393)", year: 1996,
+      ratio: "The Supreme Court reversed a trial court acquittal, holding that the sole testimony of a rape survivor, if found credible and trustworthy, is sufficient for conviction without requiring corroboration. The Court criticised insensitive judicial treatment of survivors and directed that rape trials be held in camera to protect their dignity.",
+      url: "https://indiankanoon.org/doc/1046545/" }] },
   { id: 64, ipc: 376, category: "T", title: "Punishment for rape",
     text: "(1) Rape, other than the aggravated cases in sub-section (2), is punishable with rigorous imprisonment of ten years to life, and fine. (2) Rape committed by a police officer or public servant on a woman in their custody; by armed forces personnel in an area of deployment; by jail/institution/hospital staff on an inmate or patient; by a relative, guardian, teacher, or person in a position of trust; during communal or sectarian violence; on a woman known to be pregnant, incapable of consenting, or suffering mental illness or physical disability; causing grievous harm or repeated rape on the same woman — is punishable with rigorous imprisonment of ten years to imprisonment for life meaning the remainder of natural life, and fine.",
     illustrations: [], crossRefs: [63] },
@@ -738,7 +743,10 @@ const SECTIONS = [
   { id: 124, ipc: 326, category: "P", title: "Voluntarily causing grievous hurt by use of acid, etc.",
     text: "(1) Causing permanent or partial damage, deformity, burns, maiming, disfigurement, disability, or a permanent vegetative state by throwing or administering acid, or by any comparable means, with intent or knowledge — punishable with rigorous imprisonment of ten years to life, and a fine that must be just and reasonable to cover the victim's medical treatment, payable to the victim. (2) Throwing or attempting to throw/administer acid, or attempting comparable means, with such intent — punishable with imprisonment of five to seven years, and fine.",
     explanations: ["'Acid' includes any substance with acidic or corrosive character or burning nature capable of causing bodily injury leading to scarring or disfigurement, temporary or permanent."],
-    illustrations: [], crossRefs: [] },
+    illustrations: [], crossRefs: [],
+    cases: [{ name: "Laxmi v. Union of India", cite: "(2014) 4 SCC 427", year: 2013,
+      ratio: "In this PIL brought by an acid attack survivor, the Supreme Court held that the unrestricted, unregulated sale of acid violated Article 21, and directed every State and Union Territory to regulate its sale, provide minimum compensation of ₹3,00,000 to survivors, and ensure no hospital could refuse them treatment — the case that directly shaped why acid attacks are now a distinctly punished offence.",
+      url: "https://indiankanoon.org/doc/90443079/" }] },
   { id: 125, ipc: 336, category: "P", title: "Act endangering life or personal safety of others",
     text: "Doing any act so rashly or negligently as to endanger human life or personal safety — punishable with imprisonment up to three months or fine up to two thousand five hundred rupees, or both; if hurt is caused, imprisonment up to six months or fine up to five thousand rupees, or both; if grievous hurt is caused, imprisonment up to three years or fine up to ten thousand rupees, or both.",
     illustrations: [], crossRefs: [] },
@@ -884,6 +892,63 @@ const SECTIONS = [
     text: "Whoever knowingly aids or assists any State prisoner or prisoner of war in escaping from lawful custody, or rescues or attempts to rescue any such prisoner, or harbours or conceals any such prisoner who has escaped from lawful custody, or offers or attempts to offer any resistance to the recapture of such prisoner, shall be punished with imprisonment for life, or with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine.",
     explanations: ["A State prisoner or prisoner of war who is permitted to be at large on parole within certain limits in India is said to escape from lawful custody if he goes beyond those limits."],
     illustrations: [], crossRefs: [156] },
+
+  /* ---- Chapter X — Of Coin, Currency-Notes, Bank-Notes and Government Stamps ---- */
+  { id: 178, ipc: null, category: "YY", title: "Counterfeiting coin, government stamps, currency-notes or bank-notes",
+    text: "Whoever counterfeits, or knowingly performs any part of the process of counterfeiting, any coin, stamp issued by Government for the purpose of revenue, currency note or bank-note, shall be punished with imprisonment for life, or with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine.",
+    explanations: [
+      "\"Bank-note\" means a promissory note or engagement for the payment of money to bearer on demand issued by any person carrying on the business of banking anywhere in the world, or issued by or under the authority of any State or Sovereign Power, intended to be used as equivalent to, or a substitute for, money.",
+      "\"Coin\" has the meaning assigned in Section 2 of the Coinage Act, 2011, and includes metal used for the time being as money, stamped and issued by or under the authority of any State or Sovereign Power, intended to be so used.",
+      "A person commits \"counterfeiting Government stamp\" who causes a genuine stamp of one denomination to appear like a genuine stamp of a different denomination.",
+      "A person commits \"counterfeiting coin\" who, intending to practise deception (or knowing deception is likely), causes a genuine coin to appear like a different coin.",
+      "\"Counterfeiting coin\" includes diminishing a coin's weight, or altering its composition or appearance."
+    ],
+    punishment: "Imprisonment for life, or up to ten years, plus fine. Cognizable, non-bailable, triable by Court of Session.",
+    illustrations: [], crossRefs: [179, 180, 181] },
+  { id: 179, ipc: null, category: "YY", title: "Using as genuine, forged or counterfeit coin, Government stamp, currency-notes or bank-notes",
+    text: "Whoever sells or delivers to, or buys or receives from, any other person, or otherwise traffics or uses as genuine, any forged or counterfeit coin, stamp issued by Government for the purpose of revenue, currency-note or bank-note, knowing or having reason to believe it forged or counterfeit, shall be punished with imprisonment for life, or with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine.",
+    punishment: "Imprisonment for life, or up to ten years, plus fine. Cognizable, non-bailable, triable by Court of Session.",
+    illustrations: [], crossRefs: [178] },
+  { id: 180, ipc: null, category: "YY", title: "Possession of forged or counterfeit coin, Government stamp, currency-notes or bank-notes",
+    text: "Whoever has in his possession any forged or counterfeit coin, stamp issued by Government for the purpose of revenue, currency-note or bank-note, knowing or having reason to believe it forged or counterfeit, and intending to use it as genuine (or that it may be used as genuine), shall be punished with imprisonment up to seven years, or fine, or both.",
+    punishment: "Up to seven years, or fine, or both. Cognizable, non-bailable, triable by Court of Session.",
+    illustrations: [], crossRefs: [178, 179] },
+  { id: 181, ipc: null, category: "YY", title: "Making or possessing instruments or materials for forging or counterfeiting coin, Government stamp, currency-notes or bank-notes",
+    text: "Whoever makes or mends, or performs any part of the process of making or mending, or buys, sells, disposes of, or possesses any machinery, die, instrument, or material for the purpose of being used (or knowing/believing it is intended to be used) for forging or counterfeiting any coin, Government revenue stamp, currency-note, or bank-note, shall be punished with imprisonment for life, or with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine.",
+    punishment: "Imprisonment for life, or up to ten years, plus fine. Cognizable, non-bailable, triable by Court of Session.",
+    illustrations: [], crossRefs: [178] },
+  { id: 182, ipc: null, category: "YY", title: "Making or using documents resembling currency-notes or bank-notes",
+    text: "(1) Whoever makes, causes to be made, uses for any purpose, or delivers to any person, a document purporting to be, or resembling (or so nearly resembling as to be calculated to deceive), any currency-note or bank-note, shall be punished with fine up to ₹300. (2) A person whose name appears on such a document, who refuses without lawful excuse to disclose to a police officer (on being required) the name and address of the printer/maker, shall be punished with fine up to ₹600. (3) Where a person's name appears on such a document, or on any other document used/distributed in connection with it, it may be presumed (until the contrary is proved) that they caused the document to be made.",
+    punishment: "Fine up to ₹300 (sub-section 1); fine up to ₹600 (sub-section 2, refusal to disclose).",
+    illustrations: [], crossRefs: [] },
+  { id: 183, ipc: null, category: "YY", title: "Effacing writing from substance bearing Government stamp, or removing from document a stamp used for it, with intent to cause loss to Government",
+    text: "Whoever, fraudulently or intending to cause loss to Government, removes or effaces from any substance bearing a Government revenue stamp any writing/document for which the stamp was used, or removes from a writing/document a stamp used for it, so that the stamp may be used for a different writing/document, shall be punished with imprisonment up to three years, or fine, or both.",
+    punishment: "Up to three years, or fine, or both. Cognizable, bailable, triable by Magistrate of the first class.",
+    illustrations: [], crossRefs: [184, 185] },
+  { id: 184, ipc: null, category: "YY", title: "Using Government stamp known to have been before used",
+    text: "Whoever, fraudulently or intending to cause loss to Government, uses for any purpose a Government revenue stamp which he knows to have been used before, shall be punished with imprisonment up to two years, or fine, or both.",
+    punishment: "Up to two years, or fine, or both. Cognizable, bailable, triable by any Magistrate.",
+    illustrations: [], crossRefs: [183, 185] },
+  { id: 185, ipc: null, category: "YY", title: "Erasure of mark denoting that stamp has been used",
+    text: "Whoever, fraudulently or intending to cause loss to Government, erases or removes from a Government revenue stamp any mark denoting it has been used, or knowingly possesses, sells, or disposes of any such stamp from which such a mark has been erased/removed, or sells/disposes of a stamp they know to have been used, shall be punished with imprisonment up to three years, or fine, or both.",
+    punishment: "Up to three years, or fine, or both. Cognizable, bailable, triable by Magistrate of the first class.",
+    illustrations: [], crossRefs: [183, 184] },
+  { id: 186, ipc: null, category: "YY", title: "Prohibition of fictitious stamps",
+    text: "(1) Whoever (a) makes, knowingly utters, deals in, or sells any fictitious stamp, or knowingly uses any fictitious stamp for a postal purpose; or (b) possesses, without lawful excuse, any fictitious stamp; or (c) makes, or without lawful excuse possesses, any die, plate, instrument, or materials for making a fictitious stamp — shall be punished with fine up to ₹200. (2) Any such stamp, die, plate, instrument, or materials found in someone's possession for making a fictitious stamp may be seized and, if seized, forfeited.",
+    explanations: [
+      "\"Fictitious stamp\" means any stamp falsely purporting to be issued by Government to denote a rate of postage, or any facsimile, imitation, or representation (on paper or otherwise) of such a stamp.",
+      "In this section, and in Sections 176–179 and 181–183, \"Government\" (in connection with a postage stamp) includes any person authorised by law to administer executive Government in any part of India or a foreign country."
+    ],
+    punishment: "Fine up to ₹200. Cognizable, bailable, triable by any Magistrate.",
+    illustrations: [], crossRefs: [] },
+  { id: 187, ipc: null, category: "YY", title: "Person employed in mint causing coin to be of different weight or composition from that fixed by law",
+    text: "Whoever, being employed in a mint lawfully established in India, does any act or omits a legally required act, intending to cause any coin issued from that mint to differ in weight or composition from what is fixed by law, shall be punished with imprisonment up to seven years, and shall also be liable to fine.",
+    punishment: "Up to seven years, and fine. Cognizable, non-bailable, triable by Magistrate of the first class.",
+    illustrations: [], crossRefs: [188] },
+  { id: 188, ipc: null, category: "YY", title: "Unlawfully taking coining instrument from mint",
+    text: "Whoever, without lawful authority, takes out of any mint lawfully established in India any coining tool or instrument, shall be punished with imprisonment up to seven years, and shall also be liable to fine.",
+    punishment: "Up to seven years, and fine. Cognizable, non-bailable, triable by Magistrate of the first class.",
+    illustrations: [], crossRefs: [187] },
 
   /* ---- Chapter XI — Of Offences Against The Public Tranquillity ---- */
   { id: 189, ipc: 141, category: "BB", title: "Unlawful assembly",
@@ -2159,7 +2224,7 @@ export default function BareActNavigator() {
         <div className="topbar-titles">
           <p className="eyebrow">Bare Act &amp; Statute Navigator · Prototype</p>
           <h1>Bharatiya Nyaya Sanhita, 2023</h1>
-          <div className="sub">13 chapters live · 298 of 358 BNS sections</div>
+          <div className="sub">14 chapters live · 309 of 358 BNS sections</div>
         </div>
         <Scale size={22} color="#a5813c" style={{ flexShrink: 0 }} />
       </div>
@@ -2311,8 +2376,8 @@ export default function BareActNavigator() {
           </div>
 
           <p className="disclaimer">
-            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: 298 of 358 BNS sections
-            across 13 chapters (I–VII, XI, XIII–XV, XVII, XIX). Remaining: Chapters VIII, IX, X, XII, XVI, XVIII, XX.
+            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: 309 of 358 BNS sections
+            across 14 chapters (I–VII, X, XI, XIII–XV, XVII, XIX). Remaining: Chapters VIII, IX, XII, XVI, XVIII, XX.
             Landmark cases are curated only for a deliberately small set of sections as a demonstration of the accuracy bar —
             statute text takes priority, cases are being enriched progressively. Statutes and case law can change after this
             date — if you know of an amendment or a newer ruling on a section here, flag it so it can be re-verified.
