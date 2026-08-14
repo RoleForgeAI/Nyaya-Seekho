@@ -5,7 +5,7 @@ An interactive, cross-referenced study tool for Indian law students, starting wi
 Bharatiya Nyaya Sanhita (BNS), 2023. Built for a solo, non-engineer law student builder.
 Every session so far has been done conversationally in Claude chat — no code written by hand.
 
-## Current status: 309 of 358 BNS sections — 14 of 20 chapters complete
+## Current status: BNS complete — all 358 of 358 sections, all 20 chapters
 - Chapter I — Preliminary (§§1–3)
 - Chapter II — Of Punishments (§§4–13)
 - Chapter III — General Exceptions (§§14–44)
@@ -13,24 +13,29 @@ Every session so far has been done conversationally in Claude chat — no code w
 - Chapter V — Offences Against Woman and Child (§§63–99)
 - Chapter VI — Offences Affecting the Human Body (§§100–146)
 - Chapter VII — Offences Against the State (§§147–158)
+- Chapter VIII — Offences Relating to the Army, Navy and Air Force (§§159–168)
+- Chapter IX — Offences Relating to Elections (§§169–177)
 - Chapter X — Coin, Currency-Notes, Bank-Notes and Government Stamps (§§178–188)
 - Chapter XI — Offences Against Public Tranquillity (§§189–197)
+- Chapter XII — Offences By or Relating to Public Servants (§§198–205)
 - Chapter XIII — Contempts of the Lawful Authority of Public Servants (§§206–226)
 - Chapter XIV — False Evidence and Offences Against Public Justice (§§227–269)
 - Chapter XV — Public Health, Safety, Convenience, Decency and Morals (§§270–297)
+- Chapter XVI — Offences Relating to Religion (§§298–302)
 - Chapter XVII — Offences Against Property (§§303–334)
+- Chapter XVIII — Offences Relating to Documents and to Property Marks (§§335–350)
 - Chapter XIX — Criminal Intimidation, Insult, Annoyance, Defamation (§§351–357)
+- Chapter XX — Repeal and Savings (§358)
 
 **Landmark cases curated (verified citations only — a deliberately small, high-value set,
 not exhaustive):** Sections 22, 35, 38, 45, 61, 63 (2 cases), 85, 100, 101, 124, 303, 356.
+No new case law was added in the final six-chapter batch — statute text took priority for
+that batch; cases in Chapters VIII, IX, XII, XVI, XVIII, XX can be enriched later.
 
-**Remaining BNS chapters (~49 sections):**
-- Chapter VIII — Army/Navy/Air Force offences (~159–168, unverified exact range)
-- Chapter IX — Election offences (~169–177, unverified exact range)
-- Chapter XII — Offences by/Relating to Public Servants (198–205, confirmed)
-- Chapter XVI — Offences Relating to Religion (~298–302, confirmed range, short)
-- Chapter XVIII — Documents & Property Marks (~335–350, confirmed range)
-- Chapter XX — Repeal and Savings (§358 — essentially a single closing section)
+**Integrity check (run after the final batch):** exactly 358 section objects in `SECTIONS`,
+ids 1–358 with no gaps and no duplicates; all 20 `CHAPTERS` entries present; every
+`CATEGORIES` entry's `chapter` resolves to a real chapter and every section's `category`
+resolves to a real category. `npm run build` succeeds.
 
 **After BNS is complete:** BNSS (Bharatiya Nagarik Suraksha Sanhita — criminal *procedure*,
 not yet started, likely 500+ sections), BSA (Bharatiya Sakshya Adhiniyam — evidence law),
@@ -127,6 +132,3 @@ routine chapter-building.
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
   justifies building one.
-- Chapters VIII and IX section ranges above are estimates — verify against a reliable
-  source (devgan.in or similar) before building them out, the same way every other
-  chapter here was verified before being added.
