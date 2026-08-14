@@ -2003,6 +2003,19 @@ const SECTION_MAP = Object.fromEntries(SECTIONS.map((s) => [s.id, s]));
 const DEF_KEYS = Object.keys(DEFINITIONS).sort((a, b) => b.length - a.length);
 const DEF_REGEX = new RegExp(`(${DEF_KEYS.join("|")})`, "gi");
 
+function chapterOf(section) {
+  return CHAPTERS.find((ch) => ch.id === CATEGORIES.find((cat) => cat.id === section.category)?.chapter);
+}
+
+// Coverage stats derived from CHAPTERS/SECTIONS so the header/footer never need manual updates.
+const BNS_CHAPTERS = CHAPTERS.filter((c) => c.act === "BNS");
+const BNS_TOTAL_SECTIONS = Math.max(...BNS_CHAPTERS.flatMap((c) => c.range.split(/[–-]/).map(Number)));
+const BNS_SECTIONS = SECTIONS.filter((s) => chapterOf(s)?.act === "BNS");
+const BNS_LIVE_SECTION_COUNT = BNS_SECTIONS.length;
+const BNS_LIVE_CHAPTER_IDS = [...new Set(BNS_SECTIONS.map((s) => chapterOf(s)?.id))];
+const BNS_LIVE_CHAPTER_COUNT = BNS_LIVE_CHAPTER_IDS.length;
+const BNS_REMAINING_CHAPTERS = BNS_CHAPTERS.filter((c) => !BNS_LIVE_CHAPTER_IDS.includes(c.id));
+
 /* ------------------------------------------------------------------ */
 
 function renderWithDefs(text, onOpenDef) {
@@ -2041,6 +2054,14 @@ export default function BareActNavigator() {
 
   const section = SECTION_MAP[selectedId];
 
+  // The reading pane's own scroll container can be `.main`, or — on the current layout,
+  // where `.app` merely sets a min-height — the document itself. Reset both so the top of
+  // the newly-selected section is always what the reader sees, regardless of which scrolls.
+  useEffect(() => {
+    if (mainRef.current) mainRef.current.scrollTop = 0;
+    window.scrollTo(0, 0);
+  }, [selectedId]);
+
   const [noteError, setNoteError] = useState("");
   const storageAvailable = typeof window !== "undefined" && !!window.localStorage;
 
@@ -2049,7 +2070,6 @@ export default function BareActNavigator() {
     setNoteError("");
     if (!storageAvailable) {
       setNoteStatus("unavailable");
-      if (mainRef.current) mainRef.current.scrollTop = 0;
       return;
     }
     setNoteStatus("loading");
@@ -2068,7 +2088,6 @@ export default function BareActNavigator() {
         }
       }
     })();
-    if (mainRef.current) mainRef.current.scrollTop = 0;
     return () => { cancelled = true; };
   }, [selectedId, storageAvailable]);
 
@@ -2448,7 +2467,7 @@ export default function BareActNavigator() {
         <div className="topbar-titles">
           <p className="eyebrow">Bare Act &amp; Statute Navigator · Prototype</p>
           <h1>Bharatiya Nyaya Sanhita, 2023</h1>
-          <div className="sub">14 chapters live · 309 of 358 BNS sections</div>
+          <div className="sub">{BNS_LIVE_CHAPTER_COUNT} chapters live · {BNS_LIVE_SECTION_COUNT} of {BNS_TOTAL_SECTIONS} BNS sections</div>
         </div>
         <Scale size={22} color="#a5813c" style={{ flexShrink: 0 }} />
       </div>
@@ -2600,9 +2619,10 @@ export default function BareActNavigator() {
           </div>
 
           <p className="disclaimer">
-            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: 309 of 358 BNS sections
-            across 14 chapters (I–VII, X, XI, XIII–XV, XVII, XIX). Remaining: Chapters VIII, IX, XII, XVI, XVIII, XX.
-            Landmark cases are curated only for a deliberately small set of sections as a demonstration of the accuracy bar —
+            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: {BNS_LIVE_SECTION_COUNT} of {BNS_TOTAL_SECTIONS} BNS sections
+            across {BNS_LIVE_CHAPTER_COUNT} of {BNS_CHAPTERS.length} chapters.
+            {BNS_REMAINING_CHAPTERS.length > 0 && ` Remaining: Chapters ${BNS_REMAINING_CHAPTERS.map((c) => c.id).join(", ")}.`}
+            {" "}Landmark cases are curated only for a deliberately small set of sections as a demonstration of the accuracy bar —
             statute text takes priority, cases are being enriched progressively. Statutes and case law can change after this
             date — if you know of an amendment or a newer ruling on a section here, flag it so it can be re-verified.
           </p>
