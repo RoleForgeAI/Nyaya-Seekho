@@ -2037,7 +2037,18 @@ const SECTIONS = [
   { id: "SRA-10", category: "SRC-C", title: "Specific performance in respect of contracts",
     text: "The specific performance of a contract shall be enforced by the court subject to the provisions contained in Section 11(2), Section 14, and Section 16.",
     simpleExplanation: "This is the single most important structural change from the 2018 amendment — before 2018, courts had wide discretion whether to order specific performance at all, treating it as an exception to the normal remedy of damages. Since 2018, specific performance is the default, general rule, and courts must enforce it unless one of the specific exceptions in Sections 11(2), 14, or 16 applies.",
-    crossRefs: ["SRA-11", "SRA-14", "SRA-16"] },
+    crossRefs: ["SRA-11", "SRA-14", "SRA-16"],
+    cases: [
+      { name: "Chand Rani v. Kamal Rani", cite: "(1993) 1 SCC 519 (also AIR 1993 SC 1742)", year: 1992,
+        ratio: "A Constitution Bench of the Supreme Court held that in contracts for the sale of immovable property, time is never regarded as the essence of the contract by default — there is a presumption against it — unless the parties specifically stipulate this or it clearly emerges by implication from the contract's terms.",
+        url: "https://indiankanoon.org/doc/1757550/" },
+      { name: "Saradamani Kandappan v. S. Rajalakshmi", cite: "(2011) 12 SCC 18", year: 2011,
+        ratio: "The Supreme Court held that the traditional \"time is not of the essence\" presumption from Chand Rani needs to be revisited in light of modern economic reality — given the steep, rapid rise in property prices, treating time as insignificant can unfairly prejudice a vendor forced to wait years for a buyer to complete payment, and courts must weigh this practical reality when deciding whether to grant specific performance.",
+        url: "https://indiankanoon.org/doc/834739/" },
+      { name: "Katta Sujatha Reddy v. Siddamsetty Infra Projects Pvt. Ltd.", cite: "Civil Appeal No. 5822 of 2022", year: 2022,
+        ratio: "The Supreme Court held that the 2018 amendment to Section 10 — which made specific performance the general rule rather than a discretionary exception — applies only prospectively, not retrospectively. Suits filed, and contracts entered into, before the amendment came into force (1 October 2018) continue to be governed by the old discretionary regime.",
+        url: "https://indiankanoon.org/doc/64833870/" }
+    ] },
   { id: "SRA-11", category: "SRC-C", title: "Cases in which specific performance of contracts connected with trusts enforceable",
     text: "(1) Except as otherwise provided in this Act, specific performance of a contract shall be enforced when the act agreed to be done is in the performance, wholly or partly, of a trust. (2) A contract made by a trustee in excess of his powers, or in breach of trust, cannot be specifically enforced.",
     crossRefs: ["SRA-10"] },
@@ -2051,7 +2062,10 @@ const SECTIONS = [
   { id: "SRA-14", category: "SRC-C", title: "Contracts not specifically enforceable",
     text: "The following contracts cannot be specifically enforced — (a) a contract where a party has already obtained substituted performance under Section 20; (b) a contract whose performance involves a continuous duty the court cannot supervise; (c) a contract so dependent on the parties' personal qualifications that the court cannot enforce its material terms specifically; and (d) a contract that is by its nature determinable (i.e. terminable at will).",
     simpleExplanation: "These are the four categories courts cannot force specific performance on, even after the 2018 amendment made specific performance the default rule — practical unenforceability (courts can't supervise every ongoing duty forever), personal-skill contracts (you can't force someone to paint a masterpiece), and contracts either side could freely walk away from anyway.",
-    crossRefs: ["SRA-10"] },
+    crossRefs: ["SRA-10"],
+    cases: [{ name: "Executive Committee of Vaish Degree College, Shamli v. Lakshmi Narain", cite: "AIR 1976 SC 888 (also (1976) 2 SCC 58)", year: 1975,
+      ratio: "The Supreme Court held that a contract of personal service (such as an employment relationship) cannot ordinarily be specifically enforced — a dismissed employee cannot obtain a court order forcing the employer to reinstate them, since courts cannot supervise an ongoing personal working relationship. This is the classic case behind the \"personal service contracts\" category of non-enforceable contracts.",
+      url: "https://indiankanoon.org/doc/1004292/" }] },
   { id: "SRA-14A", category: "SRC-C", title: "Power of court to engage experts",
     text: "(1) In any suit under this Act, where the court considers it necessary to get expert opinion on a specific issue, it may engage one or more experts, direct them to report on that issue, and secure their attendance to give evidence (including producing documents). (2) The court may require any person to give relevant information to the expert, or produce/give access to relevant documents, goods, or property for inspection. (3) The expert's opinion/report becomes part of the suit's record; the court (or, with permission, any party) may examine the expert in open court on the matters referred to them, their opinion/report, or how they conducted their inspection. (4) The expert is entitled to a fee/cost/expense fixed by the court, payable by the parties as the court directs.",
     simpleExplanation: "This was added by the 2018 amendment — it lets courts bring in outside technical experts (engineers, valuers, etc.) for complex specific-performance disputes, particularly relevant given the same amendment's new focus on infrastructure project contracts.",
@@ -2063,7 +2077,15 @@ const SECTIONS = [
     text: "Specific performance of a contract cannot be enforced in favour of a person — (a) who has already obtained substituted performance under Section 20; or (b) who has become incapable of performing, or violates any essential term of, the contract remaining to be performed on his part, or acts in fraud of the contract, or wilfully acts at variance with or in subversion of the relationship the contract intended to establish; or (c) who fails to prove that he has performed, or has always been ready and willing to perform, the essential terms of the contract that are his to perform (other than terms whose performance was prevented or waived by the defendant).",
     explanations: ["For clause (c) — where a contract involves paying money, the plaintiff need not actually tender money or deposit it in court except when the court so directs; the plaintiff must prove performance of, or readiness and willingness to perform, the contract according to its true construction."],
     simpleExplanation: "Clause (c)'s \"readiness and willingness\" requirement is one of the most frequently tested points in this Act — a plaintiff seeking specific performance must affirmatively prove they were genuinely able and willing to hold up their end of the bargain throughout, not just that the other side breached.",
-    crossRefs: ["SRA-15"] },
+    crossRefs: ["SRA-15"],
+    cases: [
+      { name: "N.P. Thirugnanam v. Dr. R. Jagan Mohan Rao", cite: "(1995) 5 SCC 115 (also AIR 1996 SC 116)", year: 1995,
+        ratio: "The Supreme Court held that \"continuous readiness and willingness\" on the plaintiff's part is a condition precedent to obtaining specific performance under Section 16(c) — it must be proved through conduct both before and after filing the suit, running all the way from the date of the contract's execution to the date of the decree, not just asserted. If the plaintiff fails to plead or prove this, the claim fails regardless of the defendant's own breach.",
+        url: "https://indiankanoon.org/doc/169428/" },
+      { name: "Gaddipati Divija v. Pathuri Samrajyam", cite: "2023 INSC 385 (also (2023) 3 SCR 802)", year: 2023,
+        ratio: "The Supreme Court reaffirmed that a plaintiff seeking specific performance must plead and prove continuous readiness and willingness to perform their part of the contract, and reiterated the classic rule that time is not ordinarily of the essence in contracts for the sale of immovable property, unless the contract's express terms show otherwise.",
+        url: "https://www.legitquest.com/case/gaddipati-divija-anr-v-pathuri-samrajyam-ors/7781EF" }
+    ] },
   { id: "SRA-17", category: "SRC-D", title: "Contract to sell or let property by one who has no title, not specifically enforceable",
     text: "(1) A contract to sell or let immovable property cannot be specifically enforced against a vendor or lessor — (a) who, knowing he had no title to the property, contracted to sell or let it; or (b) who, though believing in good faith he had good title when contracting, cannot at the time fixed for completion give the purchaser/lessee a title free from reasonable doubt. (2) These provisions also apply, as far as possible, to contracts for the sale or hire of movable property.",
     crossRefs: ["SRA-13"] },
@@ -2152,7 +2174,10 @@ const SECTIONS = [
     crossRefs: ["SRA-37"] },
   { id: "SRA-37", category: "SRC-J", title: "Temporary and perpetual injunctions",
     text: "(1) Temporary injunctions continue until a specified time, or until further order of the court, and may be granted at any stage of a suit; they are regulated by the Code of Civil Procedure, 1908. (2) A perpetual injunction can only be granted by a decree made at the hearing, on the suit's merits — the defendant is thereby permanently barred from asserting a right, or committing an act, contrary to the plaintiff's rights.",
-    crossRefs: ["SRA-36", "SRA-38"] },
+    crossRefs: ["SRA-36", "SRA-38"],
+    cases: [{ name: "Dalpat Kumar v. Prahlad Singh", cite: "(1992) 1 SCC 719 (also AIR 1993 SC 276)", year: 1991,
+      ratio: "The Supreme Court laid down the foundational three-part test that still governs every temporary injunction application in India: the plaintiff must show (1) a prima facie case — a serious question requiring investigation, not proof of certain success; (2) that irreparable injury would result without the injunction — meaning harm that damages alone couldn't fairly compensate; and (3) that the balance of convenience favours granting it. All three factors must be weighed together, not treated as a mechanical checklist.",
+      url: "https://indiankanoon.org/doc/49480/" }] },
 
   /* ---- Part III, Chapter VIII — Perpetual Injunctions ---- */
   { id: "SRA-38", category: "SRC-K", title: "Perpetual injunction when granted",
@@ -2170,7 +2195,10 @@ const SECTIONS = [
   { id: "SRA-42", category: "SRC-K", title: "Injunction to perform negative agreement",
     text: "Notwithstanding Section 41(e), where a contract has an affirmative agreement to do a certain act coupled with a negative agreement (express or implied) not to do a certain act, the court's inability to compel specific performance of the affirmative part doesn't stop it from granting an injunction to enforce the negative part.",
     provisos: ["This applies provided the plaintiff hasn't failed to perform the contract insofar as it binds him."],
-    crossRefs: ["SRA-41"] },
+    crossRefs: ["SRA-41"],
+    cases: [{ name: "Gujarat Bottling Co. Ltd. v. Coca-Cola Co.", cite: "(1995) 5 SCC 545", year: 1995,
+      ratio: "The Supreme Court held that a negative covenant in a commercial agreement (here, a bottling franchise agreement restraining the franchisee from dealing in competing brands) can be enforced by injunction under this section, even though the positive obligations of the same contract could not themselves be specifically enforced — confirming that Section 42 lets courts restrain the \"don't do X\" half of a contract independent of the \"do Y\" half.",
+      url: "https://www.casemine.com/commentary/in/enforceability-of-negative-covenants-in-franchise-agreements:-a-comprehensive-analysis-of-gujarat-bottling-co.-ltd.-v.-coca-cola-co.-(1995)/view" }] },
 ];
 
 const DEFINITIONS = {
