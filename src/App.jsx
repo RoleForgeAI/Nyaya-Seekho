@@ -11,13 +11,14 @@ import { storage } from "./lib/storage.js";
 
 const ACTS = [
   { id: "BNS", label: "Bharatiya Nyaya Sanhita, 2023", short: "BNS", status: "active" },
+  { id: "SRA", label: "The Specific Relief Act, 1963", short: "SRA", status: "active" },
   { id: "BNSS", label: "Bharatiya Nagarik Suraksha Sanhita, 2023", short: "BNSS", status: "soon" },
   { id: "BSA", label: "Bharatiya Sakshya Adhiniyam, 2023", short: "BSA", status: "soon" },
   { id: "CONTRACT", label: "Indian Contract Act, 1872", short: "Contract Act", status: "soon" },
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "soon" },
 ];
 
-const CONTENT_LAST_VERIFIED = "14 August 2026 — all 358 BNS sections complete";
+const CONTENT_LAST_VERIFIED = "14 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -40,6 +41,16 @@ const CHAPTERS = [
   { id: "XVIII", act: "BNS", label: "Chapter XVIII — Offences Relating to Documents and to Property Marks", range: "335–350" },
   { id: "XIX", act: "BNS", label: "Chapter XIX — Criminal Intimidation, Insult, Annoyance, Defamation", range: "351–357" },
   { id: "XX", act: "BNS", label: "Chapter XX — Repeal and Savings", range: "358" },
+
+  { id: "SR-I", act: "SRA", label: "Part I — Preliminary", range: "1-4" },
+  { id: "SR-II-1", act: "SRA", label: "Part II, Chapter I — Recovering Possession of Property", range: "5-8" },
+  { id: "SR-II-2", act: "SRA", label: "Part II, Chapter II — Specific Performance of Contracts", range: "9-25" },
+  { id: "SR-II-3", act: "SRA", label: "Part II, Chapter III — Rectification of Instruments", range: "26" },
+  { id: "SR-II-4", act: "SRA", label: "Part II, Chapter IV — Rescission of Contracts", range: "27-30" },
+  { id: "SR-II-5", act: "SRA", label: "Part II, Chapter V — Cancellation of Instruments", range: "31-33" },
+  { id: "SR-II-6", act: "SRA", label: "Part II, Chapter VI — Declaratory Decrees", range: "34-35" },
+  { id: "SR-III-7", act: "SRA", label: "Part III, Chapter VII — Injunctions Generally", range: "36-37" },
+  { id: "SR-III-8", act: "SRA", label: "Part III, Chapter VIII — Perpetual Injunctions", range: "38-42" },
 ];
 
 const CATEGORIES = [
@@ -101,6 +112,18 @@ const CATEGORIES = [
   { id: "DDD", chapter: "XVIII", label: "Of Documents & Forgery", range: "335–344" },
   { id: "EEE", chapter: "XVIII", label: "Of Property Marks", range: "345–350" },
   { id: "FFF", chapter: "XX", label: "Repeal and Savings", range: "358" },
+
+  { id: "SRC-A", chapter: "SR-I", label: "Preliminary", range: "1-4" },
+  { id: "SRC-B", chapter: "SR-II-1", label: "Recovering Possession of Property", range: "5-8" },
+  { id: "SRC-C", chapter: "SR-II-2", label: "Enforceable & Non-Enforceable Contracts", range: "9-14A" },
+  { id: "SRC-D", chapter: "SR-II-2", label: "Persons For/Against Whom Contracts May Be Enforced", range: "15-19" },
+  { id: "SRC-E", chapter: "SR-II-2", label: "Substituted Performance, Compensation & Awards", range: "20-25" },
+  { id: "SRC-F", chapter: "SR-II-3", label: "Rectification of Instruments", range: "26" },
+  { id: "SRC-G", chapter: "SR-II-4", label: "Rescission of Contracts", range: "27-30" },
+  { id: "SRC-H", chapter: "SR-II-5", label: "Cancellation of Instruments", range: "31-33" },
+  { id: "SRC-I", chapter: "SR-II-6", label: "Declaratory Decrees", range: "34-35" },
+  { id: "SRC-J", chapter: "SR-III-7", label: "Injunctions Generally", range: "36-37" },
+  { id: "SRC-K", chapter: "SR-III-8", label: "Perpetual Injunctions", range: "38-42" },
 ];
 
 const SECTIONS = [
@@ -1966,6 +1989,188 @@ const SECTIONS = [
     text: "(1) The Indian Penal Code (45 of 1860) is hereby repealed. (2) Notwithstanding that repeal, it shall not affect — (a) the previous operation of the repealed Code, or anything duly done or suffered under it; or (b) any right, privilege, obligation, or liability acquired, accrued, or incurred under the repealed Code; or (c) any penalty or punishment incurred for offences against the repealed Code; or (d) any investigation or remedy in respect of such penalty or punishment; or (e) any proceeding, investigation, or remedy as aforesaid — and any such proceeding or remedy may be instituted, continued, or enforced, and any such penalty imposed, as if the Code had not been repealed. (3) Notwithstanding the repeal, anything done or any action taken under the repealed Code is deemed to have been done or taken under the corresponding provisions of this Sanhita. (4) The mention of particular matters in sub-section (2) does not prejudice or affect the general application of Section 6 of the General Clauses Act, 1897, regarding the effect of repeal.",
     simpleExplanation: "This is the closing section of BNS — the formal handover clause. It does two things: kills off the old IPC, and makes sure nothing falls through the cracks in the transition — ongoing IPC cases, already-accrued rights, and pending punishments all carry over cleanly into the new Sanhita rather than becoming void.",
     illustrations: [], crossRefs: [] },
+
+  /* ==================================================================== */
+  /* THE SPECIFIC RELIEF ACT, 1963 — all 42 active sections (Act 18 of    */
+  /* 2018 amendments incorporated). Sections use string ids "SRA-N" so   */
+  /* they never collide with the numeric BNS section ids above.          */
+  /* Sections 43–44 were themselves repealed by the Repealing and        */
+  /* Amending Act, 1974 and are not part of the Act's active content.    */
+  /* ==================================================================== */
+
+  /* ---- Part I — Preliminary ---- */
+  { id: "SRA-1", category: "SRC-A", title: "Short title, extent and commencement",
+    text: "(1) This Act may be called the Specific Relief Act, 1963. (2) It extends to the whole of India. (3) It shall come into force on such date as the Central Government may, by notification in the Official Gazette, appoint. [Came into force 1 March 1964.]",
+    crossRefs: [] },
+  { id: "SRA-2", category: "SRC-A", title: "Definitions",
+    text: "In this Act, unless the context otherwise requires — (a) \"obligation\" includes every duty enforceable by law; (b) \"settlement\" means an instrument (other than a will or codicil) whereby the destination or devolution of successive interests in movable or immovable property is disposed of or agreed to be disposed of; (c) \"trust\" has the same meaning as in Section 3 of the Indian Trusts Act, 1882, and includes an obligation in the nature of a trust within the meaning of Chapter IX of that Act; (d) \"trustee\" includes every person holding property in trust; (e) all other words and expressions used but not defined here, and defined in the Indian Contract Act, 1872, have the meanings assigned to them in that Act.",
+    crossRefs: [] },
+  { id: "SRA-3", category: "SRC-A", title: "Savings",
+    text: "Except as otherwise provided herein, nothing in this Act shall be deemed — (a) to deprive any person of any right to relief, other than specific performance, which he may have under any contract; or (b) to affect the operation of the Indian Registration Act, 1908, on documents.",
+    crossRefs: [] },
+  { id: "SRA-4", category: "SRC-A", title: "Specific relief to be granted only for enforcing individual civil rights and not for enforcing penal laws",
+    text: "Specific relief can be granted only for the purpose of enforcing individual civil rights and not for the mere purpose of enforcing a penal law.",
+    simpleExplanation: "This is the Act's foundational limiting principle — it exists to make private civil obligations (like a broken contract) actually enforceable, not to let someone use a civil court to punish another person for a crime. That's what criminal law and prosecution are for.",
+    crossRefs: [] },
+
+  /* ---- Part II, Chapter I — Recovering Possession of Property ---- */
+  { id: "SRA-5", category: "SRC-B", title: "Recovery of specific immovable property",
+    text: "A person entitled to the possession of specific immovable property may recover it in the manner provided by the Code of Civil Procedure, 1908.",
+    crossRefs: ["SRA-6"] },
+  { id: "SRA-6", category: "SRC-B", title: "Suit by person dispossessed of immovable property",
+    text: "(1) If any person is dispossessed without his consent of immovable property otherwise than in due course of law, he (or any person through whom he has been in possession, or any person claiming through him) may, by suit, recover possession of it, notwithstanding any other title that may be set up in that suit. (2) No suit under this section shall be brought — (a) after the expiry of six months from the date of dispossession; or (b) against the Government. (3) No appeal shall lie from any order or decree passed in a suit under this section, nor shall any review of such an order or decree be allowed. (4) Nothing in this section bars any person from suing to establish his title to the property and recover its possession.",
+    simpleExplanation: "This is the classic \"possession is nine-tenths of the law\" provision — it protects whoever was actually in possession, regardless of who really owns the property, as a fast, summary remedy against being thrown out other than through due legal process. The strict six-month deadline and the \"no appeal, no review\" rule both exist to keep this remedy quick — if you miss the window, you still have the slower, ordinary title suit under sub-section (4) available.",
+    crossRefs: ["SRA-5"] },
+  { id: "SRA-7", category: "SRC-B", title: "Recovery of specific movable property",
+    text: "A person entitled to the possession of specific movable property may recover it in the manner provided by the Code of Civil Procedure, 1908.",
+    explanations: ["A trustee may sue under this section for possession of movable property in which the person for whom he is trustee holds the beneficial interest.", "A special or temporary right to present possession of movable property is sufficient to support a suit under this section."],
+    crossRefs: ["SRA-8"] },
+  { id: "SRA-8", category: "SRC-B", title: "Liability of person in possession, not as owner, to deliver to persons entitled to immediate possession",
+    text: "A person having possession or control of a particular article of movable property, of which he is not the owner, may be compelled to specifically deliver it to the person entitled to its immediate possession, in any of these cases — (a) the thing claimed is held by the defendant as agent or trustee of the plaintiff; (b) compensation in money would not afford the plaintiff adequate relief for its loss; (c) it would be extremely difficult to ascertain the actual damage caused by its loss; (d) possession of the thing claimed was wrongfully transferred from the plaintiff.",
+    explanations: ["Unless proven otherwise, the court shall presume, for property claimed under clause (b) or (c), that money compensation would not be adequate, or that actual damage would be extremely difficult to ascertain."],
+    crossRefs: ["SRA-7"] },
+
+  /* ---- Part II, Chapter II — Specific Performance of Contracts ---- */
+  { id: "SRA-9", category: "SRC-C", title: "Defences respecting suits for relief based on contract",
+    text: "Except as otherwise provided herein, where any relief is claimed under this Chapter in respect of a contract, the person against whom the relief is claimed may plead by way of defence any ground available to him under any law relating to contracts.",
+    crossRefs: [] },
+  { id: "SRA-10", category: "SRC-C", title: "Specific performance in respect of contracts",
+    text: "The specific performance of a contract shall be enforced by the court subject to the provisions contained in Section 11(2), Section 14, and Section 16.",
+    simpleExplanation: "This is the single most important structural change from the 2018 amendment — before 2018, courts had wide discretion whether to order specific performance at all, treating it as an exception to the normal remedy of damages. Since 2018, specific performance is the default, general rule, and courts must enforce it unless one of the specific exceptions in Sections 11(2), 14, or 16 applies.",
+    crossRefs: ["SRA-11", "SRA-14", "SRA-16"] },
+  { id: "SRA-11", category: "SRC-C", title: "Cases in which specific performance of contracts connected with trusts enforceable",
+    text: "(1) Except as otherwise provided in this Act, specific performance of a contract shall be enforced when the act agreed to be done is in the performance, wholly or partly, of a trust. (2) A contract made by a trustee in excess of his powers, or in breach of trust, cannot be specifically enforced.",
+    crossRefs: ["SRA-10"] },
+  { id: "SRA-12", category: "SRC-C", title: "Specific performance of part of contract",
+    text: "(1) Except as otherwise provided in this section, the court shall not direct specific performance of only part of a contract. (2) Where a party is unable to perform the whole of his part, but the unperformed part is only a small proportion of the whole in value and admits of money compensation, the court may direct specific performance of as much as can be performed, with compensation for the deficiency. (3) Where the unperformed part is either a considerable part of the whole (though it admits of compensation), or does not admit of compensation at all, the party in default is not entitled to a decree for specific performance — but the court may, on the other party's suit, direct the defaulting party to perform what he can, if the other party pays the full consideration (reduced appropriately if compensable) and relinquishes all claims to the rest of the contract's performance and to compensation for the shortfall. (4) Where a performable part of a contract stands on a separate, independent footing from a part that cannot or should not be specifically performed, the court may direct specific performance of the former part alone.",
+    explanations: ["A party is deemed unable to perform the whole of his part if part of the contract's subject-matter, existing at the date of the contract, has ceased to exist by the time of performance."],
+    crossRefs: ["SRA-10"] },
+  { id: "SRA-13", category: "SRC-C", title: "Rights of purchaser or lessee against person with no title or imperfect title",
+    text: "(1) Where a person contracts to sell or let immovable property having no title, or only an imperfect title, the purchaser or lessee has these rights — (a) if the vendor/lessor later acquires an interest in the property, the purchaser/lessee may compel him to make good the contract out of that interest; (b) where a third party's concurrence is needed to validate the title, and they're bound to concur at the vendor/lessor's request, the purchaser/lessee may compel the vendor/lessor to procure that concurrence or conveyance; (c) where the vendor claimed to sell unencumbered property but it's actually mortgaged for an amount not exceeding the purchase money (with only a right to redeem), the purchaser may compel him to redeem the mortgage and obtain a valid discharge (and conveyance from the mortgagee if needed); (d) where the vendor/lessor sues for specific performance and the suit is dismissed for want of title, the defendant has a right to the return of his deposit with interest, his costs, and a lien for these on the vendor/lessor's interest in the property. (2) These provisions also apply, as far as possible, to contracts for the sale or hire of movable property.",
+    crossRefs: ["SRA-17"] },
+  { id: "SRA-14", category: "SRC-C", title: "Contracts not specifically enforceable",
+    text: "The following contracts cannot be specifically enforced — (a) a contract where a party has already obtained substituted performance under Section 20; (b) a contract whose performance involves a continuous duty the court cannot supervise; (c) a contract so dependent on the parties' personal qualifications that the court cannot enforce its material terms specifically; and (d) a contract that is by its nature determinable (i.e. terminable at will).",
+    simpleExplanation: "These are the four categories courts cannot force specific performance on, even after the 2018 amendment made specific performance the default rule — practical unenforceability (courts can't supervise every ongoing duty forever), personal-skill contracts (you can't force someone to paint a masterpiece), and contracts either side could freely walk away from anyway.",
+    crossRefs: ["SRA-10"] },
+  { id: "SRA-14A", category: "SRC-C", title: "Power of court to engage experts",
+    text: "(1) In any suit under this Act, where the court considers it necessary to get expert opinion on a specific issue, it may engage one or more experts, direct them to report on that issue, and secure their attendance to give evidence (including producing documents). (2) The court may require any person to give relevant information to the expert, or produce/give access to relevant documents, goods, or property for inspection. (3) The expert's opinion/report becomes part of the suit's record; the court (or, with permission, any party) may examine the expert in open court on the matters referred to them, their opinion/report, or how they conducted their inspection. (4) The expert is entitled to a fee/cost/expense fixed by the court, payable by the parties as the court directs.",
+    simpleExplanation: "This was added by the 2018 amendment — it lets courts bring in outside technical experts (engineers, valuers, etc.) for complex specific-performance disputes, particularly relevant given the same amendment's new focus on infrastructure project contracts.",
+    crossRefs: [] },
+  { id: "SRA-15", category: "SRC-D", title: "Who may obtain specific performance",
+    text: "Except as otherwise provided by this Chapter, specific performance of a contract may be obtained by — (a) any party to it; (b) the representative in interest or principal of any party (unless personal skill/solvency/quality was a material ingredient, or assignment was barred by the contract, in which case the representative/principal can't claim it unless the original party already performed or their performance was accepted); (c) any person beneficially entitled under a marriage settlement or family compromise of doubtful rights; (d) the remainderman, where a tenant for life entered the contract in due exercise of a power; (e) a reversioner in possession, entitled to the benefit of a covenant entered with his predecessor in title; (f) a reversioner in remainder, similarly entitled and who will suffer material injury from the breach; (fa) a new LLP arising from amalgamation of an LLP that had entered the contract; (g) a new company arising from amalgamation of a company that had entered the contract; (h) a company, where its promoters entered a pre-incorporation contract for its purposes and it has since accepted and communicated acceptance of that contract.",
+    crossRefs: ["SRA-16"] },
+  { id: "SRA-16", category: "SRC-D", title: "Personal bars to relief",
+    text: "Specific performance of a contract cannot be enforced in favour of a person — (a) who has already obtained substituted performance under Section 20; or (b) who has become incapable of performing, or violates any essential term of, the contract remaining to be performed on his part, or acts in fraud of the contract, or wilfully acts at variance with or in subversion of the relationship the contract intended to establish; or (c) who fails to prove that he has performed, or has always been ready and willing to perform, the essential terms of the contract that are his to perform (other than terms whose performance was prevented or waived by the defendant).",
+    explanations: ["For clause (c) — where a contract involves paying money, the plaintiff need not actually tender money or deposit it in court except when the court so directs; the plaintiff must prove performance of, or readiness and willingness to perform, the contract according to its true construction."],
+    simpleExplanation: "Clause (c)'s \"readiness and willingness\" requirement is one of the most frequently tested points in this Act — a plaintiff seeking specific performance must affirmatively prove they were genuinely able and willing to hold up their end of the bargain throughout, not just that the other side breached.",
+    crossRefs: ["SRA-15"] },
+  { id: "SRA-17", category: "SRC-D", title: "Contract to sell or let property by one who has no title, not specifically enforceable",
+    text: "(1) A contract to sell or let immovable property cannot be specifically enforced against a vendor or lessor — (a) who, knowing he had no title to the property, contracted to sell or let it; or (b) who, though believing in good faith he had good title when contracting, cannot at the time fixed for completion give the purchaser/lessee a title free from reasonable doubt. (2) These provisions also apply, as far as possible, to contracts for the sale or hire of movable property.",
+    crossRefs: ["SRA-13"] },
+  { id: "SRA-18", category: "SRC-D", title: "Non-enforcement except with variation",
+    text: "Where a plaintiff seeks specific performance of a written contract, and the defendant sets up a variation, the plaintiff cannot obtain the performance sought except with that variation, in these cases — (a) where fraud, mistake of fact, or misrepresentation means the written contract differs in terms/effect from what the parties actually agreed, or omits agreed terms the defendant relied on; (b) where the parties' object was a certain legal result the contract as framed doesn't achieve; (c) where the parties, after executing the contract, subsequently varied its terms.",
+    crossRefs: [] },
+  { id: "SRA-19", category: "SRC-D", title: "Relief against parties and persons claiming under them by subsequent title",
+    text: "Except as otherwise provided by this Chapter, specific performance of a contract may be enforced against — (a) either party to it; (b) any other person claiming under him by a title arising after the contract, except a good-faith transferee for value without notice of the original contract; (c) any person claiming under a title that, though prior to the contract and known to the plaintiff, might have been displaced by the defendant; (ca) a new LLP arising from amalgamation of an LLP that entered the contract; (d) a new company arising from amalgamation of a company that entered the contract; (e) a company, where its promoters entered a pre-incorporation contract for its purposes and it has since accepted and communicated acceptance.",
+    crossRefs: [] },
+  { id: "SRA-20", category: "SRC-E", title: "Substituted performance of contract",
+    text: "(1) Without prejudice to the Indian Contract Act, 1872, and except as otherwise agreed by the parties, where a contract is broken due to a party's non-performance, the party who suffers the breach may choose substituted performance — through a third party or his own agency — and recover the actual expenses/costs incurred from the party in breach. (2) No substituted performance may be undertaken unless the aggrieved party first gives at least thirty days' written notice calling on the breaching party to perform within the specified time; only on refusal/failure may substituted performance proceed. The aggrieved party may only recover expenses under sub-section (1) if he has actually gotten the contract performed through a third party or his own agency. (3) Once substituted performance has actually occurred after such notice, the aggrieved party can no longer claim specific performance against the breaching party. (4) Nothing here prevents the aggrieved party from separately claiming compensation from the breaching party.",
+    simpleExplanation: "This is the 2018 amendment's other headline addition, alongside making specific performance the default rule. It gives the wronged party a genuinely new option: instead of going to court for specific performance, they can hire someone else to do the job and then bill the difference to the party who broke the contract — provided they follow the mandatory 30-day notice procedure first.",
+    crossRefs: ["SRA-10", "SRA-14", "SRA-16"] },
+  { id: "SRA-20A", category: "SRC-E", title: "Special provisions for contract relating to infrastructure project",
+    text: "(1) No injunction shall be granted by a court in a suit under this Act involving a contract relating to an infrastructure project specified in the Schedule, where granting the injunction would impede or delay that project's progress or completion. (2) The Central Government may, by Gazette notification, amend the Schedule's categories of projects or infrastructure sub-sectors as needed. (3) Every such notification must be laid before both Houses of Parliament for a total of thirty days (across one or more sessions); if both Houses agree to modify or reject it within that period, it takes effect only in modified form or not at all — without prejudice to anything already done under it.",
+    simpleExplanation: "Added in 2018 specifically to stop courts from granting injunctions that could stall major public infrastructure projects (roads, ports, power plants, etc. — the full list is in the Act's Schedule) over contract disputes, prioritizing project completion over a party's ability to freeze the project through litigation.",
+    crossRefs: ["SRA-41"] },
+  { id: "SRA-20B", category: "SRC-E", title: "Special Courts",
+    text: "The State Government, in consultation with the Chief Justice of the High Court, shall designate (by Gazette notification) one or more Civil Courts as Special Courts, within local area limits, to try suits under this Act involving contracts relating to infrastructure projects.",
+    crossRefs: ["SRA-20"] },
+  { id: "SRA-20C", category: "SRC-E", title: "Expeditious disposal of suits",
+    text: "Notwithstanding the Code of Civil Procedure, 1908, a suit filed under this Act shall be disposed of by the court within twelve months from the date of service of summons to the defendant — extendable by a further period of up to six months in aggregate, if the court records written reasons for the extension.",
+    crossRefs: [] },
+  { id: "SRA-21", category: "SRC-E", title: "Power to award compensation in certain cases",
+    text: "(1) In a suit for specific performance, the plaintiff may also claim compensation for the breach in addition to such performance. (2) If the court decides specific performance should not be granted, but there was a contract broken by the defendant entitling the plaintiff to compensation, it shall award that compensation. (3) If the court decides specific performance should be granted, but it alone wouldn't satisfy justice, and some compensation should also be paid, it shall award that too. (4) In determining compensation under this section, the court is guided by the principles in Section 73 of the Indian Contract Act, 1872. (5) No compensation is awarded unless claimed in the plaint — though the court may, at any stage, allow the plaint to be amended to include such a claim, on just terms.",
+    explanations: ["The fact that a contract has become incapable of specific performance doesn't stop the court from exercising jurisdiction under this section."],
+    crossRefs: [] },
+  { id: "SRA-22", category: "SRC-E", title: "Power to grant relief for possession, partition, refund of earnest money, etc.",
+    text: "(1) Notwithstanding the Code of Civil Procedure, 1908, a person suing for specific performance of a contract to transfer immovable property may, in an appropriate case, also ask for — (a) possession, or partition and separate possession, of the property, in addition to such performance; or (b) any other relief he's entitled to, including refund of earnest money or deposit, if his claim for specific performance is refused. (2) No relief under clause (a) or (b) is granted unless specifically claimed — though the court may allow the plaint to be amended at any stage, on just terms, to include such a claim. (3) The court's power to grant relief under clause (b) is without prejudice to its power to award compensation under Section 21.",
+    crossRefs: ["SRA-21"] },
+  { id: "SRA-23", category: "SRC-E", title: "Liquidation of damages not a bar to specific performance",
+    text: "(1) A contract otherwise proper for specific performance may still be so enforced, even if it names a sum payable on breach and the defaulting party is willing to pay it, if the court is satisfied (given the contract's terms and circumstances) that the named sum was only meant to secure performance — not to give the defaulting party an option to simply pay money instead of performing. (2) When enforcing specific performance under this section, the court shall not also order payment of that named sum.",
+    crossRefs: [] },
+  { id: "SRA-24", category: "SRC-E", title: "Bar of suit for compensation for breach after dismissal of suit for specific performance",
+    text: "Dismissal of a suit for specific performance of a contract (or part of it) bars the plaintiff's right to separately sue for compensation for that breach — but does not bar his right to sue for any other relief he may be entitled to by reason of the breach.",
+    crossRefs: [] },
+  { id: "SRA-25", category: "SRC-E", title: "Application of preceding sections to certain awards and testamentary directions to execute settlements",
+    text: "The provisions of this Chapter regarding contracts apply equally to arbitration awards to which the Arbitration and Conciliation Act, 1996 does not apply, and to directions in a will or codicil to execute a particular settlement.",
+    crossRefs: [] },
+
+  /* ---- Part II, Chapter III — Rectification of Instruments ---- */
+  { id: "SRA-26", category: "SRC-F", title: "When instrument may be rectified",
+    text: "(1) When, through fraud or a mutual mistake of the parties, a contract or other written instrument (not being a company's articles of association) fails to express their real intention, then — (a) either party or his representative may sue to have the instrument rectified; or (b) the plaintiff may claim rectification in any suit where a right arising under the instrument is at issue; or (c) a defendant in such a suit may, in addition to any other defence, ask for rectification. (2) If the court finds, in such a suit, that fraud or mistake means the instrument doesn't express the real intention, it may in its discretion direct rectification to express that intention — so far as this can be done without prejudicing third parties' good-faith rights acquired for value. (3) A written contract may first be rectified, and then — if the party claiming rectification has prayed for it and the court thinks fit — be specifically enforced. (4) No relief for rectification is granted unless specifically claimed — though the court may allow amendment at any stage, on just terms, to include such a claim.",
+    crossRefs: [] },
+
+  /* ---- Part II, Chapter IV — Rescission of Contracts ---- */
+  { id: "SRA-27", category: "SRC-G", title: "When rescission may be adjudged or refused",
+    text: "(1) Any person interested in a contract may sue to have it rescinded, and the court may adjudge rescission where — (a) the contract is voidable or terminable by the plaintiff; or (b) the contract is unlawful for reasons not apparent on its face, and the defendant is more to blame than the plaintiff. (2) Notwithstanding this, the court may refuse to rescind where — (a) the plaintiff has expressly or impliedly ratified the contract; or (b) circumstances have changed since the contract was made (not due to the defendant's own act) such that the parties can't be substantially restored to their original position; or (c) third parties have, during the contract's subsistence, acquired good-faith rights for value; or (d) only part of the contract is sought to be rescinded and that part isn't severable from the rest.",
+    explanations: ["\"Contract,\" in territories where the Transfer of Property Act, 1882 doesn't extend, means a contract in writing for the purposes of this section."],
+    crossRefs: ["SRA-29"] },
+  { id: "SRA-28", category: "SRC-G", title: "Rescission in certain circumstances of contracts for the sale or lease of immovable property, the specific performance of which has been decreed",
+    text: "(1) Where a decree for specific performance of a sale/lease contract for immovable property has been made, and the purchaser/lessee fails to pay the purchase money or other ordered sum within the decreed (or extended) period, the vendor/lessor may apply in the same suit to have the contract rescinded, and the court may rescind it (partially against the defaulting party, or altogether) as justice requires. (2) On such rescission, the court shall direct the purchaser/lessee, if he'd obtained possession, to restore it to the vendor/lessor, and may direct payment of all rents/profits accrued from when possession was obtained until restoration, and (if justice requires) refund of any earnest money or deposit paid. (3) If the purchaser/lessee does pay within the period, the court may, on application in the same suit, award further relief he's entitled to, including execution of a proper conveyance/lease, and delivery of possession (or partition and separate possession). (4) No separate suit for relief claimable under this section lies for any of these parties. (5) Costs of proceedings under this section are at the court's discretion.",
+    crossRefs: ["SRA-27"] },
+  { id: "SRA-29", category: "SRC-G", title: "Alternative prayer for rescission in suit for specific performance",
+    text: "A plaintiff suing for specific performance of a written contract may pray in the alternative that, if the contract cannot be specifically enforced, it be rescinded and delivered up to be cancelled; and if the court refuses specific enforcement, it may direct rescission and delivery up accordingly.",
+    crossRefs: ["SRA-27"] },
+  { id: "SRA-30", category: "SRC-G", title: "Court may require parties rescinding to do equity",
+    text: "On adjudging rescission of a contract, the court may require the party granted that relief to restore, so far as possible, any benefit he received from the other party, and to make any compensation justice requires.",
+    crossRefs: [] },
+
+  /* ---- Part II, Chapter V — Cancellation of Instruments ---- */
+  { id: "SRA-31", category: "SRC-H", title: "When cancellation may be ordered",
+    text: "(1) Any person against whom a written instrument is void or voidable, who has reasonable apprehension that it may cause him serious injury if left outstanding, may sue to have it adjudged void or voidable — and the court may, in its discretion, so adjudge it and order it delivered up and cancelled. (2) If the instrument was registered under the Indian Registration Act, 1908, the court shall also send a copy of its decree to the registering officer, who shall note the cancellation on the instrument's copy in his books.",
+    crossRefs: ["SRA-32", "SRA-33"] },
+  { id: "SRA-32", category: "SRC-H", title: "What instruments may be partially cancelled",
+    text: "Where an instrument is evidence of different rights or different obligations, the court may, in a proper case, cancel it in part and let it stand for the residue.",
+    crossRefs: ["SRA-31"] },
+  { id: "SRA-33", category: "SRC-H", title: "Power to require benefit to be restored or compensation to be made when instrument is cancelled or is successfully resisted as being void or voidable",
+    text: "(1) On adjudging cancellation of an instrument, the court may require the party granted that relief to restore, so far as possible, any benefit he received from the other party, and make any compensation justice requires. (2) Where a defendant successfully resists a suit on the ground that — (a) the instrument sought to be enforced against him is voidable, the court may (if he received any benefit under it) require him to restore that benefit or compensate for it; (b) the agreement sought to be enforced is void because he wasn't competent to contract under Section 11 of the Indian Contract Act, 1872, the court may require him to restore any benefit received, to the extent he or his estate benefited.",
+    crossRefs: ["SRA-31"] },
+
+  /* ---- Part II, Chapter VI — Declaratory Decrees ---- */
+  { id: "SRA-34", category: "SRC-I", title: "Discretion of court as to declaration of status or right",
+    text: "Any person entitled to any legal character, or to any right as to any property, may sue any person denying (or interested in denying) his title to that character or right, and the court may in its discretion declare that he is so entitled — the plaintiff need not ask for any further relief in such a suit.",
+    provisos: ["No court shall make such a declaration where the plaintiff, being able to seek further relief than a mere declaration of title, omits to do so."],
+    explanations: ["A property trustee is a \"person interested to deny\" a title adverse to someone not yet in existence, for whom he would be a trustee if they existed."],
+    simpleExplanation: "The proviso here is the classic exam trap — a declaratory suit is meant as a genuine remedy, not a way to dodge asking for the \"real\" relief you could have claimed (like possession or an injunction) alongside the mere declaration. If you could have asked for more and simply chose not to, courts will refuse the declaration.",
+    crossRefs: ["SRA-35"] },
+  { id: "SRA-35", category: "SRC-I", title: "Effect of declaration",
+    text: "A declaration made under this Chapter binds only the parties to the suit, persons claiming through them, and, where any party is a trustee, the persons for whom that party would be a trustee if they existed at the date of the declaration.",
+    crossRefs: ["SRA-34"] },
+
+  /* ---- Part III, Chapter VII — Injunctions Generally ---- */
+  { id: "SRA-36", category: "SRC-J", title: "Preventive relief how granted",
+    text: "Preventive relief is granted at the court's discretion, by injunction — temporary or perpetual.",
+    crossRefs: ["SRA-37"] },
+  { id: "SRA-37", category: "SRC-J", title: "Temporary and perpetual injunctions",
+    text: "(1) Temporary injunctions continue until a specified time, or until further order of the court, and may be granted at any stage of a suit; they are regulated by the Code of Civil Procedure, 1908. (2) A perpetual injunction can only be granted by a decree made at the hearing, on the suit's merits — the defendant is thereby permanently barred from asserting a right, or committing an act, contrary to the plaintiff's rights.",
+    crossRefs: ["SRA-36", "SRA-38"] },
+
+  /* ---- Part III, Chapter VIII — Perpetual Injunctions ---- */
+  { id: "SRA-38", category: "SRC-K", title: "Perpetual injunction when granted",
+    text: "(1) Subject to this Chapter's other provisions, a perpetual injunction may be granted to prevent breach of an obligation existing in the plaintiff's favour, whether express or implied. (2) Where such an obligation arises from contract, the court is guided by the rules in Chapter II. (3) Where the defendant invades or threatens the plaintiff's right to, or enjoyment of, property, the court may grant a perpetual injunction where — (a) the defendant is trustee of the property for the plaintiff; (b) there's no standard for ascertaining the actual or likely damage from the invasion; (c) money compensation wouldn't afford adequate relief; (d) the injunction is necessary to prevent a multiplicity of judicial proceedings.",
+    crossRefs: ["SRA-37", "SRA-39"] },
+  { id: "SRA-39", category: "SRC-K", title: "Mandatory injunctions",
+    text: "When, to prevent breach of an obligation, it's necessary to compel performance of certain acts the court is capable of enforcing, the court may, in its discretion, grant an injunction to both prevent the breach complained of and compel performance of the requisite acts.",
+    crossRefs: ["SRA-38"] },
+  { id: "SRA-40", category: "SRC-K", title: "Damages in lieu of, or in addition to, injunction",
+    text: "(1) A plaintiff suing for a perpetual injunction (Section 38) or mandatory injunction (Section 39) may claim damages either in addition to, or instead of, such an injunction, and the court may award them if it thinks fit. (2) No damages are granted unless claimed in the plaint — though the court may, at any stage, allow amendment to include such a claim, on just terms. (3) Dismissal of a suit to prevent breach of an obligation bars the plaintiff's right to separately sue for damages for that breach.",
+    crossRefs: ["SRA-38", "SRA-39"] },
+  { id: "SRA-41", category: "SRC-K", title: "Injunction when refused",
+    text: "An injunction cannot be granted — (a) to restrain prosecuting a judicial proceeding already pending when the injunction suit was filed, unless necessary to prevent a multiplicity of proceedings; (b) to restrain instituting/prosecuting proceedings in a court not subordinate to the one from which the injunction is sought; (c) to restrain applying to any legislative body; (d) to restrain instituting/prosecuting a criminal matter proceeding; (e) to prevent breach of a contract whose performance wouldn't itself be specifically enforced; (f) to prevent, on nuisance grounds, an act not reasonably clear to actually be a nuisance; (g) to prevent a continuing breach the plaintiff has acquiesced in; (h) when equally effective relief can certainly be obtained through another usual proceeding, except in cases of breach of trust; (ha) if it would impede or delay an infrastructure project's progress/completion, or interfere with continued provision of a related facility/service; (i) when the plaintiff's or his agents' conduct disentitles him to the court's assistance; (j) when the plaintiff has no personal interest in the matter.",
+    crossRefs: ["SRA-20A"] },
+  { id: "SRA-42", category: "SRC-K", title: "Injunction to perform negative agreement",
+    text: "Notwithstanding Section 41(e), where a contract has an affirmative agreement to do a certain act coupled with a negative agreement (express or implied) not to do a certain act, the court's inability to compel specific performance of the affirmative part doesn't stop it from granting an injunction to enforce the negative part.",
+    provisos: ["This applies provided the plaintiff hasn't failed to perform the contract insofar as it binds him."],
+    crossRefs: ["SRA-41"] },
 ];
 
 const DEFINITIONS = {
@@ -2007,14 +2212,35 @@ function chapterOf(section) {
   return CHAPTERS.find((ch) => ch.id === CATEGORIES.find((cat) => cat.id === section.category)?.chapter);
 }
 
+// Strips an act-namespace prefix (e.g. "SRA-14A" -> "14A") for compact display;
+// plain numeric ids (BNS) pass through unchanged since they have no "-" prefix.
+function sectionNumber(id) {
+  const s = String(id);
+  const dash = s.indexOf("-");
+  return dash === -1 ? s : s.slice(dash + 1);
+}
+
 // Coverage stats derived from CHAPTERS/SECTIONS so the header/footer never need manual updates.
+// Works for any act id — used for BNS today and any future act (SRA, BNSS, ...) added to ACTS.
+function actStats(actId) {
+  const chapters = CHAPTERS.filter((c) => c.act === actId);
+  const numericMax = Math.max(0, ...chapters.flatMap((c) => c.range.split(/[–-]/).map(Number)).filter((n) => !isNaN(n)));
+  const sections = SECTIONS.filter((s) => chapterOf(s)?.act === actId);
+  const liveChapterIds = [...new Set(sections.map((s) => chapterOf(s)?.id))];
+  return {
+    chapters,
+    totalSections: Math.max(numericMax, sections.length),
+    liveSectionCount: sections.length,
+    liveChapterCount: liveChapterIds.length,
+    remainingChapters: chapters.filter((c) => !liveChapterIds.includes(c.id)),
+  };
+}
+
 const BNS_CHAPTERS = CHAPTERS.filter((c) => c.act === "BNS");
-const BNS_TOTAL_SECTIONS = Math.max(...BNS_CHAPTERS.flatMap((c) => c.range.split(/[–-]/).map(Number)));
-const BNS_SECTIONS = SECTIONS.filter((s) => chapterOf(s)?.act === "BNS");
-const BNS_LIVE_SECTION_COUNT = BNS_SECTIONS.length;
-const BNS_LIVE_CHAPTER_IDS = [...new Set(BNS_SECTIONS.map((s) => chapterOf(s)?.id))];
-const BNS_LIVE_CHAPTER_COUNT = BNS_LIVE_CHAPTER_IDS.length;
-const BNS_REMAINING_CHAPTERS = BNS_CHAPTERS.filter((c) => !BNS_LIVE_CHAPTER_IDS.includes(c.id));
+const BNS_TOTAL_SECTIONS = actStats("BNS").totalSections;
+const BNS_LIVE_SECTION_COUNT = actStats("BNS").liveSectionCount;
+const BNS_LIVE_CHAPTER_COUNT = actStats("BNS").liveChapterCount;
+const BNS_REMAINING_CHAPTERS = actStats("BNS").remainingChapters;
 
 /* ------------------------------------------------------------------ */
 
@@ -2043,6 +2269,9 @@ export default function BareActNavigator() {
   const [noteDraft, setNoteDraft] = useState("");
   const [noteStatus, setNoteStatus] = useState("idle"); // idle | loading | saving | saved | error
   const mainRef = useRef(null);
+
+  const currentActMeta = ACTS.find((a) => a.id === selectedAct);
+  const currentActStats = useMemo(() => actStats(selectedAct), [selectedAct]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 880px)");
@@ -2111,9 +2340,10 @@ export default function BareActNavigator() {
 
   function exportSection() {
     const s = section;
+    const act = ACTS.find((a) => a.id === chapterOf(s)?.act);
     const lines = [
-      `BHARATIYA NYAYA SANHITA, 2023 — Chapter III, General Exceptions`,
-      `Section ${s.id}. ${s.title}  (≈ IPC §${s.ipc})`,
+      `${act?.label.toUpperCase() || ""} — ${chapterOf(s)?.label || ""}`,
+      `Section ${sectionNumber(s.id)}. ${s.title}${s.ipc ? `  (≈ IPC §${s.ipc})` : ""}`,
       "",
       s.text,
       "",
@@ -2132,7 +2362,7 @@ export default function BareActNavigator() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `BNS-Section-${s.id}.txt`;
+    a.download = `${act?.id || "Section"}-Section-${sectionNumber(s.id)}.txt`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -2466,8 +2696,8 @@ export default function BareActNavigator() {
         </button>
         <div className="topbar-titles">
           <p className="eyebrow">Bare Act &amp; Statute Navigator · Prototype</p>
-          <h1>Bharatiya Nyaya Sanhita, 2023</h1>
-          <div className="sub">{BNS_LIVE_CHAPTER_COUNT} chapters live · {BNS_LIVE_SECTION_COUNT} of {BNS_TOTAL_SECTIONS} BNS sections</div>
+          <h1>{currentActMeta?.label}</h1>
+          <div className="sub">{currentActStats.liveChapterCount} chapters live · {currentActStats.liveSectionCount} of {currentActStats.totalSections} {currentActMeta?.short} sections</div>
         </div>
         <Scale size={22} color="#a5813c" style={{ flexShrink: 0 }} />
       </div>
@@ -2492,11 +2722,13 @@ export default function BareActNavigator() {
 
         <main className="main" ref={mainRef}>
           <div className="breadcrumb">
-            Bharatiya Nyaya Sanhita, 2023 <span>›</span> {CHAPTERS.find((c) => c.id === CATEGORIES.find((cat) => cat.id === section.category)?.chapter)?.label} <span>›</span> Section {section.id}
+            {ACTS.find((a) => a.id === chapterOf(section)?.act)?.label} <span>›</span> {chapterOf(section)?.label} <span>›</span> Section {sectionNumber(section.id)}
           </div>
           <div className="stamp-row">
-            <div className="stamp">{section.id}</div>
-            <span className="ipc-tag">{section.ipc ? `≈ IPC Section ${section.ipc}` : "New provision — no direct IPC equivalent"}</span>
+            <div className="stamp">{sectionNumber(section.id)}</div>
+            {chapterOf(section)?.act === "BNS" && (
+              <span className="ipc-tag">{section.ipc ? `≈ IPC Section ${section.ipc}` : "New provision — no direct IPC equivalent"}</span>
+            )}
           </div>
           <h2 className="sec-heading">{section.title}</h2>
 
@@ -2569,7 +2801,7 @@ export default function BareActNavigator() {
               <div className="chip-row">
                 {section.crossRefs.map((rid) => (
                   <button key={rid} className="chip" onClick={() => setDrawer({ type: "section", id: rid })}>
-                    <Link2 size={12} /> §{rid} · {SECTION_MAP[rid].title.length > 34 ? SECTION_MAP[rid].title.slice(0, 34) + "…" : SECTION_MAP[rid].title}
+                    <Link2 size={12} /> §{sectionNumber(rid)} · {SECTION_MAP[rid].title.length > 34 ? SECTION_MAP[rid].title.slice(0, 34) + "…" : SECTION_MAP[rid].title}
                   </button>
                 ))}
               </div>
@@ -2595,7 +2827,7 @@ export default function BareActNavigator() {
           )}
 
           <div className="notes-box">
-            <div className="block-label"><StickyNote size={12} style={{ verticalAlign: -2 }} /> Your Notes on Section {section.id}</div>
+            <div className="block-label"><StickyNote size={12} style={{ verticalAlign: -2 }} /> Your Notes on Section {sectionNumber(section.id)}</div>
             <textarea
               value={noteDraft}
               onChange={(e) => setNoteDraft(e.target.value)}
@@ -2619,9 +2851,9 @@ export default function BareActNavigator() {
           </div>
 
           <p className="disclaimer">
-            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: {BNS_LIVE_SECTION_COUNT} of {BNS_TOTAL_SECTIONS} BNS sections
-            across {BNS_LIVE_CHAPTER_COUNT} of {BNS_CHAPTERS.length} chapters.
-            {BNS_REMAINING_CHAPTERS.length > 0 && ` Remaining: Chapters ${BNS_REMAINING_CHAPTERS.map((c) => c.id).join(", ")}.`}
+            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: {currentActStats.liveSectionCount} of {currentActStats.totalSections} {currentActMeta?.short} sections
+            across {currentActStats.liveChapterCount} of {currentActStats.chapters.length} chapters.
+            {currentActStats.remainingChapters.length > 0 && ` Remaining: Chapters ${currentActStats.remainingChapters.map((c) => c.id).join(", ")}.`}
             {" "}Landmark cases are curated only for a deliberately small set of sections as a demonstration of the accuracy bar —
             statute text takes priority, cases are being enriched progressively. Statutes and case law can change after this
             date — if you know of an amendment or a newer ruling on a section here, flag it so it can be re-verified.
@@ -2635,7 +2867,7 @@ export default function BareActNavigator() {
           <div className="drawer">
             <button className="drawer-close" onClick={() => setDrawer(null)}><X size={18} /></button>
             <div className="ipc-tag" style={{ marginBottom: 10 }}>Quick Preview</div>
-            <h3 style={{ margin: "0 0 8px", fontSize: 18 }}>§{drawer.id}. {SECTION_MAP[drawer.id].title}</h3>
+            <h3 style={{ margin: "0 0 8px", fontSize: 18 }}>§{sectionNumber(drawer.id)}. {SECTION_MAP[drawer.id].title}</h3>
             <p style={{ fontSize: 14, lineHeight: 1.6 }}>{SECTION_MAP[drawer.id].text}</p>
             <button className="save-btn" onClick={() => goTo(drawer.id)}>Open full section →</button>
           </div>
@@ -2703,7 +2935,7 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
                   className={"sec-btn" + (s.id === selectedId ? " active" : "")}
                   onClick={() => goTo(s.id)}
                 >
-                  <span className="sec-num">{s.id}</span>
+                  <span className="sec-num">{sectionNumber(s.id)}</span>
                   <span className="sec-title">{s.title}</span>
                 </button>
               ))}
