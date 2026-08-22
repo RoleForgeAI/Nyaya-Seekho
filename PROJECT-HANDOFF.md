@@ -41,16 +41,17 @@ resolves to a real category. `npm run build` succeeds.
 not yet started, likely 500+ sections), BSA (Bharatiya Sakshya Adhiniyam — evidence law),
 and eventually Indian Contract Act / Constitution, per the ACTS structure already built in.
 
-## BSA (Bharatiya Sakshya Adhiniyam, 2023) — in progress: 50 of 170 sections, 2 of 12 chapters
+## BSA (Bharatiya Sakshya Adhiniyam, 2023) — in progress: 100 of 170 sections, 6 of 12 chapters
 Full 12-chapter scaffold registered in `CHAPTERS` (`BSA-I` … `BSA-XII`, act: `"BSA"`), per
 the Act's official structure (Part I Preliminary, Part II Relevancy of Facts, Part III On
 Proof, Part IV Production and Effect of Evidence):
 - Chapter I — Preliminary (§§1–2) — **done**
 - Chapter II — Relevancy of Facts (§§3–50) — **done**
-- Chapter III — Facts Which Need Not Be Proved (§§51–53) — not started
-- Chapter IV — Of Oral Evidence (§§54–55) — not started
-- Chapter V — Of Documentary Evidence (§§56–93) — not started
-- Chapter VI — Of the Exclusion of Oral by Documentary Evidence (§§94–103) — not started
+- Chapter III — Facts Which Need Not Be Proved (§§51–53) — **done**
+- Chapter IV — Of Oral Evidence (§§54–55) — **done**
+- Chapter V — Of Documentary Evidence (§§56–93) — **done** (3 categories: General Rules
+  §§56–73, Public Documents §§74–77, Presumptions as to Documents §§78–93)
+- Chapter VI — Of the Exclusion of Oral by Documentary Evidence (§§94–103) — **partial, §§94–100 of 103**
 - Chapter VII — Of the Burden of Proof (§§104–120) — not started
 - Chapter VIII — Of Estoppel (§§121–123) — not started
 - Chapter IX — Of Witnesses (§§124–139) — not started
@@ -58,7 +59,7 @@ Proof, Part IV Production and Effect of Evidence):
 - Chapter XI — Of Improper Admission and Rejection of Evidence (§169) — not started
 - Chapter XII — Repeal and Savings (§170) — not started
 
-Only Chapters I–II have `CATEGORIES` and `SECTIONS` entries so far — sections 51–170 are
+Only Chapters I–VI have `CATEGORIES` and `SECTIONS` entries so far — sections 101–170 are
 deliberately **absent** from `SECTIONS` rather than present as blank placeholders, matching
 how BNS chapters were built up incrementally: `CHAPTERS` entries exist ahead of content so
 `actStats()`'s "remaining chapters" footer text is accurate, but a chapter/category with no
@@ -70,8 +71,20 @@ Section ids use the `"BSA-<n>"` string-prefix convention (matching `"SRA-<n>"`) 
 numeric ids would collide with BNS's 1–358, since `SECTION_MAP` is keyed globally across
 every act in `SECTIONS`. `sectionNumber()` strips the prefix for display.
 
-Sourced from the official Gazette text via India Code (indiacode.nic.in), Act No. 47 of
-2023, as on 6 Oct 2025. Next batch: Chapter III onward.
+Landmark cases so far: §§8, 23, 24, 26, 39, 63 (2 cases), 72, 95 — same small-set standard
+as BNS. Note §39 and §72 both cite *Murari Lal v. State of Madhya Pradesh* (1980) 1 SCC 704
+for two distinct holdings (expert-opinion reliability generally vs. the court's own power to
+compare handwriting) — this is intentional, not a duplicate. Cases decided before the BSA
+existed (all of them so far, since BSA only came into force July 2024) carry two extra
+fields — `decidedUnder` (the old Indian Evidence Act provision) and `continuityNote` (a
+caveat that no BSA-era judgment has separately confirmed the holding still applies) — shown
+in the case card as a muted "Decided under {decidedUnder} (pre-BSA)" line with the full
+caveat behind a "why this still applies" `<details>` toggle, plus a matching line in the
+"Export section as text" output.
+
+Sourced from the official Gazette text via India Code (indiacode.nic.in) for §§1–50, and the
+Gazette PDF via mha.gov.in (cross-checked against India Code's Arrangement of Sections) for
+§§51–100, Act No. 47 of 2023. Next batch: §§101–103 (rest of Chapter VI) + Chapter VII onward.
 
 ## Files
 This is now a real Vite + React project — no more manual esbuild bundling.
