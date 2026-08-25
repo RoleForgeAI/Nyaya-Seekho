@@ -139,13 +139,16 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
-## Indian Contract Act, 1872 (ICA) — new Act, in progress: 30 of 190 active sections
+## Indian Contract Act, 1872 (ICA) — new Act, in progress: 45 of 190 active sections
 Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
 place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
 never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
 `"ICA-<n>"` string-prefixed section ids (`SECTION_MAP` is keyed globally, so plain numeric
 ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Prelim"`,
-`"ICA-I"`, `"ICA-II"`, etc.
+`"ICA-I"`, `"ICA-II"`, etc. `CHAPTERS` entries are added chapter-by-chapter as batches
+arrive (not all pre-registered upfront the way BSA's 12 chapters were) — so the header's
+"N of M sections" total will keep climbing as later chapters get registered; it does not
+yet reflect the true eventual 190 until every chapter exists in `CHAPTERS`.
 
 **Structural quirk specific to this Act — read before writing any future integrity
 check for it:** the original 1872 Act had 266 sections, but §§76–123 (Sale of Goods) and
@@ -159,8 +162,10 @@ true total of currently-existing sections is 266 − 76 = **190**, not 266. Chap
 - Chapter I — Of the Communication, Acceptance and Revocation of Proposals (§§3–9) — **done**
 - Chapter II — Of Contracts, Voidable Contracts and Void Agreements (§§10–30) — **done**
   (2 categories: Contract Validity, Capacity & Free Consent §§10–22; Void Agreements §§23–30)
-- Chapter III — Contingent Contracts (§§31–36) — not started
-- Chapter IV — Performance of Contracts (§§37–75) — not started
+- Chapter III — Of Contingent Contracts (§§31–36) — **done**
+- Chapter IV — Of the Performance of Contracts (§§37–75) — **partial, §§37–45 of 75**
+  (2 categories so far: Contracts Which Must Be Performed §§37–39, By Whom Contracts Must
+  Be Performed §§40–45; "Time and place for performance" §46 onward is the next batch)
 - *(gap: §§76–123 permanently repealed, not part of the active Act)*
 - Indemnity, Guarantee, Bailment, Agency chapters (§§124–238) — not started
 - *(gap: §§239–266 permanently repealed, not part of the active Act)*
@@ -172,7 +177,18 @@ duplicate id means `CATEGORIES.find(c => c.id === section.category)` resolves to
 one appears first in the array, misassigning the second act's sections to the first act's
 chapter.
 
-No landmark cases in this batch. Two are already lined up for the next batch (§§51–75):
+**Landmark cases (6 sections, added in a second pass onto sections that were already
+live):** §§2, 8 (2 cases), 11, 23, 25. Unlike BSA, this Act has never been replaced, so
+its cases don't use `decidedUnder`/`continuityNote` — they're simply current good law.
+One case is a deliberate exception to "Indian cases only": *Carlill v. Carbolic Smoke
+Ball Co.* [1893] 1 QB 256 (England, cited under §8 alongside the Indian *Lalman Shukla*)
+is foreign, non-binding persuasive authority, flagged with two different fields —
+`jurisdiction` and `persuasiveNote` — rendered as a visually distinct blue-accented
+"Persuasive authority only — {jurisdiction} (not binding in India)" line with the
+`persuasiveNote` behind a "why it's cited here" `<details>` toggle (`.case-jurisdiction`
+in the CSS, deliberately styled differently from `.case-continuity`'s oxblood so the two
+patterns — "pre-BSA inference" vs. "foreign persuasive authority" — are never visually
+confused). Two more cases are already lined up for the next batch (§§51–75):
 *Satyabrata Ghose v. Mugneeram Bangur & Co.* (frustration, §56) and *Fateh Chand v.
 Balkishan Dass* (penalty/liquidated damages, §74).
 
