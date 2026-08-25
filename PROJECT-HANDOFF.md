@@ -112,6 +112,33 @@ This is now a real Vite + React project — no more manual esbuild bundling.
   GitHub Pages / Netlify / Vercel — no backend required).
 - `npm run preview` — serve the production build locally to sanity-check it.
 
+## Text vs. illustrations split (done for BNS, SRA, BSA)
+`section.text` holds only the operative provision; illustrations live in their own
+`section.illustrations` array, rendered under a separate "Illustrations" heading below
+"Official Bare Act Text" (`SidebarContents`'s sibling, the reading pane, around the
+`.body-text` / `.illus-card` JSX). `.body-text` and `.illus-card` both use
+`white-space: pre-line` so embedded `\n`/`\n\n` in the text render as real line breaks
+(separate sub-clauses, not one run-on paragraph) without needing to split `text` into
+multiple `<p>` elements.
+
+BNS already had 71 sections with a proper `illustrations` array from earlier batches;
+SRA's bare act has no illustrations at all (genuinely — it's not an omission). Only BSA
+had illustrations embedded inline in `text` (57 of 170 sections), inherited from how that
+data was originally transcribed. All 57 were mechanically split out and verified
+word-for-word lossless against the pre-split text (word-multiset diff, not just a visual
+check) — except **BSA-2** (Definitions), which needed an editorial judgment call: it has
+three separate embedded illustration blocks, each attached to a different defined term
+("document", "fact", "facts in issue"), with each block's own (i)/(ii)/... numbering
+restarting from the top. Flattening those into one array with no way to tell them apart
+would've been actively misleading, so each group got a short lead-in label ("As to the
+definition of 'document' in clause (d):") that isn't itself from the bare act text —
+the only place in the project where `illustrations` contains added editorial framing
+rather than a verbatim excerpt. Flag this if it ever needs re-deriving from source.
+
+SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as proper
+`{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
+confirmed, no changes needed there.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
