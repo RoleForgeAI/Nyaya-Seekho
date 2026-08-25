@@ -18,7 +18,7 @@ const ACTS = [
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "soon" },
 ];
 
-const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) Chapters Preliminary–V partial (§§1–70 of 190 active sections) verified against India Code Act No. 9 of 1872";
+const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) Part I: General Principles complete — all 75 of 75 sections, Chapters Preliminary–VI (§§76–123 repealed, moved to the Sale of Goods Act, 1930) — verified against India Code Act No. 9 of 1872";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -71,6 +71,8 @@ const CHAPTERS = [
   { id: "ICA-III", act: "ICA", label: "Chapter III — Of Contingent Contracts", range: "31–36" },
   { id: "ICA-IV", act: "ICA", label: "Chapter IV — Of the Performance of Contracts", range: "37–67" },
   { id: "ICA-V", act: "ICA", label: "Chapter V — Of Certain Relations Resembling Those Created by Contract", range: "68–72" },
+  { id: "ICA-VI", act: "ICA", label: "Chapter VI — Of the Consequences of Breach of Contract", range: "73–75" },
+  { id: "ICA-VII-repealed", act: "ICA", label: "Chapter VII — Of the Sale of Goods (§§76–123)", range: "76–123", repealed: true, repealedNote: "Repealed — moved to the Sale of Goods Act, 1930." },
 ];
 
 const CATEGORIES = [
@@ -181,6 +183,7 @@ const CATEGORIES = [
   { id: "appropriation-of-payments", chapter: "ICA-IV", label: "Appropriation of Payments", range: "59–61" },
   { id: "performance-not-required", chapter: "ICA-IV", label: "Contracts Which Need Not Be Performed", range: "62–67" },
   { id: "quasi-contract", chapter: "ICA-V", label: "Certain Relations Resembling Those Created by Contract", range: "68–72" },
+  { id: "breach-of-contract", chapter: "ICA-VI", label: "Of the Consequences of Breach of Contract", range: "73–75" },
 ];
 
 const SECTIONS = [
@@ -3082,6 +3085,34 @@ const SECTIONS = [
     cases: [{ name: "State of West Bengal v. B.K. Mondal & Sons", cite: "AIR 1962 SC 779", year: 1962,
       ratio: "Even where a contract with the government is invalid for failing to comply with mandatory constitutional formalities, the government can still be made liable under Section 70 if it has knowingly accepted and enjoyed the benefit of work genuinely done for it -- confirming that a Section 70 claim rests on independent statutory obligation, not on any underlying contract at all, valid or otherwise.",
       url: "https://indiankanoon.org/doc/197048/" }] },
+  /* ============================================================ */
+  /* ICA Sections 71-75: finishes Chapter V -- quasi-contract       */
+  /* (SS71-72) and completes Chapter VI -- Of the Consequences of   */
+  /* Breach of Contract (SS73-75). This closes out Part I: General  */
+  /* Principles (SS1-75) of the Act in full. Sections 76-123 are    */
+  /* repealed (moved to the Sale of Goods Act, 1930). Sourced from  */
+  /* the official India Code PDF, Act No. 9 of 1872. All 5 sections */
+  /* have simpleExplanation. Case: S74 (Fateh Chand v. Balkishan    */
+  /* Dass).                                                          */
+  /* ============================================================ */
+  { id: "ICA-71", category: "quasi-contract", title: "Responsibility of finder of goods",
+    text: "A person who finds goods belonging to another, and takes them into his custody, is subject to the same responsibility as a bailee.",
+    simpleExplanation: "A finder of lost goods isn't just a passive custodian free to do as they please -- the law treats them exactly like a bailee (someone who has voluntarily taken charge of another's property), which brings real obligations: reasonable care of the goods, no unauthorized use, and a duty to return them to the true owner rather than keep them." },
+  { id: "ICA-72", category: "quasi-contract", title: "Liability of person to whom money is paid, or thing delivered, by mistake or under coercion",
+    text: "A person to whom money has been paid, or anything delivered, by mistake or under coercion, must repay or return it.\n\nIllustrations\n(a) A and B jointly owe 100 rupees to C. A alone pays the amount to C, and B, not knowing this fact, pays 100 rupees over again to C. C is bound to repay the amount to B.\n(b) A railway company refuses to deliver up certain goods to the consignee, except upon the payment of an illegal charge for carriage. The consignee pays the sum charged in order to obtain the goods. He is entitled to recover so much of the charge as was illegally excessive.",
+    simpleExplanation: "The final quasi-contract provision closes the chapter with a clean, broad principle: money paid or property delivered by genuine mistake, or extracted under coercion, has to be given back -- regardless of whether the person who received it was at fault. Illustration (a) shows this applies even to an entirely innocent, honest mistake (a duplicate payment neither side intended), while illustration (b) shows it also covers a party using leverage to extract an illegal payment." },
+  { id: "ICA-73", category: "breach-of-contract", title: "Compensation for loss or damage caused by breach of contract",
+    text: "When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken the contract, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it.\n\nSuch compensation is not to be given for any remote and indirect loss or damage sustained by reason of the breach.\n\nCompensation for failure to discharge obligation resembling those created by contract.--When an obligation resembling those created by contract has been incurred and has not been discharged, any person injured by the failure to discharge it is entitled to receive the same compensation from the party in default, as if such person had contracted to discharge it and had broken his contract.\n\nExplanation.--In estimating the loss or damage arising from a breach of contract, the means which existed of remedying the inconvenience caused by the non-performance of the contract must be taken into account.\n\nIllustrations\n(a) A contracts to sell and deliver 50 maunds of saltpetre to B, at a certain price to be delivered at a stated time. A does not deliver the goods at the time specified, and B, in consequence, is obliged to buy other saltpetre at a higher price than that which he was to pay to A, and, having so done, is compelled to resell it, owing to a subsequent fall in price, at a loss. B is entitled to receive from A, by way of compensation, the sum by which the contract price fell short of the price given for other saltpetre, but not any sum on account of the loss on the resale.\n(b) A hires B's ship to go to Bombay, and there take on board, on the first of January, a cargo, which A is to provide, and to bring it to Calcutta, the freight to be paid when earned. B's ship does not go to Bombay, but A has no cargo ready to put on board the ship when it arrives at Bombay, and has no means of getting it ready. A must pay B such compensation as, under the circumstances, is reasonable.\n(c) A contracts to sell and deliver 500 bales of cotton to B on a fixed day. A knows nothing of B's mode of conducting his business. A breaks his promise, and B, having no cotton, is obliged to close his mill. A is not responsible to B for the loss caused to B by the closing of the mill.\n(d) A contracts to buy of B, at a stated price, 50 maunds of rice, no time being fixed for delivery. A afterwards informs B that he will not accept the rice if tendered to him. B is entitled to receive from A, by way of compensation, the amount, if any, by which the contract price exceeds that which B can obtain for the rice at the time when A informs B that he will not accept it.\n(e) A, a builder, contracts to erect and finish a house by the first of January, in order that B may give possession of it at that time to C, to whom B has contracted to let it. A is informed of the contract between B and C. A builds the house so badly that, before the first of January, it falls down and has to be rebuilt by B, who, in consequence, loses the rent which he was to have received from C, and is obliged to make compensation to C for the breach of his contract. A must make compensation to B for the cost of rebuilding the house, for the rent lost, and for the compensation made to C.\n(f) A contracts to supply B with a certain quantity of iron at a fixed price, being a higher price than the market price at the time of the contract. The contract is made by telegram, and B's message describing the kind of iron he wants is misdelivered by the telegraph company. A, in consequence, fails to supply the iron and B is obliged to buy it in the market at a higher price than that which he was to have paid to A. B recovers the difference between the market price and the price he was to have paid to A.\n(g) A contracts to sell and deliver to B, on the first of January, certain cloth which B intends to manufacture into caps of a particular kind, for which there is no demand, except at that season. The cloth is not delivered till after the appointed time, and too late to be used that year in making caps except at a great loss. B is entitled to receive from A, by way of compensation, the difference between the contract price of the cloth and its market price at the time of delivery, but not the loss caused to B by his inability to manufacture the caps.\n(h) A delivers to B, a common carrier, a machine, to be conveyed, without delay, to A's mill, informing B that his mill is stopped for want of the machine. B unreasonably delays the delivery of the machine, and A, in consequence, loses a profitable contract with the Government. A is entitled to receive from B, by way of compensation, the average amount of profit which would have been made by the working of the mill during the time that delivery of it was delayed, but not the loss sustained through the loss of the Government contract.\n(i) A, a builder, contracts to build a house for B by a fixed day, in consideration of the payment of the price by instalments as the work reaches certain stages. B fails to make the payment as agreed, upon which A stops the work. A is entitled to a reasonable compensation for the damage caused to him by such non-performance of the contract on the part of B.\n(j) A hires B's vessel to convey him from Calcutta to Sydney, and B unjustifiably refuses to perform his contract. A hires another vessel, and, in consequence of certain circumstances not known to B, is subjected to great loss. B is not liable to make good to A anything except the excess of the fare which A is compelled to pay in consequence of the breach of contract, beyond that which he would have paid to B.\n(k) A contracts to pay a sum of money to B on a day specified. A does not pay the money on that day. B, in consequence of not receiving the money on that day, is unable to pay his debts, and is totally ruined. A is not liable to make good to B anything except the principal sum he contracted to pay, together with interest up to the day of payment.\n(l) A contracts to deliver 50 maunds of saltpetre to B on the first of January, at a certain price. B afterwards, before the first of January, contracts to sell the saltpetre to C at a price higher than the market price of the first of January. A breaks his promise. In estimating the compensation payable by A to B, the market price of the first of January, and not the profit which B would have made by its resale to C, is to be taken into account.\n(m) A, a coachmaker, contracts to deliver to B, on a fixed day, a carriage of a particular kind. A tenders to B, on the day fixed, a carriage of a different kind. B refuses to accept the carriage. A is not entitled to recover the price. B may, if he thinks fit, maintain a suit for damages for non-delivery according to the contract.\n(n) A contracts to repair B's house in a certain manner, and receives payment in advance. A repairs the house, but not according to contract. B is entitled to recover from A the cost of making the repairs conform to the contract.\n(o) A contracts to let his ship to B for a year, from the first of January, for a certain price. Freights rise, and, on the first of February, A breaks his contract. B is entitled to be paid such compensation as will put him into as good a position as if the contract had been performed.\n(p) A contracts to sell and deliver 500 bales of cotton to B on a fixed day. A knows nothing of B's mode of conducting business. A breaks his promise, and B, having no cotton, is obliged to close his mill. A is not responsible to B for the loss caused to B by the closing of the mill.\n(q) A, a builder, contracts to erect and finish a house by the first of January, in order that B may give possession of it at that time to C, to whom B has contracted to let it, but A does not know of B's contract with C. A is not liable to B for compensation for the loss caused to B by the loss of the rent from C.\n(r) A sells certain merchandise to B, warranting it to be of a particular quality, and B, in reliance upon this warranty, sells it to C with a similar warranty. The goods prove to be not according to the warranty, and B becomes liable to pay C a sum of money by way of compensation. B is entitled to be reimbursed by A.",
+    simpleExplanation: "This is the Indian statutory equivalent of the famous English 'remoteness of damage' rule from Hadley v. Baxendale, and it's one of the most heavily used sections in the whole Act. The core test has two branches: compensation covers loss that either (1) naturally arose in the usual course of things from the breach, or (2) was something both parties actually knew, at the time of contracting, was likely to result from a breach -- but never loss that's remote or indirect. The 18 illustrations exist precisely to draw this line concretely: illustration (c)/(p) shows a seller unaware of the buyer's specific business isn't liable for the buyer's mill closing (too remote, unknown), while illustration (e) shows a builder who WAS told about the onward lease to C is liable for that consequential loss too (known, foreseeable). Illustration (j)/(k) add a further important limit -- even foreseeable-seeming consequential losses like a party's 'total ruin' from not being paid on time generally aren't recoverable beyond the principal and interest, since the law doesn't compensate for the innocent party's own unusual financial fragility unless the breaching party actually knew about it. The Explanation adds a mitigation principle: the injured party is expected to have taken reasonable steps to minimise their own loss, and that gets factored into the compensation calculation." },
+  { id: "ICA-74", category: "breach-of-contract", title: "Compensation for breach of contract where penalty stipulated for",
+    text: "When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, or if the contract contains any other stipulation by way of penalty, the party complaining of the breach is entitled, whether or not actual damage or loss is proved to have been caused thereby, to receive from the party who has broken the contract reasonable compensation not exceeding the amount so named or, as the case may be, the penalty stipulated for.\n\nExplanation.--A stipulation for increased interest from the date of default may be a stipulation by way of penalty.\n\nException.--When any person enters into any bail-bond, recognizance or other instrument of the same nature, or, under the provisions of any law, or under the orders of the Central Government or of any State Government, gives any bond for the performance of any public duty or act in which the public are interested, he shall be liable, upon breach of the condition of any such instrument, to pay the whole sum mentioned therein.\n\nExplanation.--A person who enters into a contract with the Government does not necessarily thereby undertake any public duty, or promise to do an act in which the public are interested.\n\nIllustrations\n(a) A contracts with B to pay B Rs. 1,000, if he fails to pay B Rs. 500 on a given day. A fails to pay B Rs. 500 on that day. B is entitled to recover from A such compensation, not exceeding Rs. 1,000, as the Court considers reasonable.\n(b) A contracts with B that, if A practises as a surgeon within Calcutta, he will pay B Rs. 5,000. A practises as a surgeon in Calcutta. B is entitled to such compensation, not exceeding Rs. 5,000, as the Court considers reasonable.\n(c) A gives a recognizance binding him in a penalty of Rs. 500 to appear in Court on a certain day. He forfeits his recognizance. He is liable to pay the whole penalty.\n(d) A gives B a bond for the repayment of Rs. 1,000 with interest at 12 per cent, at the end of six months, with a stipulation that, in case of default, interest shall be payable at the rate of 75 per cent, from the date of default. This is a stipulation by way of penalty, and B is only entitled to recover from A such compensation as the Court considers reasonable.\n(e) A, who owes money to B, a money-lender, undertakes to repay him by delivering to him 10 maunds of grain on a certain date, and agrees that, in the event of his not delivering the stipulated amount by the stipulated date, he shall be liable to deliver 20 maunds. This is a stipulation by way of penalty, and B is only entitled to reasonable compensation in case of breach.\n(f) A undertakes to repay B a loan of Rs. 1,000 by five equal monthly instalments, with a stipulation that, in default of payment of any instalment, the whole shall become due. This stipulation is not by way of penalty, and the contract may be enforced according to its terms.\n(g) A borrows Rs. 100 from B and gives him a bond for Rs. 200 payable by five yearly instalments of Rs. 40, with a stipulation that, in default of payment of any instalment, the whole shall become due. This is a stipulation by way of penalty.",
+    simpleExplanation: "This is arguably the single most litigated section on breach of contract, because it fundamentally departs from English law. English contract law draws a sharp distinction between a 'liquidated damages' clause (a genuine pre-estimate of loss, enforceable as written) and a 'penalty' clause (a punitive sum meant to deter breach, struck down). Section 74 rejects that distinction entirely -- under Indian law, it doesn't matter what the clause calls itself or how it's worded; the court simply awards 'reasonable compensation not exceeding' whatever sum was named, regardless of label. Crucially, the innocent party doesn't have to prove actual loss occurred at all to get some compensation, but the named sum operates only as a cap, not an automatic entitlement -- the court still independently assesses what's reasonable. The Exception carves out one narrow but important category: bail bonds and similar instruments securing a public duty, where the full stipulated sum genuinely is payable in full, no reasonableness discount applied.",
+    cases: [{ name: "Fateh Chand v. Balkishan Dass", cite: "AIR 1963 SC 1405", year: 1963,
+      ratio: "Section 74 abolishes, for India, the English common-law distinction between 'penalty' and 'liquidated damages' -- whatever the contract calls the stipulated sum, and however it is worded, a court awards only reasonable compensation not exceeding that sum, and is not bound to award the full amount merely because the parties agreed to it. Where a buyer forfeited an earnest deposit on breach, the Supreme Court held the forfeiture clause was subject to this same reasonableness ceiling under Section 74, not automatically enforceable in full.",
+      url: "https://indiankanoon.org/doc/584252/" }] },
+  { id: "ICA-75", category: "breach-of-contract", title: "Party rightfully rescinding contract, entitled to compensation",
+    text: "A person who rightfully rescinds a contract is entitled to compensation for any damage which he has sustained through the non-fulfilment of the contract.\n\nIllustration\nA, a singer, contracts with B, the manager of a theatre, to sing at his theatre two nights in every week during the next two months, and B engages to pay her 100 rupees for each night's performance. On the sixth night A wilfully absents herself from the theatre, and B, in consequence, rescinds the contract. B is entitled to claim compensation for the damage which he has sustained through the non-fulfilment of the contract.",
+    simpleExplanation: "Closes out breach of contract with a clarifying point: rescinding a contract (as Section 39 allows when the other side refuses to perform) isn't just a walk-away option with no further consequence -- the rightfully rescinding party can still separately claim compensation for the damage the breach caused them, on top of being released from their own future obligations. Rescission and compensation aren't alternatives; they work together." },
 ];
 
 const DEFINITIONS = {
@@ -3134,7 +3165,7 @@ function sectionNumber(id) {
 // Coverage stats derived from CHAPTERS/SECTIONS so the header/footer never need manual updates.
 // Works for any act id — used for BNS today and any future act (SRA, BNSS, ...) added to ACTS.
 function actStats(actId) {
-  const chapters = CHAPTERS.filter((c) => c.act === actId);
+  const chapters = CHAPTERS.filter((c) => c.act === actId && !c.repealed);
   const numericMax = Math.max(0, ...chapters.flatMap((c) => c.range.split(/[–-]/).map(Number)).filter((n) => !isNaN(n)));
   const sections = SECTIONS.filter((s) => chapterOf(s)?.act === actId);
   const liveChapterIds = [...new Set(sections.map((s) => chapterOf(s)?.id))];
@@ -3437,6 +3468,25 @@ export default function BareActNavigator() {
         .cat-range {
           font-weight: 400; color: var(--ink-soft); letter-spacing: 0;
           text-transform: none; font-size: 10.5px;
+        }
+        .chapter-repealed {
+          border-top: 2px dashed var(--line); padding-top: 10px; margin-top: 18px;
+          opacity: 0.7;
+        }
+        .chapter-repealed-heading {
+          display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+          font-family: -apple-system, 'Segoe UI', sans-serif;
+          font-size: 12.5px; font-weight: 800; color: var(--ink-soft);
+        }
+        .repealed-badge {
+          font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+          background: none; border: 1px solid #7c2233; border-radius: 10px;
+          padding: 1px 7px; color: #7c2233;
+        }
+        .chapter-repealed-note {
+          font-family: -apple-system, 'Segoe UI', sans-serif;
+          font-size: 11.5px; color: var(--ink-soft); font-style: italic;
+          margin: 5px 6px 0; line-height: 1.4;
         }
         .sec-btn {
           display: flex; align-items: baseline; gap: 9px; width: 100%;
@@ -3861,12 +3911,13 @@ export default function BareActNavigator() {
 
 function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selectedAct, setSelectedAct }) {
   const chapterGroups = CHAPTERS.filter((ch) => ch.act === selectedAct).map((ch) => {
+    if (ch.repealed) return { ...ch, cats: [] };
     const cats = CATEGORIES.filter((c) => c.chapter === ch.id).map((cat) => ({
       ...cat,
       items: filtered.filter((s) => s.category === cat.id),
     })).filter((c) => c.items.length > 0);
     return { ...ch, cats };
-  }).filter((ch) => ch.cats.length > 0);
+  }).filter((ch) => ch.repealed || ch.cats.length > 0);
 
   return (
     <>
@@ -3893,26 +3944,35 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
         />
       </div>
       {chapterGroups.map((ch) => (
-        <div key={ch.id}>
-          <div className="chapter-heading">{ch.label}</div>
-          {ch.cats.map((cat) => (
-            <div key={cat.id}>
-              <div className="cat-label">{cat.label} <span className="cat-range">§§{cat.range}</span></div>
-              {cat.items.map((s) => (
-                <button
-                  key={s.id}
-                  className={"sec-btn" + (s.id === selectedId ? " active" : "")}
-                  onClick={() => goTo(s.id)}
-                >
-                  <span className="sec-num">{sectionNumber(s.id)}</span>
-                  <span className="sec-title">{s.title}</span>
-                </button>
-              ))}
+        ch.repealed ? (
+          <div key={ch.id} className="chapter-repealed">
+            <div className="chapter-repealed-heading">
+              {ch.label} <span className="repealed-badge">repealed</span>
             </div>
-          ))}
-        </div>
+            {ch.repealedNote && <div className="chapter-repealed-note">{ch.repealedNote}</div>}
+          </div>
+        ) : (
+          <div key={ch.id}>
+            <div className="chapter-heading">{ch.label}</div>
+            {ch.cats.map((cat) => (
+              <div key={cat.id}>
+                <div className="cat-label">{cat.label} <span className="cat-range">§§{cat.range}</span></div>
+                {cat.items.map((s) => (
+                  <button
+                    key={s.id}
+                    className={"sec-btn" + (s.id === selectedId ? " active" : "")}
+                    onClick={() => goTo(s.id)}
+                  >
+                    <span className="sec-num">{sectionNumber(s.id)}</span>
+                    <span className="sec-title">{s.title}</span>
+                  </button>
+                ))}
+              </div>
+            ))}
+          </div>
+        )
       ))}
-      {chapterGroups.length === 0 && <div style={{ padding: 12, fontSize: 13, color: "#4a4038" }}>No sections match.</div>}
+      {chapterGroups.filter((ch) => !ch.repealed).length === 0 && <div style={{ padding: 12, fontSize: 13, color: "#4a4038" }}>No sections match.</div>}
     </>
   );
 }

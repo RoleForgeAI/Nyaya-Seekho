@@ -139,7 +139,7 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
-## Indian Contract Act, 1872 (ICA) — new Act, in progress: 70 of 190 active sections
+## Indian Contract Act, 1872 (ICA) — Part I: General Principles complete (75 of 190 active sections)
 Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
 place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
 never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
@@ -148,15 +148,21 @@ ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Preli
 `"ICA-I"`, `"ICA-II"`, etc. `CHAPTERS` entries are added chapter-by-chapter as batches
 arrive (not all pre-registered upfront the way BSA's 12 chapters were) — so the header's
 "N of M sections" total will keep climbing as later chapters get registered; it does not
-yet reflect the true eventual 190 until every chapter exists in `CHAPTERS`.
+yet reflect the true eventual 190 until every chapter (Part II, §§124–238) exists in
+`CHAPTERS`. **Part I (§§1–75, Preliminary through Chapter VI) is now fully done** — the
+Ss.71–75 batch closed it out; the header/footer now correctly read "75 of 75 sections
+across 7 of 7 chapters" for the Contract Act (see the `actStats()` note below for why the
+repealed-chapter placeholder doesn't distort this).
 
 **Correction from an earlier batch:** Chapter IV's range was first registered as "37–75",
 inferred (wrongly) from the Act-wide note that the active block runs 1–75 before the
 repealed gap. The Ss.46–70 batch's own header revealed Chapter V actually opens at §68,
 meaning Chapter IV really ends at **§67** — fixed in `CHAPTERS` (`ICA-IV` range corrected
 to `"37–67"`) and a new `ICA-V` chapter added for §§68–72. Lesson: an Act-wide "active
-block ends at N" note is not the same claim as "this specific chapter ends at N" — don't
-conflate them again for Chapter VI (Consequences of Breach, §§73–75) once that arrives.
+block ends at N" note is not the same claim as "this specific chapter ends at N" — this
+mattered again for Chapter VI, but this time the Ss.71–75 batch's header stated its range
+explicitly ("chapter 6 -> 'breach-of-contract' (Ss.73-75, complete...)"), so `"73–75"` was
+used directly rather than inferred — no repeat of the earlier mistake.
 
 **Structural quirk specific to this Act — read before writing any future integrity
 check for it:** the original 1872 Act had 266 sections, but §§76–123 (Sale of Goods) and
@@ -175,13 +181,50 @@ true total of currently-existing sections is 266 − 76 = **190**, not 266. Chap
   Which Must Be Performed §§37–39, By Whom Contracts Must Be Performed §§40–45, Time and
   Place for Performance §§46–50, Performance of Reciprocal Promises §§51–58, Appropriation
   of Payments §§59–61, Contracts Which Need Not Be Performed §§62–67)
-- Chapter V — Of Certain Relations Resembling Those Created by Contract (§§68–72) —
-  **partial, §§68–70 of 72** (category `quasi-contract`, registered with its full 68–72
-  range already; §§71–72 are the next batch)
-- Chapter VI — Of the Consequences of Breach of Contract (§§73–75) — not started
-- *(gap: §§76–123 permanently repealed, not part of the active Act)*
-- Indemnity, Guarantee, Bailment, Agency chapters (§§124–238) — not started
+- Chapter V — Of Certain Relations Resembling Those Created by Contract (§§68–72) — **done**
+  (category `quasi-contract`, §§68–72 in full)
+- Chapter VI — Of the Consequences of Breach of Contract (§§73–75) — **done** (new category
+  `breach-of-contract`, §§73–75 in full) — **this completes Part I: General Principles**
+- *(gap: §§76–123 permanently repealed, not part of the active Act — see the repealed-chapter
+  placeholder below)*
+- Part II: Indemnity, Guarantee, Bailment, Agency chapters (§§124–238) — not started, picks
+  up at §124
 - *(gap: §§239–266 permanently repealed, not part of the active Act)*
+
+**New feature: non-clickable "repealed chapter" sidebar placeholder.** Added specifically
+for the §§76–123 gap so a reader browsing the sidebar sees the gap is deliberate, not
+missing content. A `CHAPTERS` entry can now carry `repealed: true` plus a `repealedNote`
+string (see `ICA-VII-repealed`, range `"76–123"`, label "Chapter VII — Of the Sale of
+Goods (§§76–123)"). This is a *chapter-level* flag only — it is never given any
+`CATEGORIES` pointing at it, so it carries zero sections and is invisible to every
+category/section-resolution integrity check. `SidebarContents`'s `chapterGroups` builder
+special-cases `ch.repealed`: it skips the normal categories/items derivation entirely and
+is kept in the list even with empty `cats` (the old filter was `.filter(ch => ch.cats.length
+> 0)`, now `.filter(ch => ch.repealed || ch.cats.length > 0)`). The render loop branches on
+`ch.repealed` to draw a visually distinct, non-interactive block (a plain `<div>`, no
+`<button>`s anywhere inside it — confirmed via Playwright) instead of the normal
+chapter-heading-plus-categories tree: dashed top border, muted "REPEALED" badge
+(`.repealed-badge`, oxblood-outlined text on transparent background — deliberately *not*
+`.soon-badge`'s parchment-filled pill, so a "this chapter is gone forever" placeholder
+never looks like a "this whole Act isn't live yet" placeholder), and an italic note line
+(`.chapter-repealed-note`) rendering `repealedNote`. New CSS classes: `.chapter-repealed`,
+`.chapter-repealed-heading`, `.repealed-badge`, `.chapter-repealed-note`.
+
+**`actStats()` fix required alongside the above.** Before this fix, registering a chapter
+with a wide numeric `range` like `"76–123"` would have inflated `numericMax` (the "of N
+sections" denominator) and made the placeholder show up in `remainingChapters` (the
+"Remaining: Chapters …" footer text) as if it were genuine pending content — exactly the
+opposite of the intended "this is settled, not missing" signal. Fixed by excluding
+`repealed` chapters at the very first line of `actStats()`: `CHAPTERS.filter(c => c.act
+=== actId && !c.repealed)`. Every downstream computation (`numericMax`, `chapters.length`,
+`remainingChapters`) flows from that one filtered array, so the repealed chapter is now
+invisible to all progress-tracking math while still being rendered by `SidebarContents`
+(which reads `CHAPTERS` directly, not `actStats()`). Verified via Playwright: header now
+reads "75 of 75 Contract Act sections" and "7 of 7 chapters", with no "Remaining:
+Chapters…" text. If a second repealed-chapter placeholder is ever added (e.g. for the
+§§239–266 Partnership Act gap once Part II is built out), it should follow the exact same
+`repealed: true` / `repealedNote` pattern — no code changes needed, `actStats()` and
+`SidebarContents` already generalize to any number of them.
 
 The category id `"preliminary"` was already taken by BSA's own Chapter I category, so
 ICA's equivalent is `"ica-preliminary"` — check for id collisions against every other
@@ -190,9 +233,9 @@ duplicate id means `CATEGORIES.find(c => c.id === section.category)` resolves to
 one appears first in the array, misassigning the second act's sections to the first act's
 chapter.
 
-**Landmark cases (8 sections, 10 case objects — cases have been added in separate passes
+**Landmark cases (9 sections, 11 case objects — cases have been added in separate passes
 onto sections already live, not always in the same batch as the section text itself):**
-§§2, 8 (2 cases), 11, 23, 25, 56 (2 cases), 65, 70. Unlike BSA, this Act has never been
+§§2, 8 (2 cases), 11, 23, 25, 56 (2 cases), 65, 70, 74. Unlike BSA, this Act has never been
 replaced, so its cases don't use `decidedUnder`/`continuityNote` — they're simply current
 good law. One case is a deliberate exception to "Indian cases only": *Carlill v. Carbolic
 Smoke Ball Co.* [1893] 1 QB 256 (England, cited under §8 alongside the Indian *Lalman
@@ -205,9 +248,11 @@ patterns — "pre-BSA inference" vs. "foreign persuasive authority" — are neve
 confused). §56 (the frustration doctrine, India's Section 56 vs. imported English common
 law) carries two cases together — *Satyabrata Ghose v. Mugneeram Bangur & Co.* (1954, the
 foundational case) and *Energy Watchdog v. CERC* (2017, the modern case narrowing its
-scope) — read together they tell the doctrine's full arc, not a duplicate citation. One
-more case is already lined up for the next batch: *Fateh Chand v. Balkishan Dass*
-(penalty/liquidated damages, §74).
+scope) — read together they tell the doctrine's full arc, not a duplicate citation. The
+final case of Part I is *Fateh Chand v. Balkishan Dass*, AIR 1963 SC 1405 (§74, penalty
+vs. liquidated damages — the Supreme Court held §74 caps a forfeiture clause at reasonable
+compensation regardless of how the contract labels the stipulated sum), a plain current
+good-law case with no `decidedUnder`/`continuityNote`/`jurisdiction`/`persuasiveNote` fields.
 
 Sourced from the official India Code PDF (indiacode.nic.in), Act No. 9 of 1872, Ministry
 of Law & Justice consolidated text.
