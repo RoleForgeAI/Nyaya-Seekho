@@ -139,6 +139,46 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
+## Indian Contract Act, 1872 (ICA) — new Act, in progress: 30 of 190 active sections
+Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
+place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
+never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
+`"ICA-<n>"` string-prefixed section ids (`SECTION_MAP` is keyed globally, so plain numeric
+ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Prelim"`,
+`"ICA-I"`, `"ICA-II"`, etc.
+
+**Structural quirk specific to this Act — read before writing any future integrity
+check for it:** the original 1872 Act had 266 sections, but §§76–123 (Sale of Goods) and
+§§239–266 (Partnership) were later repealed out into their own Acts (the Sale of Goods
+Act, 1930 and the Indian Partnership Act, 1932). Those 76 section numbers are gone
+**permanently** — they are not missing data to chase down, and a "no gaps" integrity
+check must explicitly exclude both ranges rather than flag them. The active Act is
+1–75, then 124–238, then 267 onward doesn't exist either (Act ends at 266) — so the
+true total of currently-existing sections is 266 − 76 = **190**, not 266. Chapters so far:
+- Preliminary (§§1–2) — **done**
+- Chapter I — Of the Communication, Acceptance and Revocation of Proposals (§§3–9) — **done**
+- Chapter II — Of Contracts, Voidable Contracts and Void Agreements (§§10–30) — **done**
+  (2 categories: Contract Validity, Capacity & Free Consent §§10–22; Void Agreements §§23–30)
+- Chapter III — Contingent Contracts (§§31–36) — not started
+- Chapter IV — Performance of Contracts (§§37–75) — not started
+- *(gap: §§76–123 permanently repealed, not part of the active Act)*
+- Indemnity, Guarantee, Bailment, Agency chapters (§§124–238) — not started
+- *(gap: §§239–266 permanently repealed, not part of the active Act)*
+
+The category id `"preliminary"` was already taken by BSA's own Chapter I category, so
+ICA's equivalent is `"ica-preliminary"` — check for id collisions against every other
+act's `CATEGORIES` before reusing a short/generic category slug for a new Act; a silent
+duplicate id means `CATEGORIES.find(c => c.id === section.category)` resolves to whichever
+one appears first in the array, misassigning the second act's sections to the first act's
+chapter.
+
+No landmark cases in this batch. Two are already lined up for the next batch (§§51–75):
+*Satyabrata Ghose v. Mugneeram Bangur & Co.* (frustration, §56) and *Fateh Chand v.
+Balkishan Dass* (penalty/liquidated damages, §74).
+
+Sourced from the official India Code PDF (indiacode.nic.in), Act No. 9 of 1872, Ministry
+of Law & Justice consolidated text.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
