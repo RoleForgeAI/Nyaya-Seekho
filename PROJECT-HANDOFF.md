@@ -139,7 +139,7 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
-## Indian Contract Act, 1872 (ICA) — Part I: General Principles complete (75 of 190 active sections)
+## Indian Contract Act, 1872 (ICA) — Part I complete + Part II Chapter VIII complete (99 of 190 active sections)
 Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
 place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
 never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
@@ -148,11 +148,14 @@ ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Preli
 `"ICA-I"`, `"ICA-II"`, etc. `CHAPTERS` entries are added chapter-by-chapter as batches
 arrive (not all pre-registered upfront the way BSA's 12 chapters were) — so the header's
 "N of M sections" total will keep climbing as later chapters get registered; it does not
-yet reflect the true eventual 190 until every chapter (Part II, §§124–238) exists in
-`CHAPTERS`. **Part I (§§1–75, Preliminary through Chapter VI) is now fully done** — the
-Ss.71–75 batch closed it out; the header/footer now correctly read "75 of 75 sections
-across 7 of 7 chapters" for the Contract Act (see the `actStats()` note below for why the
-repealed-chapter placeholder doesn't distort this).
+yet reflect the true eventual 190 until the rest of Part II (§§148–238) exists in
+`CHAPTERS`. **Part I (§§1–75, Preliminary through Chapter VI) is fully done**, and **Part
+II now has its first chapter done too: Chapter VIII — Of Indemnity and Guarantee
+(§§124–147)**, merged across two source files (Ss.124–135, then Ss.136–147) delivered
+separately but treated as one batch. The header/footer now correctly read "99 of 99
+sections across 8 of 8 chapters" for the Contract Act (see the `actStats()` notes below —
+there are now *two* fixes stacked on that function, one from the Part I batch and one from
+this batch, both needed for the number to stay honest once a chapter starts after a gap).
 
 **Correction from an earlier batch:** Chapter IV's range was first registered as "37–75",
 inferred (wrongly) from the Act-wide note that the active block runs 1–75 before the
@@ -187,8 +190,15 @@ true total of currently-existing sections is 266 − 76 = **190**, not 266. Chap
   `breach-of-contract`, §§73–75 in full) — **this completes Part I: General Principles**
 - *(gap: §§76–123 permanently repealed, not part of the active Act — see the repealed-chapter
   placeholder below)*
-- Part II: Indemnity, Guarantee, Bailment, Agency chapters (§§124–238) — not started, picks
-  up at §124
+- **Part II: Special Contracts begins here.** Chapter VIII — Of Indemnity and Guarantee
+  (§§124–147) — **done** (6 categories: Indemnity §§124–125, Guarantee — General
+  Provisions §§126–132, Discharge of Surety §§133–139, Rights of Surety §§140–141,
+  Invalid Guarantees §§142–144, Co-Sureties §§145–147). No case law yet in this chapter —
+  flagged as a future enrichment candidate, e.g. §140's right-of-subrogation doctrine has
+  real Supreme Court authority behind it. Chapter id `"ICA-VIII"`, matching the official
+  "CHAPTER VIII" numbering (chapter 7 was intentionally left for the repealed placeholder,
+  not registered as a real content chapter).
+- Bailment, Agency chapters (§§148–238) — not started, picks up at §148 (Chapter IX)
 - *(gap: §§239–266 permanently repealed, not part of the active Act)*
 
 **New feature: non-clickable "repealed chapter" sidebar placeholder.** Added specifically
@@ -210,21 +220,30 @@ never looks like a "this whole Act isn't live yet" placeholder), and an italic n
 (`.chapter-repealed-note`) rendering `repealedNote`. New CSS classes: `.chapter-repealed`,
 `.chapter-repealed-heading`, `.repealed-badge`, `.chapter-repealed-note`.
 
-**`actStats()` fix required alongside the above.** Before this fix, registering a chapter
-with a wide numeric `range` like `"76–123"` would have inflated `numericMax` (the "of N
-sections" denominator) and made the placeholder show up in `remainingChapters` (the
-"Remaining: Chapters …" footer text) as if it were genuine pending content — exactly the
-opposite of the intended "this is settled, not missing" signal. Fixed by excluding
-`repealed` chapters at the very first line of `actStats()`: `CHAPTERS.filter(c => c.act
-=== actId && !c.repealed)`. Every downstream computation (`numericMax`, `chapters.length`,
-`remainingChapters`) flows from that one filtered array, so the repealed chapter is now
-invisible to all progress-tracking math while still being rendered by `SidebarContents`
-(which reads `CHAPTERS` directly, not `actStats()`). Verified via Playwright: header now
-reads "75 of 75 Contract Act sections" and "7 of 7 chapters", with no "Remaining:
-Chapters…" text. If a second repealed-chapter placeholder is ever added (e.g. for the
-§§239–266 Partnership Act gap once Part II is built out), it should follow the exact same
-`repealed: true` / `repealedNote` pattern — no code changes needed, `actStats()` and
-`SidebarContents` already generalize to any number of them.
+**`actStats()` — two fixes stacked here, both required for an Act with a permanent gap
+in its numbering.** (1) Registering a chapter with a wide numeric `range` like `"76–123"`
+would inflate the "of N sections" denominator and make the placeholder show up in
+`remainingChapters` (the "Remaining: Chapters …" footer text) as if it were genuine
+pending content — exactly the opposite of the intended "this is settled, not missing"
+signal. Fixed by excluding `repealed` chapters at the very first line of `actStats()`:
+`CHAPTERS.filter(c => c.act === actId && !c.repealed)`. (2) That fix alone wasn't enough
+once a *real* chapter started on the far side of the gap: the old denominator logic took
+the single highest number across every live chapter's `range` (`numericMax`), which
+worked fine when chapters were contiguous 1..N, but once Chapter VIII's own range
+(`"124–147"`) sits well past the excluded 76–123 gap, that same "highest number seen"
+approach silently re-introduced the gap into the total — it read "99 of 147" instead of
+"99 of 99", implying ~48 sections were missing between Part I and Part II when in fact
+every currently-registered chapter is fully live. Fixed by replacing the raw max with a
+**sum of each live chapter's own span** (`Math.max(...nums) - Math.min(...nums) + 1`,
+summed across chapters) — this is mathematically identical to the old max-based approach
+for any Act whose chapters are contiguous with no gaps (BNS, SRA, BSA, and ICA's own Part
+I), and only diverges — correctly — once a repealed chapter creates a real gap between two
+live chapters. Verified via Playwright across all four Acts: BNS still reads "358 of 358",
+SRA "46 of 46", BSA "170 of 170" (all unchanged), and ICA now correctly reads "99 of 99
+Contract Act sections" / "8 of 8 chapters", with no "Remaining: Chapters…" text. If a
+second repealed-chapter placeholder is added (e.g. for the §§239–266 Partnership Act gap
+once the rest of Part II is built out), no further code changes are needed — both fixes
+already generalize to any number of gaps.
 
 The category id `"preliminary"` was already taken by BSA's own Chapter I category, so
 ICA's equivalent is `"ica-preliminary"` — check for id collisions against every other
