@@ -139,26 +139,35 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
-## Indian Contract Act, 1872 (ICA) — Part I complete + Part II Chapters VIII–IX complete (134 of 190 active sections)
+## Indian Contract Act, 1872 (ICA) — COMPLETE: all 190 of 190 active sections, 10 chapters
 Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
 place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
 never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
 `"ICA-<n>"` string-prefixed section ids (`SECTION_MAP` is keyed globally, so plain numeric
 ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Prelim"`,
-`"ICA-I"`, `"ICA-II"`, etc. `CHAPTERS` entries are added chapter-by-chapter as batches
-arrive (not all pre-registered upfront the way BSA's 12 chapters were) — so the header's
-"N of M sections" total will keep climbing as later chapters get registered; it does not
-yet reflect the true eventual 190 until the rest of Part II (§§182–238) exists in
-`CHAPTERS`. **Part I (§§1–75, Preliminary through Chapter VI) is fully done**, and **Part
-II now has two chapters done: Chapter VIII — Of Indemnity and Guarantee (§§124–147)**,
-merged across two source files (Ss.124–135, then Ss.136–147) delivered separately but
-treated as one batch, and **Chapter IX — Of Bailment (§§148–181, including §178A)**, also
-merged across two source files (Ss.148–165, then Ss.166–181). The header/footer now
-correctly read "134 of 134 sections across 9 of 9 chapters" for the Contract Act (see the
-`actStats()` notes below — there are now *two* fixes stacked on that function, one from
-the Part I batch and one from the Chapter VIII batch, both needed for the number to stay
-honest once a chapter starts after a gap; Chapter IX didn't need a third fix, since its own
-span-sum contribution is contiguous within itself).
+`"ICA-I"`, `"ICA-II"`, etc. **The Act is now fully done end to end**: Part I (§§1–75,
+Preliminary through Chapter VI), Chapter VIII — Indemnity and Guarantee (§§124–147),
+Chapter IX — Bailment (§§148–181, incl. §178A), and Chapter X — Agency (§§182–238, the
+final chapter, merged across three source files delivered separately: Ss.182–200,
+Ss.201–221, Ss.222–238). The header/footer now correctly read "191 of 191 sections across
+10 of 10 chapters" for the Contract Act — the "191" (not the nominal 190) is honest, not a
+bug: `actStats()` takes `Math.max(registeredSectionCount, liveSectionCount)`, and §178A is
+one genuine section beyond the base 1–75/124–238 numbering, so the live count legitimately
+exceeds the span-sum by exactly one. `CONTENT_LAST_VERIFIED` states the headline figure as
+"190 of 190 active sections (§§1–75 and §§124–238)" to match the Act's own official
+numbering (the same framing the source files themselves used), with §178A documented
+separately as the noted exception rather than folded into a "191" headline that would need
+its own explanation every time someone reads it.
+
+**Two permanent gaps, two matching repealed-chapter placeholders.** §§76–123 (Sale of
+Goods, moved to the Sale of Goods Act, 1930) already had `ICA-VII-repealed`; this batch
+added the second and final one, `ICA-XI-repealed`, for §§239–266 (Partnership, moved to
+the Indian Partnership Act, 1932) — same `repealed: true` / `repealedNote` pattern, same
+CSS classes, no code changes needed (this is exactly the generalization the original
+Part I batch's `PROJECT-HANDOFF.md` note anticipated). It renders correctly positioned
+right after §238 in the sidebar — verified via Playwright, both placeholders show side by
+side in order (`ICA-VII-repealed` after Chapter VI, `ICA-XI-repealed` after Chapter X) with
+distinct, correct label/note text for each.
 
 **Correction from an earlier batch:** Chapter IV's range was first registered as "37–75",
 inferred (wrongly) from the Act-wide note that the active block runs 1–75 before the
@@ -211,8 +220,27 @@ true total of currently-existing sections is 266 − 76 = **190**, not 266. Chap
   property recovered by police, are never held under a bailment). §171 (general lien) and
   §178/§178A (pledge by mercantile agent / voidable-contract possessor) are flagged as
   future case-law enrichment candidates.
-- Agency chapter (§§182–238) — not started, picks up at §182 (Chapter X)
-- *(gap: §§239–266 permanently repealed, not part of the active Act)*
+- Chapter X — Of Agency (§§182–238) — **done, the Act's final chapter** (7 categories,
+  matching the Act's own official sub-headings: Appointment and Authority of Agents
+  §§182–189, Sub-Agents §§190–195, Ratification §§196–200, Revocation of Authority
+  §§201–210, Agent's Duty to Principal §§211–221, Principal's Duty to Agent §§222–225,
+  Effect of Agency on Contracts with Third Persons §§226–238). Chapter id `"ICA-X"`, range
+  `"182–238"`, merged from three source files (Ss.182–200, Ss.201–221, Ss.222–238)
+  delivered separately but treated as one batch — 57 sections in total, the largest single
+  ICA merge so far. No case law in this batch; §196 (ratification), §215/§216 (agent
+  dealing on own account), and §237 (ostensible/apparent authority — one of the most
+  significant doctrines in all of agency law) are flagged as strong future enrichment
+  candidates, all with substantial real Indian case law available.
+- *(gap: §§239–266 permanently repealed — Chapter XI, Of Partnership, moved to the Indian
+  Partnership Act, 1932 — see the second repealed-chapter placeholder, `ICA-XI-repealed`,
+  above)*
+
+**This completes the Indian Contract Act, 1872, end to end** — every currently-active
+section (1–75 and 124–238, plus §178A) is merged and verified, both repealed gaps have
+matching sidebar placeholders, and the header reads a clean "191 of 191 sections across
+10 of 10 chapters" with no `remainingChapters` text. Any future ICA work would be pure
+enrichment (case law, illustrations-splitting parity with other Acts) rather than new
+section content.
 
 **§178A — the Act's first lettered-suffix section id.** Section 178A was a genuine later
 insertion into the 1872 Act (added by Act 4 of 1930, alongside an amendment to §178) — it
