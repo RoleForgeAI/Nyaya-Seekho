@@ -252,26 +252,44 @@ duplicate id means `CATEGORIES.find(c => c.id === section.category)` resolves to
 one appears first in the array, misassigning the second act's sections to the first act's
 chapter.
 
-**Landmark cases (9 sections, 11 case objects — cases have been added in separate passes
+**Landmark cases (14 sections, 18 case objects — cases have been added in separate passes
 onto sections already live, not always in the same batch as the section text itself):**
-§§2, 8 (2 cases), 11, 23, 25, 56 (2 cases), 65, 70, 74. Unlike BSA, this Act has never been
-replaced, so its cases don't use `decidedUnder`/`continuityNote` — they're simply current
-good law. One case is a deliberate exception to "Indian cases only": *Carlill v. Carbolic
-Smoke Ball Co.* [1893] 1 QB 256 (England, cited under §8 alongside the Indian *Lalman
-Shukla*) is foreign, non-binding persuasive authority, flagged with two different fields —
-`jurisdiction` and `persuasiveNote` — rendered as a visually distinct blue-accented
-"Persuasive authority only — {jurisdiction} (not binding in India)" line with the
-`persuasiveNote` behind a "why it's cited here" `<details>` toggle (`.case-jurisdiction`
-in the CSS, deliberately styled differently from `.case-continuity`'s oxblood so the two
-patterns — "pre-BSA inference" vs. "foreign persuasive authority" — are never visually
-confused). §56 (the frustration doctrine, India's Section 56 vs. imported English common
-law) carries two cases together — *Satyabrata Ghose v. Mugneeram Bangur & Co.* (1954, the
-foundational case) and *Energy Watchdog v. CERC* (2017, the modern case narrowing its
-scope) — read together they tell the doctrine's full arc, not a duplicate citation. The
-final case of Part I is *Fateh Chand v. Balkishan Dass*, AIR 1963 SC 1405 (§74, penalty
-vs. liquidated damages — the Supreme Court held §74 caps a forfeiture clause at reasonable
-compensation regardless of how the contract labels the stipulated sum), a plain current
-good-law case with no `decidedUnder`/`continuityNote`/`jurisdiction`/`persuasiveNote` fields.
+§§2, 4, 8 (2 cases), 11, 23, 25, 27 (2 cases), 28, 56 (2 cases), 65, 70, 74 (2 cases), 125,
+141. Unlike BSA, this Act has never been replaced, so its cases don't use
+`decidedUnder`/`continuityNote` — they're simply current good law. One case is a
+deliberate exception to "Indian cases only": *Carlill v. Carbolic Smoke Ball Co.* [1893] 1
+QB 256 (England, cited under §8 alongside the Indian *Lalman Shukla*) is foreign,
+non-binding persuasive authority, flagged with two different fields — `jurisdiction` and
+`persuasiveNote` — rendered as a visually distinct blue-accented "Persuasive authority
+only — {jurisdiction} (not binding in India)" line with the `persuasiveNote` behind a
+"why it's cited here" `<details>` toggle (`.case-jurisdiction` in the CSS, deliberately
+styled differently from `.case-continuity`'s oxblood so the two patterns — "pre-BSA
+inference" vs. "foreign persuasive authority" — are never visually confused). §56 (the
+frustration doctrine, India's Section 56 vs. imported English common law) carries two
+cases together — *Satyabrata Ghose v. Mugneeram Bangur & Co.* (1954, the foundational
+case) and *Energy Watchdog v. CERC* (2017, the modern case narrowing its scope) — read
+together they tell the doctrine's full arc, not a duplicate citation. §27 (restraint of
+trade) similarly carries two cases together — *Madhub Chunder v. Rajcoomar Doss* (1874,
+the foundational case establishing partial restraints are void too, not just total ones)
+and *Gujarat Bottling Co. v. Coca Cola Co.* (1995, the companion principle that a
+restraint operating only within the life of a subsisting contract isn't a "restraint of
+trade" at all). §74 (penalty vs. liquidated damages) carries *Fateh Chand v. Balkishan
+Dass* (1963, the foundational case abolishing the English penalty/liquidated-damages
+distinction) plus, added in a later case-law-only update, *ONGC Ltd. v. Saw Pipes Ltd.*
+(2003, refining Fateh Chand: where the named sum is a genuine pre-estimate of loss, the
+claimant need not separately prove actual loss). A case-law-only update batch (no section
+text or illustrations touched, `cases` fields added or appended only) also added §4
+(*Bhagwandas Kedia v. Girdharilal Parshottamdas*, 1966, instantaneous-communication
+contracts form where/when the acceptance is heard, not the postal rule), §28
+(*Hakam Singh v. Gammon (India) Ltd.*, 1971, exclusive-jurisdiction clauses among
+courts that already have jurisdiction are enforceable), §125 (*Gajanan Moreshwar Parelkar
+v. Moreshwar Madan Mantri*, 1942, an indemnity-holder can compel the indemnifier to make
+good an absolute liability even before personally paying), and §141 (*Amrit Lal Goverdhan
+Lalan v. State Bank of Travancore*, 1968, a surety is discharged even where the creditor's
+loss of security was merely negligent, not deliberate). When appending a case to a
+section that already has one (as with §74's ONGC addition), splice into the existing
+`cases` array as an additional object rather than replacing it — verified via a full-diff
+check that Fateh Chand's entry was untouched.
 
 Sourced from the official India Code PDF (indiacode.nic.in), Act No. 9 of 1872, Ministry
 of Law & Justice consolidated text.
