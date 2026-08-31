@@ -139,7 +139,7 @@ SRA's 8 landmark cases (across §§10, 14, 16, 37, 42) were already stored as pr
 `{ name, cite, year, ratio, url }` objects on `cases`, never merged into `section.text` —
 confirmed, no changes needed there.
 
-## Indian Contract Act, 1872 (ICA) — Part I complete + Part II Chapter VIII complete (99 of 190 active sections)
+## Indian Contract Act, 1872 (ICA) — Part I complete + Part II Chapters VIII–IX complete (134 of 190 active sections)
 Act code `"ICA"` in `ACTS` — this replaces the old `"CONTRACT"` placeholder id (renamed in
 place, `status` flipped `"soon"` → `"active"`; there's only ever one Contract Act entry,
 never both ids). Chapters/categories/sections all follow the same conventions as SRA/BSA:
@@ -148,14 +148,17 @@ ids would collide with BNS/BSA's own 1–190), chapter ids scoped as `"ICA-Preli
 `"ICA-I"`, `"ICA-II"`, etc. `CHAPTERS` entries are added chapter-by-chapter as batches
 arrive (not all pre-registered upfront the way BSA's 12 chapters were) — so the header's
 "N of M sections" total will keep climbing as later chapters get registered; it does not
-yet reflect the true eventual 190 until the rest of Part II (§§148–238) exists in
+yet reflect the true eventual 190 until the rest of Part II (§§182–238) exists in
 `CHAPTERS`. **Part I (§§1–75, Preliminary through Chapter VI) is fully done**, and **Part
-II now has its first chapter done too: Chapter VIII — Of Indemnity and Guarantee
-(§§124–147)**, merged across two source files (Ss.124–135, then Ss.136–147) delivered
-separately but treated as one batch. The header/footer now correctly read "99 of 99
-sections across 8 of 8 chapters" for the Contract Act (see the `actStats()` notes below —
-there are now *two* fixes stacked on that function, one from the Part I batch and one from
-this batch, both needed for the number to stay honest once a chapter starts after a gap).
+II now has two chapters done: Chapter VIII — Of Indemnity and Guarantee (§§124–147)**,
+merged across two source files (Ss.124–135, then Ss.136–147) delivered separately but
+treated as one batch, and **Chapter IX — Of Bailment (§§148–181, including §178A)**, also
+merged across two source files (Ss.148–165, then Ss.166–181). The header/footer now
+correctly read "134 of 134 sections across 9 of 9 chapters" for the Contract Act (see the
+`actStats()` notes below — there are now *two* fixes stacked on that function, one from
+the Part I batch and one from the Chapter VIII batch, both needed for the number to stay
+honest once a chapter starts after a gap; Chapter IX didn't need a third fix, since its own
+span-sum contribution is contiguous within itself).
 
 **Correction from an earlier batch:** Chapter IV's range was first registered as "37–75",
 inferred (wrongly) from the Act-wide note that the active block runs 1–75 before the
@@ -193,13 +196,39 @@ true total of currently-existing sections is 266 − 76 = **190**, not 266. Chap
 - **Part II: Special Contracts begins here.** Chapter VIII — Of Indemnity and Guarantee
   (§§124–147) — **done** (6 categories: Indemnity §§124–125, Guarantee — General
   Provisions §§126–132, Discharge of Surety §§133–139, Rights of Surety §§140–141,
-  Invalid Guarantees §§142–144, Co-Sureties §§145–147). No case law yet in this chapter —
-  flagged as a future enrichment candidate, e.g. §140's right-of-subrogation doctrine has
-  real Supreme Court authority behind it. Chapter id `"ICA-VIII"`, matching the official
-  "CHAPTER VIII" numbering (chapter 7 was intentionally left for the repealed placeholder,
-  not registered as a real content chapter).
-- Bailment, Agency chapters (§§148–238) — not started, picks up at §148 (Chapter IX)
+  Invalid Guarantees §§142–144, Co-Sureties §§145–147). Chapter id `"ICA-VIII"`, matching
+  the official "CHAPTER VIII" numbering (chapter 7 was intentionally left for the repealed
+  placeholder, not registered as a real content chapter). Case law: a later case-law-only
+  update added cases to §125 (indemnity) and §141 (surety-rights) — §140's
+  right-of-subrogation doctrine still has no case attached and remains a good future
+  enrichment candidate.
+- Chapter IX — Of Bailment (§§148–181, including §178A) — **done** (5 categories: Bailment
+  — General Provisions §§148–167, Finder of Goods §§168–169, Bailee's Lien §§170–171,
+  Bailments of Pledges §§172–179, Suits by Bailees or Bailors Against Wrong-Doers
+  §§180–181). Chapter id `"ICA-IX"`, range `"148–181"`. §148 carries verified case law
+  (*Ram Gulam v. Government of Uttar Pradesh*, AIR 1950 All 206 — bailment requires an
+  actual contract; goods that come into someone's possession without one, e.g. stolen
+  property recovered by police, are never held under a bailment). §171 (general lien) and
+  §178/§178A (pledge by mercantile agent / voidable-contract possessor) are flagged as
+  future case-law enrichment candidates.
+- Agency chapter (§§182–238) — not started, picks up at §182 (Chapter X)
 - *(gap: §§239–266 permanently repealed, not part of the active Act)*
+
+**§178A — the Act's first lettered-suffix section id.** Section 178A was a genuine later
+insertion into the 1872 Act (added by Act 4 of 1930, alongside an amendment to §178) — it
+sits between §178 and §179 in the official Act, not a numbering error to "fix." Stored as
+the quoted string id `"ICA-178A"` (i.e. `id: "178A"` in the source batch, prefixed the
+usual way), sorted correctly between `ICA-178` and `ICA-179` purely by its position in the
+`SECTIONS` array — nothing in the app relies on numeric ordering of ids, so no special
+sort logic was needed. Worth noting for the record: BNS doesn't actually have its own
+precedent for a lettered-suffix *section id* — its `ipc` field (e.g. `"108A"`, `"376A"`)
+stores the old IPC cross-reference number, which does carry letter suffixes, but BNS's own
+section numbering is a plain, unbroken 1–358 with no lettered ids of its own. §178A is the
+first time any Act in this app has actually needed a lettered-suffix *id*, and the existing
+string-id convention (every id is already a string like `"ICA-141"`) handled it with zero
+code changes — the gap-aware integrity check just needed to separate numeric ids from
+lettered ones when doing its "no missing numbers" scan, rather than assume every id parses
+as an integer.
 
 **New feature: non-clickable "repealed chapter" sidebar placeholder.** Added specifically
 for the §§76–123 gap so a reader browsing the sidebar sees the gap is deliberate, not
@@ -252,10 +281,10 @@ duplicate id means `CATEGORIES.find(c => c.id === section.category)` resolves to
 one appears first in the array, misassigning the second act's sections to the first act's
 chapter.
 
-**Landmark cases (14 sections, 18 case objects — cases have been added in separate passes
+**Landmark cases (15 sections, 19 case objects — cases have been added in separate passes
 onto sections already live, not always in the same batch as the section text itself):**
 §§2, 4, 8 (2 cases), 11, 23, 25, 27 (2 cases), 28, 56 (2 cases), 65, 70, 74 (2 cases), 125,
-141. Unlike BSA, this Act has never been replaced, so its cases don't use
+141, 148. Unlike BSA, this Act has never been replaced, so its cases don't use
 `decidedUnder`/`continuityNote` — they're simply current good law. One case is a
 deliberate exception to "Indian cases only": *Carlill v. Carbolic Smoke Ball Co.* [1893] 1
 QB 256 (England, cited under §8 alongside the Indian *Lalman Shukla*) is foreign,
@@ -289,7 +318,10 @@ Lalan v. State Bank of Travancore*, 1968, a surety is discharged even where the 
 loss of security was merely negligent, not deliberate). When appending a case to a
 section that already has one (as with §74's ONGC addition), splice into the existing
 `cases` array as an additional object rather than replacing it — verified via a full-diff
-check that Fateh Chand's entry was untouched.
+check that Fateh Chand's entry was untouched. The Chapter IX (Bailment) batch added §148
+(*Ram Gulam v. Government of Uttar Pradesh*, 1949/AIR 1950 All 206 — bailment is a
+contractual obligation and cannot arise independently of a contract, so goods that come
+into someone's possession without one are never held under a bailment).
 
 Sourced from the official India Code PDF (indiacode.nic.in), Act No. 9 of 1872, Ministry
 of Law & Justice consolidated text.
