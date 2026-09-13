@@ -409,14 +409,23 @@ button is also `.active` so selecting it still shows the normal highlighted stat
 the chapter-level placeholders, §73 stays a real, clickable section (it has genuine,
 if brief, informative content explaining why it's empty), not a non-interactive block.
 
-**No case law yet.** The source file's own header flags several promising citations
-visible in the official PDF's margin notes (§4 — Deoha F. Guzdar v. CIT; §9 — Sita Ram v.
-Radha Rai; §13 — Mandyala Govindu v. CIT; §15 — Addanki Narayanappa v. Bhaskara Krishnappa;
-§55 — Khusal Khemgal Shah v. Khurshed Banu; §59/§68 — CIT A.P. v. Jaya Laxmi Rice Mills) —
-but none of these have been independently verified across multiple sources yet (the
-source PDF has visible OCR artifacts elsewhere), so none were added in this initial
-build. This is a clearly flagged candidate for a dedicated case-law enrichment pass,
-following the exact same verify-before-adding discipline already used for BNS/BSA/ICA.
+**Landmark cases (5 sections, 6 case objects) added in a later case-law-only update.**
+The Act had zero verified cases at first merge; a subsequent batch (no section text or
+illustrations touched) added: §4 — two cases together, *K.D. Kamath & Co. v. CIT* (1971,
+mutual agency survives even where one partner holds overriding day-to-day managerial
+control, so long as that control is exercised for the collective benefit) and *Dulichand
+Laxminarayan v. CIT* (1956, a firm has no separate legal personality from its partners,
+so a firm cannot itself become a partner in another firm); §6 — *Champaran Cane Concern
+v. State of Bihar* (1964, draws the line between partnership and mere co-ownership with
+shared profits); §30 — *CIT v. Dwarkadas Khetan & Co.* (1960, a minor can only be
+admitted to the benefits of partnership, never made a full contracting partner); §48 —
+*Addanki Narayanappa v. Bhaskara Krishtappa* (1966, a partner's interest in firm property
+is itself movable property, regardless of the firm's underlying assets); §69 — *Haldiram
+Bhujiawala v. Anand Kumar Deepak Kumar* (2000, Section 69(2)'s bar only reaches rights
+arising from a contract the unregistered firm itself entered into — not a separate tort
+or statutory claim like trademark passing-off). Some of the source file's earlier-flagged
+margin-note citations (e.g. Sita Ram v. Radha Rai, Mandyala Govindu v. CIT) were not part
+of this particular verified batch and remain open candidates for further enrichment.
 
 Sourced from the official India Code PDF (indiacode.nic.in/bitstream/123456789/12849/1/
 the_indian_partnership_act_1932.pdf), cross-checked against the Act's official table of
@@ -486,11 +495,27 @@ used one:
    Preview · SRA", and clicking "Open full section →" correctly lands on SRA §10 with the
    Library sidebar now showing SRA's own chapters and highlighting the SRA button.
 
-**No case law yet.** Flagged candidates from the source's own header: §16 (implied
-condition of merchantable quality / fitness for purpose), §27 (mercantile agent exception
-to nemo dat), and §64 (auction sales, particularly the "pretended bidding" rule) — all
-well-litigated provisions with real Supreme Court authority, none added yet pending
-independent verification.
+**Landmark cases (3 sections, 3 case objects) added in a later case-law-only update,
+including the app's second use of the foreign-persuasive-authority pattern.** §14
+(implied undertaking as to title) got *Rowland v. Divall* [1923] 2 KB 500 — English Court
+of Appeal, a seller with no title breaches the implied title condition and the buyer can
+recover the entire price with no deduction for use, given as total failure of
+consideration. §16 (implied conditions as to quality/fitness) got *Grant v. Australian
+Knitting Mills* [1936] AC 85 — a Privy Council decision (on appeal from Australia) on
+what "merchantable quality" means, still treated as leading Indian authority since the
+Privy Council was India's own final court of appeal until 1949–50. Both carry
+`jurisdiction` and `persuasiveNote` fields — the exact same pattern first built for
+*Carlill v. Carbolic Smoke Ball* in the Contract Act's case law — rendered via the
+existing `.case-jurisdiction` block (a distinct "Persuasive authority only — {jurisdiction}
+(not binding in India)" line with the `persuasiveNote` behind a collapsible "why it's
+cited here" `<details>`) with no code changes needed; verified via Playwright that both
+render the jurisdiction block and that §30's case (below) correctly does not. §30 (seller
+or buyer in possession after sale) got *Central National Bank Ltd. v. United Industrial
+Bank Ltd.*, AIR 1954 SC 181 — a genuine Indian Supreme Court case, no jurisdiction/
+persuasiveNote fields, confirming Section 30(2)'s good-faith-transferee protection
+requires possession genuinely obtained "with the consent" of the seller, not merely
+physical opportunity to take it. §27 (mercantile agent exception) and §64 (auction sales)
+remain open candidates for further case-law enrichment.
 
 Sourced from two independently cross-checked sources: the Uttar Pradesh Commercial Tax
 Department's official PDF (comtax.up.nic.in) and advocatekhoj.com's bare-act pages.
@@ -567,12 +592,28 @@ SGA's §65: a spent provision (repealed by the Repealing and Amending Act, 1891)
 via the same `.section-repealed-note` / `.repealed-badge` / `sec-btn-repealed` styling
 built for those two, again with zero new code needed.
 
-**No case law yet.** The source flags §9 (holder in due course — arguably the single most
-important concept in the whole Act), §118's presumptions, and above all §138 (cheque
-dishonour, by a wide margin the most litigated section in the Act, given extensive Supreme
-Court authority on what counts as a "legally enforceable debt" and on rebutting the §139
-presumption of consideration) as strong future case-law candidates — none added yet
-pending independent verification.
+**Landmark cases (6 sections, 8 case objects) added in a later case-law-only update.**
+§87 (material alteration) — *Veera Exports v. T. Kalavathy* (2001, a drawer may
+voluntarily revalidate a stale cheque by altering the date; whether an alteration was
+consented to is a question of fact). §118 (presumptions) — *Kumar Exports v. Sharma
+Carpets* (2009, explains how the Section 118(a)/139 presumptions actually operate: not
+evidence itself, only a prima facie device, rebuttable on preponderance of probabilities
+using even the complainant's own evidence). §138 (cheque dishonour) — *MSR Leathers v. S.
+Palaniappan* (2013, a payee can present a dishonoured cheque multiple times within its
+validity, each fresh dishonour giving a fresh right to prosecute, provided an earlier
+notice's 15-day window wasn't already let lapse). §139 (presumption in favour of holder)
+— two cases together: *Rangappa v. Sri Mohan* (2010, the presumption is one of law, not
+fact, rebuttable only on preponderance of probabilities) and *Bir Singh v. Mukesh Kumar*
+(2019, a validly signed blank cheque later filled in still attracts the full presumption).
+§141 (offences by companies) — *SMS Pharmaceuticals Ltd. v. Neeta Bhalla* (2005, merely
+holding the title "director" isn't enough for vicarious liability; the complaint itself
+must specifically aver the person was in charge of and responsible for the company's
+business at the time). §142 (cognizance of offences) — two cases together: *Dashrath
+Rupsingh Rathod v. State of Maharashtra* (2014, the case that prompted the 2015
+Section 142(2) jurisdiction amendment) and *Yogendra Pratap Singh v. Savitri Pandey*
+(2014, a complaint filed even one day before the 15-day notice period expires is invalid
+and cannot be cured by later delay). §9's holder-in-due-course doctrine remains an open
+candidate for further case-law enrichment.
 
 Sourced from Drishti Judiciary's official-text bare-act PDF (vault.drishtijudiciary.com).
 
