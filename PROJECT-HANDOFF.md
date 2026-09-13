@@ -495,6 +495,87 @@ independent verification.
 Sourced from two independently cross-checked sources: the Uttar Pradesh Commercial Tax
 Department's official PDF (comtax.up.nic.in) and advocatekhoj.com's bare-act pages.
 
+## The Negotiable Instruments Act, 1881 (NIA) — COMPLETE: all 148 of 148 sections (155 objects incl. 7 lettered insertions), 17 chapters
+A fifth brand-new Act, delivered as a single combined file (`NIA_SECTIONS_1_148_FULL.js`)
+and merged whole in one batch. Act code `"NIA"`, `"NIA-<n>"` string-prefixed section ids.
+By far the largest single-file Act merge so far: 17 chapters, 17 categories, 155 section
+objects (148 numbered §§1–148 plus 7 later-amendment lettered insertions: §45A, §75A,
+§85A, §104A, §131A, §142A, §143A).
+
+**Worth flagging: the source file's own header comment contradicted its actual data, and
+the actual data was trusted over the header, per this project's standing rule.** The
+file's opening ~35 lines describe it as covering only "SECTIONS 1-122... THIS FILE covers
+Chapters I-XIII (Ss.1-122) in full. Chapters XIV-XVII (Ss.123-148) will complete the Act
+in a following batch" — language clearly left over from an earlier "part 1" draft that
+was never updated. But the file's own `export const NIA_SECTIONS_1_148` array, when
+actually inspected, contains all 155 objects, ids 1 through 148 with no gaps, including
+every lettered insertion through Chapter XVII — and a second, later header block (lines
+62–97) correctly lists all 17 chapters, adds the missing categories for Chapters XIV–XVII,
+and explicitly states "THIS IS THE COMPLETE NEGOTIABLE INSTRUMENTS ACT, 1881, START TO
+FINISH -- ALL 17 CHAPTERS, 147 ACTIVE SECTIONS," matching what the user's own request
+described. Also worth noting for the repo's own git history: unlike ICA/IPA/SGA, there
+are no earlier NIA batches anywhere in this project's commit history — the user's request
+referred to "earlier batches" and previously-merged sections (45A/75A/85A/104A) as though
+they already existed in the app, but this was in fact the Act's first and only merge.
+Verified this by grepping the codebase for any prior "NIA" trace before starting (none
+found) and by directly inspecting the uploaded file's actual array contents rather than
+trusting either the stale header or the request's framing — the data itself was complete
+and internally consistent, so the merge proceeded on that basis rather than blocking to
+ask, but this discrepancy is recorded here in case the user meant a different session or
+a different app instance.
+
+Chapters (17, matching the Act's official structure):
+- Chapter I — Preliminary (§§1–3), category `nia-preliminary`
+- Chapter II — Of Notes, Bills and Cheques (§§4–25), category `notes-bills-cheques`
+- Chapter III — Parties to Notes, Bills and Cheques (§§26–45, incl. §45A), category
+  `parties-to-instruments`
+- Chapter IV — Of Negotiation (§§46–60), category `negotiation`
+- Chapter V — Of Presentment (§§61–77, incl. §75A), category `presentment`
+- Chapter VI — Of Payment and Interest (§§78–81), category `payment-and-interest`
+- Chapter VII — Of Discharge from Liability on Notes, Bills and Cheques (§§82–90, incl.
+  §85A), category `discharge-from-liability`
+- Chapter VIII — Of Notice of Dishonour (§§91–98), category `notice-of-dishonour`
+- Chapter IX — Of Noting and Protest (§§99–104, incl. §104A), category
+  `noting-and-protest`
+- Chapter X — Of Reasonable Time (§§105–107), category `reasonable-time`
+- Chapter XI — Of Acceptance and Payment for Honour and Reference in Case of Need
+  (§§108–116), category `acceptance-payment-for-honour`
+- Chapter XII — Of Compensation (§117 only — the Act's only single-section chapter),
+  category `compensation`
+- Chapter XIII — Special Rules of Evidence (§§118–122), category `special-rules-of-evidence`
+- Chapter XIV — Of Crossed Cheques (§§123–131, incl. §131A), category `crossed-cheques`
+- Chapter XV — Of Bills in Sets (§§132–133), category `bills-in-sets`
+- Chapter XVI — Of International Law (§§134–137), category `international-law`
+- Chapter XVII — Of Penalties in Case of Dishonour of Certain Cheques for Insufficiency
+  of Funds (§§138–148, incl. §142A, §143A), category `cheque-dishonour-penalties`
+
+**`"preliminary"` collision — fourth occurrence now**, same treatment: remapped to
+`"nia-preliminary"`. This pattern is now firmly established for every new Act.
+
+**Lettered-range chapters need a numeric-only `range` field.** Chapters III and IX are
+officially described as "Ss.26-45A" and "Ss.99-104A" respectively, but `CHAPTERS.range`
+was deliberately set to the pure numeric span (`"26–45"`, `"99–104"`) rather than
+including the trailing letter. This matters for `actStats()`: its span-sum computation
+(`c.range.split(/[–-]/).map(Number)...`) would silently drop a non-numeric endpoint like
+`"45A"` entirely, undercounting that chapter's span by treating it as a single-section
+chapter. Using the pure-numeric range (with the lettered insertion counted the same way
+ICA's §178A and SGA's §64A already are — as one extra live section beyond the nominal
+span) keeps the "X of Y sections" math honest without needing any further code change.
+
+**§2 — a third section-level `repealed: true`**, identical treatment to IPA's §73 and
+SGA's §65: a spent provision (repealed by the Repealing and Amending Act, 1891), rendered
+via the same `.section-repealed-note` / `.repealed-badge` / `sec-btn-repealed` styling
+built for those two, again with zero new code needed.
+
+**No case law yet.** The source flags §9 (holder in due course — arguably the single most
+important concept in the whole Act), §118's presumptions, and above all §138 (cheque
+dishonour, by a wide margin the most litigated section in the Act, given extensive Supreme
+Court authority on what counts as a "legally enforceable debt" and on rebutting the §139
+presumption of consideration) as strong future case-law candidates — none added yet
+pending independent verification.
+
+Sourced from Drishti Judiciary's official-text bare-act PDF (vault.drishtijudiciary.com).
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
