@@ -354,6 +354,74 @@ into someone's possession without one are never held under a bailment).
 Sourced from the official India Code PDF (indiacode.nic.in), Act No. 9 of 1872, Ministry
 of Law & Justice consolidated text.
 
+## Indian Partnership Act, 1932 (IPA) — COMPLETE: all 74 of 74 sections, 8 chapters
+A brand-new Act, added whole in a single batch (all 74 sections delivered in one file,
+having previously been drafted as three separate batches — Ss.1–30, Ss.31–55, Ss.56–74 —
+and combined by the user before merging). Act code `"IPA"`, `"IPA-<n>"` string-prefixed
+section ids following the same convention as every other Act. This Act completes the story
+of the Contract Act's own repealed Chapter XI (§§239–266, "Of Partnership") — that chapter
+was repealed by this very Act's own §73 and replaced with this dedicated, far more
+detailed 74-section Act. §3 of this Act expressly preserves the Contract Act's general
+principles as still applicable to partnerships wherever this Act's own rules don't differ,
+so the two Acts are genuinely cross-referenced (several `simpleExplanation`s across this
+batch point back to specific ICA sections — e.g. §16's fiduciary duty mirrors ICA §§215–216,
+§28's "holding out" doctrine echoes ICA §237's ostensible authority).
+
+Chapters (8, matching the Act's official structure exactly):
+- Chapter I — Preliminary (§§1–3), category `ipa-preliminary`
+- Chapter II — The Nature of Partnership (§§4–8), category `nature-of-partnership`
+- Chapter III — Relations of Partners to One Another (§§9–17), category
+  `partners-relations-to-one-another`
+- Chapter IV — Relations of Partners to Third Parties (§§18–30), category
+  `partners-relations-to-third-parties`
+- Chapter V — Incoming and Outgoing Partners (§§31–38), category
+  `incoming-outgoing-partners`
+- Chapter VI — Dissolution of a Firm (§§39–55), category `dissolution-of-firm`
+- Chapter VII — Registration of Firms (§§56–71), category `registration-of-firms`
+- Chapter VIII — Supplemental (§§72–74), category `supplemental`
+
+**Category id collision handled the same way as ICA's own "preliminary" problem.** The
+source file's own category name for Chapter I was `"preliminary"` — already taken by
+BSA's Chapter I category (`{ id: "preliminary", chapter: "BSA-I", ... }`). Followed the
+exact precedent already set for ICA (`"ica-preliminary"`): remapped to `"ipa-preliminary"`
+in the merge transform script rather than merging the collision in verbatim. Always check
+every new Act's category ids against every existing Act's `CATEGORIES` before merging —
+this is now the second time a generically-named "preliminary" category has needed this
+treatment, and it will very likely happen again for the Constitution or BNSS.
+
+**§73 — a genuinely contentless section, rendered distinctly rather than as normal
+statutory text.** §73 is itself a spent repeal provision ("Rep. by the Repealing Act, 1938
+(1 of 1938), s. 2 and Sch."), included in the source purely so the Act reads as whole from
+§1 through §74 rather than jumping from §72 to §74. Flagged with a new `repealed: true`
+field on the section object itself (distinct from the *chapter*-level `repealed` flag
+already used for the ICA repealed-chapter placeholders — this is a first, a single
+*section* being flagged, not a whole chapter). The content-pane render (`App.jsx`, the
+main section-detail block right after the "Export section as text" button) now branches
+on `section.repealed`: instead of the normal "Official Bare Act Text" label + `.body-text`
+block, a repealed section renders inside a new `.section-repealed-note` box (dashed
+border, parchment-deep background) with a `.repealed-badge` pill (reusing the exact same
+oxblood-outlined badge styling already established for the ICA chapter placeholders) and
+its text shown in italic, muted `.ink-soft` color. A second `.repealed-badge` also appears
+in the meta-chips row up top, so it's visible even before scrolling to the body. In the
+sidebar, `SidebarContents`'s section-button loop adds a `sec-btn-repealed` modifier class
+when `s.repealed` is true (`opacity: 0.6` and an italic title, suppressed whenever the
+button is also `.active` so selecting it still shows the normal highlighted state) — unlike
+the chapter-level placeholders, §73 stays a real, clickable section (it has genuine,
+if brief, informative content explaining why it's empty), not a non-interactive block.
+
+**No case law yet.** The source file's own header flags several promising citations
+visible in the official PDF's margin notes (§4 — Deoha F. Guzdar v. CIT; §9 — Sita Ram v.
+Radha Rai; §13 — Mandyala Govindu v. CIT; §15 — Addanki Narayanappa v. Bhaskara Krishnappa;
+§55 — Khusal Khemgal Shah v. Khurshed Banu; §59/§68 — CIT A.P. v. Jaya Laxmi Rice Mills) —
+but none of these have been independently verified across multiple sources yet (the
+source PDF has visible OCR artifacts elsewhere), so none were added in this initial
+build. This is a clearly flagged candidate for a dedicated case-law enrichment pass,
+following the exact same verify-before-adding discipline already used for BNS/BSA/ICA.
+
+Sourced from the official India Code PDF (indiacode.nic.in/bitstream/123456789/12849/1/
+the_indian_partnership_act_1932.pdf), cross-checked against the Act's official table of
+contents for chapter/section structure.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
