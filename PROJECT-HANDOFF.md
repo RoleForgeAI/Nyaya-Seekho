@@ -422,6 +422,79 @@ Sourced from the official India Code PDF (indiacode.nic.in/bitstream/123456789/1
 the_indian_partnership_act_1932.pdf), cross-checked against the Act's official table of
 contents for chapter/section structure.
 
+## The Sale of Goods Act, 1930 (SGA) — COMPLETE: all 66 of 66 sections (67 objects incl. §64A), 7 chapters
+Another brand-new Act, added whole in a single batch (all 66 sections + the inserted §64A,
+previously drafted as three batches — §§1–30, §§31–54, §§55–66 — combined by the user
+before merging). Act code `"SGA"`, `"SGA-<n>"` string-prefixed section ids. This Act
+completes the story of the Contract Act's *other* repealed gap: §§76–123 ("Of the Sale of
+Goods") were repealed and replaced by this dedicated 66-section Act (in force 1 July
+1930). §3 preserves the Contract Act's general principles as still applicable to
+sale-of-goods contracts — the identical bridging structure already used in IPA's own §3.
+
+Chapters (7, matching the Act's official structure):
+- Chapter I — Preliminary (§§1–3), category `sga-preliminary`
+- Chapter II — Formation of the Contract (§§4–17), category `formation-of-contract`
+- Chapter III — Effects of the Contract (§§18–30), category `effects-of-the-contract`
+- Chapter IV — Performance of the Contract (§§31–44), category `performance-of-contract`
+- Chapter V — Rights of Unpaid Seller Against the Goods (§§45–54), category
+  `rights-of-unpaid-seller`
+- Chapter VI — Suits for Breach of the Contract (§§55–61), category `suits-for-breach`
+- Chapter VII — Miscellaneous (§§62–66, including §64A), category `miscellaneous`
+
+**`"preliminary"` collision — third time now.** Same treatment as ICA (`ica-preliminary`)
+and IPA (`ipa-preliminary`): remapped to `"sga-preliminary"`. This is now a recurring,
+predictable pattern for every new Act's Chapter I — check `CATEGORIES` for a bare
+`"preliminary"` id before merging any future Act, and prefix with that Act's own code.
+
+**§64A — a second lettered-suffix insertion, same pattern as ICA's §178A.** A later
+insertion (tax pass-through provision) sitting between §64 and §65 in the official Act.
+Stored as `"SGA-64A"`, no code changes needed — the id is just another string, and the
+splice landed it in the correct array position by construction. Total live SGA section
+count is 67 (66 numbered + 1 lettered), same "actual count exceeds nominal count by
+exactly the number of lettered insertions" situation already seen for ICA (191 vs. 190).
+
+**§65 — a second section-level `repealed: true`, identical treatment to IPA's §73.** Also
+a spent 1938 repeal provision with no substantive content. Reused the exact same
+`.section-repealed-note` / `.repealed-badge` / `sec-btn-repealed` rendering built for IPA
+§73 — no new code needed, confirming that feature was built generally enough to cover the
+next Act's identical situation without modification.
+
+**New: the app's first genuine cross-Act `crossRefs` link, plus a real bug it surfaced
+and fixed.** §58 (specific performance) refers, in its own original 1930 statutory text,
+to "Chapter II of the Specific Relief Act, 1877" — a real historical reference to the
+long-repealed predecessor of the Specific Relief Act, 1963 (already fully built in this
+app as `SRA`). Left the original text untouched (it's not an error), but added
+`crossRefs: ["SRA-10"]` pointing to SRA's own general specific-performance section. Every
+prior `crossRefs` usage in the app (all in SRA, referencing other SRA sections) stayed
+within one Act, so `SECTION_MAP[rid]` resolution technically already worked for a
+cross-Act id — but two real UI bugs would have surfaced the first time anyone actually
+used one:
+1. `goTo(id)` only ever set `selectedId`, never `selectedAct` — clicking through to a
+   cross-Act section left the Library sidebar showing the *previous* Act's chapter tree
+   (and highlighting the wrong Act button) while the content pane showed the new Act's
+   section. Fixed by having `goTo` look up the target section's actual act via
+   `chapterOf(SECTION_MAP[id])?.act` and call `setSelectedAct` first if it differs from
+   the current one — a no-op for every existing same-act crossRef, so nothing else
+   changed behaviour.
+2. The "Related Sections" chip and the "Quick Preview" drawer both showed only `§{number}`
+   with no Act name — harmless when linking within one Act, but genuinely ambiguous
+   cross-Act (SGA has its own unrelated §10, "Agreement to sell at valuation"). Fixed by
+   showing the target Act's `short` name in the chip (only when it differs from the
+   current section's Act, to avoid clutter on the far more common same-act case) and
+   always in the drawer's "Quick Preview" label. Verified via Playwright end to end:
+   chip reads "SRA §10 · Specific performance in respect of…", drawer reads "Quick
+   Preview · SRA", and clicking "Open full section →" correctly lands on SRA §10 with the
+   Library sidebar now showing SRA's own chapters and highlighting the SRA button.
+
+**No case law yet.** Flagged candidates from the source's own header: §16 (implied
+condition of merchantable quality / fitness for purpose), §27 (mercantile agent exception
+to nemo dat), and §64 (auction sales, particularly the "pretended bidding" rule) — all
+well-litigated provisions with real Supreme Court authority, none added yet pending
+independent verification.
+
+Sourced from two independently cross-checked sources: the Uttar Pradesh Commercial Tax
+Department's official PDF (comtax.up.nic.in) and advocatekhoj.com's bare-act pages.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
