@@ -761,6 +761,55 @@ Sourced from the Punjab Revenue Department's bare-act page (plrs.org.in) as a ba
 with §4(2), §6, §23, §24, and §30 independently re-verified against the official Hindu
 Succession (Amendment) Act, 2005 (39 of 2005) text (prsindia.org) before merging.
 
+## The Limitation Act, 1963 (LA) — COMPLETE: all 32 of 32 sections, 5 chapters (Parts I–V)
+An eighth brand-new Act, delivered whole in one batch. Act code `"LA"`, `"LA-<n>"`
+string-prefixed section ids. Structurally simple (32 sections, 5 chapters/Parts, no
+lettered insertions), and unlike the previous two Acts this batch needed no independent
+verification against a later amendment and no discrepancy-flagging — the source file's
+own claims matched its actual delivered content exactly.
+
+Chapters (5, following the Act's own Part structure):
+- Part I — Preliminary (§§1–2), category `la-preliminary` (remapped from the source's
+  own `"preliminary"` — the sixth time this exact collision, always with BSA's own
+  Chapter I category, has come up)
+- Part II — Limitation of Suits, Appeals and Applications (§§3–11), category
+  `limitation-of-suits-appeals-applications`
+- Part III — Computation of Period of Limitation (§§12–24), category
+  `computation-of-period`
+- Part IV — Acquisition of Ownership by Possession (§§25–27), category
+  `acquisition-by-possession`
+- Part V — Miscellaneous (§§28–32), category `la-miscellaneous` (remapped from the
+  source's own `"miscellaneous"` — collides with SGA's category of the same name,
+  same pattern ACA hit with `aca-miscellaneous`)
+
+**Two sections flagged `repealed: true` — exactly as the user's request named, no
+discrepancy this time.** §28 (originally "Amendment of certain Acts") and §32
+(originally "Repeal") were both repealed by the Repealing and Amending Act, 1974 (56 of
+1974), section 2 and the First Schedule, and carry no substantive content today — only a
+repeal citation, the same shape already handled for IPA §73, SGA §65, NIA §2, and HSA
+§23/§24/§31. Unlike the HSA batch, I checked §§29–31 individually (all three genuinely
+substantive: "Savings", "Provision for suits, etc., in respect of pre-Act rights", and
+"Provisions as to barred or pending suits, etc." respectively) and confirmed no third
+undisclosed repealed section exists here — the user's count of "two sections" is accurate
+as given. Verified via Playwright that both §28 and §32 render with the same distinct
+`.section-repealed-note` / `.repealed-badge` treatment used elsewhere, and that §28 sits
+correctly under the "Part V — Miscellaneous" breadcrumb.
+
+**The Schedule of 137 limitation-period Articles is intentionally not included.** The
+Act's substantive time-limits live in a tabular Schedule (Articles 1–137, each mapping a
+suit/appeal/application type to its limitation period and the date from which time runs),
+not in numbered sections — a fundamentally different data shape than this project's
+`SECTIONS` schema (`{id, category, title, text}`) is built for. Force-fitting it in would
+either lose the tabular structure or require a parallel schema; flagging this as a
+distinct future feature candidate rather than merging it awkwardly now.
+
+**No case law yet.** §5 (condonation of delay on "sufficient cause") is the single most
+litigated provision in the Act and the strongest candidate for a future case-law pass;
+§18 (effect of acknowledgment in writing) and §14 (exclusion of time in bona fide
+proceedings in a wrong court) are secondary candidates.
+
+Sourced from Drishti Judiciary's official-text bare-act PDF.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
