@@ -617,6 +617,89 @@ candidate for further case-law enrichment.
 
 Sourced from Drishti Judiciary's official-text bare-act PDF (vault.drishtijudiciary.com).
 
+## The Arbitration and Conciliation Act, 1996 (ACA) — COMPLETE: all numbered sections (86 objects), 15 chapters, 5 Parts
+A sixth brand-new Act, delivered as a single combined file and merged whole in one batch.
+Act code `"ACA"`, `"ACA-<n>"` string-prefixed section ids. This is the first Act in the
+project organized into named **Parts** rather than a flat chapter sequence — Part I
+(Arbitration, §§1–43, 10 chapters), Part IA (Arbitration Council of India, §§43A–43M, a
+single chapter, inserted whole by the 2019 Amendment), Part II (Enforcement of Certain
+Foreign Awards, §§44–60, 2 chapters), Part III (Conciliation, §§61–62), and Part IV
+(Supplementary Provisions, §§82–87). Followed the exact labeling convention already
+established for SRA (`"Part II, Chapter II — Specific Performance of Contracts"`, etc.) —
+no schema change needed, the Part/Chapter structure lives entirely in each `CHAPTERS`
+entry's `label` string.
+
+**Structural note — Part III is genuinely just 2 sections, not an incomplete build.** As
+originally enacted, Part III was a detailed 21-section conciliation procedure code
+(§§61–81). The Mediation Act, 2023 repealed and substituted the entirety of old §§61–81
+with just two short sections (also numbered 61 and 62), which now simply redirect all
+conciliation activity to the separate Mediation Act, 2023 instead. Old §§63–81 no longer
+exist in current law. The gap-aware integrity check treats numbers 63–81 (19 numbers) as
+a permanent restructuring gap, the same pattern already used for ICA's two repealed
+ranges — confirmed the count matches exactly: 87 nominal numbers − 19 restructured = 68
+numeric ids actually present, plus 18 lettered insertions (29A, 29B, 31A, 42A, 42B, and
+the 13-section run 43A–43M) = 86 total section objects, matching the source's own count.
+
+**Chapter 11 (Part IA) is the first chapter whose entire official range is lettered on
+both ends — `"43A–43M"`, not a mix with numeric endpoints like every prior lettered-suffix
+chapter (ICA's `"26–45"` softened from `"26–45A"`, SGA's `"99–104"` softened from
+`"99–104A"`).** Rather than fudging a numeric placeholder, this was kept as the literal
+official range, because `actStats()`'s span-sum reducer already has a guard for exactly
+this case: `c.range.split(/[–-]/).map(Number).filter(n => !isNaN(n))` on `"43A–43M"`
+produces an empty array after filtering, and the reducer's `if (nums.length === 0) return
+sum` line means that chapter contributes 0 to the registered-span total rather than
+corrupting it to `-Infinity` — verified this is safe by reading the exact guard clause
+before relying on it, not by assumption. The existing `Math.max(registeredSectionCount,
+liveSectionCount)` fallback then makes the Act-wide total come out exactly right anyway
+(verified via Playwright: header reads "86 of 86 Arbitration Act sections across 15 of 15
+chapters"). No code changes were needed — this is a case where the two-Act-old fix already
+generalized correctly to a scenario its original authors hadn't specifically anticipated.
+
+**§87 — a new kind of distinct rendering, deliberately NOT the existing `repealed: true`
+pattern.** §87 remains textually part of the Act (inserted by the 2019 Amendment) but was
+struck down as unconstitutional by the Supreme Court in *Hindustan Construction Co. Ltd.
+v. Union of India* (2019 SCC OnLine SC 1520) — restoring the earlier position in *BCCI v.
+Kochi Cricket Pvt. Ltd.* (2018). This is a genuinely different legal status from IPA §73 /
+SGA §65 / NIA §2's spent repeal provisions: §87's text is real, substantive, operative-
+looking statutory language that a reader must actually be able to read to understand what
+was struck down and why — unlike a repealed section's text, which is deliberately replaced
+by a short explanatory note since there's no real content left to show. Reusing
+`repealed: true` would have hidden §87's actual text behind the dashed "this section has
+no content" treatment, which would be actively wrong here. Instead, added a new,
+independent pair of fields — `struckDown: true` and a `struckDownNote` string — and a
+render treatment that *adds* a distinct warning callout (`.struck-down-note`, amber-bordered,
+`#a5622a` accent, deliberately a different color from both `.repealed-badge`'s oxblood and
+`.case-jurisdiction`'s blue, so none of the three "this needs special reading" patterns in
+the app are visually confused with each other) directly above the section's completely
+normal "Official Bare Act Text" block, rather than replacing it. A matching
+`.struck-down-badge` also appears in the meta-chips row for at-a-glance visibility. §87's
+own `cases` array (the *Hindustan Construction* case) still renders via the ordinary
+"Landmark Precedent" mechanism below, so the full chain — warning callout → real statutory
+text → plain-English explanation → the case that struck it down — reads in one continuous,
+correctly-ordered pass. Verified via Playwright: the callout, badge, full original text,
+and case card all render together on §87.
+
+**Category id `"miscellaneous"` collided with SGA's own category — remapped to
+`"aca-miscellaneous"`,** the same treatment as every prior generically-named category
+collision this project has hit (`preliminary` four times now, `miscellaneous` once).
+
+**No case law beyond §87.** The source itself flags §34 (setting aside an award) as the
+single strongest candidate for a much larger future case-law pass — it carries an
+enormous body of Supreme Court authority defining "public policy of India" and "patent
+illegality" that would genuinely benefit students, but adding even a representative
+sample would need its own dedicated, carefully-scoped batch given how much authority
+exists on that one section alone.
+
+**Eight Schedules exist but are not included** (New York Convention text, Geneva
+Protocol/Convention texts, the Model Fee schedule, arbitrator-qualification/disclosure
+schedules) — a different content type from numbered sections, consistent with how
+Schedules have been handled for every other Act in this project (none have ever been
+built out as separate content).
+
+Sourced from arbitrationindia.com's consolidated bare-act PDF (reflecting all amendments
+through the Mediation Act, 2023), cross-checked against Drishti Judiciary's official-text
+PDF for earlier sections.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
