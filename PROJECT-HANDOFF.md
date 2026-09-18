@@ -700,6 +700,67 @@ Sourced from arbitrationindia.com's consolidated bare-act PDF (reflecting all am
 through the Mediation Act, 2023), cross-checked against Drishti Judiciary's official-text
 PDF for earlier sections.
 
+## The Hindu Succession Act, 1956 (HSA) — COMPLETE: all 31 of 31 sections, 4 chapters
+A seventh brand-new Act, delivered whole in one batch. Act code `"HSA"`, `"HSA-<n>"`
+string-prefixed section ids. Genuinely small and structurally simple compared to the last
+few Acts (31 sections, 4 chapters, no lettered insertions, no Parts) — but content-wise
+demanding in a different way: this Act was heavily rewritten by the Hindu Succession
+(Amendment) Act, 2005, and the base source (predating that amendment) needed several
+sections independently re-verified and corrected against the 2005 Amendment's own official
+text before merging, not just transcribed as-is.
+
+Chapters (4):
+- Chapter I — Preliminary (§§1–4), category `hsa-preliminary` (remapped from the source's
+  own `"preliminary"` — the fifth time this exact collision, always with BSA's own
+  Chapter I category, has come up; every new Act's Chapter I needs this check now)
+- Chapter II — Intestate Succession (§§5–29), category `intestate-succession`
+- Chapter III — Testamentary Succession (§30 only), category `testamentary-succession`
+- Chapter IV — Repeals (§31 only), category `repeals`
+
+**Current, post-2005 text verified section by section — this Act is a real test case for
+the "never invent, never paraphrase, verify against the actual current law" discipline.**
+Four specific corrections the source flagged and I did not merge blindly:
+- §4(2) — omitted by the 2005 Amendment; only sub-section (1) is operative today.
+- §6 — completely replaced by 2005, not merely amended. The old text (survivorship
+  excluding daughters from the coparcenary) is obsolete and would have been actively
+  dangerous to present as current law. The merged text is the actual post-2005 version:
+  a daughter becomes a coparcener by birth, on equal footing with a son, effective from
+  20 December 2004 for protecting already-completed transactions. This is the single most
+  significant provision in the Act — confirmed the merged text matches the "daughter...
+  shall... by birth become a coparcener" language exactly, and confirmed via Playwright
+  it renders correctly with the sub-section (1)-(5) structure and the pious-obligation
+  abolition in sub-section (4) intact.
+- §30 — the small but real 2005 wording fix ("disposed of by him" → "disposed of by him
+  or by her") is present in the merged text, verified directly (`text.includes("by him or
+  by her")`).
+- §§23 and 24 — omitted entirely by 2005 (the dwelling-house partition restriction and the
+  remarried-widow disqualification, respectively) — both correctly absent as substantive
+  content, present only as the distinct repealed placeholder described below.
+
+**Three sections flagged `repealed: true`, not two — a discrepancy caught and resolved
+by trusting the actual delivered content over the request's literal count.** The user's
+message named only §23 and §24 as "omitted provisions... please render them distinctly."
+But §31 ("Repeals") has the identical shape: title indicating a repeal, and body text
+that is purely `"[Repealed by the Repealing and Amending Act, 1960 (58 of 1960).]"` — no
+substantive content whatsoever, exactly the pattern the app's `repealed: true` / distinct-
+rendering feature (built for IPA §73, SGA §65, NIA §2) exists to handle. The source file's
+own `simpleExplanation` for §31 even draws the comparison explicitly: "the same kind of
+self-consuming provision already seen in other Acts in this project." Flagged all three
+(§23, §24, §31) as `repealed: true` rather than only the two named in the request, since
+the underlying content — not the request's count — is what the existing convention is
+keyed to. Verified via Playwright that all three render with the same distinct treatment,
+including §31 sitting correctly at the very end of the Act as its own single-section
+Chapter IV.
+
+**No case law yet.** §6 (coparcenary rights, especially the retrospective-vs-prospective
+question ultimately settled in *Vineeta Sharma v. Rakesh Sharma*, 2020) and §14 (a female
+Hindu's absolute ownership) are both flagged by the source as strong, well-documented
+candidates for a future case-law pass.
+
+Sourced from the Punjab Revenue Department's bare-act page (plrs.org.in) as a base text,
+with §4(2), §6, §23, §24, and §30 independently re-verified against the official Hindu
+Succession (Amendment) Act, 2005 (39 of 2005) text (prsindia.org) before merging.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
