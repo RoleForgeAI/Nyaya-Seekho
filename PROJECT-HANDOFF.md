@@ -915,6 +915,45 @@ Sourced from a latestlaws.com/punjabrevenue.nic.in base text, with §13 onward
 independently re-verified against the official India Code text (Act No. 25 of 1955)
 before merging.
 
+## Case-law pass: LA, HSA, HMA, TPA — 11 landmark case objects across 8 sections
+A case-law-only update batch across four Acts, delivered as four separate files, each
+targeting sections that previously had zero cases. No section text, illustrations, or
+any other field changed anywhere — only `cases` arrays were added.
+
+- **The Limitation Act, 1963 (LA)** — 4 cases across 3 sections: §3 (*Narne Rama Murthy
+  v. Ravula Somasundaram*, 2005, on limitation as a mixed question of fact and law),
+  §5 (*Collector, Land Acquisition, Anantnag v. Mst. Katiji*, 1987, and *N. Balakrishnan
+  v. M. Krishnamurthy*, 1998, both on the "sufficient cause" condonation-of-delay
+  standard), §27 (*Bombay Dyeing & Manufacturing Co. Ltd. v. State of Bombay*, 1957, on
+  the remedy-vs-right distinction this section departs from). The source file's own
+  header transparently documented three cases it considered but excluded: one that
+  couldn't be independently verified, one that concerns a Schedule Article rather than a
+  numbered section (the Schedule remains a not-yet-built content type for this Act), and
+  three that are genuinely HSA/coparcenary cases misfiled against this Act in an earlier
+  source list — all left out rather than force-fit, consistent with this project's
+  verification discipline.
+- **The Hindu Succession Act, 1956 (HSA)** — 3 cases, all on §6 (coparcenary property),
+  the single most litigated provision in the Act: *Vineeta Sharma v. Rakesh Sharma*
+  (2020, the landmark ruling that daughters' coparcenary rights are retroactive by birth,
+  already referenced in §6's own `simpleExplanation` from the original HSA merge),
+  *K.C. Laxmana v. K.C. Chandrappa Gowda* (2022, on a Karta's limited power to gift
+  coparcenary property), and *Madhegowda v. Ankegowda* (2001, on a coparcener's
+  birthright interest versus the Karta's management authority).
+- **The Hindu Marriage Act, 1955 (HMA)** — 2 cases: §13 (*Samar Ghosh v. Jaya Ghosh*,
+  2007, on mental cruelty as a divorce ground) and §17 (*Gopal Lal v. State of
+  Rajasthan*, 1979, on bigamy prosecutions requiring proof of valid ceremonies for the
+  second marriage despite its civil voidness).
+- **The Transfer of Property Act, 1882 (TPA)** — 2 cases, the Act's first-ever case-law
+  pass: §14 (*Ram Baran Prasad v. Ram Mohit Hazra*, 1966, on the rule against perpetuity
+  not applying to purely personal contractual rights) and §53A (*Nathulal v. Phoolchand*,
+  1969, laying down the four conditions for the part-performance defence).
+
+All 11 case objects verified against the existing `{name, cite, year, ratio, url}`
+schema (no new fields needed — none of this batch's cases carry the foreign-jurisdiction
+`jurisdiction`/`persuasiveNote` fields used for SGA's earlier cases). Verified via
+Playwright that both multi-case sections in this batch (LA §5 with 2 cases, HSA §6 with
+3 cases) render all case cards correctly under the "Landmark case available" chip.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
