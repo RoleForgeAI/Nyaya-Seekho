@@ -868,6 +868,53 @@ Sourced from the official India Code text (indiacode.nic.in), including full
 amendment-history footnotes (the Transfer of Property (Amendment) Act, 1929 being the
 single largest amending Act, substantially reshaping much of this Act).
 
+## The Hindu Marriage Act, 1955 (HMA) — COMPLETE: all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories
+A tenth brand-new Act, delivered whole in one file. Act code `"HMA"`, `"HMA-<n>"`
+string-prefixed section ids (including lettered ones, e.g. `"HMA-13B"`). Like TPA, this
+source used a numeric `chapter` field (1–6) directly on each section object, making the
+chapter mapping straightforward.
+
+Chapters (6) and their categories:
+- Chapter I — Preliminary (§§1–4), category `hma-preliminary` (remapped from the
+  source's own `"preliminary"` — the eighth time this exact collision, always with
+  BSA's own Chapter I category, has come up)
+- Chapter II — Hindu Marriages (§§5–8), category `hindu-marriages` (includes §6, repealed)
+- Chapter III — Restitution of Conjugal Rights and Judicial Separation (§§9–10),
+  category `restitution-judicial-separation`
+- Chapter IV — Nullity of Marriage and Divorce (§§11–18, incl. §13A and §13B),
+  category `nullity-and-divorce`
+- Chapter V — Jurisdiction and Procedure (§§19–28, incl. §21A–C, §23A, §28A),
+  category `jurisdiction-and-procedure`
+- Chapter VI — Savings and Repeal (§§29–30), category `savings-and-repeal` (includes
+  §30, repealed)
+
+**Two sections flagged `repealed: true` — exactly as the user's request named, no
+discrepancy this time.** §6 (originally "Guardianship in marriage") was repealed by the
+Child Marriage Restraint (Amendment) Act, 1978; §30 (originally "Repeals") was repealed
+by the Repealing and Amending Act, 1960. Both carry no substantive content beyond a
+repeal citation, matching this project's established pattern, and both were verified via
+Playwright to render with the same distinct treatment. Unlike the earlier TPA and HSA
+batches, the source file's own header count and the actual delivered content agreed
+exactly — no independent re-count was needed to catch a discrepancy.
+
+**Independently re-verified current-text corrections, caught before merge (per the
+source file's own account, itself cross-checked against the structure of the delivered
+sections):** §13(1)(iv)'s leprosy ground for divorce was omitted by the 2019 Amendment
+and correctly absent from the merged text; §18(a)'s penalty for underage marriage
+reflects the substantially increased 2007 penalty (up to two years' rigorous imprisonment
+or a ₹1 lakh fine), not the original, far milder 1955 penalty. Also current: §19(iiia)'s
+pro-petitioner-wife forum option (2003), and the 60-day disposal provisos in §24 and §26
+(2001).
+
+**No case law yet.** §5 (particularly the bigamy condition) and §13 (especially
+"cruelty" and "desertion," terms this Act deliberately leaves to case-law elaboration)
+both carry an enormous body of Supreme Court authority and are strong candidates for a
+future case-law pass.
+
+Sourced from a latestlaws.com/punjabrevenue.nic.in base text, with §13 onward
+independently re-verified against the official India Code text (Act No. 25 of 1955)
+before merging.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
