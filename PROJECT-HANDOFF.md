@@ -810,6 +810,64 @@ proceedings in a wrong court) are secondary candidates.
 
 Sourced from Drishti Judiciary's official-text bare-act PDF.
 
+## The Transfer of Property Act, 1882 (TPA) — COMPLETE: all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories
+A ninth brand-new Act, delivered whole in one file, and the largest and structurally
+richest Act added to this project to date. Act code `"TPA"`, `"TPA-<n>"` string-prefixed
+section ids (including lettered ones, e.g. `"TPA-53A"`). Unlike LA, this source used a
+numeric `chapter` field (1–8) directly on each section object rather than only a
+category string, which made mapping straightforward — chapter numbers map 1:1 to the
+Act's own 8 chapters.
+
+Chapters (8) and their categories (17 total):
+- Chapter I — Preliminary (§§1–4), category `tpa-preliminary` (remapped from the
+  source's own `"preliminary"` — the seventh time this exact collision, always with
+  BSA's own Chapter I category, has come up)
+- Chapter II — Of Transfers of Property by Act of Parties (§§5–53A), split into two
+  categories matching the Act's own internal Part (A)/(B) split: `transfer-general-
+  principles` (§§5–37, moveable or immoveable) and `transfer-immoveable-property`
+  (§§38–53A, immoveable only, incl. §53A's part-performance doctrine)
+- Chapter III — Of Sales of Immoveable Property (§§54–57), category
+  `sales-of-immoveable-property`
+- Chapter IV — Of Mortgages of Immoveable Property and Charges (§§58–104), by far the
+  densest chapter, split into 9 categories: `mortgages-definitions` (§§58–59A),
+  `mortgagor-rights-liabilities` (§§60–66), `mortgagee-rights-liabilities` (§§67–73),
+  `mortgagee-liabilities-priority` (§§74–80), `marshalling-contribution-deposit`
+  (§§81–84), `suits-foreclosure-sale-redemption` (§§85–90, entirely repealed — see
+  below), `redemption-subrogation` (§§91–97), `anomalous-mortgages-charges` (§§98–101),
+  `notice-and-tender` (§§102–104)
+- Chapter V — Of Leases of Immoveable Property (§§105–117), category
+  `leases-of-immoveable-property`
+- Chapter VI — Of Exchanges (§§118–121), category `exchanges`
+- Chapter VII — Of Gifts (§§122–129), category `gifts`
+- Chapter VIII — Of Transfers of Actionable Claims (§§130–137), category
+  `actionable-claims`
+
+**13 sections flagged `repealed: true`, not 11 — a discrepancy caught in the source
+file's own header, not just the user's request.** The source file's header comment
+explicitly claimed "REPEALED SECTIONS (11 total)" but then itemised §74, §75, §80,
+§§85–90 (six sections), §97, §99, §130A and §135A — which sums to 13, not 11, an
+internal inconsistency in the header's own count. The user's chat message repeated the
+same "11 sections" figure. Rather than trust either stated number, I verified against
+the actual delivered content: exactly 13 entries carry the title `"[Repealed]"` and a
+body consisting only of a repeal citation, matching this project's established
+`repealed: true` pattern (IPA §73, SGA §65, NIA §2, HSA §23/§24/§31, LA §28/§32) exactly.
+All 13 (§74, §75, §80, §85, §86, §87, §88, §89, §90, §97, §99, §130A, §135A) were flagged
+and verified via Playwright to render with the same distinct treatment. Six of these
+(§§85–90) form a single coordinated block — the entire mortgage foreclosure/sale/
+redemption procedure was moved out of this Act by the Code of Civil Procedure, 1908 and
+now lives in CPC Order XXXIV — confirmed via the rendered §85 page, which correctly notes
+this is "the first of a large, deliberate block of six consecutive repeals... moved to
+the CPC's Order XXXIV in a single 1908 legislative act."
+
+**No case law yet.** This Act carries an especially large body of case law — §14 (rule
+against perpetuity), §53A (part performance doctrine), §58 (mortgage classifications),
+and virtually all of Chapter IV on mortgages are flagged by the source as especially
+heavily litigated and strong candidates for a substantial future case-law pass.
+
+Sourced from the official India Code text (indiacode.nic.in), including full
+amendment-history footnotes (the Transfer of Property (Amendment) Act, 1929 being the
+single largest amending Act, substantially reshaping much of this Act).
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
