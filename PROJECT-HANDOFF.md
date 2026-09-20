@@ -984,6 +984,58 @@ absence of," not literally "after death."
 Sourced from the official India Code text (indiacode.nic.in), cross-checked against
 multiple independent bare-act sources for exact wording.
 
+## Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) — COMPLETE: all 531 of 531 sections, 39 chapters, 56 categories
+By far the largest single merge in this project's history, and the Act that had been
+sitting as `status: "soon"` since the very start (it was already scaffolded in `ACTS`
+before any of its content existed). This batch delivered the entire Act in one file and
+flipped its status to `"active"`.
+
+**Delivered pre-formatted, unlike every previous batch.** The source file
+(`BNSS_SECTIONS_1_531_FULL.js`) came with its own `BNSS_CLAUDE_CODE_INSTRUCTIONS.md`
+companion file, and both the `BNSS_CHAPTERS`, `BNSS_CATEGORIES`, and
+`BNSS_SECTIONS_1_531` exports were already written in this project's exact `App.jsx`
+object style (all 56 category ids already prefixed `bnss-`, avoiding the recurring
+`preliminary` collision with BSA without needing a remap step). This meant no transform
+script was needed this time — the three arrays were extracted verbatim from the source
+and appended directly to the end of `CHAPTERS`, `CATEGORIES`, and `SECTIONS`
+respectively, per the instructions file's own directive, rather than being spliced in
+alongside a related Act's entries the way every prior batch was.
+
+**Structure:** 39 chapters mirroring the Act's own Chapter I–XXXIX numbering; 56
+categories, with a chapter split into multiple categories only where the Act itself uses
+lettered A./B./C. parts (Chapters VI, VII, XI, XVIII, XX, XXV, and XXXIV), one category
+per chapter otherwise.
+
+**8 sections carry the Act's own illustrations** (§§234, 236, 238, 241, 243, 244, 245,
+337), split out of `text` into a separate `illustrations` array per this project's
+established text/illustrations convention (first built for BNS). §243 is the most
+complex, with three illustration groups, each keeping the Act's own group heading
+("Illustrations to sub-section (1)," etc.) as its own lead-in item. No sections are
+repealed, struck down, or lettered — a genuinely clean, uninterrupted 1–531 run.
+
+**Deliberately deferred in this pass:** no `simpleExplanation`, `cases`, or `crossRefs`
+were added anywhere — the instructions file was explicit that this merge is statute text
+only, with explanatory and case-law enrichment left as separate future passes. The First
+Schedule (classification of offences) and Second Schedule (forms) are likewise not
+included, consistent with how this project has treated other Acts' non-section Schedule
+content (e.g. LA's 137-Article Schedule).
+
+**Source integrity, per the instructions file's own account:** sourced from the Gazette
+of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023) — the enacted Act, not the
+withdrawn Bill No. 122 of 2023 — with every non-space character in the Gazette body text
+accounted for (difference 0), three Gazette typesetting quirks corrected (§114(2), §260,
+§480(2)), one marginal-note spelling choice noted (§479 "undertrial" per the Gazette,
+differing from India Code's "under-trial," title only), and an explicit warning that the
+India Code PDF's text for §53(3) and §58 is garbled and was not used as a source.
+
+Independently verified via a scratch-run inspection script before merge: exact section/
+chapter/category counts, no gaps or duplicates in 1–531, every category's `chapter`
+resolves, every section's `category` resolves, every category `range` matches the actual
+min–max of its sections, every chapter `range` matches the actual min–max of its
+categories' sections, and the illustrated-section list matches exactly. All checks
+passed cleanly before the splice, and the full-dataset integrity check passed again
+after it.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
