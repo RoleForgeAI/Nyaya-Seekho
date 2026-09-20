@@ -954,6 +954,36 @@ schema (no new fields needed — none of this batch's cases carry the foreign-ju
 Playwright that both multi-case sections in this batch (LA §5 with 2 cases, HSA §6 with
 3 cases) render all case cards correctly under the "Landmark case available" chip.
 
+## The Hindu Minority and Guardianship Act, 1956 (HMGA) — COMPLETE: all 13 of 13 sections, 1 chapter, 1 category
+An eleventh brand-new Act, and by far the smallest and structurally simplest so far.
+Act code `"HMGA"`, `"HMGA-<n>"` string-prefixed section ids. The third of the four "Hindu
+Code Bills" now built in this project (alongside HMA and HSA) — only the Hindu Adoptions
+and Maintenance Act, 1956 remains to complete the full quartet.
+
+**Genuinely flat structure — no chapter divisions in the source Act itself.** Unlike
+every other Act merged so far, this one is a single, undivided list of 13 sections with
+no internal Part or Chapter headings at all. Per the user's explicit instruction, this
+was set up as a single chapter (`HMGA-I`, labelled simply "The Act", range 1–13) and a
+single category (`guardianship`, same range) rather than forcing an artificial multi-
+chapter structure onto content that genuinely has none. This is the first Act in the
+project built this way — worth remembering as the pattern for any future single-category
+Act, rather than assuming every new Act needs the usual chapter/category split.
+
+No category remap was needed — `guardianship` did not collide with any existing
+category id, unlike almost every other Act merged into this project so far (this is the
+first batch where no id collision check turned anything up).
+
+**No repealed sections, no case law yet.** Every one of the 13 sections carries genuine
+substantive text. §6 (natural guardians — the Act's single most litigated provision) and
+§13 (the "welfare of the minor" paramountcy principle, which can override even §6's own
+ordered priority rules) are both flagged by the source as strong candidates for a future
+case-law pass — §6 in particular for *Githa Hariharan v. Reserve Bank of India*, the
+Supreme Court decision establishing that the phrase "after him" in §6(a) means "in the
+absence of," not literally "after death."
+
+Sourced from the official India Code text (indiacode.nic.in), cross-checked against
+multiple independent bare-act sources for exact wording.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
