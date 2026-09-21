@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from "react";
 import { Search, X, ScrollText, Scale, StickyNote, Menu, BookMarked, Link2 } from "lucide-react";
 import { storage } from "./lib/storage.js";
+import { CONSTITUTION_META, CONSTITUTION_CHAPTERS, CONSTITUTION_SECTIONS } from "./data/constitutionData.js";
 
 /* ------------------------------------------------------------------ */
 /* DATA — Chapter III, General Exceptions, Bharatiya Nyaya Sanhita 2023 */
@@ -24,10 +25,10 @@ const ACTS = [
   { id: "TPA", label: "The Transfer of Property Act, 1882", short: "Transfer of Property Act", status: "active" },
   { id: "HMA", label: "The Hindu Marriage Act, 1955", short: "Hindu Marriage Act", status: "active" },
   { id: "HMGA", label: "The Hindu Minority and Guardianship Act, 1956", short: "Hindu Minority & Guardianship Act", status: "active" },
-  { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "soon" },
+  { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "active" },
 ];
 
-const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label";
+const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); explanation and landmark cases reserved for a future pass";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -6856,6 +6857,58 @@ const SECTION_MAP = Object.fromEntries(SECTIONS.map((s) => [s.id, s]));
 const DEF_KEYS = Object.keys(DEFINITIONS).sort((a, b) => b.length - a.length);
 const DEF_REGEX = new RegExp(`(${DEF_KEYS.join("|")})`, "gi");
 
+// The Constitution of India is kept structurally separate from the flat ACTS/CHAPTERS/
+// CATEGORIES/SECTIONS model every other Act uses. Its own section ids are bare article/
+// schedule numbers (e.g. "21", "21A", "sch7-I") with no act-namespace prefix, which would
+// silently collide with BNS's own unprefixed numeric ids (1-358) inside a single shared
+// SECTION_MAP (Object.fromEntries coerces every key to a string, so BNS id 1 and
+// Constitution article "1" would overwrite each other). Kept in parallel maps instead, with
+// selectedAct === "CONSTITUTION" as the sole discriminator for which map/UI path applies.
+const CONSTITUTION_SECTION_MAP = Object.fromEntries(CONSTITUTION_SECTIONS.map((s) => [s.id, s]));
+const CONSTITUTION_CHAPTER_MAP = Object.fromEntries(CONSTITUTION_CHAPTERS.map((c) => [c.id, c]));
+const CONSTITUTION_PARTS = CONSTITUTION_CHAPTERS.filter((c) => c.kind === "part");
+
+function constitutionPartOf(section) {
+  return section && section.kind === "article" ? CONSTITUTION_CHAPTER_MAP["part-" + section.part] : null;
+}
+
+// Groups an ordered run of a Part's articles into chapterTitle -> group -> items, inserting
+// a new sub-heading only when the value actually changes from the previous article (never
+// sorted -- array order is the Contents-page order and must be preserved verbatim).
+function groupConstitutionPartSections(sections) {
+  const out = [];
+  let curChapter = null;
+  let curGroup = null;
+  for (const s of sections) {
+    const chapterKey = s.chapterTitle || null;
+    if (!curChapter || curChapter.chapterTitle !== chapterKey) {
+      curChapter = { chapterTitle: chapterKey, chapterNumber: s.chapter || null, groups: [] };
+      out.push(curChapter);
+      curGroup = null;
+    }
+    const groupKey = s.group || null;
+    if (!curGroup || curGroup.group !== groupKey) {
+      curGroup = { group: groupKey, items: [] };
+      curChapter.groups.push(curGroup);
+    }
+    curGroup.items.push(s);
+  }
+  return out;
+}
+
+function constitutionSearchMatch(s, q) {
+  if (String(s.id).toLowerCase().includes(q)) return true;
+  if (s.label && s.label.toLowerCase().includes(q)) return true;
+  if (s.title && s.title.toLowerCase().includes(q)) return true;
+  if (s.text && s.text.toLowerCase().includes(q)) return true;
+  if (s.omission && s.omission.toLowerCase().includes(q)) return true;
+  if (s.group && s.group.toLowerCase().includes(q)) return true;
+  if (s.chapterTitle && s.chapterTitle.toLowerCase().includes(q)) return true;
+  if (s.entries && s.entries.some((e) => e.text && e.text.toLowerCase().includes(q))) return true;
+  if (s.rows && s.rows.some((r) => Object.values(r).some((v) => typeof v === "string" && v.toLowerCase().includes(q)))) return true;
+  return false;
+}
+
 function chapterOf(section) {
   return CHAPTERS.find((ch) => ch.id === CATEGORIES.find((cat) => cat.id === section.category)?.chapter);
 }
@@ -6922,8 +6975,9 @@ export default function BareActNavigator() {
   const [noteStatus, setNoteStatus] = useState("idle"); // idle | loading | saving | saved | error
   const mainRef = useRef(null);
 
+  const isConstitution = selectedAct === "CONSTITUTION";
   const currentActMeta = ACTS.find((a) => a.id === selectedAct);
-  const currentActStats = useMemo(() => actStats(selectedAct), [selectedAct]);
+  const currentActStats = useMemo(() => (isConstitution ? null : actStats(selectedAct)), [selectedAct, isConstitution]);
 
   useEffect(() => {
     const mq = window.matchMedia("(min-width: 880px)");
@@ -6933,7 +6987,8 @@ export default function BareActNavigator() {
     return () => mq.removeEventListener("change", update);
   }, []);
 
-  const section = SECTION_MAP[selectedId];
+  const section = isConstitution ? null : SECTION_MAP[selectedId];
+  const constitutionSection = isConstitution ? CONSTITUTION_SECTION_MAP[selectedId] : null;
 
   // The reading pane's own scroll container can be `.main`, or — on the current layout,
   // where `.app` merely sets a min-height — the document itself. Reset both so the top of
@@ -6945,6 +7000,10 @@ export default function BareActNavigator() {
 
   const [noteError, setNoteError] = useState("");
   const storageAvailable = typeof window !== "undefined" && !!window.localStorage;
+  // Constitution ids (e.g. "21") would otherwise collide with BNS's own unprefixed
+  // numeric ids under the same legacy "bns-note-<id>" key, so the Constitution gets its
+  // own namespaced key; every other Act's existing keys are left exactly as they are.
+  const noteKey = isConstitution ? `constitution-note-${selectedId}` : `bns-note-${selectedId}`;
 
   useEffect(() => {
     let cancelled = false;
@@ -6956,7 +7015,7 @@ export default function BareActNavigator() {
     setNoteStatus("loading");
     (async () => {
       try {
-        const res = await storage.get(`bns-note-${selectedId}`);
+        const res = await storage.get(noteKey);
         if (!cancelled) {
           setNoteDraft(res && typeof res.value === "string" ? res.value : "");
           setNoteStatus("idle");
@@ -6970,7 +7029,7 @@ export default function BareActNavigator() {
       }
     })();
     return () => { cancelled = true; };
-  }, [selectedId, storageAvailable]);
+  }, [selectedId, storageAvailable, noteKey]);
 
   async function saveNote() {
     if (!storageAvailable) {
@@ -6980,7 +7039,7 @@ export default function BareActNavigator() {
     setNoteStatus("saving");
     setNoteError("");
     try {
-      const result = await storage.set(`bns-note-${selectedId}`, noteDraft);
+      const result = await storage.set(noteKey, noteDraft);
       if (!result) throw new Error("Storage returned no confirmation — the save may not have persisted.");
       setNoteStatus("saved");
       setTimeout(() => setNoteStatus((s) => (s === "saved" ? "idle" : s)), 1800);
@@ -7025,6 +7084,43 @@ export default function BareActNavigator() {
     URL.revokeObjectURL(url);
   }
 
+  function exportConstitutionSection() {
+    const s = constitutionSection;
+    const lines = [
+      `THE CONSTITUTION OF INDIA — ${constitutionPartOf(s)?.title || CONSTITUTION_CHAPTER_MAP[s.chapterId]?.title || ""}`,
+      `${s.label}${s.title && s.title !== s.label ? `. ${s.title}` : ""}`,
+      "",
+    ];
+    if (s.status === "omitted") {
+      lines.push("[OMITTED]", s.omission || "", "");
+    } else {
+      lines.push(s.text, "");
+      if (s.entries && s.entries.length) lines.push(...s.entries.map((e) => `${e.no}. ${e.omitted ? "Omitted" : e.text}`), "");
+      if (s.rows && s.rows.length) {
+        const isSeats = s.rows.some((r) => "seats" in r);
+        lines.push(...s.rows.map((r) => `${r.no ? r.no + ". " : ""}${r.name} — ${r.omitted ? "Omitted" : (isSeats ? r.seats : r.territories)}`), "");
+      }
+    }
+    if (s.amendments.length) lines.push("AMENDMENT HISTORY:", ...s.amendments.map((a) => `- ${a}`), "");
+    if (s.notInForce.length) lines.push("NOT YET IN FORCE:", ...s.notInForce.map((n) => `- ${n}`), "");
+    if (noteDraft && noteDraft.trim()) lines.push("MY NOTES:", noteDraft, "");
+    const blob = new Blob([lines.join("\n")], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `Constitution-${s.id}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  const constitutionFiltered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return CONSTITUTION_SECTIONS;
+    return CONSTITUTION_SECTIONS.filter((s) => constitutionSearchMatch(s, q));
+  }, [query]);
+
   const actSections = useMemo(() => {
     return SECTIONS.filter((s) => {
       const cat = CATEGORIES.find((c) => c.id === s.category);
@@ -7058,14 +7154,26 @@ export default function BareActNavigator() {
     if (!isDesktop) setSidebarOpen(false);
   }
 
+  // Separate from goTo(): Constitution ids are not looked up in the shared SECTION_MAP at
+  // all (see the collision note above CONSTITUTION_SECTION_MAP), so this never touches it.
+  function goToConstitution(id) {
+    setSelectedId(id);
+    setDrawer(null);
+    if (!isDesktop) setSidebarOpen(false);
+  }
+
   function switchAct(actId) {
     setSelectedAct(actId);
-    const firstSection = SECTIONS.find((s) => {
-      const cat = CATEGORIES.find((c) => c.id === s.category);
-      const chap = CHAPTERS.find((ch) => ch.id === cat?.chapter);
-      return chap?.act === actId;
-    });
-    if (firstSection) setSelectedId(firstSection.id);
+    if (actId === "CONSTITUTION") {
+      setSelectedId("preamble");
+    } else {
+      const firstSection = SECTIONS.find((s) => {
+        const cat = CATEGORIES.find((c) => c.id === s.category);
+        const chap = CHAPTERS.find((ch) => ch.id === cat?.chapter);
+        return chap?.act === actId;
+      });
+      if (firstSection) setSelectedId(firstSection.id);
+    }
     setDrawer(null);
     if (!isDesktop) setSidebarOpen(false);
   }
@@ -7420,6 +7528,50 @@ export default function BareActNavigator() {
           .drawer { left: auto; right: 40px; bottom: 40px; width: 380px;
             border-radius: 14px; max-height: 60vh; }
         }
+
+        .omitted-badge {
+          font-size: 9.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+          background: none; border: 1px solid #7c2233; border-radius: 10px;
+          padding: 1px 7px; color: #7c2233;
+        }
+        .not-in-force-note {
+          background: rgba(165,98,42,0.08); border: 1px solid #a5622a; border-radius: 10px;
+          padding: 14px 16px; margin-bottom: 18px;
+        }
+        .not-in-force-title {
+          font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 11px; font-weight: 800;
+          letter-spacing: 1px; text-transform: uppercase; color: #a5622a; margin-bottom: 6px;
+        }
+        .not-in-force-note p { font-size: 14px; line-height: 1.6; color: var(--ink); margin: 0 0 8px; white-space: pre-line; }
+        .not-in-force-note p:last-child { margin-bottom: 0; }
+        .amendments-box {
+          margin: 0 0 18px; font-family: -apple-system, 'Segoe UI', sans-serif;
+        }
+        .amendments-box summary {
+          cursor: pointer; font-size: 12px; font-weight: 700; color: var(--oxblood);
+          text-decoration: underline dotted; text-underline-offset: 3px;
+        }
+        .amendments-box ul { margin: 10px 0 0; padding-left: 18px; }
+        .amendments-box li { font-size: 13px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 8px; }
+        .const-entries { margin-bottom: 18px; }
+        .const-entry { display: flex; gap: 10px; padding: 6px 0; font-size: 15px; line-height: 1.65; border-bottom: 1px solid var(--line); }
+        .const-entry:last-child { border-bottom: none; }
+        .const-entry-no { font-weight: 700; color: var(--oxblood); flex-shrink: 0; min-width: 28px; }
+        .const-entry-omitted .const-entry-text { font-style: italic; color: var(--ink-soft); }
+        .const-table { width: 100%; border-collapse: collapse; margin-bottom: 18px; font-size: 14px; }
+        .const-table th {
+          font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 10.5px; letter-spacing: 1px;
+          text-transform: uppercase; color: var(--gold); text-align: left;
+          border-bottom: 2px solid var(--oxblood); padding: 8px 10px;
+        }
+        .const-table td { padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+        .const-row-total td { font-weight: 700; border-top: 2px solid var(--oxblood); }
+        .const-row-omitted td { font-style: italic; color: var(--ink-soft); }
+        .const-group-heading {
+          font-family: -apple-system, 'Segoe UI', sans-serif;
+          font-size: 10.5px; letter-spacing: 1.6px; text-transform: uppercase;
+          color: var(--oxblood-deep); font-weight: 700; margin: 14px 0 6px;
+        }
       `}</style>
 
       <div className="topbar">
@@ -7429,7 +7581,11 @@ export default function BareActNavigator() {
         <div className="topbar-titles">
           <p className="eyebrow">Bare Act &amp; Statute Navigator · Prototype</p>
           <h1>{currentActMeta?.label}</h1>
-          <div className="sub">{currentActStats.liveChapterCount} chapters live · {currentActStats.liveSectionCount} of {currentActStats.totalSections} {currentActMeta?.short} sections</div>
+          <div className="sub">
+            {isConstitution
+              ? `${CONSTITUTION_META.counts.partSlots} Parts · ${CONSTITUTION_META.counts.schedules} Schedules · ${CONSTITUTION_META.counts.appendices} Appendices · ${CONSTITUTION_META.counts.sections} of ${CONSTITUTION_META.counts.sections} sections`
+              : `${currentActStats.liveChapterCount} chapters live · ${currentActStats.liveSectionCount} of ${currentActStats.totalSections} ${currentActMeta?.short} sections`}
+          </div>
         </div>
         <Scale size={22} color="#a5813c" style={{ flexShrink: 0 }} />
       </div>
@@ -7437,7 +7593,7 @@ export default function BareActNavigator() {
       <div className="body-wrap">
         {isDesktop && (
           <nav className="sidebar">
-            <SidebarContents query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={switchAct} />
+            <SidebarContents query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={switchAct} isConstitution={isConstitution} constitutionFiltered={constitutionFiltered} goToConstitution={goToConstitution} />
           </nav>
         )}
         {!isDesktop && sidebarOpen && (
@@ -7445,7 +7601,7 @@ export default function BareActNavigator() {
             <div className="overlay" onClick={() => setSidebarOpen(false)} />
             <nav className="side-mobile-drawer">
               <button className="drawer-close" onClick={() => setSidebarOpen(false)}><X size={18} /></button>
-              <SidebarContents query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={switchAct} />
+              <SidebarContents query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={switchAct} isConstitution={isConstitution} constitutionFiltered={constitutionFiltered} goToConstitution={goToConstitution} />
             </nav>
           </>
         )}
@@ -7453,6 +7609,19 @@ export default function BareActNavigator() {
         {isDesktop && <div className="thread" />}
 
         <main className="main" ref={mainRef}>
+          {isConstitution ? (
+            <ConstitutionSectionView
+              s={constitutionSection}
+              noteDraft={noteDraft}
+              setNoteDraft={setNoteDraft}
+              saveNote={saveNote}
+              noteStatus={noteStatus}
+              noteError={noteError}
+              storageAvailable={storageAvailable}
+              exportConstitutionSection={exportConstitutionSection}
+            />
+          ) : (
+            <>
           <div className="breadcrumb">
             {ACTS.find((a) => a.id === chapterOf(section)?.act)?.label} <span>›</span> {chapterOf(section)?.label} <span>›</span> Section {sectionNumber(section.id)}
           </div>
@@ -7634,6 +7803,8 @@ export default function BareActNavigator() {
             statute text takes priority, cases are being enriched progressively. Statutes and case law can change after this
             date — if you know of an amendment or a newer ruling on a section here, flag it so it can be re-verified.
           </p>
+            </>
+          )}
         </main>
       </div>
 
@@ -7666,7 +7837,7 @@ export default function BareActNavigator() {
   );
 }
 
-function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selectedAct, setSelectedAct }) {
+function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selectedAct, setSelectedAct, isConstitution, constitutionFiltered, goToConstitution }) {
   const chapterGroups = CHAPTERS.filter((ch) => ch.act === selectedAct).map((ch) => {
     if (ch.repealed) return { ...ch, cats: [] };
     const cats = CATEGORIES.filter((c) => c.chapter === ch.id).map((cat) => ({
@@ -7700,6 +7871,10 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
           onChange={(e) => setQuery(e.target.value)}
         />
       </div>
+      {isConstitution ? (
+        <ConstitutionSidebarTree filtered={constitutionFiltered} selectedId={selectedId} goTo={goToConstitution} />
+      ) : (
+      <>
       {chapterGroups.map((ch) => (
         ch.repealed ? (
           <div key={ch.id} className="chapter-repealed">
@@ -7730,6 +7905,259 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
         )
       ))}
       {chapterGroups.filter((ch) => !ch.repealed).length === 0 && <div style={{ padding: 12, fontSize: 13, color: "#4a4038" }}>No sections match.</div>}
+      </>
+      )}
+    </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/* THE CONSTITUTION OF INDIA -- rendering components.                 */
+/* Kept structurally separate from the flat ACTS/CHAPTERS/CATEGORIES/ */
+/* SECTIONS model (see the comment above CONSTITUTION_SECTION_MAP):   */
+/* Parts carry their own sub-chapters and cross-headings, articles    */
+/* can be "omitted" with no body text, and Schedules carry numbered   */
+/* entries or table rows instead of plain text -- none of which the   */
+/* shared section-rendering pipe above was built to represent.        */
+/* ------------------------------------------------------------------ */
+
+function ConstitutionSidebarTree({ filtered, selectedId, goTo }) {
+  const preamble = filtered.find((s) => s.kind === "preamble");
+
+  const articlesByPart = {};
+  for (const s of filtered) {
+    if (s.kind !== "article") continue;
+    (articlesByPart[s.chapterId] = articlesByPart[s.chapterId] || []).push(s);
+  }
+
+  const scheduleSections = filtered.filter((s) => s.kind === "schedule");
+  const scheduleGroups = [];
+  for (const s of scheduleSections) {
+    let g = scheduleGroups.find((x) => x.group === s.group);
+    if (!g) { g = { group: s.group, items: [] }; scheduleGroups.push(g); }
+    g.items.push(s);
+  }
+
+  const appendixSections = filtered.filter((s) => s.kind === "appendix");
+
+  const hasAnyContent = !!preamble || Object.keys(articlesByPart).length > 0 || scheduleSections.length > 0 || appendixSections.length > 0;
+
+  return (
+    <>
+      {preamble && (
+        <div>
+          <div className="chapter-heading">Preamble</div>
+          <button
+            className={"sec-btn" + (preamble.id === selectedId ? " active" : "")}
+            onClick={() => goTo(preamble.id)}
+          >
+            <span className="sec-title">{preamble.label}</span>
+          </button>
+        </div>
+      )}
+
+      {CONSTITUTION_PARTS.map((part) => {
+        const arts = articlesByPart[part.id];
+        if (!arts || arts.length === 0) return null;
+        const grouped = groupConstitutionPartSections(arts);
+        return (
+          <div key={part.id} className={part.status === "omitted" ? "chapter-repealed" : undefined}>
+            <div className={part.status === "omitted" ? "chapter-repealed-heading" : "chapter-heading"}>
+              Part {part.number} — {part.title}
+              {part.status === "omitted" && <span className="repealed-badge">omitted</span>}
+            </div>
+            {grouped.map((cg, i) => (
+              <div key={i}>
+                {cg.chapterTitle && (
+                  <div className="const-group-heading">Chapter {cg.chapterNumber} — {cg.chapterTitle}</div>
+                )}
+                {cg.groups.map((g, j) => (
+                  <div key={j}>
+                    {g.group && <div className="cat-label">{g.group}</div>}
+                    {g.items.map((s) => (
+                      <button
+                        key={s.id}
+                        className={"sec-btn" + (s.id === selectedId ? " active" : "") + (s.status === "omitted" ? " sec-btn-repealed" : "")}
+                        onClick={() => goTo(s.id)}
+                      >
+                        <span className="sec-num">{s.number}</span>
+                        <span className="sec-title">{s.status === "omitted" ? "[Omitted]" : s.title}</span>
+                      </button>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        );
+      })}
+
+      {scheduleSections.length > 0 && (
+        <div>
+          <div className="chapter-heading">Schedules</div>
+          {scheduleGroups.map((g, i) => (
+            <div key={i}>
+              <div className="cat-label">{g.group}</div>
+              {g.items.map((s) => (
+                <button
+                  key={s.id}
+                  className={"sec-btn" + (s.id === selectedId ? " active" : "")}
+                  onClick={() => goTo(s.id)}
+                >
+                  <span className="sec-title">{s.title || s.label}</span>
+                </button>
+              ))}
+            </div>
+          ))}
+        </div>
+      )}
+
+      {appendixSections.length > 0 && (
+        <div>
+          <div className="chapter-heading">Appendices</div>
+          {appendixSections.map((s) => (
+            <button
+              key={s.id}
+              className={"sec-btn" + (s.id === selectedId ? " active" : "")}
+              onClick={() => goTo(s.id)}
+            >
+              <span className="sec-title">{s.label} — {s.title}</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      {!hasAnyContent && <div style={{ padding: 12, fontSize: 13, color: "#4a4038" }}>No sections match.</div>}
+    </>
+  );
+}
+
+function ConstitutionEntries({ entries }) {
+  return (
+    <div className="const-entries">
+      {entries.map((e, i) => (
+        <div className={"const-entry" + (e.omitted ? " const-entry-omitted" : "")} key={i}>
+          <span className="const-entry-no">{e.no}.</span>
+          <span className="const-entry-text">{e.omitted ? "Omitted" : e.text}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function ConstitutionRows({ rows }) {
+  const isSeats = rows.some((r) => "seats" in r);
+  return (
+    <table className="const-table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>{isSeats ? "Seats" : "Territories"}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr key={i} className={r.name === "Total" ? "const-row-total" : (r.omitted ? "const-row-omitted" : "")}>
+            <td>{r.no}</td>
+            <td>{r.name}</td>
+            <td>{r.omitted ? "Omitted" : (isSeats ? r.seats : r.territories)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteStatus, noteError, storageAvailable, exportConstitutionSection }) {
+  if (!s) return null;
+  const isOmitted = s.status === "omitted";
+  const part = constitutionPartOf(s);
+  const chapter = CONSTITUTION_CHAPTER_MAP[s.chapterId];
+  const crumbMiddle = s.kind === "article"
+    ? `Part ${part?.number} — ${part?.title}${part?.status === "omitted" ? " (Omitted)" : ""}`
+    : (chapter?.title || "");
+
+  return (
+    <>
+      <div className="breadcrumb">
+        The Constitution of India <span>›</span> {crumbMiddle} <span>›</span> {s.label}
+      </div>
+      <div className="stamp-row">
+        {s.number && <div className="stamp">{s.number}</div>}
+      </div>
+      <h2 className="sec-heading">{s.title || s.label}</h2>
+
+      <div className="meta-chips">
+        {s.group && <span className="meta-chip">{s.group}</span>}
+        {isOmitted && <span className="meta-chip"><span className="omitted-badge">omitted</span></span>}
+        {s.amendments.length > 0 && (
+          <span className="meta-chip">{s.amendments.length} amendment note{s.amendments.length > 1 ? "s" : ""}</span>
+        )}
+        {s.notInForce.length > 0 && <span className="meta-chip gold">Not yet in force</span>}
+      </div>
+
+      <button className="export-btn" onClick={exportConstitutionSection}>Export section as text ↓</button>
+
+      {isOmitted ? (
+        <div className="section-repealed-note">
+          <span className="omitted-badge">omitted</span>
+          <p>{s.omission}</p>
+        </div>
+      ) : (
+        <>
+          <div className="block-label">Official Constitutional Text</div>
+          {s.text && <p className="body-text">{s.text}</p>}
+          {s.entries && s.entries.length > 0 && <ConstitutionEntries entries={s.entries} />}
+          {s.rows && s.rows.length > 0 && <ConstitutionRows rows={s.rows} />}
+        </>
+      )}
+
+      {s.notInForce.length > 0 && (
+        <div className="not-in-force-note">
+          <div className="not-in-force-title">Not Yet in Force</div>
+          {s.notInForce.map((n, i) => <p key={i}>{n}</p>)}
+        </div>
+      )}
+
+      {s.amendments.length > 0 && (
+        <details className="amendments-box">
+          <summary>Amendment history ({s.amendments.length})</summary>
+          <ul>{s.amendments.map((a, i) => <li key={i}>{a}</li>)}</ul>
+        </details>
+      )}
+
+      <div className="notes-box">
+        <div className="block-label"><StickyNote size={12} style={{ verticalAlign: -2 }} /> Your Notes on {s.label}</div>
+        <textarea
+          value={noteDraft}
+          onChange={(e) => setNoteDraft(e.target.value)}
+          placeholder="Jot exam points, mnemonics, or a case you want to add here…"
+        />
+        <div className="notes-actions">
+          <button className="save-btn" onClick={saveNote} disabled={noteStatus === "saving" || !storageAvailable}>
+            {noteStatus === "saving" ? "Saving…" : "Save note"}
+          </button>
+          {noteStatus === "saved" && <span className="status-text">Saved ✓</span>}
+          {noteStatus === "loading" && <span className="status-text">Loading…</span>}
+          {noteStatus === "unavailable" && (
+            <span className="status-text">Storage isn't available in this preview — notes won't persist here.</span>
+          )}
+        </div>
+        {noteStatus === "error" && (
+          <div className="status-text" style={{ color: "#7c2233", marginTop: 6 }}>
+            Couldn't save: {noteError}
+          </div>
+        )}
+      </div>
+
+      <p className="disclaimer">
+        Content last verified against source: <strong>{CONSTITUTION_META.source.title}, {CONSTITUTION_META.source.publisher}, as on {CONSTITUTION_META.source.asOn}, amended up to {CONSTITUTION_META.source.amendedUpTo}</strong>.
+        Live scope: {CONSTITUTION_META.counts.sections} of {CONSTITUTION_META.counts.sections} Constitution sections
+        ({CONSTITUTION_META.counts.articlesInForce} of {CONSTITUTION_META.counts.articleSlots} articles in force, {CONSTITUTION_META.counts.articlesOmitted} omitted).
+        {" "}Explanation and landmark cases are reserved for a future enrichment pass — statute text takes priority.
+        Statutes and case law can change after this date — if you know of an amendment or a newer ruling here, flag it so it can be re-verified.
+      </p>
     </>
   );
 }

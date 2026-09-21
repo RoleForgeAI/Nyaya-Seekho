@@ -6,8 +6,11 @@
   "description": "Bare Act & Statute Navigator — interactive, cross-referenced study tool for Indian law students.",
   "scripts": {
     "dev": "vite",
+    "prebuild": "npm run verify:constitution",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify:constitution": "node scripts/verify-constitution.mjs src/data/constitutionData.js scripts/constitution.expected.json",
+    "smoke:constitution": "node scripts/smoke-constitution-build.mjs dist"
   },
   "dependencies": {
     "lucide-react": "^0.462.0",

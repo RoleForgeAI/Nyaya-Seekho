@@ -1,0 +1,7399 @@
+{
+ "source": {
+  "title": "The Constitution of India (pocket size edition, diglot — English text parsed)",
+  "publisher": "Legislative Department, Ministry of Law and Justice, Government of India",
+  "asOn": "2026-05-01",
+  "amendedUpTo": "The Constitution (One Hundred and Sixth Amendment) Act, 2023",
+  "pdfPages": 402,
+  "parsedFrom": "uploaded PDF text layer (no external text used)"
+ },
+ "counts": {
+  "articleSlots": 506,
+  "articlesInForce": 471,
+  "articlesOmitted": 35,
+  "partsInForce": 25,
+  "partSlots": 26,
+  "constitutionChapters": 23,
+  "schedules": 12,
+  "appendices": 3,
+  "sections": 570
+ },
+ "parts": [
+  {
+   "number": "I",
+   "title": "THE UNION AND ITS TERRITORY",
+   "omitted": false
+  },
+  {
+   "number": "II",
+   "title": "CITIZENSHIP",
+   "omitted": false
+  },
+  {
+   "number": "III",
+   "title": "FUNDAMENTAL RIGHTS",
+   "omitted": false
+  },
+  {
+   "number": "IV",
+   "title": "DIRECTIVE PRINCIPLES OF STATE POLICY",
+   "omitted": false
+  },
+  {
+   "number": "IVA",
+   "title": "FUNDAMENTAL DUTIES",
+   "omitted": false
+  },
+  {
+   "number": "V",
+   "title": "THE UNION",
+   "omitted": false
+  },
+  {
+   "number": "VI",
+   "title": "THE STATES",
+   "omitted": false
+  },
+  {
+   "number": "VII",
+   "title": "THE STATES IN PART B OF THE FIRST SCHEDULE",
+   "omitted": true
+  },
+  {
+   "number": "VIII",
+   "title": "THE UNION TERRITORIES",
+   "omitted": false
+  },
+  {
+   "number": "IX",
+   "title": "THE PANCHAYATS",
+   "omitted": false
+  },
+  {
+   "number": "IXA",
+   "title": "THE MUNICIPALITIES",
+   "omitted": false
+  },
+  {
+   "number": "IXB",
+   "title": "THE CO-OPERATIVE SOCIETIES",
+   "omitted": false
+  },
+  {
+   "number": "X",
+   "title": "THE SCHEDULED AND TRIBAL AREAS",
+   "omitted": false
+  },
+  {
+   "number": "XI",
+   "title": "RELATIONS BETWEEN THE UNION AND THE STATES",
+   "omitted": false
+  },
+  {
+   "number": "XII",
+   "title": "FINANCE, PROPERTY, CONTRACTS AND SUITS",
+   "omitted": false
+  },
+  {
+   "number": "XIII",
+   "title": "TRADE, COMMERCE AND INTERCOURSE WITHIN THE TERRITORY OF INDIA",
+   "omitted": false
+  },
+  {
+   "number": "XIV",
+   "title": "SERVICES UNDER THE UNION AND THE STATES",
+   "omitted": false
+  },
+  {
+   "number": "XIVA",
+   "title": "TRIBUNALS",
+   "omitted": false
+  },
+  {
+   "number": "XV",
+   "title": "ELECTIONS",
+   "omitted": false
+  },
+  {
+   "number": "XVI",
+   "title": "SPECIAL PROVISIONS RELATING TO CERTAIN CLASSES",
+   "omitted": false
+  },
+  {
+   "number": "XVII",
+   "title": "OFFICIAL LANGUAGE",
+   "omitted": false
+  },
+  {
+   "number": "XVIII",
+   "title": "EMERGENCY PROVISIONS",
+   "omitted": false
+  },
+  {
+   "number": "XIX",
+   "title": "MISCELLANEOUS",
+   "omitted": false
+  },
+  {
+   "number": "XX",
+   "title": "AMENDMENT OF THE CONSTITUTION",
+   "omitted": false
+  },
+  {
+   "number": "XXI",
+   "title": "TEMPORARY, TRANSITIONAL AND SPECIAL PROVISIONS",
+   "omitted": false
+  },
+  {
+   "number": "XXII",
+   "title": "SHORT TITLE, COMMENCEMENT, AUTHORITATIVE TEXT IN HINDI AND REPEALS",
+   "omitted": false
+  }
+ ],
+ "constitutionChapters": [
+  {
+   "part": "V",
+   "number": "I",
+   "title": "THE EXECUTIVE"
+  },
+  {
+   "part": "V",
+   "number": "II",
+   "title": "PARLIAMENT"
+  },
+  {
+   "part": "V",
+   "number": "III",
+   "title": "LEGISLATIVE POWERS OF THE PRESIDENT"
+  },
+  {
+   "part": "V",
+   "number": "IV",
+   "title": "THE UNION JUDICIARY"
+  },
+  {
+   "part": "V",
+   "number": "V",
+   "title": "COMPTROLLER AND AUDITOR-GENERAL OF INDIA"
+  },
+  {
+   "part": "VI",
+   "number": "I",
+   "title": "GENERAL"
+  },
+  {
+   "part": "VI",
+   "number": "II",
+   "title": "THE EXECUTIVE"
+  },
+  {
+   "part": "VI",
+   "number": "III",
+   "title": "THE STATE LEGISLATURE"
+  },
+  {
+   "part": "VI",
+   "number": "IV",
+   "title": "LEGISLATIVE POWER OF THE GOVERNOR"
+  },
+  {
+   "part": "VI",
+   "number": "V",
+   "title": "THE HIGH COURTS IN THE STATES"
+  },
+  {
+   "part": "VI",
+   "number": "VI",
+   "title": "SUBORDINATE COURTS"
+  },
+  {
+   "part": "XI",
+   "number": "I",
+   "title": "LEGISLATIVE RELATIONS"
+  },
+  {
+   "part": "XI",
+   "number": "II",
+   "title": "ADMINISTRATIVE RELATIONS"
+  },
+  {
+   "part": "XII",
+   "number": "I",
+   "title": "FINANCE"
+  },
+  {
+   "part": "XII",
+   "number": "II",
+   "title": "BORROWING"
+  },
+  {
+   "part": "XII",
+   "number": "III",
+   "title": "PROPERTY, CONTRACTS, RIGHTS, LIABILITIES, OBLIGATIONS AND SUITS"
+  },
+  {
+   "part": "XII",
+   "number": "IV",
+   "title": "RIGHT TO PROPERTY"
+  },
+  {
+   "part": "XIV",
+   "number": "I",
+   "title": "SERVICES"
+  },
+  {
+   "part": "XIV",
+   "number": "II",
+   "title": "PUBLIC SERVICE COMMISSIONS"
+  },
+  {
+   "part": "XVII",
+   "number": "I",
+   "title": "LANGUAGE OF THE UNION"
+  },
+  {
+   "part": "XVII",
+   "number": "II",
+   "title": "REGIONAL LANGUAGES"
+  },
+  {
+   "part": "XVII",
+   "number": "III",
+   "title": "LANGUAGE OF THE SUPREME COURT, HIGH COURTS, ETC."
+  },
+  {
+   "part": "XVII",
+   "number": "IV",
+   "title": "SPECIAL DIRECTIVES"
+  }
+ ],
+ "articles": [
+  {
+   "id": "1",
+   "omitted": false,
+   "part": "I",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Name and territory of the Union."
+  },
+  {
+   "id": "2",
+   "omitted": false,
+   "part": "I",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Admission or establishment of new States."
+  },
+  {
+   "id": "2A",
+   "omitted": true,
+   "part": "I",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Sikkim to be associated with the Union.—Omitted.]"
+  },
+  {
+   "id": "3",
+   "omitted": false,
+   "part": "I",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Formation of new States and alteration of areas, boundaries or names of existing States."
+  },
+  {
+   "id": "4",
+   "omitted": false,
+   "part": "I",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Laws made under articles 2 and 3 to provide for the amendment of the First and the Fourth Schedules and supplemental, incidental and consequential matters."
+  },
+  {
+   "id": "5",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Citizenship at the commencement of the Constitution."
+  },
+  {
+   "id": "6",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Rights of citizenship of certain persons who have migrated to India from Pakistan."
+  },
+  {
+   "id": "7",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Rights of citizenship of certain migrants to Pakistan."
+  },
+  {
+   "id": "8",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Rights of citizenship of certain persons of Indian origin residing outside India."
+  },
+  {
+   "id": "9",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Persons voluntarily acquiring citizenship of a foreign State not to be citizens."
+  },
+  {
+   "id": "10",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Continuance of the rights of citizenship."
+  },
+  {
+   "id": "11",
+   "omitted": false,
+   "part": "II",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Parliament to regulate the right of citizenship by law."
+  },
+  {
+   "id": "12",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "General",
+   "contentsTitle": "Definition."
+  },
+  {
+   "id": "13",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "General",
+   "contentsTitle": "Laws inconsistent with or in derogation of the fundamental rights."
+  },
+  {
+   "id": "14",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Equality",
+   "contentsTitle": "Equality before law."
+  },
+  {
+   "id": "15",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Equality",
+   "contentsTitle": "Prohibition of discrimination on grounds of religion, race, caste, sex or place of birth."
+  },
+  {
+   "id": "16",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Equality",
+   "contentsTitle": "Equality of opportunity in matters of public employment."
+  },
+  {
+   "id": "17",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Equality",
+   "contentsTitle": "Abolition of Untouchability."
+  },
+  {
+   "id": "18",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Equality",
+   "contentsTitle": "Abolition of titles."
+  },
+  {
+   "id": "19",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom",
+   "contentsTitle": "Protection of certain rights regarding freedom of speech, etc."
+  },
+  {
+   "id": "20",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom",
+   "contentsTitle": "Protection in respect of conviction for offences."
+  },
+  {
+   "id": "21",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom",
+   "contentsTitle": "Protection of life and personal liberty."
+  },
+  {
+   "id": "21A",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom",
+   "contentsTitle": "Right to education."
+  },
+  {
+   "id": "22",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom",
+   "contentsTitle": "Protection against arrest and detention in certain cases."
+  },
+  {
+   "id": "23",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right against Exploitation",
+   "contentsTitle": "Prohibition of traffic in human beings and forced labour."
+  },
+  {
+   "id": "24",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right against Exploitation",
+   "contentsTitle": "Prohibition of employment of children in factories, etc."
+  },
+  {
+   "id": "25",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom of Religion",
+   "contentsTitle": "Freedom of conscience and free profession, practice and propagation of religion."
+  },
+  {
+   "id": "26",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom of Religion",
+   "contentsTitle": "Freedom to manage religious affairs."
+  },
+  {
+   "id": "27",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom of Religion",
+   "contentsTitle": "Freedom as to payment of taxes for promotion of any particular religion."
+  },
+  {
+   "id": "28",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Freedom of Religion",
+   "contentsTitle": "Freedom as to attendance at religious instruction or religious worship in certain educational institutions."
+  },
+  {
+   "id": "29",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Cultural and Educational Rights",
+   "contentsTitle": "Protection of interests of minorities."
+  },
+  {
+   "id": "30",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Cultural and Educational Rights",
+   "contentsTitle": "Right of minorities to establish and administer educational institutions."
+  },
+  {
+   "id": "31",
+   "omitted": true,
+   "part": "III",
+   "chapter": null,
+   "group": "Cultural and Educational Rights",
+   "contentsTitle": "Compulsory acquisition of property —Omitted.]"
+  },
+  {
+   "id": "31A",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Saving of Certain Laws",
+   "contentsTitle": "Saving of Laws providing for acquisition of estates, etc."
+  },
+  {
+   "id": "31B",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Saving of Certain Laws",
+   "contentsTitle": "Validation of certain Acts and Regulations."
+  },
+  {
+   "id": "31C",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Saving of Certain Laws",
+   "contentsTitle": "Saving of laws giving effect to certain directive principles."
+  },
+  {
+   "id": "31D",
+   "omitted": true,
+   "part": "III",
+   "chapter": null,
+   "group": "Saving of Certain Laws",
+   "contentsTitle": "Saving of laws in respect of anti-national activities.—Omitted.]"
+  },
+  {
+   "id": "32",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Constitutional Remedies",
+   "contentsTitle": "Remedies for enforcement of rights conferred by this Part."
+  },
+  {
+   "id": "32A",
+   "omitted": true,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Constitutional Remedies",
+   "contentsTitle": "Constitutional validity of State laws not to be considered in proceedings under article 32.—Omitted.]"
+  },
+  {
+   "id": "33",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Constitutional Remedies",
+   "contentsTitle": "Power of Parliament to modify the rights conferred by this Part in their application to Forces, etc."
+  },
+  {
+   "id": "34",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Constitutional Remedies",
+   "contentsTitle": "Restriction on rights conferred by this Part while martial law is in force in any area."
+  },
+  {
+   "id": "35",
+   "omitted": false,
+   "part": "III",
+   "chapter": null,
+   "group": "Right to Constitutional Remedies",
+   "contentsTitle": "Legislation to give effect to the provisions of this Part."
+  },
+  {
+   "id": "36",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Definition."
+  },
+  {
+   "id": "37",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application of the principles contained in this Part."
+  },
+  {
+   "id": "38",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "State to secure a social order for the promotion of welfare of the people."
+  },
+  {
+   "id": "39",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Certain principles of policy to be followed by the State."
+  },
+  {
+   "id": "39A",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Equal justice and free legal aid."
+  },
+  {
+   "id": "40",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Organisation of village panchayats."
+  },
+  {
+   "id": "41",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Right to work, to education and to public assistance in certain cases."
+  },
+  {
+   "id": "42",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision for just and humane conditions of work and maternity relief."
+  },
+  {
+   "id": "43",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Living wage, etc., for workers."
+  },
+  {
+   "id": "43A",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Participation of workers in management of Industries."
+  },
+  {
+   "id": "43B",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Promotion of co-operative societies."
+  },
+  {
+   "id": "44",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Uniform civil code for the citizens."
+  },
+  {
+   "id": "45",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision for early childhood care and education to children below the age of six years."
+  },
+  {
+   "id": "46",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Promotion of educational and economic interests of Scheduled Castes, Scheduled Tribes and other weaker sections."
+  },
+  {
+   "id": "47",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Duty of the State to raise the level of nutrition and the standard of living and to improve public health."
+  },
+  {
+   "id": "48",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Organisation of agriculture and animal husbandry."
+  },
+  {
+   "id": "48A",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Protection and improvement of environment and safeguarding of forests and wild life."
+  },
+  {
+   "id": "49",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Protection of monuments and places and objects of national importance."
+  },
+  {
+   "id": "50",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Separation of judiciary from executive."
+  },
+  {
+   "id": "51",
+   "omitted": false,
+   "part": "IV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Promotion of international peace and security."
+  },
+  {
+   "id": "51A",
+   "omitted": false,
+   "part": "IVA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Fundamental duties."
+  },
+  {
+   "id": "52",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "The President of India."
+  },
+  {
+   "id": "53",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Executive power of the Union."
+  },
+  {
+   "id": "54",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Election of President."
+  },
+  {
+   "id": "55",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Manner of election of President."
+  },
+  {
+   "id": "56",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Term of office of President."
+  },
+  {
+   "id": "57",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Eligibility for re-election."
+  },
+  {
+   "id": "58",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Qualifications for election as President."
+  },
+  {
+   "id": "59",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Conditions of President’s office."
+  },
+  {
+   "id": "60",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Oath or affirmation by the President."
+  },
+  {
+   "id": "61",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Procedure for impeachment of the President."
+  },
+  {
+   "id": "62",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Time of holding election to fill vacancy in the office of President and the term of office of person elected to fill casual vacancy."
+  },
+  {
+   "id": "63",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "The Vice-President of India."
+  },
+  {
+   "id": "64",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "The Vice-President to be ex officio Chairman of the Council of States."
+  },
+  {
+   "id": "65",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "The Vice-President to act as President or to discharge his functions during casual vacancies in the office, or during the absence, of President."
+  },
+  {
+   "id": "66",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Election of Vice-President."
+  },
+  {
+   "id": "67",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Term of office of Vice-President."
+  },
+  {
+   "id": "68",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Time of holding election to fill vacancy in the office of Vice-President and the term of office of person elected to fill casual vacancy."
+  },
+  {
+   "id": "69",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Oath or affirmation by the Vice-President."
+  },
+  {
+   "id": "70",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Discharge of President’s functions in other contingencies."
+  },
+  {
+   "id": "71",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Matters relating to, or connected with, the election of a President or Vice-President."
+  },
+  {
+   "id": "72",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Power of President to grant pardons, etc., and to suspend, remit or commute sentences in certain cases."
+  },
+  {
+   "id": "73",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The President and Vice-President",
+   "contentsTitle": "Extent of executive power of the Union."
+  },
+  {
+   "id": "74",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "Council of Ministers",
+   "contentsTitle": "Council of Ministers to aid and advise President."
+  },
+  {
+   "id": "75",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "Council of Ministers",
+   "contentsTitle": "Other provisions as to Ministers."
+  },
+  {
+   "id": "76",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "The Attorney-General for India",
+   "contentsTitle": "Attorney-General for India."
+  },
+  {
+   "id": "77",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "Conduct of Government Business",
+   "contentsTitle": "Conduct of business of the Government of India."
+  },
+  {
+   "id": "78",
+   "omitted": false,
+   "part": "V",
+   "chapter": "I",
+   "group": "Conduct of Government Business",
+   "contentsTitle": "Duties of Prime Minister as respects the furnishing of information to the President, etc."
+  },
+  {
+   "id": "79",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Constitution of Parliament."
+  },
+  {
+   "id": "80",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Composition of the Council of States."
+  },
+  {
+   "id": "81",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Composition of the House of the People."
+  },
+  {
+   "id": "82",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Readjustment after each census."
+  },
+  {
+   "id": "83",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Duration of Houses of Parliament."
+  },
+  {
+   "id": "84",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Qualification for membership of Parliament."
+  },
+  {
+   "id": "85",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Sessions of Parliament, prorogation and dissolution."
+  },
+  {
+   "id": "86",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Right of President to address and send messages to Houses."
+  },
+  {
+   "id": "87",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Special address by the President."
+  },
+  {
+   "id": "88",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Rights of Ministers and Attorney-General as respects Houses."
+  },
+  {
+   "id": "89",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "The Chairman and Deputy Chairman of the Council of States."
+  },
+  {
+   "id": "90",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Vacation and resignation of, and removal from, the office of Deputy Chairman."
+  },
+  {
+   "id": "91",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman."
+  },
+  {
+   "id": "92",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration."
+  },
+  {
+   "id": "93",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "The Speaker and Deputy Speaker of the House of the People."
+  },
+  {
+   "id": "94",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker."
+  },
+  {
+   "id": "95",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker."
+  },
+  {
+   "id": "96",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration."
+  },
+  {
+   "id": "97",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Salaries and allowances of the Chairman and Deputy Chairman and the Speaker and Deputy Speaker."
+  },
+  {
+   "id": "98",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Officers of Parliament",
+   "contentsTitle": "Secretariat of Parliament."
+  },
+  {
+   "id": "99",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Conduct of Business",
+   "contentsTitle": "Oath or affirmation by members."
+  },
+  {
+   "id": "100",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Conduct of Business",
+   "contentsTitle": "Voting in Houses, power of Houses to act notwithstanding vacancies and quorum."
+  },
+  {
+   "id": "101",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Vacation of seats."
+  },
+  {
+   "id": "102",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Disqualifications for membership."
+  },
+  {
+   "id": "103",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Decision on questions as to disqualifications of members."
+  },
+  {
+   "id": "104",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Penalty for sitting and voting before making oath or affirmation under article 99 or when not qualified or when disqualified."
+  },
+  {
+   "id": "105",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Powers, Privileges and Immunities of Parliament and its Members",
+   "contentsTitle": "Powers, privileges, etc., of the Houses of Parliament and of the members and committees thereof."
+  },
+  {
+   "id": "106",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Powers, Privileges and Immunities of Parliament and its Members",
+   "contentsTitle": "Salaries and allowances of members."
+  },
+  {
+   "id": "107",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Provisions as to introduction and passing of Bills."
+  },
+  {
+   "id": "108",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Joint sitting of both Houses in certain cases."
+  },
+  {
+   "id": "109",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Special procedure in respect of Money Bills."
+  },
+  {
+   "id": "110",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Definition of “Money Bills”."
+  },
+  {
+   "id": "111",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Assent to Bills."
+  },
+  {
+   "id": "112",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Annual financial statement."
+  },
+  {
+   "id": "113",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Procedure in Parliament with respect to estimates."
+  },
+  {
+   "id": "114",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Appropriation Bills."
+  },
+  {
+   "id": "115",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Supplementary, additional or excess grants."
+  },
+  {
+   "id": "116",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Votes on account, votes of credit and exceptional grants."
+  },
+  {
+   "id": "117",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Special provisions as to financial Bills."
+  },
+  {
+   "id": "118",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure Generally",
+   "contentsTitle": "Rules of procedure."
+  },
+  {
+   "id": "119",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure Generally",
+   "contentsTitle": "Regulation by law of procedure in Parliament in relation to financial business."
+  },
+  {
+   "id": "120",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure Generally",
+   "contentsTitle": "Language to be used in Parliament."
+  },
+  {
+   "id": "121",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure Generally",
+   "contentsTitle": "Restriction on discussion in Parliament."
+  },
+  {
+   "id": "122",
+   "omitted": false,
+   "part": "V",
+   "chapter": "II",
+   "group": "Procedure Generally",
+   "contentsTitle": "Courts not to inquire into proceedings of Parliament."
+  },
+  {
+   "id": "123",
+   "omitted": false,
+   "part": "V",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Power of President to promulgate Ordinances during recess of Parliament."
+  },
+  {
+   "id": "124",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Establishment and constitution of the Supreme Court."
+  },
+  {
+   "id": "124A",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "National Judicial Appointments Commission."
+  },
+  {
+   "id": "124B",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Functions of Commission."
+  },
+  {
+   "id": "124C",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Power of Parliament to make law."
+  },
+  {
+   "id": "125",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Salaries, etc., of Judges."
+  },
+  {
+   "id": "126",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Appointment of acting Chief Justice."
+  },
+  {
+   "id": "127",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Appointment of ad hoc Judges."
+  },
+  {
+   "id": "128",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Attendance of retired Judges at sittings of the Supreme Court."
+  },
+  {
+   "id": "129",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Supreme Court to be a court of record."
+  },
+  {
+   "id": "130",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Seat of Supreme Court."
+  },
+  {
+   "id": "131",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Original jurisdiction of the Supreme Court."
+  },
+  {
+   "id": "131A",
+   "omitted": true,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Exclusive jurisdiction of the Supreme Court in regard to questions as to constitutional validity of Central laws.⎯Omitted.]"
+  },
+  {
+   "id": "132",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Appellate jurisdiction of the Supreme Court in appeals from High Courts in certain cases."
+  },
+  {
+   "id": "133",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Appellate jurisdiction of the Supreme Court in appeals from High Courts in regard to civil matters."
+  },
+  {
+   "id": "134",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Appellate jurisdiction of the Supreme Court in regard to criminal matters."
+  },
+  {
+   "id": "134A",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Certificate for appeal to the Supreme Court."
+  },
+  {
+   "id": "135",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Jurisdiction and powers of the Federal Court under existing law to be exercisable by the Supreme Court."
+  },
+  {
+   "id": "136",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Special leave to appeal by the Supreme Court."
+  },
+  {
+   "id": "137",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Review of judgments or orders by the Supreme Court."
+  },
+  {
+   "id": "138",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Enlargement of the jurisdiction of the Supreme Court."
+  },
+  {
+   "id": "139",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Conferment on the Supreme Court of powers to issue certain writs."
+  },
+  {
+   "id": "139A",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Transfer of certain cases."
+  },
+  {
+   "id": "140",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Ancillary powers of the Supreme Court."
+  },
+  {
+   "id": "141",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Law declared by Supreme Court to be binding on all courts."
+  },
+  {
+   "id": "142",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Enforcement of decrees and orders of the Supreme Court and orders as to discovery, etc."
+  },
+  {
+   "id": "143",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Power of the President to consult the Supreme Court."
+  },
+  {
+   "id": "144",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Civil and judicial authorities to act in aid of the Supreme Court."
+  },
+  {
+   "id": "144A",
+   "omitted": true,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Special provisions as to disposal of questions relating to constitutional validity of laws.⎯Omitted.]"
+  },
+  {
+   "id": "145",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Rules of Court, etc."
+  },
+  {
+   "id": "146",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Officers and servants and the expenses of the Supreme Court."
+  },
+  {
+   "id": "147",
+   "omitted": false,
+   "part": "V",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Interpretation."
+  },
+  {
+   "id": "148",
+   "omitted": false,
+   "part": "V",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Comptroller and Auditor-General of India."
+  },
+  {
+   "id": "149",
+   "omitted": false,
+   "part": "V",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Duties and powers of the Comptroller and Auditor-General."
+  },
+  {
+   "id": "150",
+   "omitted": false,
+   "part": "V",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Form of accounts of the Union and of the States."
+  },
+  {
+   "id": "151",
+   "omitted": false,
+   "part": "V",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Audit reports."
+  },
+  {
+   "id": "152",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Definition."
+  },
+  {
+   "id": "153",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Governors of States."
+  },
+  {
+   "id": "154",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Executive power of State."
+  },
+  {
+   "id": "155",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Appointment of Governor."
+  },
+  {
+   "id": "156",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Term of office of Governor."
+  },
+  {
+   "id": "157",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Qualifications for appointment as Governor."
+  },
+  {
+   "id": "158",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Conditions of Governor’s office."
+  },
+  {
+   "id": "159",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Oath or affirmation by the Governor."
+  },
+  {
+   "id": "160",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Discharge of the functions of the Governor in certain contingencies."
+  },
+  {
+   "id": "161",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Power of Governor to grant pardons, etc., and to suspend, remit or commute sentences in certain cases."
+  },
+  {
+   "id": "162",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Governor",
+   "contentsTitle": "Extent of executive power of State."
+  },
+  {
+   "id": "163",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "Council of Ministers",
+   "contentsTitle": "Council of Ministers to aid and advise Governor."
+  },
+  {
+   "id": "164",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "Council of Ministers",
+   "contentsTitle": "Other provisions as to Ministers."
+  },
+  {
+   "id": "165",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "The Advocate-General for the State",
+   "contentsTitle": "Advocate-General for the State."
+  },
+  {
+   "id": "166",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "Conduct of Government Business",
+   "contentsTitle": "Conduct of business of the Government of a State."
+  },
+  {
+   "id": "167",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "II",
+   "group": "Conduct of Government Business",
+   "contentsTitle": "Duties of Chief Minister as respects the furnishing of information to Governor, etc."
+  },
+  {
+   "id": "168",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Constitution of Legislatures in States."
+  },
+  {
+   "id": "169",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Abolition or creation of Legislative Councils in States."
+  },
+  {
+   "id": "170",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Composition of the Legislative Assemblies."
+  },
+  {
+   "id": "171",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Composition of the Legislative Councils."
+  },
+  {
+   "id": "172",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Duration of State Legislatures."
+  },
+  {
+   "id": "173",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Qualification for membership of the State Legislature."
+  },
+  {
+   "id": "174",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Sessions of the State Legislature, prorogation and dissolution."
+  },
+  {
+   "id": "175",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Right of Governor to address and send messages to the House or Houses."
+  },
+  {
+   "id": "176",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Special address by the Governor."
+  },
+  {
+   "id": "177",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "General",
+   "contentsTitle": "Rights of Ministers and Advocate-General as respects the Houses."
+  },
+  {
+   "id": "178",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "The Speaker and Deputy Speaker of the Legislative Assembly."
+  },
+  {
+   "id": "179",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Vacation and resignation of, and removal from, the offices of Speaker and Deputy Speaker."
+  },
+  {
+   "id": "180",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Power of the Deputy Speaker or other person to perform the duties of the office of, or to act as, Speaker."
+  },
+  {
+   "id": "181",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "The Speaker or the Deputy Speaker not to preside while a resolution for his removal from office is under consideration."
+  },
+  {
+   "id": "182",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "The Chairman and Deputy Chairman of the Legislative Council."
+  },
+  {
+   "id": "183",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Vacation and resignation of, and removal from, the offices of Chairman and Deputy Chairman."
+  },
+  {
+   "id": "184",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Power of the Deputy Chairman or other person to perform the duties of the office of, or to act as, Chairman."
+  },
+  {
+   "id": "185",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "The Chairman or the Deputy Chairman not to preside while a resolution for his removal from office is under consideration."
+  },
+  {
+   "id": "186",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Salaries and allowances of the Speaker and Deputy Speaker and the Chairman and Deputy Chairman."
+  },
+  {
+   "id": "187",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Officers of the State Legislature",
+   "contentsTitle": "Secretariat of State Legislature."
+  },
+  {
+   "id": "188",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Conduct of Business",
+   "contentsTitle": "Oath or affirmation by members."
+  },
+  {
+   "id": "189",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Conduct of Business",
+   "contentsTitle": "Voting in Houses, power of Houses to act notwithstanding vacancies and quorum."
+  },
+  {
+   "id": "190",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Vacation of seats."
+  },
+  {
+   "id": "191",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Disqualifications for membership."
+  },
+  {
+   "id": "192",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Decision on questions as to disqualifications of members."
+  },
+  {
+   "id": "193",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Disqualifications of Members",
+   "contentsTitle": "Penalty for sitting and voting before making oath or affirmation under article 188 or when not qualified or when disqualified."
+  },
+  {
+   "id": "194",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Powers, privileges and immunities of State Legislatures and their Members",
+   "contentsTitle": "Powers, privileges, etc., of the Houses of Legislatures and of the members and committees thereof."
+  },
+  {
+   "id": "195",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Powers, privileges and immunities of State Legislatures and their Members",
+   "contentsTitle": "Salaries and allowances of members."
+  },
+  {
+   "id": "196",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Provisions as to introduction and passing of Bills."
+  },
+  {
+   "id": "197",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Restriction on powers of Legislative Council as to Bills other than Money Bills."
+  },
+  {
+   "id": "198",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Special procedure in respect of Money Bills."
+  },
+  {
+   "id": "199",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Definition of “Money Bills”."
+  },
+  {
+   "id": "200",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Assent to Bills."
+  },
+  {
+   "id": "201",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Legislative Procedure",
+   "contentsTitle": "Bills reserved for consideration."
+  },
+  {
+   "id": "202",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Annual financial statement."
+  },
+  {
+   "id": "203",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Procedure in Legislature with respect to estimates."
+  },
+  {
+   "id": "204",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Appropriation Bills."
+  },
+  {
+   "id": "205",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Supplementary, additional or excess grants."
+  },
+  {
+   "id": "206",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Votes on account, votes of credit and exceptional grants."
+  },
+  {
+   "id": "207",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure in Financial Matters",
+   "contentsTitle": "Special provisions as to financial Bills."
+  },
+  {
+   "id": "208",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure Generally",
+   "contentsTitle": "Rules of procedure."
+  },
+  {
+   "id": "209",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure Generally",
+   "contentsTitle": "Regulation by law of procedure in the Legislature of the State in relation to financial business."
+  },
+  {
+   "id": "210",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure Generally",
+   "contentsTitle": "Language to be used in the Legislature."
+  },
+  {
+   "id": "211",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure Generally",
+   "contentsTitle": "Restriction on discussion in the Legislature."
+  },
+  {
+   "id": "212",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "III",
+   "group": "Procedure Generally",
+   "contentsTitle": "Courts not to inquire into proceedings of the Legislature."
+  },
+  {
+   "id": "213",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Power of Governor to promulgate Ordinances during recess of Legislature."
+  },
+  {
+   "id": "214",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "High Courts for States."
+  },
+  {
+   "id": "215",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "High Courts to be courts of record."
+  },
+  {
+   "id": "216",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Constitution of High Courts."
+  },
+  {
+   "id": "217",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Appointment and conditions of the office of a Judge of a High Court."
+  },
+  {
+   "id": "218",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Application of certain provisions relating to Supreme Court to High Courts."
+  },
+  {
+   "id": "219",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Oath or affirmation by Judges of High Courts."
+  },
+  {
+   "id": "220",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Restriction on practice after being a permanent Judge."
+  },
+  {
+   "id": "221",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Salaries, etc., of Judges."
+  },
+  {
+   "id": "222",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Transfer of a Judge from one High Court to another."
+  },
+  {
+   "id": "223",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Appointment of acting Chief Justice."
+  },
+  {
+   "id": "224",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Appointment of additional and acting Judges."
+  },
+  {
+   "id": "224A",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Appointment of retired Judges at sittings of High Courts."
+  },
+  {
+   "id": "225",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Jurisdiction of existing High Courts."
+  },
+  {
+   "id": "226",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Power of High Courts to issue certain writs."
+  },
+  {
+   "id": "226A",
+   "omitted": true,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Constitutional validity of Central laws not to be considered in proceedings under article 226.⎯Omitted.]"
+  },
+  {
+   "id": "227",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Power of superintendence over all courts by the High Court."
+  },
+  {
+   "id": "228",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Transfer of certain cases to High Court."
+  },
+  {
+   "id": "228A",
+   "omitted": true,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Special provisions as to disposal of questions relating to constitutional validity of State laws.⎯Omitted.]"
+  },
+  {
+   "id": "229",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Officers and servants and the expenses of High Courts."
+  },
+  {
+   "id": "230",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Extension of jurisdiction of High Courts to Union territories."
+  },
+  {
+   "id": "231",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Establishment of a common High Court for two or more States."
+  },
+  {
+   "id": "232",
+   "omitted": true,
+   "part": "VI",
+   "chapter": "V",
+   "group": null,
+   "contentsTitle": "Articles 230, 231 and 232 substituted by articles 230 and 231]."
+  },
+  {
+   "id": "233",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Appointment of district judges."
+  },
+  {
+   "id": "233A",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Validation of appointments of, and judgments, etc., delivered by, certain district judges."
+  },
+  {
+   "id": "234",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Recruitment of persons other than district judges to the judicial service."
+  },
+  {
+   "id": "235",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Control over subordinate courts."
+  },
+  {
+   "id": "236",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Interpretation."
+  },
+  {
+   "id": "237",
+   "omitted": false,
+   "part": "VI",
+   "chapter": "VI",
+   "group": null,
+   "contentsTitle": "Application of the provisions of this Chapter to certain class or classes of magistrates."
+  },
+  {
+   "id": "238",
+   "omitted": true,
+   "part": "VII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Omitted.]"
+  },
+  {
+   "id": "239",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Administration of Union territories."
+  },
+  {
+   "id": "239A",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Creation of local Legislatures or Council of Ministers or both for certain Union territories."
+  },
+  {
+   "id": "239AA",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provisions with respect to Delhi."
+  },
+  {
+   "id": "239AB",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision in case of failure of constitutional machinery."
+  },
+  {
+   "id": "239B",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of administrator to promulgate Ordinances during recess of Legislature."
+  },
+  {
+   "id": "240",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of President to make regulations for certain Union territories."
+  },
+  {
+   "id": "241",
+   "omitted": false,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "High Courts for Union territories."
+  },
+  {
+   "id": "242",
+   "omitted": true,
+   "part": "VIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Coorg.⎯Omitted.]"
+  },
+  {
+   "id": "243",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Definitions."
+  },
+  {
+   "id": "243A",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Gram Sabha."
+  },
+  {
+   "id": "243B",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Constitution of Panchayats."
+  },
+  {
+   "id": "243C",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Composition of Panchayats."
+  },
+  {
+   "id": "243D",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats."
+  },
+  {
+   "id": "243E",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Duration of Panchayats, etc."
+  },
+  {
+   "id": "243F",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Disqualifications for membership."
+  },
+  {
+   "id": "243G",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Powers, authority and responsibilities of Panchayats."
+  },
+  {
+   "id": "243H",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Powers to impose taxes by, and Funds of, the Panchayats."
+  },
+  {
+   "id": "243I",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Constitution of Finance Commission to review financial position."
+  },
+  {
+   "id": "243J",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Audit of accounts of Panchayats."
+  },
+  {
+   "id": "243K",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Elections to the Panchayats."
+  },
+  {
+   "id": "243L",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application to Union territories."
+  },
+  {
+   "id": "243M",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Part not to apply to certain areas."
+  },
+  {
+   "id": "243N",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Continuance of existing laws and Panchayats."
+  },
+  {
+   "id": "243O",
+   "omitted": false,
+   "part": "IX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Bar to interference by courts in electoral matters."
+  },
+  {
+   "id": "243P",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Definitions."
+  },
+  {
+   "id": "243Q",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Constitution of Municipalities."
+  },
+  {
+   "id": "243R",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Composition of Municipalities."
+  },
+  {
+   "id": "243S",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Constitution and composition of Wards Committees, etc."
+  },
+  {
+   "id": "243T",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats."
+  },
+  {
+   "id": "243U",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Duration of Municipalities, etc."
+  },
+  {
+   "id": "243V",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Disqualifications for membership."
+  },
+  {
+   "id": "243W",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Powers, authority and responsibilities of Municipalities, etc."
+  },
+  {
+   "id": "243X",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power to impose taxes by, and Funds of, the Municipalities."
+  },
+  {
+   "id": "243Y",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Finance Commission."
+  },
+  {
+   "id": "243Z",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Audit of accounts of Municipalities."
+  },
+  {
+   "id": "243ZA",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Elections to the Municipalities."
+  },
+  {
+   "id": "243ZB",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application to Union territories."
+  },
+  {
+   "id": "243ZC",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Part not to apply to certain areas."
+  },
+  {
+   "id": "243ZD",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Committee for district planning."
+  },
+  {
+   "id": "243ZE",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Committee for Metropolitan planning."
+  },
+  {
+   "id": "243ZF",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Continuance of existing laws and Municipalities."
+  },
+  {
+   "id": "243ZG",
+   "omitted": false,
+   "part": "IXA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Bar to interference by courts in electoral matters."
+  },
+  {
+   "id": "243ZH",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Definitions."
+  },
+  {
+   "id": "243ZI",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Incorporation of co-operative societies."
+  },
+  {
+   "id": "243ZJ",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Number and term of members of board and its office bearers."
+  },
+  {
+   "id": "243ZK",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Election of members of board."
+  },
+  {
+   "id": "243ZL",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Supersession and suspension of board and interim management."
+  },
+  {
+   "id": "243ZM",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Audit of accounts of co-operative societies."
+  },
+  {
+   "id": "243ZN",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Convening of general body meetings."
+  },
+  {
+   "id": "243ZO",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Right of a member to get information."
+  },
+  {
+   "id": "243ZP",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Returns."
+  },
+  {
+   "id": "243ZQ",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Offences and penalties."
+  },
+  {
+   "id": "243ZR",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application to multi-State co-operative societies."
+  },
+  {
+   "id": "243ZS",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application to Union territories."
+  },
+  {
+   "id": "243ZT",
+   "omitted": false,
+   "part": "IXB",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Continuance of existing laws."
+  },
+  {
+   "id": "244",
+   "omitted": false,
+   "part": "X",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Administration of Scheduled Areas and Tribal Areas."
+  },
+  {
+   "id": "244A",
+   "omitted": false,
+   "part": "X",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Formation of an autonomous State comprising certain tribal areas in Assam and creation of local Legislature or Council of Ministers or both therefor."
+  },
+  {
+   "id": "245",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Extent of laws made by Parliament and by the Legislatures of States."
+  },
+  {
+   "id": "246",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Subject-matter of laws made by Parliament and by the Legislatures of States."
+  },
+  {
+   "id": "246A",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Special provision with respect to goods and services tax."
+  },
+  {
+   "id": "247",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Power of Parliament to provide for the establishment of certain additional courts."
+  },
+  {
+   "id": "248",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Residuary powers of legislation."
+  },
+  {
+   "id": "249",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Power of Parliament to legislate with respect to a matter in the State List in the national interest."
+  },
+  {
+   "id": "250",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Power of Parliament to legislate with respect to any matter in the State List if a Proclamation of Emergency is in operation."
+  },
+  {
+   "id": "251",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Inconsistency between laws made by Parliament under articles 249 and 250 and laws made by the Legislatures of States."
+  },
+  {
+   "id": "252",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Power of Parliament to legislate for two or more States by consent and adoption of such legislation by any other State."
+  },
+  {
+   "id": "253",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Legislation for giving effect to international agreements."
+  },
+  {
+   "id": "254",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Inconsistency between laws made by Parliament and laws made by the Legislatures of States."
+  },
+  {
+   "id": "255",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "I",
+   "group": "Distribution of Legislative Powers",
+   "contentsTitle": "Requirements as to recommendations and previous sanctions to be regarded as matters of procedure only."
+  },
+  {
+   "id": "256",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Obligation of States and the Union."
+  },
+  {
+   "id": "257",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Control of the Union over States in certain cases."
+  },
+  {
+   "id": "257A",
+   "omitted": true,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Assistance to States by deployment of armed forces or other forces of the Union.⎯Omitted.]"
+  },
+  {
+   "id": "258",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Power of the Union to confer powers, etc., on States in certain cases."
+  },
+  {
+   "id": "258A",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Power of the States to entrust functions to the Union."
+  },
+  {
+   "id": "259",
+   "omitted": true,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Armed Forces in States in Part B of the First Schedule.⎯ Omitted.]"
+  },
+  {
+   "id": "260",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Jurisdiction of the Union in relation to territories outside India."
+  },
+  {
+   "id": "261",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "General",
+   "contentsTitle": "Public acts, records and judicial proceedings."
+  },
+  {
+   "id": "262",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "Disputes relating to Waters",
+   "contentsTitle": "Adjudication of disputes relating to waters of inter-State rivers or river valleys."
+  },
+  {
+   "id": "263",
+   "omitted": false,
+   "part": "XI",
+   "chapter": "II",
+   "group": "Co-ordination between States",
+   "contentsTitle": "Provisions with respect to an inter-State Council."
+  },
+  {
+   "id": "264",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "General",
+   "contentsTitle": "Interpretation."
+  },
+  {
+   "id": "265",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "General",
+   "contentsTitle": "Taxes not to be imposed save by authority of law."
+  },
+  {
+   "id": "266",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "General",
+   "contentsTitle": "Consolidated Funds and public accounts of India and of the States."
+  },
+  {
+   "id": "267",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "General",
+   "contentsTitle": "Contingency Fund."
+  },
+  {
+   "id": "268",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Duties levied by the Union but collected and appropriated by the States."
+  },
+  {
+   "id": "268A",
+   "omitted": true,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Service tax levied by Union and collected by the Union and the States.⎯Omitted.]"
+  },
+  {
+   "id": "269",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Taxes levied and collected by the Union but assigned to the States."
+  },
+  {
+   "id": "269A",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Levy and collection of goods and services tax in course of inter- State trade or commerce."
+  },
+  {
+   "id": "270",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Taxes levied and distributed between the Union and the States."
+  },
+  {
+   "id": "271",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Surcharge on certain duties and taxes for purposes of the Union."
+  },
+  {
+   "id": "272",
+   "omitted": true,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Taxes which are levied and collected by the Union and may be distributed between the Union and the States.⎯Omitted.]"
+  },
+  {
+   "id": "273",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Grants in lieu of export duty on jute and jute products."
+  },
+  {
+   "id": "274",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Prior recommendation of President required to Bills affecting taxation in which States are interested."
+  },
+  {
+   "id": "275",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Grants from the Union to certain States."
+  },
+  {
+   "id": "276",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Taxes on professions, trades, callings and employments."
+  },
+  {
+   "id": "277",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Savings."
+  },
+  {
+   "id": "278",
+   "omitted": true,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Agreement with States in Part B of the First Schedule with regard to certain financial matters.⎯Omitted.]"
+  },
+  {
+   "id": "279",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Calculation of “net proceeds”, etc."
+  },
+  {
+   "id": "279A",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Goods and Services Tax Council."
+  },
+  {
+   "id": "280",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Finance Commission."
+  },
+  {
+   "id": "281",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Distribution of Revenues between the Union and the States",
+   "contentsTitle": "Recommendations of the Finance Commission."
+  },
+  {
+   "id": "282",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Expenditure defrayable by the Union or a State out of its revenues."
+  },
+  {
+   "id": "283",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Custody, etc., of Consolidated Funds, Contingency Funds and moneys credited to the public accounts."
+  },
+  {
+   "id": "284",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Custody of suitors’ deposits and other moneys received by public servants and courts."
+  },
+  {
+   "id": "285",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Exemption of property of the Union from State taxation."
+  },
+  {
+   "id": "286",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Restrictions as to imposition of tax on the sale or purchase of goods."
+  },
+  {
+   "id": "287",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Exemption from taxes on electricity."
+  },
+  {
+   "id": "288",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Exemption from taxation by States in respect of water or electricity in certain cases."
+  },
+  {
+   "id": "289",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Exemption of property and income of a State from Union taxation."
+  },
+  {
+   "id": "290",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Adjustment in respect of certain expenses and pensions."
+  },
+  {
+   "id": "290A",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Annual payment to certain Devaswom Funds."
+  },
+  {
+   "id": "291",
+   "omitted": true,
+   "part": "XII",
+   "chapter": "I",
+   "group": "Miscellaneous Financial Provisions",
+   "contentsTitle": "Privy purse sums of Rulers.⎯Omitted.]"
+  },
+  {
+   "id": "292",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Borrowing by the Government of India."
+  },
+  {
+   "id": "293",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Borrowing by States."
+  },
+  {
+   "id": "294",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Succession to property, assets, rights, liabilities and obligations in certain cases."
+  },
+  {
+   "id": "295",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Succession to property, assets, rights, liabilities and obligations in other cases."
+  },
+  {
+   "id": "296",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Property accruing by escheat or lapse or as bona vacantia."
+  },
+  {
+   "id": "297",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Things of value within territorial waters or continental shelf and resources of the exclusive economic zone to vest in the Union."
+  },
+  {
+   "id": "298",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Power to carry on trade, etc."
+  },
+  {
+   "id": "299",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Contracts."
+  },
+  {
+   "id": "300",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Suits and proceedings."
+  },
+  {
+   "id": "300A",
+   "omitted": false,
+   "part": "XII",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Persons not to be deprived of property save by authority of law."
+  },
+  {
+   "id": "301",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Freedom of trade, commerce and intercourse."
+  },
+  {
+   "id": "302",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of Parliament to impose restrictions on trade, commerce and intercourse."
+  },
+  {
+   "id": "303",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Restrictions on the legislative powers of the Union and of the States with regard to trade and commerce."
+  },
+  {
+   "id": "304",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Restrictions on trade, commerce and intercourse among States."
+  },
+  {
+   "id": "305",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Saving of existing laws and laws providing for State monopolies."
+  },
+  {
+   "id": "306",
+   "omitted": true,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of certain States in Part B of the First Schedule to impose restrictions on trade and commerce.⎯Omitted]"
+  },
+  {
+   "id": "307",
+   "omitted": false,
+   "part": "XIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Appointment of authority for carrying out the purposes of articles 301 to 304."
+  },
+  {
+   "id": "308",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Interpretation."
+  },
+  {
+   "id": "309",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Recruitment and conditions of service of persons serving the Union or a State."
+  },
+  {
+   "id": "310",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Tenure of office of persons serving the Union or a State."
+  },
+  {
+   "id": "311",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Dismissal, removal or reduction in rank of persons employed in civil capacities under the Union or a State."
+  },
+  {
+   "id": "312",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "All-India services."
+  },
+  {
+   "id": "312A",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Power of Parliament to vary or revoke conditions of service of officers of certain services."
+  },
+  {
+   "id": "313",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Transitional provisions."
+  },
+  {
+   "id": "314",
+   "omitted": true,
+   "part": "XIV",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Provision for protection of existing officers of certain services.⎯ Omitted.]"
+  },
+  {
+   "id": "315",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Public Service Commissions for the Union and for the States."
+  },
+  {
+   "id": "316",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Appointment and term of office of members."
+  },
+  {
+   "id": "317",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Removal and suspension of a member of a Public Service Commission."
+  },
+  {
+   "id": "318",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Power to make regulations as to conditions of service of members and staff of the Commission."
+  },
+  {
+   "id": "319",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Prohibition as to the holding of offices by members of Commission on ceasing to be such members."
+  },
+  {
+   "id": "320",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Functions of Public Service Commissions."
+  },
+  {
+   "id": "321",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Power to extend functions of Public Service Commissions."
+  },
+  {
+   "id": "322",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Expenses of Public Service Commissions."
+  },
+  {
+   "id": "323",
+   "omitted": false,
+   "part": "XIV",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Reports of Public Service Commissions."
+  },
+  {
+   "id": "323A",
+   "omitted": false,
+   "part": "XIVA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Administrative tribunals."
+  },
+  {
+   "id": "323B",
+   "omitted": false,
+   "part": "XIVA",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Tribunals for other matters."
+  },
+  {
+   "id": "324",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Superintendence, direction and control of elections to be vested in an Election Commission."
+  },
+  {
+   "id": "325",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "No person to be ineligible for inclusion in, or to claim to be included in a special, electoral roll on grounds of religion, race, caste or sex."
+  },
+  {
+   "id": "326",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Elections to the House of the People and to the Legislative Assemblies of States to be on the basis of adult suffrage."
+  },
+  {
+   "id": "327",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of Parliament to make provision with respect to elections to Legislatures."
+  },
+  {
+   "id": "328",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of Legislature of a State to make provision with respect to elections to such Legislature."
+  },
+  {
+   "id": "329",
+   "omitted": false,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Bar to interference by courts in electoral matters."
+  },
+  {
+   "id": "329A",
+   "omitted": true,
+   "part": "XV",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision as to elections to Parliament in the case of Prime Minister and Speaker.⎯Omitted.]"
+  },
+  {
+   "id": "330",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats for Scheduled Castes and Scheduled Tribes in the House of the People."
+  },
+  {
+   "id": "330A",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats for women in the House of the People."
+  },
+  {
+   "id": "331",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Representation of the Anglo-Indian community in the House of the People."
+  },
+  {
+   "id": "332",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats for Scheduled Castes and Scheduled Tribes in the Legislative Assemblies of the States."
+  },
+  {
+   "id": "332A",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats for women in the Legislative Assemblies of the States."
+  },
+  {
+   "id": "333",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Representation of the Anglo-Indian community in the Legislative Assemblies of the States."
+  },
+  {
+   "id": "334",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats and special representation to cease after certain period."
+  },
+  {
+   "id": "334A",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Reservation of seats for women take effect."
+  },
+  {
+   "id": "335",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Claims of Scheduled Castes and Scheduled Tribes to services and posts."
+  },
+  {
+   "id": "336",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision for Anglo-Indian community in certain services."
+  },
+  {
+   "id": "337",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to educational grants for the benefit of Anglo-Indian Community."
+  },
+  {
+   "id": "338",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "National Commission for Scheduled Castes."
+  },
+  {
+   "id": "338A",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "National Commission for Scheduled Tribes."
+  },
+  {
+   "id": "338B",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "National Commission for Backward Classes."
+  },
+  {
+   "id": "339",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Control of the Union over the administration of Scheduled Areas and the welfare of Scheduled Tribes."
+  },
+  {
+   "id": "340",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Appointment of a Commission to investigate the conditions of backward classes."
+  },
+  {
+   "id": "341",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Scheduled Castes."
+  },
+  {
+   "id": "342",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Scheduled Tribes."
+  },
+  {
+   "id": "342A",
+   "omitted": false,
+   "part": "XVI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Socially and educationally backward classes."
+  },
+  {
+   "id": "343",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Official language of the Union."
+  },
+  {
+   "id": "344",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "I",
+   "group": null,
+   "contentsTitle": "Commission and Committee of Parliament on official language."
+  },
+  {
+   "id": "345",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Official language or languages of a State."
+  },
+  {
+   "id": "346",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Official language for communication between one State and another or between a State and the Union."
+  },
+  {
+   "id": "347",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "II",
+   "group": null,
+   "contentsTitle": "Special provision relating to language spoken by a section of the population of a State."
+  },
+  {
+   "id": "348",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Language to be used in the Supreme Court and in the High Courts and for Acts, Bills, etc."
+  },
+  {
+   "id": "349",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "III",
+   "group": null,
+   "contentsTitle": "Special procedure for enactment of certain laws relating to language."
+  },
+  {
+   "id": "350",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Language to be used in representations for redress of grievances."
+  },
+  {
+   "id": "350A",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Facilities for instruction in mother-tongue at primary stage."
+  },
+  {
+   "id": "350B",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Special Officer for linguistic minorities."
+  },
+  {
+   "id": "351",
+   "omitted": false,
+   "part": "XVII",
+   "chapter": "IV",
+   "group": null,
+   "contentsTitle": "Directive for development of the Hindi language."
+  },
+  {
+   "id": "352",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Proclamation of Emergency."
+  },
+  {
+   "id": "353",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Effect of Proclamation of Emergency."
+  },
+  {
+   "id": "354",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application of provisions relating to distribution of revenues while a Proclamation of Emergency is in operation."
+  },
+  {
+   "id": "355",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Duty of the Union to protect States against external aggression and internal disturbance."
+  },
+  {
+   "id": "356",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions in case of failure of constitutional machinery in States."
+  },
+  {
+   "id": "357",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Exercise of legislative powers under Proclamation issued under article 356."
+  },
+  {
+   "id": "358",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Suspension of provisions of article 19 during emergencies."
+  },
+  {
+   "id": "359",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Suspension of the enforcement of the rights conferred by Part III during emergencies."
+  },
+  {
+   "id": "359A",
+   "omitted": true,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Application of this Part to the State of Punjab.⎯Omitted.]"
+  },
+  {
+   "id": "360",
+   "omitted": false,
+   "part": "XVIII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to financial emergency."
+  },
+  {
+   "id": "361",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Protection of President and Governors and Rajpramukhs."
+  },
+  {
+   "id": "361A",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Protection of publication of proceedings of Parliament and State Legislatures."
+  },
+  {
+   "id": "361B",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Disqualification for appointment on remunerative political post."
+  },
+  {
+   "id": "362",
+   "omitted": true,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Rights and privileges of Rulers of Indian States.⎯Omitted.]"
+  },
+  {
+   "id": "363",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Bar to interference by courts in disputes arising out of certain treaties, agreements, etc."
+  },
+  {
+   "id": "363A",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Recognition granted to Rulers of Indian States to cease and privy purses to be abolished."
+  },
+  {
+   "id": "364",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provisions as to major ports and aerodromes."
+  },
+  {
+   "id": "365",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Effect of failure to comply with, or to give effect to, directions given by the Union."
+  },
+  {
+   "id": "366",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Definitions."
+  },
+  {
+   "id": "367",
+   "omitted": false,
+   "part": "XIX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Interpretation."
+  },
+  {
+   "id": "368",
+   "omitted": false,
+   "part": "XX",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of Parliament to amend the Constitution and procedure therefor."
+  },
+  {
+   "id": "369",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Temporary power to Parliament to make laws with respect to certain matters in the State List as if they were matters in the Concurrent List."
+  },
+  {
+   "id": "370",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Temporary provisions with respect to the State of Jammu and Kashmir."
+  },
+  {
+   "id": "371",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the States of Maharashtra and Gujarat."
+  },
+  {
+   "id": "371A",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Nagaland."
+  },
+  {
+   "id": "371B",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Assam."
+  },
+  {
+   "id": "371C",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Manipur."
+  },
+  {
+   "id": "371D",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provisions with respect to the State of Andhra Pradesh or the State of Telangana."
+  },
+  {
+   "id": "371E",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Establishment of Central University in Andhra Pradesh."
+  },
+  {
+   "id": "371F",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provisions with respect to the State of Sikkim."
+  },
+  {
+   "id": "371G",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Mizoram."
+  },
+  {
+   "id": "371H",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Arunachal Pradesh."
+  },
+  {
+   "id": "371I",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision with respect to the State of Goa."
+  },
+  {
+   "id": "371J",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provisions with respect to the State of Karnataka."
+  },
+  {
+   "id": "372",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Continuance in force of existing laws and their adaptation."
+  },
+  {
+   "id": "372A",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of the President to adapt laws."
+  },
+  {
+   "id": "373",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of President to make order in respect of persons under preventive detention in certain cases."
+  },
+  {
+   "id": "374",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to Judges of the Federal Court and proceedings pending in the Federal Court or before His Majesty in Council."
+  },
+  {
+   "id": "375",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Courts, authorities and officers to continue to function subject to the provisions of the Constitution."
+  },
+  {
+   "id": "376",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to Judges of High Courts."
+  },
+  {
+   "id": "377",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to Comptroller and Auditor-General of India."
+  },
+  {
+   "id": "378",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to Public Service Commissions."
+  },
+  {
+   "id": "378A",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision as to duration of Andhra Pradesh Legislative Assembly."
+  },
+  {
+   "id": "379",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to provisional Parliament and the Speaker and Deputy Speaker thereof.⎯Omitted.]"
+  },
+  {
+   "id": "380",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision as to President.⎯ Omitted.]"
+  },
+  {
+   "id": "381",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Council of Ministers of the President.⎯Omitted.]"
+  },
+  {
+   "id": "382",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to provisional Legislatures for States in Part A of the First Schedule. ⎯ Omitted.]"
+  },
+  {
+   "id": "383",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision as to Governors of Provinces. ⎯Omitted.]"
+  },
+  {
+   "id": "384",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Council of Ministers of the Governors.⎯Omitted.]"
+  },
+  {
+   "id": "385",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision as to provisional Legislatures in States in Part B of the First Schedule.⎯Omitted.]"
+  },
+  {
+   "id": "386",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Council of Ministers for States in Part B of the First Schedule. ⎯Omitted.]"
+  },
+  {
+   "id": "387",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Special provision as to determination of population for the purposes of certain elections.⎯Omitted.]"
+  },
+  {
+   "id": "388",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provisions as to the filling of casual vacancies in the provisional Parliament and provisional Legislatures of the States. ⎯ Omitted.]"
+  },
+  {
+   "id": "389",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Provision as to Bills pending in the Dominion Legislatures and in the Legislatures of Provinces and Indian States.⎯Omitted.]"
+  },
+  {
+   "id": "390",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Money received or raised or expenditure incurred between the commencement of the Constitution and the 31st day of March, 1950. ⎯Omitted.]"
+  },
+  {
+   "id": "391",
+   "omitted": true,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of the President to amend the First and Fourth Schedules in certain contingencies.⎯Omitted.]"
+  },
+  {
+   "id": "392",
+   "omitted": false,
+   "part": "XXI",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Power of the President to remove difficulties."
+  },
+  {
+   "id": "393",
+   "omitted": false,
+   "part": "XXII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Short title."
+  },
+  {
+   "id": "394",
+   "omitted": false,
+   "part": "XXII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Commencement."
+  },
+  {
+   "id": "394A",
+   "omitted": false,
+   "part": "XXII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Authoritative text in the Hindi language."
+  },
+  {
+   "id": "395",
+   "omitted": false,
+   "part": "XXII",
+   "chapter": null,
+   "group": null,
+   "contentsTitle": "Repeals. SCHEDULES House of the People and the Chairman and the Deputy Chairman of the Council of States and the Speaker and the Deputy Speaker of the Legislative Assembly and the Chairman and the Deputy Chairman of the Legislative Council of a State. APPENDICES"
+  }
+ ],
+ "titleExceptions": [
+  "371J",
+  "395"
+ ],
+ "plainBracketSections": [
+  "368",
+  "371D",
+  "sch2-D",
+  "app1"
+ ],
+ "amendmentCounts": {
+  "preamble": [
+   2,
+   0
+  ],
+  "1": [
+   2,
+   0
+  ],
+  "2": [
+   0,
+   0
+  ],
+  "2A": [
+   1,
+   0
+  ],
+  "3": [
+   3,
+   0
+  ],
+  "4": [
+   0,
+   0
+  ],
+  "5": [
+   0,
+   0
+  ],
+  "6": [
+   0,
+   0
+  ],
+  "7": [
+   0,
+   0
+  ],
+  "8": [
+   0,
+   0
+  ],
+  "9": [
+   0,
+   0
+  ],
+  "10": [
+   0,
+   0
+  ],
+  "11": [
+   0,
+   0
+  ],
+  "12": [
+   0,
+   0
+  ],
+  "13": [
+   1,
+   0
+  ],
+  "14": [
+   0,
+   0
+  ],
+  "15": [
+   3,
+   0
+  ],
+  "16": [
+   5,
+   0
+  ],
+  "17": [
+   0,
+   0
+  ],
+  "18": [
+   0,
+   0
+  ],
+  "19": [
+   7,
+   0
+  ],
+  "20": [
+   0,
+   0
+  ],
+  "21": [
+   0,
+   0
+  ],
+  "21A": [
+   1,
+   0
+  ],
+  "22": [
+   0,
+   5
+  ],
+  "23": [
+   0,
+   0
+  ],
+  "24": [
+   0,
+   0
+  ],
+  "25": [
+   0,
+   0
+  ],
+  "26": [
+   0,
+   0
+  ],
+  "27": [
+   0,
+   0
+  ],
+  "28": [
+   0,
+   0
+  ],
+  "29": [
+   0,
+   0
+  ],
+  "30": [
+   2,
+   0
+  ],
+  "31": [
+   0,
+   0
+  ],
+  "31A": [
+   7,
+   0
+  ],
+  "31B": [
+   1,
+   0
+  ],
+  "31C": [
+   4,
+   0
+  ],
+  "31D": [
+   1,
+   0
+  ],
+  "32": [
+   0,
+   0
+  ],
+  "32A": [
+   1,
+   0
+  ],
+  "33": [
+   1,
+   0
+  ],
+  "34": [
+   0,
+   0
+  ],
+  "35": [
+   0,
+   0
+  ],
+  "36": [
+   0,
+   0
+  ],
+  "37": [
+   0,
+   0
+  ],
+  "38": [
+   2,
+   0
+  ],
+  "39": [
+   1,
+   0
+  ],
+  "39A": [
+   1,
+   0
+  ],
+  "40": [
+   0,
+   0
+  ],
+  "41": [
+   0,
+   0
+  ],
+  "42": [
+   0,
+   0
+  ],
+  "43": [
+   0,
+   0
+  ],
+  "43A": [
+   1,
+   0
+  ],
+  "43B": [
+   1,
+   0
+  ],
+  "44": [
+   0,
+   0
+  ],
+  "45": [
+   1,
+   0
+  ],
+  "46": [
+   0,
+   0
+  ],
+  "47": [
+   0,
+   0
+  ],
+  "48": [
+   0,
+   0
+  ],
+  "48A": [
+   1,
+   0
+  ],
+  "49": [
+   1,
+   0
+  ],
+  "50": [
+   0,
+   0
+  ],
+  "51": [
+   0,
+   0
+  ],
+  "51A": [
+   1,
+   0
+  ],
+  "52": [
+   0,
+   0
+  ],
+  "53": [
+   0,
+   0
+  ],
+  "54": [
+   2,
+   0
+  ],
+  "55": [
+   2,
+   0
+  ],
+  "56": [
+   0,
+   0
+  ],
+  "57": [
+   0,
+   0
+  ],
+  "58": [
+   1,
+   0
+  ],
+  "59": [
+   0,
+   0
+  ],
+  "60": [
+   0,
+   0
+  ],
+  "61": [
+   0,
+   0
+  ],
+  "62": [
+   0,
+   0
+  ],
+  "63": [
+   0,
+   0
+  ],
+  "64": [
+   0,
+   0
+  ],
+  "65": [
+   0,
+   0
+  ],
+  "66": [
+   2,
+   0
+  ],
+  "67": [
+   0,
+   0
+  ],
+  "68": [
+   0,
+   0
+  ],
+  "69": [
+   0,
+   0
+  ],
+  "70": [
+   0,
+   0
+  ],
+  "71": [
+   1,
+   0
+  ],
+  "72": [
+   1,
+   0
+  ],
+  "73": [
+   1,
+   0
+  ],
+  "74": [
+   2,
+   0
+  ],
+  "75": [
+   1,
+   0
+  ],
+  "76": [
+   0,
+   0
+  ],
+  "77": [
+   2,
+   0
+  ],
+  "78": [
+   0,
+   0
+  ],
+  "79": [
+   0,
+   0
+  ],
+  "80": [
+   5,
+   0
+  ],
+  "81": [
+   10,
+   0
+  ],
+  "82": [
+   4,
+   0
+  ],
+  "83": [
+   1,
+   0
+  ],
+  "84": [
+   1,
+   0
+  ],
+  "85": [
+   1,
+   0
+  ],
+  "86": [
+   0,
+   0
+  ],
+  "87": [
+   2,
+   0
+  ],
+  "88": [
+   0,
+   0
+  ],
+  "89": [
+   0,
+   0
+  ],
+  "90": [
+   0,
+   0
+  ],
+  "91": [
+   0,
+   0
+  ],
+  "92": [
+   0,
+   0
+  ],
+  "93": [
+   0,
+   0
+  ],
+  "94": [
+   0,
+   0
+  ],
+  "95": [
+   0,
+   0
+  ],
+  "96": [
+   0,
+   0
+  ],
+  "97": [
+   0,
+   0
+  ],
+  "98": [
+   0,
+   0
+  ],
+  "99": [
+   0,
+   0
+  ],
+  "100": [
+   0,
+   1
+  ],
+  "101": [
+   6,
+   0
+  ],
+  "102": [
+   2,
+   1
+  ],
+  "103": [
+   1,
+   0
+  ],
+  "104": [
+   0,
+   0
+  ],
+  "105": [
+   1,
+   1
+  ],
+  "106": [
+   0,
+   0
+  ],
+  "107": [
+   0,
+   0
+  ],
+  "108": [
+   0,
+   0
+  ],
+  "109": [
+   0,
+   0
+  ],
+  "110": [
+   0,
+   0
+  ],
+  "111": [
+   0,
+   0
+  ],
+  "112": [
+   1,
+   0
+  ],
+  "113": [
+   0,
+   0
+  ],
+  "114": [
+   0,
+   0
+  ],
+  "115": [
+   0,
+   0
+  ],
+  "116": [
+   0,
+   0
+  ],
+  "117": [
+   0,
+   0
+  ],
+  "118": [
+   0,
+   1
+  ],
+  "119": [
+   0,
+   0
+  ],
+  "120": [
+   0,
+   0
+  ],
+  "121": [
+   0,
+   0
+  ],
+  "122": [
+   0,
+   0
+  ],
+  "123": [
+   1,
+   0
+  ],
+  "124": [
+   5,
+   0
+  ],
+  "124A": [
+   1,
+   0
+  ],
+  "124B": [
+   0,
+   0
+  ],
+  "124C": [
+   0,
+   0
+  ],
+  "125": [
+   1,
+   0
+  ],
+  "126": [
+   0,
+   0
+  ],
+  "127": [
+   1,
+   0
+  ],
+  "128": [
+   2,
+   0
+  ],
+  "129": [
+   0,
+   0
+  ],
+  "130": [
+   0,
+   0
+  ],
+  "131": [
+   1,
+   0
+  ],
+  "131A": [
+   1,
+   0
+  ],
+  "132": [
+   3,
+   0
+  ],
+  "133": [
+   2,
+   0
+  ],
+  "134": [
+   1,
+   0
+  ],
+  "134A": [
+   1,
+   0
+  ],
+  "135": [
+   0,
+   0
+  ],
+  "136": [
+   0,
+   0
+  ],
+  "137": [
+   0,
+   0
+  ],
+  "138": [
+   0,
+   0
+  ],
+  "139": [
+   0,
+   0
+  ],
+  "139A": [
+   2,
+   0
+  ],
+  "140": [
+   0,
+   0
+  ],
+  "141": [
+   0,
+   0
+  ],
+  "142": [
+   1,
+   0
+  ],
+  "143": [
+   2,
+   0
+  ],
+  "144": [
+   0,
+   0
+  ],
+  "144A": [
+   1,
+   0
+  ],
+  "145": [
+   5,
+   0
+  ],
+  "146": [
+   0,
+   0
+  ],
+  "147": [
+   0,
+   0
+  ],
+  "148": [
+   0,
+   0
+  ],
+  "149": [
+   0,
+   0
+  ],
+  "150": [
+   2,
+   0
+  ],
+  "151": [
+   1,
+   0
+  ],
+  "152": [
+   1,
+   0
+  ],
+  "153": [
+   1,
+   0
+  ],
+  "154": [
+   0,
+   0
+  ],
+  "155": [
+   0,
+   0
+  ],
+  "156": [
+   0,
+   0
+  ],
+  "157": [
+   0,
+   0
+  ],
+  "158": [
+   1,
+   0
+  ],
+  "159": [
+   0,
+   0
+  ],
+  "160": [
+   0,
+   0
+  ],
+  "161": [
+   0,
+   0
+  ],
+  "162": [
+   0,
+   0
+  ],
+  "163": [
+   0,
+   0
+  ],
+  "164": [
+   4,
+   0
+  ],
+  "165": [
+   0,
+   0
+  ],
+  "166": [
+   1,
+   0
+  ],
+  "167": [
+   0,
+   0
+  ],
+  "168": [
+   10,
+   1
+  ],
+  "169": [
+   0,
+   0
+  ],
+  "170": [
+   6,
+   0
+  ],
+  "171": [
+   1,
+   0
+  ],
+  "172": [
+   1,
+   0
+  ],
+  "173": [
+   1,
+   0
+  ],
+  "174": [
+   1,
+   0
+  ],
+  "175": [
+   0,
+   0
+  ],
+  "176": [
+   2,
+   0
+  ],
+  "177": [
+   0,
+   0
+  ],
+  "178": [
+   0,
+   0
+  ],
+  "179": [
+   0,
+   0
+  ],
+  "180": [
+   0,
+   0
+  ],
+  "181": [
+   0,
+   0
+  ],
+  "182": [
+   0,
+   0
+  ],
+  "183": [
+   0,
+   0
+  ],
+  "184": [
+   0,
+   0
+  ],
+  "185": [
+   0,
+   0
+  ],
+  "186": [
+   0,
+   0
+  ],
+  "187": [
+   0,
+   0
+  ],
+  "188": [
+   0,
+   0
+  ],
+  "189": [
+   0,
+   1
+  ],
+  "190": [
+   4,
+   0
+  ],
+  "191": [
+   2,
+   1
+  ],
+  "192": [
+   1,
+   0
+  ],
+  "193": [
+   0,
+   0
+  ],
+  "194": [
+   1,
+   1
+  ],
+  "195": [
+   0,
+   0
+  ],
+  "196": [
+   0,
+   0
+  ],
+  "197": [
+   0,
+   0
+  ],
+  "198": [
+   0,
+   0
+  ],
+  "199": [
+   0,
+   0
+  ],
+  "200": [
+   0,
+   0
+  ],
+  "201": [
+   0,
+   0
+  ],
+  "202": [
+   0,
+   0
+  ],
+  "203": [
+   0,
+   0
+  ],
+  "204": [
+   0,
+   0
+  ],
+  "205": [
+   0,
+   0
+  ],
+  "206": [
+   0,
+   0
+  ],
+  "207": [
+   0,
+   0
+  ],
+  "208": [
+   0,
+   1
+  ],
+  "209": [
+   0,
+   0
+  ],
+  "210": [
+   5,
+   0
+  ],
+  "211": [
+   0,
+   0
+  ],
+  "212": [
+   0,
+   0
+  ],
+  "213": [
+   1,
+   0
+  ],
+  "214": [
+   2,
+   0
+  ],
+  "215": [
+   0,
+   0
+  ],
+  "216": [
+   1,
+   0
+  ],
+  "217": [
+   9,
+   0
+  ],
+  "218": [
+   0,
+   0
+  ],
+  "219": [
+   1,
+   0
+  ],
+  "220": [
+   2,
+   0
+  ],
+  "221": [
+   1,
+   0
+  ],
+  "222": [
+   3,
+   0
+  ],
+  "223": [
+   0,
+   0
+  ],
+  "224": [
+   3,
+   0
+  ],
+  "224A": [
+   2,
+   0
+  ],
+  "225": [
+   1,
+   0
+  ],
+  "226": [
+   5,
+   0
+  ],
+  "226A": [
+   1,
+   0
+  ],
+  "227": [
+   2,
+   0
+  ],
+  "228": [
+   2,
+   0
+  ],
+  "228A": [
+   1,
+   0
+  ],
+  "229": [
+   1,
+   0
+  ],
+  "230": [
+   1,
+   0
+  ],
+  "231": [
+   1,
+   0
+  ],
+  "232": [
+   0,
+   0
+  ],
+  "233": [
+   0,
+   0
+  ],
+  "233A": [
+   1,
+   0
+  ],
+  "234": [
+   0,
+   0
+  ],
+  "235": [
+   0,
+   0
+  ],
+  "236": [
+   0,
+   0
+  ],
+  "237": [
+   0,
+   0
+  ],
+  "238": [
+   0,
+   0
+  ],
+  "239": [
+   1,
+   0
+  ],
+  "239A": [
+   4,
+   0
+  ],
+  "239AA": [
+   5,
+   0
+  ],
+  "239AB": [
+   0,
+   0
+  ],
+  "239B": [
+   4,
+   0
+  ],
+  "240": [
+   12,
+   0
+  ],
+  "241": [
+   3,
+   0
+  ],
+  "242": [
+   0,
+   0
+  ],
+  "243": [
+   0,
+   0
+  ],
+  "243A": [
+   0,
+   0
+  ],
+  "243B": [
+   0,
+   0
+  ],
+  "243C": [
+   0,
+   0
+  ],
+  "243D": [
+   0,
+   0
+  ],
+  "243E": [
+   0,
+   0
+  ],
+  "243F": [
+   0,
+   0
+  ],
+  "243G": [
+   0,
+   0
+  ],
+  "243H": [
+   0,
+   0
+  ],
+  "243I": [
+   0,
+   0
+  ],
+  "243J": [
+   0,
+   0
+  ],
+  "243K": [
+   0,
+   0
+  ],
+  "243L": [
+   0,
+   0
+  ],
+  "243M": [
+   1,
+   0
+  ],
+  "243N": [
+   0,
+   0
+  ],
+  "243O": [
+   0,
+   0
+  ],
+  "243P": [
+   0,
+   0
+  ],
+  "243Q": [
+   0,
+   0
+  ],
+  "243R": [
+   0,
+   0
+  ],
+  "243S": [
+   0,
+   0
+  ],
+  "243T": [
+   0,
+   0
+  ],
+  "243U": [
+   0,
+   0
+  ],
+  "243V": [
+   0,
+   0
+  ],
+  "243W": [
+   0,
+   0
+  ],
+  "243X": [
+   0,
+   0
+  ],
+  "243Y": [
+   0,
+   0
+  ],
+  "243Z": [
+   0,
+   0
+  ],
+  "243ZA": [
+   0,
+   0
+  ],
+  "243ZB": [
+   0,
+   0
+  ],
+  "243ZC": [
+   0,
+   0
+  ],
+  "243ZD": [
+   0,
+   0
+  ],
+  "243ZE": [
+   0,
+   0
+  ],
+  "243ZF": [
+   0,
+   0
+  ],
+  "243ZG": [
+   0,
+   0
+  ],
+  "243ZH": [
+   0,
+   0
+  ],
+  "243ZI": [
+   0,
+   0
+  ],
+  "243ZJ": [
+   0,
+   0
+  ],
+  "243ZK": [
+   0,
+   0
+  ],
+  "243ZL": [
+   0,
+   0
+  ],
+  "243ZM": [
+   0,
+   0
+  ],
+  "243ZN": [
+   0,
+   0
+  ],
+  "243ZO": [
+   0,
+   0
+  ],
+  "243ZP": [
+   0,
+   0
+  ],
+  "243ZQ": [
+   0,
+   0
+  ],
+  "243ZR": [
+   0,
+   0
+  ],
+  "243ZS": [
+   0,
+   0
+  ],
+  "243ZT": [
+   0,
+   0
+  ],
+  "244": [
+   5,
+   0
+  ],
+  "244A": [
+   2,
+   0
+  ],
+  "245": [
+   0,
+   0
+  ],
+  "246": [
+   2,
+   0
+  ],
+  "246A": [
+   1,
+   0
+  ],
+  "247": [
+   0,
+   0
+  ],
+  "248": [
+   1,
+   0
+  ],
+  "249": [
+   1,
+   0
+  ],
+  "250": [
+   0,
+   0
+  ],
+  "251": [
+   0,
+   0
+  ],
+  "252": [
+   0,
+   0
+  ],
+  "253": [
+   0,
+   0
+  ],
+  "254": [
+   0,
+   0
+  ],
+  "255": [
+   0,
+   0
+  ],
+  "256": [
+   0,
+   0
+  ],
+  "257": [
+   0,
+   0
+  ],
+  "257A": [
+   1,
+   0
+  ],
+  "258": [
+   0,
+   0
+  ],
+  "258A": [
+   1,
+   0
+  ],
+  "259": [
+   0,
+   0
+  ],
+  "260": [
+   0,
+   0
+  ],
+  "261": [
+   0,
+   0
+  ],
+  "262": [
+   0,
+   0
+  ],
+  "263": [
+   0,
+   0
+  ],
+  "264": [
+   1,
+   0
+  ],
+  "265": [
+   0,
+   0
+  ],
+  "266": [
+   0,
+   0
+  ],
+  "267": [
+   1,
+   0
+  ],
+  "268": [
+   2,
+   0
+  ],
+  "268A": [
+   1,
+   0
+  ],
+  "269": [
+   4,
+   0
+  ],
+  "269A": [
+   1,
+   0
+  ],
+  "270": [
+   3,
+   0
+  ],
+  "271": [
+   1,
+   0
+  ],
+  "272": [
+   0,
+   0
+  ],
+  "273": [
+   1,
+   0
+  ],
+  "274": [
+   0,
+   0
+  ],
+  "275": [
+   2,
+   0
+  ],
+  "276": [
+   2,
+   0
+  ],
+  "277": [
+   0,
+   0
+  ],
+  "278": [
+   0,
+   0
+  ],
+  "279": [
+   0,
+   0
+  ],
+  "279A": [
+   1,
+   0
+  ],
+  "280": [
+   3,
+   0
+  ],
+  "281": [
+   0,
+   0
+  ],
+  "282": [
+   0,
+   0
+  ],
+  "283": [
+   1,
+   0
+  ],
+  "284": [
+   0,
+   0
+  ],
+  "285": [
+   0,
+   0
+  ],
+  "286": [
+   6,
+   0
+  ],
+  "287": [
+   0,
+   0
+  ],
+  "288": [
+   0,
+   0
+  ],
+  "289": [
+   0,
+   0
+  ],
+  "290": [
+   0,
+   0
+  ],
+  "290A": [
+   2,
+   0
+  ],
+  "291": [
+   0,
+   0
+  ],
+  "292": [
+   0,
+   0
+  ],
+  "293": [
+   0,
+   0
+  ],
+  "294": [
+   0,
+   0
+  ],
+  "295": [
+   0,
+   0
+  ],
+  "296": [
+   0,
+   0
+  ],
+  "297": [
+   1,
+   0
+  ],
+  "298": [
+   1,
+   0
+  ],
+  "299": [
+   2,
+   0
+  ],
+  "300": [
+   0,
+   0
+  ],
+  "300A": [
+   0,
+   0
+  ],
+  "301": [
+   0,
+   0
+  ],
+  "302": [
+   0,
+   0
+  ],
+  "303": [
+   0,
+   0
+  ],
+  "304": [
+   1,
+   0
+  ],
+  "305": [
+   1,
+   0
+  ],
+  "306": [
+   0,
+   0
+  ],
+  "307": [
+   0,
+   0
+  ],
+  "308": [
+   1,
+   0
+  ],
+  "309": [
+   1,
+   0
+  ],
+  "310": [
+   2,
+   0
+  ],
+  "311": [
+   3,
+   0
+  ],
+  "312": [
+   2,
+   0
+  ],
+  "312A": [
+   1,
+   0
+  ],
+  "313": [
+   0,
+   0
+  ],
+  "314": [
+   0,
+   0
+  ],
+  "315": [
+   0,
+   0
+  ],
+  "316": [
+   2,
+   0
+  ],
+  "317": [
+   0,
+   0
+  ],
+  "318": [
+   0,
+   0
+  ],
+  "319": [
+   0,
+   0
+  ],
+  "320": [
+   1,
+   0
+  ],
+  "321": [
+   0,
+   0
+  ],
+  "322": [
+   0,
+   0
+  ],
+  "323": [
+   1,
+   0
+  ],
+  "323A": [
+   0,
+   0
+  ],
+  "323B": [
+   5,
+   0
+  ],
+  "324": [
+   2,
+   0
+  ],
+  "325": [
+   0,
+   0
+  ],
+  "326": [
+   1,
+   0
+  ],
+  "327": [
+   0,
+   0
+  ],
+  "328": [
+   0,
+   0
+  ],
+  "329": [
+   2,
+   0
+  ],
+  "329A": [
+   1,
+   0
+  ],
+  "330": [
+   6,
+   0
+  ],
+  "330A": [
+   1,
+   0
+  ],
+  "331": [
+   0,
+   0
+  ],
+  "332": [
+   7,
+   0
+  ],
+  "332A": [
+   1,
+   0
+  ],
+  "333": [
+   2,
+   0
+  ],
+  "334": [
+   2,
+   0
+  ],
+  "334A": [
+   1,
+   0
+  ],
+  "335": [
+   1,
+   0
+  ],
+  "336": [
+   0,
+   0
+  ],
+  "337": [
+   1,
+   0
+  ],
+  "338": [
+   6,
+   0
+  ],
+  "338A": [
+   1,
+   0
+  ],
+  "338B": [
+   2,
+   0
+  ],
+  "339": [
+   2,
+   0
+  ],
+  "340": [
+   0,
+   0
+  ],
+  "341": [
+   6,
+   0
+  ],
+  "342": [
+   5,
+   0
+  ],
+  "342A": [
+   3,
+   0
+  ],
+  "343": [
+   1,
+   0
+  ],
+  "344": [
+   0,
+   0
+  ],
+  "345": [
+   0,
+   0
+  ],
+  "346": [
+   0,
+   0
+  ],
+  "347": [
+   0,
+   0
+  ],
+  "348": [
+   1,
+   0
+  ],
+  "349": [
+   0,
+   0
+  ],
+  "350": [
+   0,
+   0
+  ],
+  "350A": [
+   1,
+   0
+  ],
+  "350B": [
+   0,
+   0
+  ],
+  "351": [
+   0,
+   0
+  ],
+  "352": [
+   6,
+   0
+  ],
+  "353": [
+   1,
+   0
+  ],
+  "354": [
+   0,
+   0
+  ],
+  "355": [
+   0,
+   0
+  ],
+  "356": [
+   8,
+   0
+  ],
+  "357": [
+   1,
+   0
+  ],
+  "358": [
+   5,
+   0
+  ],
+  "359": [
+   4,
+   0
+  ],
+  "359A": [
+   1,
+   0
+  ],
+  "360": [
+   2,
+   0
+  ],
+  "361": [
+   1,
+   0
+  ],
+  "361A": [
+   1,
+   0
+  ],
+  "361B": [
+   1,
+   0
+  ],
+  "362": [
+   0,
+   0
+  ],
+  "363": [
+   0,
+   0
+  ],
+  "363A": [
+   1,
+   0
+  ],
+  "364": [
+   0,
+   0
+  ],
+  "365": [
+   0,
+   0
+  ],
+  "366": [
+   9,
+   0
+  ],
+  "367": [
+   4,
+   0
+  ],
+  "368": [
+   8,
+   0
+  ],
+  "369": [
+   0,
+   0
+  ],
+  "370": [
+   4,
+   0
+  ],
+  "371": [
+   5,
+   0
+  ],
+  "371A": [
+   2,
+   0
+  ],
+  "371B": [
+   2,
+   0
+  ],
+  "371C": [
+   1,
+   0
+  ],
+  "371D": [
+   4,
+   0
+  ],
+  "371E": [
+   0,
+   0
+  ],
+  "371F": [
+   4,
+   0
+  ],
+  "371G": [
+   1,
+   0
+  ],
+  "371H": [
+   1,
+   0
+  ],
+  "371I": [
+   1,
+   0
+  ],
+  "371J": [
+   1,
+   0
+  ],
+  "372": [
+   2,
+   0
+  ],
+  "372A": [
+   2,
+   0
+  ],
+  "373": [
+   0,
+   0
+  ],
+  "374": [
+   0,
+   0
+  ],
+  "375": [
+   0,
+   0
+  ],
+  "376": [
+   1,
+   0
+  ],
+  "377": [
+   0,
+   0
+  ],
+  "378": [
+   0,
+   0
+  ],
+  "378A": [
+   1,
+   0
+  ],
+  "379": [
+   0,
+   0
+  ],
+  "380": [
+   0,
+   0
+  ],
+  "381": [
+   0,
+   0
+  ],
+  "382": [
+   0,
+   0
+  ],
+  "383": [
+   0,
+   0
+  ],
+  "384": [
+   0,
+   0
+  ],
+  "385": [
+   0,
+   0
+  ],
+  "386": [
+   0,
+   0
+  ],
+  "387": [
+   0,
+   0
+  ],
+  "388": [
+   0,
+   0
+  ],
+  "389": [
+   0,
+   0
+  ],
+  "390": [
+   0,
+   0
+  ],
+  "391": [
+   0,
+   0
+  ],
+  "392": [
+   0,
+   0
+  ],
+  "393": [
+   0,
+   0
+  ],
+  "394": [
+   0,
+   0
+  ],
+  "394A": [
+   1,
+   0
+  ],
+  "395": [
+   0,
+   0
+  ],
+  "sch1-I": [
+   39,
+   0
+  ],
+  "sch1-II": [
+   11,
+   0
+  ],
+  "sch2-A": [
+   5,
+   0
+  ],
+  "sch2-B": [
+   1,
+   0
+  ],
+  "sch2-C": [
+   4,
+   0
+  ],
+  "sch2-D": [
+   11,
+   0
+  ],
+  "sch2-E": [
+   0,
+   0
+  ],
+  "sch3": [
+   3,
+   0
+  ],
+  "sch4": [
+   33,
+   0
+  ],
+  "sch5-1": [
+   4,
+   0
+  ],
+  "sch5-2": [
+   0,
+   0
+  ],
+  "sch5-3": [
+   1,
+   0
+  ],
+  "sch5-4": [
+   2,
+   0
+  ],
+  "sch5-5": [
+   2,
+   0
+  ],
+  "sch5-6": [
+   2,
+   0
+  ],
+  "sch5-7": [
+   0,
+   0
+  ],
+  "sch6-1": [
+   5,
+   0
+  ],
+  "sch6-2": [
+   3,
+   0
+  ],
+  "sch6-3": [
+   3,
+   0
+  ],
+  "sch6-4": [
+   4,
+   0
+  ],
+  "sch6-5": [
+   2,
+   0
+  ],
+  "sch6-6": [
+   3,
+   0
+  ],
+  "sch6-7": [
+   1,
+   0
+  ],
+  "sch6-8": [
+   5,
+   0
+  ],
+  "sch6-9": [
+   2,
+   0
+  ],
+  "sch6-10": [
+   1,
+   0
+  ],
+  "sch6-11": [
+   5,
+   0
+  ],
+  "sch6-12A": [
+   1,
+   0
+  ],
+  "sch6-12AA": [
+   1,
+   0
+  ],
+  "sch6-12B": [
+   0,
+   0
+  ],
+  "sch6-13": [
+   1,
+   0
+  ],
+  "sch6-14": [
+   2,
+   0
+  ],
+  "sch6-15": [
+   2,
+   0
+  ],
+  "sch6-16": [
+   3,
+   0
+  ],
+  "sch6-17": [
+   6,
+   0
+  ],
+  "sch6-18": [
+   0,
+   0
+  ],
+  "sch6-19": [
+   1,
+   0
+  ],
+  "sch6-20": [
+   5,
+   0
+  ],
+  "sch6-table": [
+   6,
+   0
+  ],
+  "sch6-20A": [
+   1,
+   0
+  ],
+  "sch6-20B": [
+   0,
+   0
+  ],
+  "sch6-20BA": [
+   1,
+   0
+  ],
+  "sch6-20BB": [
+   1,
+   0
+  ],
+  "sch6-20C": [
+   0,
+   0
+  ],
+  "sch6-21": [
+   0,
+   0
+  ],
+  "sch7-I": [
+   10,
+   0
+  ],
+  "sch7-II": [
+   10,
+   0
+  ],
+  "sch7-III": [
+   5,
+   0
+  ],
+  "sch8": [
+   10,
+   0
+  ],
+  "sch9": [
+   11,
+   0
+  ],
+  "sch10-1": [
+   1,
+   0
+  ],
+  "sch10-2": [
+   2,
+   0
+  ],
+  "sch10-3": [
+   0,
+   0
+  ],
+  "sch10-4": [
+   0,
+   0
+  ],
+  "sch10-5": [
+   0,
+   0
+  ],
+  "sch10-6": [
+   0,
+   0
+  ],
+  "sch10-7": [
+   0,
+   0
+  ],
+  "sch10-8": [
+   0,
+   0
+  ],
+  "sch11": [
+   0,
+   0
+  ],
+  "sch12": [
+   0,
+   0
+  ],
+  "app1": [
+   2,
+   0
+  ],
+  "app2": [
+   1,
+   0
+  ],
+  "app3": [
+   1,
+   0
+  ]
+ },
+ "sequences": {
+  "sch1-I": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28"
+  ],
+  "sch1-II": [
+   "1",
+   "",
+   "2",
+   "3",
+   "4",
+   "",
+   "6",
+   "7",
+   "",
+   "",
+   "8",
+   "9"
+  ],
+  "sch4": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   ""
+  ],
+  "sch7-I": [
+   "1",
+   "2",
+   "2A",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   "32",
+   "33",
+   "34",
+   "35",
+   "36",
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "42",
+   "43",
+   "44",
+   "45",
+   "46",
+   "47",
+   "48",
+   "49",
+   "50",
+   "51",
+   "52",
+   "53",
+   "54",
+   "55",
+   "56",
+   "57",
+   "58",
+   "59",
+   "60",
+   "61",
+   "62",
+   "63",
+   "64",
+   "65",
+   "66",
+   "67",
+   "68",
+   "69",
+   "70",
+   "71",
+   "72",
+   "73",
+   "74",
+   "75",
+   "76",
+   "77",
+   "78",
+   "79",
+   "80",
+   "81",
+   "82",
+   "83",
+   "84",
+   "85",
+   "86",
+   "87",
+   "88",
+   "89",
+   "90",
+   "91",
+   "92",
+   "92A",
+   "92B",
+   "92C",
+   "93",
+   "94",
+   "95",
+   "96",
+   "97"
+  ],
+  "sch7-II": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   "32",
+   "33",
+   "34",
+   "35",
+   "36",
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "42",
+   "43",
+   "44",
+   "45",
+   "46",
+   "47",
+   "48",
+   "49",
+   "50",
+   "51",
+   "52",
+   "53",
+   "54",
+   "55",
+   "56",
+   "57",
+   "58",
+   "59",
+   "60",
+   "61",
+   "62",
+   "63",
+   "64",
+   "65",
+   "66"
+  ],
+  "sch7-III": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "11A",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "17A",
+   "17B",
+   "18",
+   "19",
+   "20",
+   "20A",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   "32",
+   "33",
+   "33A",
+   "34",
+   "35",
+   "36",
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "42",
+   "43",
+   "44",
+   "45",
+   "46",
+   "47"
+  ],
+  "sch8": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22"
+  ],
+  "sch9": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29",
+   "30",
+   "31",
+   "32",
+   "33",
+   "34",
+   "35",
+   "36",
+   "37",
+   "38",
+   "39",
+   "40",
+   "41",
+   "42",
+   "43",
+   "44",
+   "45",
+   "46",
+   "47",
+   "48",
+   "49",
+   "50",
+   "51",
+   "52",
+   "53",
+   "54",
+   "55",
+   "56",
+   "57",
+   "58",
+   "59",
+   "60",
+   "61",
+   "62",
+   "63",
+   "64",
+   "65",
+   "66",
+   "67",
+   "68",
+   "69",
+   "70",
+   "71",
+   "72",
+   "73",
+   "74",
+   "75",
+   "76",
+   "77",
+   "78",
+   "79",
+   "80",
+   "81",
+   "82",
+   "83",
+   "84",
+   "85",
+   "86",
+   "87",
+   "88",
+   "89",
+   "90",
+   "91",
+   "92",
+   "93",
+   "94",
+   "95",
+   "96",
+   "97",
+   "98",
+   "99",
+   "100",
+   "101",
+   "102",
+   "103",
+   "104",
+   "105",
+   "106",
+   "107",
+   "108",
+   "109",
+   "110",
+   "111",
+   "112",
+   "113",
+   "114",
+   "115",
+   "116",
+   "117",
+   "118",
+   "119",
+   "120",
+   "121",
+   "122",
+   "123",
+   "124",
+   "125",
+   "126",
+   "127",
+   "128",
+   "129",
+   "130",
+   "131",
+   "132",
+   "133",
+   "134",
+   "135",
+   "136",
+   "137",
+   "138",
+   "139",
+   "140",
+   "141",
+   "142",
+   "143",
+   "144",
+   "145",
+   "146",
+   "147",
+   "148",
+   "149",
+   "150",
+   "151",
+   "152",
+   "153",
+   "154",
+   "155",
+   "156",
+   "157",
+   "158",
+   "159",
+   "160",
+   "161",
+   "162",
+   "163",
+   "164",
+   "165",
+   "166",
+   "167",
+   "168",
+   "169",
+   "170",
+   "171",
+   "172",
+   "173",
+   "174",
+   "175",
+   "176",
+   "177",
+   "178",
+   "179",
+   "180",
+   "181",
+   "182",
+   "183",
+   "184",
+   "185",
+   "186",
+   "187",
+   "188",
+   "189",
+   "190",
+   "191",
+   "192",
+   "193",
+   "194",
+   "195",
+   "196",
+   "197",
+   "198",
+   "199",
+   "200",
+   "201",
+   "202",
+   "203",
+   "204",
+   "205",
+   "206",
+   "207",
+   "208",
+   "209",
+   "210",
+   "211",
+   "212",
+   "213",
+   "214",
+   "215",
+   "216",
+   "217",
+   "218",
+   "219",
+   "220",
+   "221",
+   "222",
+   "223",
+   "224",
+   "225",
+   "226",
+   "227",
+   "228",
+   "229",
+   "230",
+   "231",
+   "232",
+   "233",
+   "234",
+   "235",
+   "236",
+   "237",
+   "238",
+   "239",
+   "240",
+   "241",
+   "242",
+   "243",
+   "244",
+   "245",
+   "246",
+   "247",
+   "248",
+   "249",
+   "250",
+   "251",
+   "252",
+   "253",
+   "254",
+   "255",
+   "256",
+   "257",
+   "257A",
+   "258",
+   "259",
+   "260",
+   "261",
+   "262",
+   "263",
+   "264",
+   "265",
+   "266",
+   "267",
+   "268",
+   "269",
+   "270",
+   "271",
+   "272",
+   "273",
+   "274",
+   "275",
+   "276",
+   "277",
+   "278",
+   "279",
+   "280",
+   "281",
+   "282",
+   "283",
+   "284"
+  ],
+  "sch11": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18",
+   "19",
+   "20",
+   "21",
+   "22",
+   "23",
+   "24",
+   "25",
+   "26",
+   "27",
+   "28",
+   "29"
+  ],
+  "sch12": [
+   "1",
+   "2",
+   "3",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9",
+   "10",
+   "11",
+   "12",
+   "13",
+   "14",
+   "15",
+   "16",
+   "17",
+   "18"
+  ]
+ },
+ "paragraphSchedules": {
+  "sch2": [
+   "sch2-A",
+   "sch2-B",
+   "sch2-C",
+   "sch2-D",
+   "sch2-E"
+  ],
+  "sch5": [
+   "sch5-1",
+   "sch5-2",
+   "sch5-3",
+   "sch5-4",
+   "sch5-5",
+   "sch5-6",
+   "sch5-7"
+  ],
+  "sch6": [
+   "sch6-1",
+   "sch6-2",
+   "sch6-3",
+   "sch6-4",
+   "sch6-5",
+   "sch6-6",
+   "sch6-7",
+   "sch6-8",
+   "sch6-9",
+   "sch6-10",
+   "sch6-11",
+   "sch6-12A",
+   "sch6-12AA",
+   "sch6-12B",
+   "sch6-13",
+   "sch6-14",
+   "sch6-15",
+   "sch6-16",
+   "sch6-17",
+   "sch6-18",
+   "sch6-19",
+   "sch6-20",
+   "sch6-table",
+   "sch6-20A",
+   "sch6-20B",
+   "sch6-20BA",
+   "sch6-20BB",
+   "sch6-20C",
+   "sch6-21"
+  ],
+  "sch10": [
+   "sch10-1",
+   "sch10-2",
+   "sch10-3",
+   "sch10-4",
+   "sch10-5",
+   "sch10-6",
+   "sch10-7",
+   "sch10-8"
+  ]
+ },
+ "textHash": "6bd325cfe2ddb44b25b24c4ac6fdbbfcffe11ffbc96d86691484a7e71874f1f9",
+ "totals": {
+  "chars": 556039,
+  "words": 95435
+ },
+ "anchors": [
+  {
+   "id": "14",
+   "contains": "The State shall not deny to any person equality before the law or the equal protection of the laws within the territory of India"
+  },
+  {
+   "id": "21",
+   "contains": "No person shall be deprived of his life or personal liberty except according to procedure established by law."
+  },
+  {
+   "id": "21A",
+   "contains": "The State shall provide free and compulsory education to all children of the age of six to fourteen years"
+  },
+  {
+   "id": "32",
+   "contains": "The right to move the Supreme Court by appropriate proceedings for the enforcement of the rights conferred by this Part is guaranteed."
+  },
+  {
+   "id": "300A",
+   "contains": "No person shall be deprived of his property save by authority of law."
+  },
+  {
+   "id": "368",
+   "contains": "Parliament may in exercise of its constituent power amend by way of addition, variation or repeal any provision of this Constitution"
+  },
+  {
+   "id": "356",
+   "contains": "If the President, on receipt of a report from the Governor *** of a State or otherwise"
+  },
+  {
+   "id": "226",
+   "contains": "every High Court shall have power"
+  },
+  {
+   "id": "51A",
+   "contains": "to abide by the Constitution and respect its ideals and institutions"
+  },
+  {
+   "id": "1",
+   "contains": "India, that is Bharat, shall be a Union of States."
+  },
+  {
+   "id": "395",
+   "contains": "are hereby repealed"
+  },
+  {
+   "id": "preamble",
+   "contains": "SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC"
+  },
+  {
+   "id": "preamble",
+   "contains": "unity and integrity of the Nation"
+  }
+ ]
+}

@@ -1076,6 +1076,97 @@ State of Haryana* carries a neutral citation only (2025 INSC 162, no reporter ci
 yet available). *M. Ravindran*'s `year` field is the 2020 decision year, distinct from
 its 2021 SCC reporter volume.
 
+## The Constitution of India — COMPLETE: all 570 of 570 sections, 26 Part slots (25 in force), 12 Schedules, 3 Appendices
+The largest single addition to this project, and structurally the most different: the
+Constitution was delivered as a finished, independently-verified data file plus its own
+integrity checker and fixture, with instructions that this batch was wiring/rendering/
+testing only — "do not re-parse, re-type, or improve any statute text." No statute text
+was touched anywhere in this batch; every edit was to `App.jsx` (new rendering code) or
+`package.json` (new scripts).
+
+**Why the Constitution is NOT in the flat ACTS/CHAPTERS/CATEGORIES/SECTIONS arrays every
+other Act uses.** Two structural incompatibilities, caught before writing any wiring
+code:
+1. Constitution section ids are bare article/schedule numbers with no act-namespace
+   prefix (`"21"`, `"21A"`, `"sch7-I"`), unlike every other Act's `"ACT-<n>"` convention.
+   BNS is the one Act in this project that *also* uses unprefixed ids (raw integers
+   `1`-`358`). Since `SECTION_MAP` is `Object.fromEntries(SECTIONS.map(s => [s.id, s]))`
+   and `Object.fromEntries` coerces every key to a string, BNS's numeric id `1` and a
+   Constitution article id `"1"` would collide in a shared map — whichever was inserted
+   last would silently overwrite the other. Confirmed this is a real, not theoretical,
+   risk: BNS actually has all 358 of ids 1-358 with no gaps, directly overlapping the
+   Constitution's own 1-395 article-number range.
+2. The Constitution's own data shape carries fields the shared section-rendering pipe has
+   no way to represent: `status: 'omitted'` articles with no body text (35 of them),
+   `entries`/`rows` in place of `text` for 8 of the 12 Schedules, Part-level
+   `subChapters`/`headingNotes`, and per-article `chapterTitle`/`group` cross-headings.
+   Force-fitting these into the existing `{id, category, title, text, ...}` section shape
+   would have meant either losing structure (flattening tables into prose) or bending the
+   generic renderer with Constitution-only special cases scattered through code that every
+   other Act also runs.
+
+Kept fully parallel instead: `CONSTITUTION_SECTION_MAP` / `CONSTITUTION_CHAPTER_MAP` are
+separate module-level maps, never merged with `SECTION_MAP`/`CHAPTERS`/`CATEGORIES`, and
+`selectedAct === "CONSTITUTION"` is the sole discriminator the whole UI branches on — in
+`BareActNavigator`'s state (`constitutionSection` computed alongside, never instead of,
+`section`), in a dedicated `goToConstitution()` (mirrors `goTo()` but never touches the
+shared, ambiguous `SECTION_MAP`), in a Constitution-only `switchAct` branch (seeds
+`selectedId` to `"preamble"` instead of searching flat `SECTIONS`), and in the sidebar
+(`SidebarContents` branches to a new `ConstitutionSidebarTree` instead of its usual
+chapter/category tree). Even the "your notes" `localStorage` key is namespaced
+(`constitution-note-<id>` vs. the legacy `bns-note-<id>`) for the same collision reason —
+a Constitution Article 21 note and a BNS §21 note would otherwise have overwritten each
+other under the pre-existing shared key scheme.
+
+**New files added** (this project's first move beyond a single `App.jsx` data file):
+`src/data/constitutionData.js` (the delivered data, copied byte-for-byte verbatim — diffed
+identical after every edit in this batch to confirm), `scripts/verify-constitution.mjs` +
+`scripts/constitution.expected.json` (the delivered dependency-free integrity checker and
+its Contents-page-derived fixture, copied as-is), `scripts/smoke-constitution-build.mjs`
+(post-build check that four verbatim strings actually made it into `dist/`), and
+`docs/PARSE_REPORT.md` (parsing methodology, cross-checks, and the source-PDF gaps —
+footnotes missing in the PDF itself for 10 articles and parts of 8 schedules — that must
+not be filled in from memory). `package.json` gained `verify:constitution`,
+`smoke:constitution`, and a `prebuild` hook chaining into `verify:constitution`, so a
+`npm run build` can never silently ship a corrupted Constitution data file.
+
+**New rendering components**, built because the existing ones have no way to represent
+this content: `ConstitutionSectionView` (the main content pane — omitted-article note,
+amendment-history `<details>`, a "Not Yet in Force" callout reusing the amber
+struck-down-note visual language already established for ACA §87, `ConstitutionEntries`
+for numbered schedule lists, `ConstitutionRows` for the First/Fourth Schedule tables) and
+`ConstitutionSidebarTree` (Preamble → Parts, with per-article chapter/group sub-headings
+inserted only when they change from the previous article in the Contents-page order,
+never re-sorted → Schedules grouped by their own `group` field → Appendices).
+
+**Verified exactly per the delivered instructions' Step 5, in order:** `npm run
+verify:constitution` (570 sections, 506 article slots: 471 in force/35 omitted, 26 part
+slots, one expected `WARN sch2-D: unbalanced plain brackets` — all matching the
+instructions' stated expectations exactly) → `npm run build` (exit 0, `prebuild` correctly
+auto-ran the verifier first) → `npm run smoke:constitution` (4/4 probe strings found in
+`dist/`) → eyeball checks via Playwright covering every item the instructions named:
+Article 21 (title + text), Article 21A, Article 22 (shows all 5 "Not yet in force" notes),
+Article 238 (shows Omitted, with Part VII itself also visibly marked omitted in both the
+breadcrumb and the sidebar), Article 371J (confirms the documented "omits 'the'" title
+quirk), Seventh Schedule List I entry 97 (matches the smoke test's own probe string
+verbatim), First Schedule Part II showing Delhi (row 1) and Ladakh (row 9) with omitted
+rows correctly interspersed, Fourth Schedule's bold "Total 233" row, the Ninth Schedule
+ending at entry 284 (preserving the documented PDF typo "entent" for "extent" verbatim),
+and the existing BNSS view confirmed to still work with zero regression → the required
+negative test (changed one word in Article 21's text, confirmed `verify:constitution`
+failed on both the anchor check and the content fingerprint with exit code 1, reverted,
+confirmed the reverted file is byte-identical to the originally delivered one and the
+verifier passes clean again).
+
+**Not done in this batch, matching the instructions' explicit scope:** `explanation` and
+`cases` are empty on every section — reserved for a future enrichment pass, same framing
+as every other Act's "no case law yet" note. The First Schedule's starred/omitted rows,
+the Second Schedule Part D's one genuinely unbalanced bracket (a PDF artifact, not a
+parsing bug — the `WARN` line is expected, not a failure), and the ten articles/eight
+schedules with footnotes missing from the PDF itself are all left exactly as the source
+data delivered them; per `PARSE_REPORT.md`'s own instruction, none of these gaps are to be
+filled in from memory.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
