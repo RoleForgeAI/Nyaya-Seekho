@@ -1036,6 +1036,46 @@ categories' sections, and the illustrated-section list matches exactly. All chec
 passed cleanly before the splice, and the full-dataset integrity check passed again
 after it.
 
+## BNSS enrichment batch 1 — simpleExplanation + 6 landmark cases across 5 sections
+The first enrichment pass on BNSS since its full-text merge, and the first BNSS batch to
+add `simpleExplanation` or `cases` anywhere in the Act. Added to 5 existing section
+objects (no new sections created, no `text`/`title`/`category` touched): §35 (arrest
+without warrant), §47 (grounds of arrest and right to bail), §187 (procedure when
+investigation exceeds 24 hours / default bail), §479 (maximum undertrial detention
+period), and §482 (anticipatory bail) — 6 case objects total (§482 carries two).
+
+**Pre-BNSS continuity cases.** Four of the six cases were decided before BNSS existed,
+under the old CrPC's corresponding provisions, and carry `decidedUnder` +
+`continuityNote` fields — the same pattern already established for BSA's pre-BSA
+Evidence Act cases (e.g. *Arnesh Kumar v. State of Bihar* under CrPC §§41/41A for BNSS
+§35; *Gurbaksh Singh Sibbia* and *Sushila Aggarwal* under CrPC §438 for BNSS §482). One
+case (*In Re: Inhuman Conditions in 1382 Prisons*, on §479) is itself a BNSS-era order —
+an ongoing matter with no reporter citation, cited by writ petition number and the date
+of the 23 August 2024 order — and correctly carries neither field, since it doesn't
+straddle a code transition the way the other five do.
+
+**REQUIRED code fix, found while checking the case-card rendering for this batch:**
+the case card and the "Export section as text" output both hard-coded the label
+"(pre-BSA)" for any case carrying `decidedUnder` — correct for every Act enriched so far
+(all pre-BSA continuity cases), but wrong for BNSS, whose pre-code cases are properly
+"pre-BNSS," not "pre-BSA." Fixed in two places to key off the section's own id instead of
+a fixed string:
+- Case card JSX: `Decided under {c.decidedUnder} (pre-BSA)` → `Decided under
+  {c.decidedUnder} (pre-{String(section.id).startsWith("BNSS-") ? "BNSS" : "BSA"})`
+- Export-to-text: the `lines.push` for `c.decidedUnder` now builds the same
+  BNSS-vs-BSA label via `String(s.id).startsWith("BNSS-")` instead of the fixed
+  `pre-BSA)` suffix.
+
+Verified via Playwright that BNSS-35's case card now correctly reads "pre-BNSS," and
+that BSA-8's existing pre-BSA case (*Badri Rai v. State of Bihar*) still correctly reads
+"pre-BSA" — confirming the fix is scoped correctly with no regression on any of the
+existing BSA continuity cases.
+
+All six case links verified as Indian Kanoon judgment/order pages. *Vihaan Kumar v.
+State of Haryana* carries a neutral citation only (2025 INSC 162, no reporter citation
+yet available). *M. Ravindran*'s `year` field is the 2020 decision year, distinct from
+its 2021 SCC reporter volume.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening
