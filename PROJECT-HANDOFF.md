@@ -1369,6 +1369,73 @@ much slower than Opus-class models for comparable quality on this kind of task. 
 Opus for genuinely hard judgment calls (tricky bugs, architectural decisions) rather than
 routine chapter-building.
 
+## The Hindu Adoptions and Maintenance Act, 1956 (HAMA) — COMPLETE, all 30 of 30 sections
+Delivered as a standalone `hinduAdoptionsMaintenanceData.js` + `verify-hama.mjs` +
+`CLAUDE_CODE_INSTRUCTIONS.md` + `PARSE_REPORT.md` bundle, mirroring the Constitution's
+delivery format. Unlike the Constitution, this Act was **merged directly into the
+existing single-file `ACTS`/`CHAPTERS`/`CATEGORIES`/`SECTIONS` convention in `App.jsx`**,
+the same way HMA and HMGA were, rather than kept as a separate data file with its own
+verifier and prebuild step.
+
+**Why deviate from the delivered instructions' file layout:** the instructions asked for
+a separate file "following the same shape as the other acts already in the app (id,
+chapter, title, text, amendments, explanation, status, cases)" — but that described shape
+does not actually match how the other small Acts are stored in this codebase. The real
+convention (confirmed by reading HMA's and HMGA's actual entries) is: a prefixed id
+(`"HMA-13"`, not bare `"13"` — critical, since BNS already occupies bare ids `"1"`–`"358"`
+and a shared `SECTION_MAP` would silently collide otherwise, exactly the same risk flagged
+when the Constitution was wired in), a `category` field (not `chapter`) pointing at a
+`CATEGORIES` entry which itself points at a `CHAPTERS` entry, `simpleExplanation` (not
+`explanation`), a `repealed: true` boolean flag (not a `status` string) for spent
+sections, and no separate `amendments` array at all — amendment history is folded into
+the `simpleExplanation` prose instead. Since the session's own standing practice for this
+project is "study the existing wiring first and mirror it exactly," and a 30-section Act
+doesn't carry the scale that justified the Constitution's separate architecture, HAMA was
+adapted into the established single-file shape rather than the delivered instructions'
+literal (and, on inspection, incorrect) description of that shape. `verify-hama.mjs` and
+the standalone data file were not wired in; the uploaded bundle is kept for provenance
+only. This is the same "study existing wiring, mirror it, adapt the data at merge time,
+never edit statute text" discipline used for the Constitution.
+
+**Structure:** 4 chapters (`HAMA-I` Preliminary §§1–4, `HAMA-II` Adoption §§5–17,
+`HAMA-III` Maintenance §§18–28, `HAMA-IV` Repeals and Savings §§29–30), one category per
+chapter (matching how HMA/HMGA did it), 30 sections. Section 29 is `repealed: true` (a
+1960 repeal of an already-repealed 1946 predecessor Act — kept for numbering
+completeness, same convention as HMA-6's `[Repealed]` entry).
+
+**Content:** current as amended by Act 45 of 1962, the Hindu Adoptions and Maintenance
+(Amendment) Act, 2010 (Act 30 of 2010), the Personal Laws (Amendment) Act, 2019, and the
+J&K Reorganisation Act, 2019. Two corrections the delivered `PARSE_REPORT.md` flagged
+against commonly-copied uncorrected web text, both preserved here: §8 now reflects the
+2010 amendment giving wives the same adoption capacity as husbands (previously only an
+unmarried/divorced/widowed woman could adopt at all), and §18(2)(c) — the leprosy ground
+for a wife's separate residence — is correctly omitted per the 2019 Personal Laws
+Amendment (the clause lettering (a),(b),(d)–(g) is kept exactly as the gazette text does,
+without relabeling). Every in-force section has a `simpleExplanation`, matching the other
+Acts' "In simple words" rendering.
+
+**Case law: 5 case objects across 4 sections, all independently verified.** One arrived
+pre-verified (*Shabnam Hashmi v. Union of India*, (2014) 4 SCC 1, on §5). The delivered
+instructions flagged four more candidates surfaced during drafting but explicitly NOT yet
+checked against Indian Kanoon, with a note that one of them (*Kartar Singh v. Surjan
+Singh*) was already being named in §5's own explanation prose without a citation or URL —
+worth flagging on its own, since stating an unverified case by name in prose is still an
+unverified factual claim even without a formal `cases` entry. All four were verified this
+session via `WebSearch` (the same fallback method used for the Constitution's case-law
+backlog, since `WebFetch` to indiankanoon.org remains blocked by this environment's
+network egress policy) and merged: *Kartar Singh (Minor) v. Surjan Singh* (AIR 1974 SC
+2161, §5), *Madhusudan Das v. Narayanibai* (AIR 1983 SC 114, decided 1982, §6), *Sau
+Ashabai Kate v. Vithal Bhika Nade* (1989 Supp (2) SCC 450, §8), and *Dhanraj v. Suraj
+Bai* (AIR 1975 SC 1103, §9). No `CASES_NOT_ADDED.md` was needed — all four were
+successfully confirmed.
+
+Ran `npm run build` (exit 0) after the merge and confirmed via `grep` that both "Hindu
+Adoptions and Maintenance Act" and "Kartar Singh" text are present in the built
+`dist/assets/*.js` bundle. No dedicated verifier script exists for the single-file
+Acts convention (there never has been one for HMA/HMGA/HSA/etc. either) — integrity was
+checked manually: a duplicate/missing-id script confirmed all 30 `HAMA-1`…`HAMA-30` ids
+are present exactly once before the build was run.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
