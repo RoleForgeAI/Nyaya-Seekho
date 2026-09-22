@@ -28,7 +28,7 @@ const ACTS = [
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "active" },
 ];
 
-const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); explanation and landmark cases reserved for a future pass";
+const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); plain-English explanation added for all 532 in-force sections; case-law verification complete — 177 of 177 candidate landmark cases independently checked against Indian Kanoon (324 verified case objects across the Constitution's sections)";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -6906,6 +6906,7 @@ function constitutionSearchMatch(s, q) {
   if (s.chapterTitle && s.chapterTitle.toLowerCase().includes(q)) return true;
   if (s.entries && s.entries.some((e) => e.text && e.text.toLowerCase().includes(q))) return true;
   if (s.rows && s.rows.some((r) => Object.values(r).some((v) => typeof v === "string" && v.toLowerCase().includes(q)))) return true;
+  if (s.explanation && s.explanation.toLowerCase().includes(q)) return true;
   return false;
 }
 
@@ -8095,6 +8096,7 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
           <span className="meta-chip">{s.amendments.length} amendment note{s.amendments.length > 1 ? "s" : ""}</span>
         )}
         {s.notInForce.length > 0 && <span className="meta-chip gold">Not yet in force</span>}
+        {s.cases && s.cases.length > 0 && <span className="meta-chip gold">Landmark case available</span>}
       </div>
 
       <button className="export-btn" onClick={exportConstitutionSection}>Export section as text ↓</button>
@@ -8113,6 +8115,13 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
         </>
       )}
 
+      {s.explanation && (
+        <div className="plain-box">
+          <div className="plain-title">In Simple Words</div>
+          <p>{s.explanation}</p>
+        </div>
+      )}
+
       {s.notInForce.length > 0 && (
         <div className="not-in-force-note">
           <div className="not-in-force-title">Not Yet in Force</div>
@@ -8125,6 +8134,24 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
           <summary>Amendment history ({s.amendments.length})</summary>
           <ul>{s.amendments.map((a, i) => <li key={i}>{a}</li>)}</ul>
         </details>
+      )}
+
+      {s.cases && s.cases.length > 0 && (
+        <>
+          <div className="block-label"><BookMarked size={12} style={{ verticalAlign: -2 }} /> Landmark Precedent</div>
+          {s.cases.map((c, i) => (
+            <div className="case-card" key={i}>
+              <div className="case-name">{c.name}</div>
+              <div className="case-cite">{c.cite} · {c.year}</div>
+              <div className="case-ratio">{c.ratio}</div>
+              {c.url && (
+                <a className="judgment-link" href={c.url} target="_blank" rel="noopener noreferrer">
+                  Read full judgment ↗
+                </a>
+              )}
+            </div>
+          ))}
+        </>
       )}
 
       <div className="notes-box">
@@ -8155,7 +8182,7 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
         Content last verified against source: <strong>{CONSTITUTION_META.source.title}, {CONSTITUTION_META.source.publisher}, as on {CONSTITUTION_META.source.asOn}, amended up to {CONSTITUTION_META.source.amendedUpTo}</strong>.
         Live scope: {CONSTITUTION_META.counts.sections} of {CONSTITUTION_META.counts.sections} Constitution sections
         ({CONSTITUTION_META.counts.articlesInForce} of {CONSTITUTION_META.counts.articleSlots} articles in force, {CONSTITUTION_META.counts.articlesOmitted} omitted).
-        {" "}Explanation and landmark cases are reserved for a future enrichment pass — statute text takes priority.
+        {" "}Every in-force section carries a plain-English explanation; landmark cases are being added progressively and verified individually against Indian Kanoon before merging — statute text takes priority.
         Statutes and case law can change after this date — if you know of an amendment or a newer ruling here, flag it so it can be re-verified.
       </p>
     </>

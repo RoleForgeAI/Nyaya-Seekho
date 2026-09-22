@@ -1167,6 +1167,138 @@ schedules with footnotes missing from the PDF itself are all left exactly as the
 data delivered them; per `PARSE_REPORT.md`'s own instruction, none of these gaps are to be
 filled in from memory.
 
+## Constitution of India — Pass 2: explanations for every in-force section, 7 verified cases, 170 pending
+A follow-up batch to the initial Constitution wiring. Replaced `src/data/constitutionData.js`,
+`scripts/verify-constitution.mjs`, and `scripts/constitution.expected.json` with new
+versions delivered together (the old verifier fails against the new fixture, and the new
+verifier requires `explanation` on every in-force section, so all three had to move
+together). Added `src/data/constitutionCases.pending.json` — a 177-entry work list, not
+imported by the app, tracking which landmark cases have been independently verified
+against Indian Kanoon and which are still candidates.
+
+**Two data bugs fixed upstream in this delivery** (not by this project — the corrected
+data arrived pre-fixed): Tenth Schedule paragraph 7 and Second Schedule Part E each had a
+stray footnote star glued into the statute text. The verifier now has a dedicated
+`STRAY_STAR` check to catch this class of error going forward. The content fingerprint in
+the fixture changed only because of these two corrections (2 fewer characters overall,
+556039 → 556037) — confirmed via `diff` that nothing else in the 964KB→1.1MB file changed
+beyond the new `explanation`/`cases` fields and these two fixes.
+
+**Explanations: done, all 532 in-force sections** (Preamble + 471 articles + every
+schedule paragraph/list/appendix). Rendered as a new "In Simple Words" block —
+deliberately reusing the exact same `.plain-box`/`.plain-title` CSS every other Act's
+`simpleExplanation` field already uses, for visual consistency — placed under the
+official text/entries/rows block and above the "Not Yet in Force"/amendment-history
+blocks. Indexed in Constitution search (`constitutionSearchMatch`) alongside label/title/
+text/entries/rows, matching how other Acts already include `simpleExplanation` in their
+own search matching. Per the delivered instructions, several explanations "go beyond the
+statute text" and were flagged by the source for the owner's own review before treating
+them as settled: Article 243ZH (Part IXB struck down for State co-operatives, 2021),
+Articles 331/333 (Anglo-Indian nomination ended January 2020), Articles 124A–124C/217/222/
+224A (NJAC struck down 2015 — text kept because the PDF prints it), Article 31B/Ninth
+Schedule (I.R. Coelho), Article 368 (Kesavananda, Minerva Mills), Article 356
+(reviewability), Tenth Schedule paras 6–7 (Kihoto Hollohon), Article 226 (basic
+structure), Article 323A (tribunal review). Flagging this here rather than treating it as
+already fully settled.
+
+**Cases: 7 verified and merged so far (24 case objects across 19 sections)** — Kesavananda
+Bharati, Maneka Gandhi, Puttaswamy (privacy), S.R. Bommai, Indra Sawhney, Minerva Mills,
+Kihoto Hollohon. Rendered with the same `.case-card` markup already used everywhere else
+in the project, minus the `decidedUnder`/`jurisdiction` fields (irrelevant here — every
+Constitution case is, by definition, a Supreme Court of India judgment interpreting the
+Constitution itself, never a pre-code-transition or foreign-persuasive case). A "Landmark
+case available" gold chip was added to the meta-chips row, matching the existing
+convention.
+
+**170 cases still unverified — next batch.** `constitutionCases.pending.json` lists 170
+candidate cases (149 at `citeConfidence: "high"`, 21 at `"check"`, needing extra care)
+drafted from memory with no confirmed Indian Kanoon URL. Per the project's standing
+case-law discipline (never invent or paraphrase from memory — the same rule applied to
+every other Act's case-law batches), none of these may be merged until each one's name,
+court, year, citation, and ratio are independently confirmed against its actual Indian
+Kanoon judgment page, exactly as required for every other Act's cases in this project.
+This is being worked through as its own follow-up effort, tracked case-by-case, since it
+cannot be done as a mechanical data merge the way every other batch in this project has
+been — each entry requires an independent web lookup and a judgment read, not just
+copying delivered content into place.
+
+## Constitution of India — case-law verification COMPLETE: 177 of 177 verified, 0 left out
+Follow-up to the paragraph above. All 170 remaining candidates from
+`constitutionCases.pending.json` have now been independently checked and merged into
+`constitutionData.js`, bringing the total to all 177 of 177 candidates verified (the
+original 7 plus these 170). `constitutionCases.pending.json.verifiedCount` is now 177.
+No `CASES_NOT_ADDED.md` was created because every single candidate was successfully
+matched to a genuine Indian Kanoon judgment with a consistent name, court and citation —
+none had to be excluded.
+
+**Methodology gap, flagged transparently:** `WebFetch` to `indiankanoon.org` is blocked
+by this session's network egress policy (confirmed via `curl -sS "$HTTPS_PROXY/__agentproxy/status"`
+showing policy-denial relay failures, and directly testing the domain), so the instructed
+method of literally "opening the judgment page itself" was not possible. Per the owner's
+explicit direction when asked how to proceed ("what we did in other act do same as
+that"), verification instead used `WebSearch` — cross-checking each case's name, court,
+and judgment year against multiple independent search-result snippets/summaries of the
+Indian Kanoon page and secondary case-law sites, matching the citation against a second
+listing, and writing/rewriting the `ratio` from that synthesis rather than from the raw
+judgment text. This is the same trust-but-verify discipline already used for other Acts'
+case-law batches in this project, adapted to this session's tooling constraint, and it is
+recorded here (and in the pending file's own `_readme`) so the gap against the original
+"open the page" instruction stays visible rather than silently papered over.
+
+**Citation/year discrepancies caught and corrected** against the drafted candidates
+(judgment date used, per the project's "year = year of judgment" convention, even where
+it differs from the AIR/SCC reporter volume year): Sajjan Singh v. State of Rajasthan
+(drafted 1965 → corrected to 1964, decided 30 Oct 1964), E.P. Royappa v. State of Tamil
+Nadu (drafted 1974 → corrected to 1973, decided 23 Nov 1973), Union Carbide Corporation
+v. Union of India (drafted 1989, which was actually the original Bhopal settlement order
+→ corrected to 1991, the year of the review judgment at the cited (1991) 4 SCC 584
+reference), and several others where the AIR/SCC citation year differs from the judgment
+year (e.g. Rangachari, Kehar Singh, S. Azeez Basha, NJAC case, Krishna Kumar Singh) —
+kept as the actual decision year, consistent with how every other verified entry in this
+file is dated.
+
+**Coverage by theme:** religious freedom under Articles 25/26/30 (Shirur Mutt, Ratilal
+Gandhi, Ismail Faruqui, Kerala Education Bill, St. Stephen's, Inamdar, Azeez Basha);
+Article 44 uniform civil code (Shah Bano, Sarla Mudgal); Directive Principles under
+Articles 39/42/47/48/48A/51A (Female Workers, Mirzapur Moti Kureshi, Khoday Distilleries,
+Rural Litigation and Entitlement Kendra); executive power under Articles 53/72/74/75/154/
+161/163/164 (Ram Jawaya Kapur, Shamsher Singh, Kehar Singh, Maru Ram, Epuru Sudhakar,
+Manoj Narula, B.P. Singhal); President's Rule, anti-defection and Governor's-office cases
+under Articles 174/191/356/361 and the Tenth Schedule (Rameshwar Prasad, State of
+Rajasthan v. Union of India, Nabam Rebia, Subhash Desai, Kuldip Nayar, Lily Thomas, Ravi
+S. Naik, G. Viswanathan); parliamentary privilege and ordinances under Articles 105/122/
+123/194/212/213 (Raja Ram Pal, Keshav Singh reference, D.C. Wadhwa, Krishna Kumar Singh);
+judicial appointments under Articles 124/143/217/222/224A (Sankalchand Sheth, Second
+Judges, Third Judges, NJAC case); federalism and Article 1/131/246 (State of West Bengal
+v. Union of India); Article 136/137/141/142 Supreme Court practice (Pritam Singh, Rupa
+Ashok Hurra, Raghubir Singh, Union Carbide, Supreme Court Bar Association); tribunals and
+writ jurisdiction under Articles 32/226/227/233/323A (L. Chandra Kumar, Whirlpool, Waryam
+Singh, Chandra Mohan); NCT of Delhi under Article 239AA (2018 and 2023 judgments);
+Panchayat/Municipality reservation under Articles 243D/243T and cooperative societies
+under 243ZH (K. Krishna Murthy, Rajendra N. Shah); legislative competence and repugnancy
+under Articles 246/248/253/254 (H.S. Dhillon, Karunanidhi, Deep Chand, Zaverbhai Amaidas,
+Maganbhai Patel); Article 1/3/368/Preamble territorial-integrity cases (Berubari,
+Babulal Parate, Mangal Singh); Article 355/356 and Article 301 free-trade cases
+(Sarbananda Sonowal, Automobile Transport, Atiabari Tea, Jindal Stainless); government
+contracts and State liability under Articles 299/300/300A (Bhikraj Jaipuria, Vidhyawati,
+Kasturilal, Jilubhai Khachar, K.T. Plantation, Vidya Devi); civil-service protections
+under Articles 310/311 (Tulsiram Patel, Parshotam Lal Dhingra, Ashok Kumar Yadav);
+elections under Articles 324/326/329/342A (Mohinder Singh Gill, Anoop Baranwal, NOTA
+case, Jyoti Basu, N.P. Ponnuswami, Jaishri Patil Maratha-reservation case); Scheduled
+Castes/Tribes and language rights under Articles 341/342/350A (Milind, Associated
+Management of English Medium Schools); Emergency provisions and Article 370 (Makhan
+Singh, Sampat Prakash, the 2023 Article 370 abrogation reference, Keshavan Madhava Menon
+on Article 13's prospective effect); Fifth Schedule tribal land (Samatha); Article 12
+"State" cases (LIC v. CERC, Zee Telefilms/BCCI); and S.P. Gupta (First Judges case).
+
+Re-ran `npm run verify:constitution` (570 sections, **324 verified case entries**, no
+schema errors) and `npm run build` (exit 0) after the full merge. One data-entry slip
+caught and fixed by the verifier itself: a case URL was pasted as an
+`indiankanoon.org/docfragment/...` search-result link rather than the canonical
+`/doc/<id>/` judgment link the schema requires — the verifier's URL-pattern check caught
+it immediately, and it was corrected to the real `/doc/1515136/` link before the merge
+was considered done, which is a good illustration of why that check exists.
+
 ## Content standards — the most important thing to preserve
 1. Statute text is sourced from a reliable bare-act reference (devgan.in has been used
    throughout) — never invented, never paraphrased from memory. Full text, no shortening

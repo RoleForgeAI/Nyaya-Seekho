@@ -86,6 +86,12 @@ for (const s of sections) {
   const ac = fx.amendmentCounts[s.id];
   if (!ac) fail(`${s.id}: not in fixture`); else if (ac[0] !== s.amendments.length || ac[1] !== s.notInForce.length) fail(`${s.id}: amendment/notInForce counts changed (${ac} -> ${[s.amendments.length, s.notInForce.length]})`);
 }
+// a footnote star glued to statute text (e.g. "*7. Bar of jurisdiction") means a star note was not linked
+const STRAY_STAR = /(?:^|\n)\*(?=[A-Za-z0-9(“"])|(?<=[\s(])\*(?=[A-Za-z0-9(“"])/;
+for (const s of sections) {
+  const body = [s.text, ...(s.entries || []).map((e) => e.text), ...(s.rows || []).flatMap((r) => Object.values(r).filter((x) => typeof x === 'string'))];
+  for (const t of body) if (t && STRAY_STAR.test(t)) { fail(`${s.id}: stray footnote star in statute text: "${t.match(STRAY_STAR).input.slice(Math.max(0, t.search(STRAY_STAR) - 15), t.search(STRAY_STAR) + 25).replace(/\n/g, ' ')}"`); break; }
+}
 for (const id of Object.keys(fx.amendmentCounts)) if (!byId.has(id)) fail(`fixture section ${id} missing in data`);
 
 // 5. schedules & appendices
@@ -123,8 +129,37 @@ if (!flags.includes('--no-hash')) {
   const got = h.digest('hex');
   if (got !== fx.textHash) fail(`content fingerprint changed (${got.slice(0, 12)} != ${fx.textHash.slice(0, 12)}). Statute text must not be edited; if a correction is intentional, regenerate the fixture.`);
 }
+
+// 8. explanations (every in-force section) and cases (schema + Indian Kanoon link) — added in the explanation pass
+const hasContent = (s) => (s.text || '').trim() || (s.entries || []).length || (s.rows || []).length;
+let explained = 0, caseCount = 0;
+for (const s of sections) {
+  const ex = s.explanation;
+  if (typeof ex !== 'string') { fail(`${s.id}: explanation must be a string`); continue; }
+  if (s.status === 'omitted') { if (ex) fail(`${s.id}: an omitted section must not carry an explanation`); }
+  else if (hasContent(s)) {
+    const words = ex.trim().split(/\s+/).filter(Boolean).length;
+    if (words < 4) fail(`${s.id}: explanation missing or too short`); else explained++;
+    if (words > 200) fail(`${s.id}: explanation too long (${words} words)`);
+    if (/^\s|\s$|\s{2,}|\*{2,}|\uFFFD|https?:\/\//.test(ex)) fail(`${s.id}: explanation has stray spaces, stars or a URL`);
+  }
+}
+const KANOON = /^https:\/\/indiankanoon\.org\/doc\/\d+\/?$/;
+for (const s of sections) {
+  if (!Array.isArray(s.cases)) { fail(`${s.id}: cases must be an array`); continue; }
+  if (s.cases.length && s.status === 'omitted') fail(`${s.id}: omitted section must not carry cases`);
+  const seen = new Set();
+  for (const k of s.cases) {
+    for (const f of ['name', 'cite', 'year', 'ratio', 'url']) if (k[f] === undefined || k[f] === '' || k[f] === null) fail(`${s.id}: case "${k.name || '?'}" is missing ${f}`);
+    if (k.url && !KANOON.test(k.url)) fail(`${s.id}: case "${k.name}" url must be an Indian Kanoon document link (https://indiankanoon.org/doc/<id>/)`);
+    if (!Number.isInteger(k.year) || k.year < 1947 || k.year > 2030) fail(`${s.id}: case "${k.name}" has an invalid year`);
+    if (seen.has(k.name)) fail(`${s.id}: duplicate case "${k.name}"`);
+    seen.add(k.name); caseCount++;
+  }
+}
 const chars = sections.reduce((n, s) => n + (s.text || '').length, 0);
 console.log(`Constitution data: ${sections.length} sections (${arts.length} article slots: ${c.slots - c.omitted} in force, ${c.omitted} omitted), ${parts.length} part slots, ${chars} chars of text`);
+console.log(`Explanations: ${explained} sections explained; cases: ${caseCount} verified case entries`);
 for (const w of warns) console.warn('WARN ', w);
 if (fails.length) { console.error(`\nFAILED — ${fails.length} problem(s):`); for (const f of fails.slice(0, 60)) console.error('  ✗ ' + f); process.exit(1); }
 console.log('✓ all Constitution integrity checks passed');

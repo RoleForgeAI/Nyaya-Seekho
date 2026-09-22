@@ -1,0 +1,3006 @@
+{
+  "_readme": "Work list of Constitution of India cases. COMPLETE: all 177 candidates have status \"verified\" (url set) and have been merged into constitutionData.js. The original 7 were checked by the delivering source on 2026-09-21 (Pass 2 delivery). The remaining 170 were checked here, also on 2026-09-21, via WebSearch (WebFetch to indiankanoon.org is blocked by this environment's network egress policy, so verification here is against search-engine snippets/summaries of the Indian Kanoon judgment page and corroborating secondary sources, not the fetched judgment text itself -- flagged explicitly since it falls short of the \"open the page itself\" standard in CLAUDE_CODE_INSTRUCTIONS.md) against the Indian Kanoon judgment page title, court and date, with the citation matched to a second listing (Indian Kanoon \"Equivalent citations\" or the case's reference page); ratios were compared with, and in several cases rewritten from, the judgment summary shown in the search extracts. Several citation-year vs. decision-date mismatches were caught and corrected against the drafted candidates (e.g. Sajjan Singh, E.P. Royappa, Union Carbide Corporation's 1991 review judgment). No candidate had to be left out: every one of the 177 was matched to a genuine Indian Kanoon judgment with a consistent name/court/citation, so there is no CASES_NOT_ADDED.md. See CLAUDE_CODE_INSTRUCTIONS.md, Pass 2, and PROJECT-HANDOFF.md for the full verification-methodology caveat.",
+  "count": 177,
+  "cases": [
+    {
+      "id": "c001",
+      "sections": [
+        "preamble",
+        "13",
+        "31C",
+        "368"
+      ],
+      "name": "Kesavananda Bharati Sripadagalvaru v. State of Kerala",
+      "cite": "(1973) 4 SCC 225; AIR 1973 SC 1461",
+      "year": 1973,
+      "court": "Supreme Court of India",
+      "ratio": "Parliament's power to amend the Constitution under Article 368 is wide but does not let it change the 'basic structure' of the Constitution. Golak Nath was overruled, so fundamental rights can be amended, but not so as to destroy the basic structure. The Preamble is part of the Constitution. The Court upheld the first part of Article 31C but struck down its bar on judicial review.",
+      "url": "https://indiankanoon.org/doc/257876/",
+      "kanoonQuery": "Kesavananda Bharati Sripadagalvaru v. State of Kerala (1973) 4 SCC 225",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c002",
+      "sections": [
+        "31C",
+        "368",
+        "37"
+      ],
+      "name": "Minerva Mills Ltd. v. Union of India",
+      "cite": "AIR 1980 SC 1789",
+      "year": 1980,
+      "court": "Supreme Court of India",
+      "ratio": "Clauses (4) and (5) of Article 368, added by the 42nd Amendment to bar judicial review of amendments, were struck down because limited amending power and judicial review are part of the basic structure. The Court also held that the balance between fundamental rights and Directive Principles is part of the basic structure, and struck down the extension of Article 31C to all Directive Principles.",
+      "url": "https://indiankanoon.org/doc/1939993/",
+      "kanoonQuery": "Minerva Mills Ltd. v. Union of India (1980) 3 SCC 625",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c003",
+      "sections": [
+        "13",
+        "368"
+      ],
+      "name": "I.C. Golak Nath v. State of Punjab",
+      "cite": "AIR 1967 SC 1643",
+      "year": 1967,
+      "court": "Supreme Court of India",
+      "ratio": "An eleven-judge bench held that a constitutional amendment is \"law\" under Article 13(2), so Parliament cannot amend the Constitution to abridge or take away Fundamental Rights. Applied prospective overruling so earlier amendments stood. Later overruled by Kesavananda Bharati (1973), which held amendments are not \"law\" under Article 13(2) but remain subject to the basic structure doctrine.",
+      "url": "https://indiankanoon.org/doc/120358/",
+      "kanoonQuery": "I.C. Golak Nath v. State of Punjab AIR 1967 SC 1643",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c004",
+      "sections": [
+        "13",
+        "368",
+        "31A"
+      ],
+      "name": "Shankari Prasad Singh Deo v. Union of India",
+      "cite": "AIR 1951 SC 458",
+      "year": 1951,
+      "court": "Supreme Court of India",
+      "ratio": "The first major challenge to Parliament's amending power. The Supreme Court upheld the Constitution (First Amendment) Act, 1951 (which added Articles 31A and 31B and the Ninth Schedule) and held that the word \"law\" in Article 13(2) means ordinary legislative law, not a constitutional amendment made under Article 368 -- so Fundamental Rights can be amended. Later qualified by Golak Nath and superseded by the basic structure doctrine in Kesavananda Bharati.",
+      "url": "https://indiankanoon.org/doc/1706770/",
+      "kanoonQuery": "Shankari Prasad Singh Deo v. Union of India AIR 1951 SC 458",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c005",
+      "sections": [
+        "368",
+        "31B"
+      ],
+      "name": "Sajjan Singh v. State of Rajasthan",
+      "cite": "AIR 1965 SC 845",
+      "year": 1964,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench upheld the Constitution (Seventeenth Amendment) Act, 1964 and followed Shankari Prasad in holding Parliament's amending power under Article 368 extends to Fundamental Rights. Justice Mudholkar's separate opinion first raised the idea that the Constitution has certain \"basic features\" that may be beyond the amending power -- the seed of the basic structure doctrine later developed in Kesavananda Bharati.",
+      "url": "https://indiankanoon.org/doc/1308308/",
+      "kanoonQuery": "Sajjan Singh v. State of Rajasthan AIR 1965 SC 845",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c006",
+      "sections": [
+        "368"
+      ],
+      "name": "Indira Nehru Gandhi v. Raj Narain",
+      "cite": "1975 Supp SCC 1",
+      "year": 1975,
+      "court": "Supreme Court of India",
+      "ratio": "Applying the basic structure doctrine for the first time after Kesavananda Bharati, the Supreme Court struck down clause 4 of the Constitution (Thirty-ninth Amendment) Act, 1975, which sought to place the Prime Minister's election dispute beyond judicial scrutiny, holding that free and fair elections and judicial review are part of the Constitution's basic structure.",
+      "url": "https://indiankanoon.org/doc/936707/",
+      "kanoonQuery": "Indira Nehru Gandhi v. Raj Narain 1975 Supp SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c007",
+      "sections": [
+        "31B",
+        "sch9",
+        "368"
+      ],
+      "name": "I.R. Coelho v. State of Tamil Nadu",
+      "cite": "(2007) 2 SCC 1",
+      "year": 2007,
+      "court": "Supreme Court of India",
+      "ratio": "A unanimous nine-judge bench held that laws placed in the Ninth Schedule on or after 24 April 1973 (the date of the Kesavananda Bharati judgment) are not automatically immune from judicial review under Article 31B; they can still be tested against the basic structure doctrine, including Articles 14, 19 and 21.",
+      "url": "https://indiankanoon.org/doc/322504/",
+      "kanoonQuery": "I.R. Coelho v. State of Tamil Nadu (2007) 2 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c008",
+      "sections": [
+        "31A",
+        "31B",
+        "sch9"
+      ],
+      "name": "Waman Rao v. Union of India",
+      "cite": "(1981) 2 SCC 362",
+      "year": 1980,
+      "court": "Supreme Court of India",
+      "ratio": "Held that laws inserted into the Ninth Schedule before 24 April 1973 (the date of the Kesavananda Bharati judgment) are fully protected from challenge under Articles 14, 19 and 31, but laws added after that date can be tested against the basic structure doctrine -- the rule later applied and refined in I.R. Coelho.",
+      "url": "https://indiankanoon.org/doc/799151/",
+      "kanoonQuery": "Waman Rao v. Union of India (1981) 2 SCC 362",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c009",
+      "sections": [
+        "14",
+        "19",
+        "21"
+      ],
+      "name": "Maneka Gandhi v. Union of India",
+      "cite": "(1978) 1 SCC 248; AIR 1978 SC 597",
+      "year": 1978,
+      "court": "Supreme Court of India",
+      "ratio": "The 'procedure established by law' in Article 21 must be fair, just and reasonable, not arbitrary. Articles 14, 19 and 21 are linked, so a law depriving a person of personal liberty must also pass the tests of Articles 14 and 19. The right to travel abroad is part of personal liberty.",
+      "url": "https://indiankanoon.org/doc/1766147/",
+      "kanoonQuery": "Maneka Gandhi v. Union of India (1978) 1 SCC 248",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c010",
+      "sections": [
+        "21",
+        "22"
+      ],
+      "name": "A.K. Gopalan v. State of Madras",
+      "cite": "AIR 1950 SC 27",
+      "year": 1950,
+      "court": "Supreme Court of India",
+      "ratio": "Held that Article 21's \"procedure established by law\" does not import the American due-process standard; each Fundamental Right (Articles 19, 21, 22) was treated as a separate, watertight code, so a law of preventive detention satisfying Article 21 need not also satisfy Article 19. This narrow reading was decisively overruled by Maneka Gandhi v. Union of India (1978), which held the Fundamental Rights are interlinked and \"procedure\" must be fair, just and reasonable.",
+      "url": "https://indiankanoon.org/doc/1857950/",
+      "kanoonQuery": "A.K. Gopalan v. State of Madras AIR 1950 SC 27",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c011",
+      "sections": [
+        "21"
+      ],
+      "name": "Kharak Singh v. State of Uttar Pradesh",
+      "cite": "AIR 1963 SC 1295",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down police-regulation provisions authorising night-time domiciliary visits as violating Article 21, but held (by majority) that there is no independent fundamental right to privacy under the Constitution and upheld surveillance short of domiciliary visits. The majority's denial of a distinct privacy right was later overruled by the nine-judge bench in Justice K.S. Puttaswamy v. Union of India (2017), which held privacy is part of Article 21.",
+      "url": "https://indiankanoon.org/doc/619152/",
+      "kanoonQuery": "Kharak Singh v. State of Uttar Pradesh AIR 1963 SC 1295",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c012",
+      "sections": [
+        "21",
+        "14",
+        "19"
+      ],
+      "name": "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+      "cite": "(2017) 10 SCC 1; AIR 2017 SC 4161",
+      "year": 2017,
+      "court": "Supreme Court of India",
+      "ratio": "A nine-judge bench unanimously held that the right to privacy is a fundamental right protected by Article 21 and by Part III as a whole. It overruled M.P. Sharma and, to that extent, Kharak Singh, and also disapproved ADM Jabalpur.",
+      "url": "https://indiankanoon.org/doc/91938676/",
+      "kanoonQuery": "Justice K.S. Puttaswamy (Retd.) v. Union of India (2017) 10 SCC 1",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c013",
+      "sections": [
+        "110"
+      ],
+      "name": "Justice K.S. Puttaswamy (Retd.) v. Union of India (Aadhaar)",
+      "cite": "(2019) 1 SCC 1",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench upheld the constitutional validity of the Aadhaar Act, 2016 and the Aadhaar scheme as a reasonable restriction on privacy proportionate to the legitimate aim of targeted delivery of welfare subsidies, while striking down provisions allowing private companies to demand Aadhaar and reading down certain other provisions (including Section 57).",
+      "url": "https://indiankanoon.org/doc/127517806/",
+      "kanoonQuery": "Justice K.S. Puttaswamy (Retd.) v. Union of India (Aadhaar) (2019) 1 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c014",
+      "sections": [
+        "359",
+        "21",
+        "352"
+      ],
+      "name": "ADM Jabalpur v. Shivkant Shukla",
+      "cite": "AIR 1976 SC 1207",
+      "year": 1976,
+      "court": "Supreme Court of India",
+      "ratio": "By a 4:1 majority (Justice H.R. Khanna dissenting), the Court held that during a Proclamation of Emergency suspending Article 21, a detenu has no locus to move any court for habeas corpus even if the detention is wholly illegal or mala fide. Widely regarded as the low point of Indian constitutional law; effectively overruled by the 44th Amendment (which bars suspension of Articles 20 and 21) and later formally disapproved by the nine-judge bench in Justice K.S. Puttaswamy v. Union of India (2017).",
+      "url": "https://indiankanoon.org/doc/1735815/",
+      "kanoonQuery": "ADM Jabalpur v. Shivkant Shukla (1976) 2 SCC 521",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c015",
+      "sections": [
+        "14",
+        "16"
+      ],
+      "name": "E.P. Royappa v. State of Tamil Nadu",
+      "cite": "(1974) 4 SCC 3",
+      "year": 1973,
+      "court": "Supreme Court of India",
+      "ratio": "Introduced the \"new doctrine\" that equality and arbitrariness are sworn enemies: State action that is arbitrary necessarily violates Article 14, regardless of whether it can also be tested through the traditional reasonable-classification standard. This arbitrariness test became a major independent ground of Article 14 review in later cases.",
+      "url": "https://indiankanoon.org/doc/1327287/",
+      "kanoonQuery": "E.P. Royappa v. State of Tamil Nadu (1974) 4 SCC 3",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c016",
+      "sections": [
+        "14"
+      ],
+      "name": "State of West Bengal v. Anwar Ali Sarkar",
+      "cite": "AIR 1952 SC 75",
+      "year": 1952,
+      "court": "Supreme Court of India",
+      "ratio": "A seven-judge bench struck down section 5(1) of the West Bengal Special Courts Act, 1950 for giving the State government unguided power to refer any case to a special, procedurally-disadvantageous court, violating Article 14. Laid the foundation of the reasonable-classification test: a classification is valid only if it rests on an intelligible differentia having a rational relation to the object sought to be achieved.",
+      "url": "https://indiankanoon.org/doc/184660633/",
+      "kanoonQuery": "State of West Bengal v. Anwar Ali Sarkar AIR 1952 SC 75",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c017",
+      "sections": [
+        "14"
+      ],
+      "name": "Ram Krishna Dalmia v. Justice S.R. Tendolkar",
+      "cite": "AIR 1958 SC 538",
+      "year": 1958,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the Commissions of Inquiry Act, 1952 and the notification appointing a commission to inquire into the petitioner's companies, and laid down the classic formulation of the Article 14 reasonable-classification test still cited today: a law may classify persons or things into groups if the classification is founded on an intelligible differentia distinguishing grouped from non-grouped persons, and that differentia has a rational relation to the object of the legislation.",
+      "url": "https://indiankanoon.org/doc/685234/",
+      "kanoonQuery": "Ram Krishna Dalmia v. Justice S.R. Tendolkar AIR 1958 SC 538",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c018",
+      "sections": [
+        "14"
+      ],
+      "name": "D.S. Nakara v. Union of India",
+      "cite": "(1983) 1 SCC 305",
+      "year": 1982,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a government pension-revision scheme that arbitrarily benefited only those who retired after a specified date, as violating Article 14. Held that pension is not a bounty but a valuable, hard-earned right, and that a classification splitting one homogeneous class of pensioners by an arbitrary cut-off date has no rational nexus to the object of the scheme.",
+      "url": "https://indiankanoon.org/doc/1416283/",
+      "kanoonQuery": "D.S. Nakara v. Union of India (1983) 1 SCC 305",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c019",
+      "sections": [
+        "14",
+        "12"
+      ],
+      "name": "R.D. Shetty v. International Airport Authority of India",
+      "cite": "(1979) 3 SCC 489",
+      "year": 1979,
+      "court": "Supreme Court of India",
+      "ratio": "Held that when the State or its instrumentalities enter contracts or dispose of public largesse, they are bound by Article 14 and cannot act arbitrarily; the State must conform to standards that are rational, relevant and non-discriminatory, and cannot depart from its own published tender conditions without a valid reason. Also developed criteria (later refined in later cases) for identifying when a body is \"State\" or an instrumentality of the State under Article 12.",
+      "url": "https://indiankanoon.org/doc/1281050/",
+      "kanoonQuery": "R.D. Shetty v. International Airport Authority of India (1979) 3 SCC 489",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c020",
+      "sections": [
+        "14",
+        "25"
+      ],
+      "name": "Shayara Bano v. Union of India",
+      "cite": "(2017) 9 SCC 1",
+      "year": 2017,
+      "court": "Supreme Court of India",
+      "ratio": "By a 3:2 majority, a five-judge bench held the practice of talaq-e-biddat (instant triple talaq) unconstitutional as manifestly arbitrary, since it allows a Muslim husband to unilaterally and irrevocably end a marriage without any attempt at reconciliation. Not protected as an essential religious practice under Article 25.",
+      "url": "https://indiankanoon.org/doc/115701246/",
+      "kanoonQuery": "Shayara Bano v. Union of India (2017) 9 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c021",
+      "sections": [
+        "14",
+        "15",
+        "19",
+        "21"
+      ],
+      "name": "Navtej Singh Johar v. Union of India",
+      "cite": "(2018) 10 SCC 1",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench unanimously decriminalised consensual same-sex conduct between adults by reading down Section 377 of the Indian Penal Code, holding that it violated the rights to equality, non-discrimination, life, dignity and privacy under Articles 14, 15, 19 and 21. Overruled Suresh Kumar Koushal v. Naz Foundation (2013) to the extent it upheld Section 377 against consenting adults.",
+      "url": "https://indiankanoon.org/doc/168671544/",
+      "kanoonQuery": "Navtej Singh Johar v. Union of India (2018) 10 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c022",
+      "sections": [
+        "14",
+        "15",
+        "21"
+      ],
+      "name": "Joseph Shine v. Union of India",
+      "cite": "(2019) 3 SCC 39",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench unanimously struck down Section 497 of the Indian Penal Code (adultery) and the corresponding procedural provision in the CrPC as unconstitutional, holding that treating a married woman as her husband's property and denying her agency violated Articles 14, 15 and 21. Adultery remains a valid ground for civil divorce but is no longer a crime.",
+      "url": "https://indiankanoon.org/doc/42184625/",
+      "kanoonQuery": "Joseph Shine v. Union of India (2019) 3 SCC 39",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c023",
+      "sections": [
+        "12",
+        "14",
+        "21"
+      ],
+      "name": "National Human Rights Commission v. State of Arunachal Pradesh",
+      "cite": "(1996) 1 SCC 742",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the State is constitutionally bound to protect the life and personal liberty of every person within its territory under Article 21, citizen or non-citizen, and directed the State of Arunachal Pradesh to protect Chakma/Hajong tribal settlers from threats and coercion by local groups seeking their eviction.",
+      "url": "https://indiankanoon.org/doc/767216/",
+      "kanoonQuery": "National Human Rights Commission v. State of Arunachal Pradesh (1996) 1 SCC 742",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c024",
+      "sections": [
+        "12"
+      ],
+      "name": "Ajay Hasia v. Khalid Mujib Sehravardi",
+      "cite": "(1981) 1 SCC 722",
+      "year": 1980,
+      "court": "Supreme Court of India",
+      "ratio": "Laid down the classic multi-factor test for deciding whether a body is an \"instrumentality or agency of the State\" under Article 12 -- looking at deep and pervasive State control, State funding, the nature of its functions, and whether it performs a public duty -- so that it can be reached by Fundamental Rights even if not created directly by statute.",
+      "url": "https://indiankanoon.org/doc/1186368/",
+      "kanoonQuery": "Ajay Hasia v. Khalid Mujib Sehravardi (1981) 1 SCC 722",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c025",
+      "sections": [
+        "12"
+      ],
+      "name": "Pradeep Kumar Biswas v. Indian Institute of Chemical Biology",
+      "cite": "(2002) 5 SCC 111",
+      "year": 2002,
+      "court": "Supreme Court of India",
+      "ratio": "A seven-judge bench overruled Sabhajit Tewary and held that the Council of Scientific and Industrial Research (CSIR) is \"State\" under Article 12, refining the Ajay Hasia test: the real question is whether, in light of the cumulative facts, the body is financially, functionally and administratively dominated by or under the control of the Government -- control that is merely regulatory is not enough.",
+      "url": "https://indiankanoon.org/doc/471272/",
+      "kanoonQuery": "Pradeep Kumar Biswas v. Indian Institute of Chemical Biology (2002) 5 SCC 111",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c026",
+      "sections": [
+        "15",
+        "16",
+        "340"
+      ],
+      "name": "Indra Sawhney v. Union of India",
+      "cite": "AIR 1993 SC 477",
+      "year": 1992,
+      "court": "Supreme Court of India",
+      "ratio": "A nine-judge bench upheld 27 per cent reservation for Other Backward Classes in Central Government jobs, but held that reservations should not generally go beyond 50 per cent, that the 'creamy layer' of backward classes must be excluded, and that reservation applies only at the initial appointment stage, not in promotions (later changed by the 77th Amendment, Article 16(4A)).",
+      "url": "https://indiankanoon.org/doc/1363234/",
+      "kanoonQuery": "Indra Sawhney v. Union of India 1992 Supp (3) SCC 217",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c027",
+      "sections": [
+        "15",
+        "29",
+        "37"
+      ],
+      "name": "State of Madras v. Champakam Dorairajan",
+      "cite": "AIR 1951 SC 226",
+      "year": 1951,
+      "court": "Supreme Court of India",
+      "ratio": "The first major Supreme Court decision on reservations: struck down a Madras government order fixing caste-based quotas for admission to State medical and engineering colleges as violating Article 15(1) and Article 29(2), holding that Fundamental Rights prevail over the Directive Principles. Directly led to the First Amendment, 1951, which added Article 15(4) permitting special provision for backward classes.",
+      "url": "https://indiankanoon.org/doc/149321/",
+      "kanoonQuery": "State of Madras v. Champakam Dorairajan AIR 1951 SC 226",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c028",
+      "sections": [
+        "15",
+        "16"
+      ],
+      "name": "M.R. Balaji v. State of Mysore",
+      "cite": "AIR 1963 SC 649",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a Mysore government order reserving 68% of seats in educational institutions for backward classes under Article 15(4) as excessive, holding that reservations must be kept within reasonable limits -- generally under 50% -- since the exception under Article 15(4) cannot be allowed to eclipse the general rule of equality of opportunity in Article 15(1).",
+      "url": "https://indiankanoon.org/doc/599701/",
+      "kanoonQuery": "M.R. Balaji v. State of Mysore AIR 1963 SC 649",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c029",
+      "sections": [
+        "15"
+      ],
+      "name": "Ashoka Kumar Thakur v. Union of India",
+      "cite": "(2008) 6 SCC 1",
+      "year": 2008,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of the 93rd Amendment and the Central Educational Institutions (Reservation in Admission) Act, 2006, providing 27% OBC reservation in central higher educational institutions, subject to exclusion of the creamy layer and periodic review, while excluding private unaided institutions from its scope at that stage.",
+      "url": "https://indiankanoon.org/doc/590346/",
+      "kanoonQuery": "Ashoka Kumar Thakur v. Union of India (2008) 6 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c030",
+      "sections": [
+        "15",
+        "16"
+      ],
+      "name": "Janhit Abhiyan v. Union of India",
+      "cite": "(2023) 5 SCC 1",
+      "year": 2022,
+      "court": "Supreme Court of India",
+      "ratio": "By a 3:2 majority, upheld the Constitution (One Hundred and Third Amendment) Act, 2019, which introduced a 10% reservation for Economically Weaker Sections (EWS) in education and public employment, holding that economic criteria alone can be a valid basis for reservation and that excluding SC/ST/OBC candidates (who already benefit from existing reservations) from the EWS quota does not violate the basic structure.",
+      "url": "https://indiankanoon.org/doc/98959833/",
+      "kanoonQuery": "Janhit Abhiyan v. Union of India (2023) 5 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c031",
+      "sections": [
+        "15",
+        "19"
+      ],
+      "name": "Anuj Garg v. Hotel Association of India",
+      "cite": "(2008) 3 SCC 1",
+      "year": 2007,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down section 30 of the Punjab Excise Act, 1914, which barred women from working in premises where liquor is served, as unconstitutional protective discrimination violating Articles 14, 15 and 19(1)(g); held that a law premised on paternalistic notions of protecting women, rather than genuine safety measures, cannot survive constitutional scrutiny.",
+      "url": "https://indiankanoon.org/doc/845216/",
+      "kanoonQuery": "Anuj Garg v. Hotel Association of India (2008) 3 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c032",
+      "sections": [
+        "14",
+        "15",
+        "16"
+      ],
+      "name": "Air India v. Nergesh Meerza",
+      "cite": "(1981) 4 SCC 335",
+      "year": 1981,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down Air India service regulations that terminated an air hostess's employment on her first pregnancy as unreasonable and arbitrary under Article 14, but upheld differential retirement ages and conditions between air hostesses and male pursers as a valid classification based on the distinct nature of the roles.",
+      "url": "https://indiankanoon.org/doc/1903603/",
+      "kanoonQuery": "Air India v. Nergesh Meerza (1981) 4 SCC 335",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c033",
+      "sections": [
+        "14",
+        "15",
+        "19",
+        "21",
+        "51"
+      ],
+      "name": "Vishaka v. State of Rajasthan",
+      "cite": "(1997) 6 SCC 241",
+      "year": 1997,
+      "court": "Supreme Court of India",
+      "ratio": "In the absence of specific legislation, the Supreme Court laid down binding guidelines (the \"Vishaka Guidelines\") requiring employers to prevent and redress sexual harassment of women at the workplace, treating them as law declared under Article 141 until Parliament legislated. Superseded by the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013.",
+      "url": "https://indiankanoon.org/doc/1031794/",
+      "kanoonQuery": "Vishaka v. State of Rajasthan (1997) 6 SCC 241",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c034",
+      "sections": [
+        "14",
+        "15",
+        "25"
+      ],
+      "name": "Indian Young Lawyers Association v. State of Kerala",
+      "cite": "(2019) 11 SCC 1",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "By a 4:1 majority, held that the Sabarimala temple's exclusion of women aged 10-50 violated Articles 14, 15 and 25, and that Rule 3(b) of the Kerala Hindu Places of Public Worship (Authorisation of Entry) Rules, 1965 was unconstitutional; devotion to Lord Ayyappa does not constitute a separate religious denomination entitled to the protection of Article 26. The correctness of the judgment was later referred to a larger bench on review.",
+      "url": "https://indiankanoon.org/doc/163639357/",
+      "kanoonQuery": "Indian Young Lawyers Association v. State of Kerala (2019) 11 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c035",
+      "sections": [
+        "16"
+      ],
+      "name": "State of Kerala v. N.M. Thomas",
+      "cite": "(1976) 2 SCC 310",
+      "year": 1975,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld a rule giving Scheduled Caste/Scheduled Tribe employees extra time to pass a mandatory departmental test before promotion, holding that Article 16(4) is not an exception to but an emphatic restatement of the equality principle in Article 16(1) -- reasonable classification and preferential treatment for backward classes in employment is itself part of substantive equality, not a departure from it.",
+      "url": "https://indiankanoon.org/doc/1130169/",
+      "kanoonQuery": "State of Kerala v. N.M. Thomas (1976) 2 SCC 310",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c036",
+      "sections": [
+        "16",
+        "335"
+      ],
+      "name": "M. Nagaraj v. Union of India",
+      "cite": "(2006) 8 SCC 212",
+      "year": 2006,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of Articles 16(4A) and 16(4B) (reservation in promotion with consequential seniority for SC/ST, and carry-forward of unfilled vacancies) as not violating the basic structure, but held that before providing such reservation the State must demonstrate, with quantifiable data, the backwardness of the class, its inadequate representation in the services, and that the reservation does not affect overall administrative efficiency.",
+      "url": "https://indiankanoon.org/doc/102852/",
+      "kanoonQuery": "M. Nagaraj v. Union of India (2006) 8 SCC 212",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c037",
+      "sections": [
+        "16",
+        "335"
+      ],
+      "name": "Jarnail Singh v. Lachhmi Narain Gupta",
+      "cite": "(2018) 10 SCC 396",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench held that M. Nagaraj's requirement to collect quantifiable data on the backwardness of Scheduled Castes and Scheduled Tribes was invalid and need not be complied with (SCs/STs are presumed backward given their constitutional recognition), but affirmed that the State must still show inadequate representation and that reservation in promotion does not affect overall efficiency, and that the creamy-layer principle applies to exclude the more advanced members even within SC/ST for promotion reservation.",
+      "url": "https://indiankanoon.org/doc/190772988/",
+      "kanoonQuery": "Jarnail Singh v. Lachhmi Narain Gupta (2018) 10 SCC 396",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c038",
+      "sections": [
+        "16"
+      ],
+      "name": "T. Devadasan v. Union of India",
+      "cite": "AIR 1964 SC 179",
+      "year": 1963,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down the government's \"carry forward rule,\" which allowed unfilled reserved vacancies from previous years to be added to the following year's reservation quota, as violating Article 16(1) where its cumulative effect pushed reservations for a single year well beyond a reasonable limit, effectively denying general-category candidates a fair opportunity.",
+      "url": "https://indiankanoon.org/doc/1466728/",
+      "kanoonQuery": "T. Devadasan v. Union of India AIR 1964 SC 179",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c039",
+      "sections": [
+        "16"
+      ],
+      "name": "General Manager, Southern Railway v. Rangachari",
+      "cite": "AIR 1962 SC 36",
+      "year": 1961,
+      "court": "Supreme Court of India",
+      "ratio": "Held that Article 16(4)'s power to reserve appointments for backward classes extends to reservation in promotions to selection posts, not merely to initial recruitment, since \"appointment\" in Article 16 includes the whole course of service, including promotion.",
+      "url": "https://indiankanoon.org/doc/1074353/",
+      "kanoonQuery": "General Manager, Southern Railway v. Rangachari AIR 1962 SC 36",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c040",
+      "sections": [
+        "15",
+        "16"
+      ],
+      "name": "Dr. Pradeep Jain v. Union of India",
+      "cite": "(1984) 3 SCC 654",
+      "year": 1984,
+      "court": "Supreme Court of India",
+      "ratio": "Held that domicile-based or institutional-preference reservation in postgraduate medical admissions must be kept within reasonable limits and cannot override merit beyond what is necessary to achieve a legitimate object, since the country as a whole, not just a State, is the appropriate unit for evaluating access to higher medical education; some reasonable institutional preference is permissible but wholesale reservation on the basis of domicile is not.",
+      "url": "https://indiankanoon.org/doc/434106/",
+      "kanoonQuery": "Dr. Pradeep Jain v. Union of India (1984) 3 SCC 654",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c041",
+      "sections": [
+        "18"
+      ],
+      "name": "Balaji Raghavan v. Union of India",
+      "cite": "(1996) 1 SCC 361",
+      "year": 1995,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the National Awards (Bharat Ratna, Padma Vibhushan, Padma Bhushan, Padma Shri) are not \"titles\" within the meaning of Article 18(1) and their conferment does not violate the constitutional prohibition on titles, since they recognise merit and service rather than creating a hereditary or privileged class; recommended safeguards to prevent them being used as or attached as suffixes/prefixes like a title.",
+      "url": "https://indiankanoon.org/doc/1882300/",
+      "kanoonQuery": "Balaji Raghavan v. Union of India (1996) 1 SCC 361",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c042",
+      "sections": [
+        "19",
+        "32"
+      ],
+      "name": "Romesh Thappar v. State of Madras",
+      "cite": "AIR 1950 SC 124",
+      "year": 1950,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a Madras government order banning the entry and circulation of a journal as violating Article 19(1)(a), holding that freedom of speech and expression includes freedom of propagation and circulation of ideas, and that restrictions can only be justified by grounds actually listed in the Constitution -- \"public order\" was not yet one of them, which directly led to the First Amendment adding it to Article 19(2).",
+      "url": "https://indiankanoon.org/doc/456839/",
+      "kanoonQuery": "Romesh Thappar v. State of Madras AIR 1950 SC 124",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c043",
+      "sections": [
+        "19"
+      ],
+      "name": "Bennett Coleman & Co. v. Union of India",
+      "cite": "(1972) 2 SCC 788",
+      "year": 1972,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down provisions of the Newsprint Control Order restricting the size and circulation of newspapers as violating the freedom of the press under Article 19(1)(a), holding that newsprint policy cannot be used as a backdoor method of controlling the volume and content of what newspapers publish, and that the right of a newspaper company includes the right of its readers and journalists to freedom of expression.",
+      "url": "https://indiankanoon.org/doc/125596/",
+      "kanoonQuery": "Bennett Coleman & Co. v. Union of India (1972) 2 SCC 788",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c044",
+      "sections": [
+        "19"
+      ],
+      "name": "Indian Express Newspapers (Bombay) Pvt. Ltd. v. Union of India",
+      "cite": "(1985) 1 SCC 641",
+      "year": 1984,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the press is not immune from taxation, but a tax that is so excessive as to substantially burden the dissemination of news and information amounts to an unreasonable restriction on the freedom of the press under Article 19(1)(a); directed the government to re-examine its import-duty policy on newsprint for its impact on small and medium newspapers.",
+      "url": "https://indiankanoon.org/doc/223504/",
+      "kanoonQuery": "Indian Express Newspapers (Bombay) Pvt. Ltd. v. Union of India (1985) 1 SCC 641",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c045",
+      "sections": [
+        "19"
+      ],
+      "name": "Shreya Singhal v. Union of India",
+      "cite": "(2015) 5 SCC 1",
+      "year": 2015,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down Section 66A of the Information Technology Act, 2000 in its entirety as unconstitutional, holding that its vague and overbroad terms (\"grossly offensive,\" \"menacing character\") had a chilling effect on online speech and went far beyond the reasonable restrictions permitted under Article 19(2).",
+      "url": "https://indiankanoon.org/doc/110813550/",
+      "kanoonQuery": "Shreya Singhal v. Union of India (2015) 5 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c046",
+      "sections": [
+        "19",
+        "21"
+      ],
+      "name": "Anuradha Bhasin v. Union of India",
+      "cite": "(2020) 3 SCC 637",
+      "year": 2020,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the freedom of speech and expression and the freedom to practise any profession or trade over the internet are protected under Article 19(1)(a) and 19(1)(g), and that any order suspending internet access must satisfy the tests of necessity and proportionality, be temporary, be published, and be subject to periodic review by a review committee.",
+      "url": "https://indiankanoon.org/doc/82461587/",
+      "kanoonQuery": "Anuradha Bhasin v. Union of India (2020) 3 SCC 637",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c047",
+      "sections": [
+        "19",
+        "21"
+      ],
+      "name": "Subramanian Swamy v. Union of India",
+      "cite": "(2016) 7 SCC 221",
+      "year": 2016,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of criminal defamation under Sections 499 and 500 of the Indian Penal Code (and the corresponding CrPC procedure), holding that protection of individual reputation, itself part of the right to life and dignity under Article 21, is a reasonable restriction on free speech under Article 19(2), and criminalising defamation is not disproportionate merely because a civil remedy also exists.",
+      "url": "https://indiankanoon.org/doc/80997184/",
+      "kanoonQuery": "Subramanian Swamy v. Union of India (2016) 7 SCC 221",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c048",
+      "sections": [
+        "19"
+      ],
+      "name": "Kedar Nath Singh v. State of Bihar",
+      "cite": "AIR 1962 SC 955",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of the sedition offence under Section 124A of the Indian Penal Code, but read it down narrowly to apply only to speech or expression that incites violence or has the tendency to create public disorder; mere criticism of the government, however strong, does not amount to sedition.",
+      "url": "https://indiankanoon.org/doc/111867/",
+      "kanoonQuery": "Kedar Nath Singh v. State of Bihar AIR 1962 SC 955",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c049",
+      "sections": [
+        "19",
+        "21"
+      ],
+      "name": "Kaushal Kishor v. State of Uttar Pradesh",
+      "cite": "(2023) 4 SCC 1",
+      "year": 2023,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the grounds for restricting free speech under Article 19(2) are exhaustive, and courts cannot invent additional restrictions on the right to free speech by invoking other fundamental rights such as Article 21; a public functionary's statement, even if traceable to affairs of State, does not by itself amount to a violation of another citizen's rights unless it results in an actual act or omission adversely affecting them, though the State can in some circumstances be held vicariously liable.",
+      "url": "https://indiankanoon.org/doc/103640961/",
+      "kanoonQuery": "Kaushal Kishor v. State of Uttar Pradesh (2023) 4 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c050",
+      "sections": [
+        "19",
+        "25"
+      ],
+      "name": "Bijoe Emmanuel v. State of Kerala",
+      "cite": "(1986) 3 SCC 615",
+      "year": 1986,
+      "court": "Supreme Court of India",
+      "ratio": "Held that expelling three Jehovah's Witness schoolchildren for silently standing but not singing the National Anthem (out of genuine religious conviction, while showing no disrespect) violated their freedom of conscience and religion under Article 25; there is no provision of law compelling anyone to sing the anthem.",
+      "url": "https://indiankanoon.org/doc/1508089/",
+      "kanoonQuery": "Bijoe Emmanuel v. State of Kerala (1986) 3 SCC 615",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c051",
+      "sections": [
+        "19",
+        "324"
+      ],
+      "name": "Union of India v. Association for Democratic Reforms",
+      "cite": "(2002) 5 SCC 294",
+      "year": 2002,
+      "court": "Supreme Court of India",
+      "ratio": "Held that a voter's right to freedom of speech and expression under Article 19(1)(a) includes the right to know the antecedents, including criminal record, educational qualifications and financial assets, of candidates contesting elections, and directed the Election Commission to secure this information through mandatory candidate disclosure.",
+      "url": "https://indiankanoon.org/doc/6396968/",
+      "kanoonQuery": "Union of India v. Association for Democratic Reforms (2002) 5 SCC 294",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c052",
+      "sections": [
+        "19",
+        "324"
+      ],
+      "name": "People's Union for Civil Liberties v. Union of India",
+      "cite": "(2003) 4 SCC 399",
+      "year": 2003,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld and reinforced the mandatory candidate-disclosure requirement (criminal antecedents, assets and liabilities, and educational qualifications) as part of the voter's fundamental right to information under Article 19(1)(a), striking down a subsequent ordinance/amendment that had sought to dilute the disclosure obligations laid down in Union of India v. ADR.",
+      "url": "https://indiankanoon.org/doc/15059075/",
+      "kanoonQuery": "People's Union for Civil Liberties v. Union of India (2003) 4 SCC 399",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c053",
+      "sections": [
+        "19",
+        "324"
+      ],
+      "name": "Association for Democratic Reforms v. Union of India (Electoral Bonds)",
+      "cite": "2024 INSC 113",
+      "year": 2024,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge bench unanimously struck down the Electoral Bond Scheme, 2018 and the accompanying amendments enabling anonymous, unlimited corporate donations to political parties, holding that they violated the voters' right to information under Article 19(1)(a) necessary to make an informed electoral choice, and directed the State Bank of India to disclose details of all bonds purchased and encashed.",
+      "url": "https://indiankanoon.org/doc/121499464/",
+      "kanoonQuery": "Association for Democratic Reforms v. Union of India (Electoral Bonds) (2024) 5 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c054",
+      "sections": [
+        "19"
+      ],
+      "name": "State of Madras v. V.G. Row",
+      "cite": "AIR 1952 SC 196",
+      "year": 1952,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a provision of the Criminal Law Amendment Act allowing the government to declare an association unlawful, subject only to an advisory (non-binding) tribunal review, as an unreasonable restriction on the freedom of association under Article 19(1)(c); held that courts, not merely the legislature, must independently judge the reasonableness of a restriction under Article 19, considering the nature of the right, the extent of the restriction, and the procedural safeguards attached to it.",
+      "url": "https://indiankanoon.org/doc/554839/",
+      "kanoonQuery": "State of Madras v. V.G. Row AIR 1952 SC 196",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c055",
+      "sections": [
+        "19"
+      ],
+      "name": "Chintaman Rao v. State of Madhya Pradesh",
+      "cite": "AIR 1951 SC 118",
+      "year": 1950,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a total prohibition on bidi manufacturing during the agricultural season as an unreasonable restriction on the right to carry on trade or business under Article 19(1)(g); held that \"reasonable restriction\" requires a proportionate balance between the individual's freedom and the social control permitted by Article 19(6), and a blanket prohibition going beyond what is required to meet the object of the law is not reasonable.",
+      "url": "https://indiankanoon.org/doc/1256541/",
+      "kanoonQuery": "Chintaman Rao v. State of Madhya Pradesh AIR 1951 SC 118",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c056",
+      "sections": [
+        "19"
+      ],
+      "name": "Modern Dental College and Research Centre v. State of Madhya Pradesh",
+      "cite": "(2016) 7 SCC 353",
+      "year": 2016,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld State regulation of fees and admissions in private unaided professional colleges as a reasonable restriction on the right to carry on an occupation under Article 19(1)(g), applying a structured proportionality test (legitimate aim, suitability, necessity, and balancing) to assess restrictions on fundamental rights -- one of the clearest applications of the modern proportionality doctrine in Indian constitutional law.",
+      "url": "https://indiankanoon.org/doc/93572510/",
+      "kanoonQuery": "Modern Dental College and Research Centre v. State of Madhya Pradesh (2016) 7 SCC 353",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c057",
+      "sections": [
+        "19"
+      ],
+      "name": "Sodan Singh v. New Delhi Municipal Committee",
+      "cite": "(1989) 4 SCC 155",
+      "year": 1989,
+      "court": "Supreme Court of India",
+      "ratio": "Held that hawkers and street vendors have a fundamental right to carry on trade or business on a public street under Article 19(1)(g), though not an absolute right to a specific spot; the right can be reasonably regulated by municipal authorities in the interest of traffic and public convenience, but cannot be denied altogether.",
+      "url": "https://indiankanoon.org/doc/165273/",
+      "kanoonQuery": "Sodan Singh v. New Delhi Municipal Committee (1989) 4 SCC 155",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c058",
+      "sections": [
+        "19",
+        "30"
+      ],
+      "name": "T.M.A. Pai Foundation v. State of Karnataka",
+      "cite": "(2002) 8 SCC 481",
+      "year": 2002,
+      "court": "Supreme Court of India",
+      "ratio": "An eleven-judge bench held that private unaided educational institutions have the right under Article 19(1)(g) to establish and administer institutions, including autonomy in admissions and fee-fixing, subject to reasonable regulation to ensure merit-based admission and prevent profiteering; minority institutions have an additional, even stronger right under Article 30 to administer their own institutions.",
+      "url": "https://indiankanoon.org/doc/665015/",
+      "kanoonQuery": "T.M.A. Pai Foundation v. State of Karnataka (2002) 8 SCC 481",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c059",
+      "sections": [
+        "20"
+      ],
+      "name": "State of Bombay v. Kathi Kalu Oghad",
+      "cite": "AIR 1961 SC 1808",
+      "year": 1961,
+      "court": "Supreme Court of India",
+      "ratio": "An eleven-judge bench held that the constitutional protection against self-incrimination in Article 20(3) covers only \"testimonial compulsion\" (being compelled to convey personal knowledge relevant to the facts in issue), and does not extend to being compelled to give physical evidence such as fingerprints, handwriting or signature specimens, since these do not involve the accused's personal knowledge.",
+      "url": "https://indiankanoon.org/doc/1626264/",
+      "kanoonQuery": "State of Bombay v. Kathi Kalu Oghad AIR 1961 SC 1808",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c060",
+      "sections": [
+        "20",
+        "21"
+      ],
+      "name": "Nandini Satpathy v. P.L. Dani",
+      "cite": "AIR 1978 SC 1025",
+      "year": 1978,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the protection against self-incrimination under Article 20(3) extends to the investigation stage, not merely to trial, and an accused person can validly refuse to answer questions during police interrogation that may expose them to a criminal charge; also read this protection together with the right to consult a lawyer.",
+      "url": "https://indiankanoon.org/doc/1938988/",
+      "kanoonQuery": "Nandini Satpathy v. P.L. Dani (1978) 2 SCC 424",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c061",
+      "sections": [
+        "20",
+        "21"
+      ],
+      "name": "Selvi v. State of Karnataka",
+      "cite": "(2010) 7 SCC 263",
+      "year": 2010,
+      "court": "Supreme Court of India",
+      "ratio": "Held that involuntary administration of narcoanalysis, polygraph and Brain Electrical Activation Profile (BEAP) tests violates both the right against self-incrimination under Article 20(3) (as testimonial compulsion) and the right to personal liberty and mental privacy under Article 21; such techniques may only be used with the subject's free and informed consent.",
+      "url": "https://indiankanoon.org/doc/338008/",
+      "kanoonQuery": "Selvi v. State of Karnataka (2010) 7 SCC 263",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c062",
+      "sections": [
+        "20"
+      ],
+      "name": "Maqbool Hussain v. State of Bombay",
+      "cite": "AIR 1953 SC 325",
+      "year": 1953,
+      "court": "Supreme Court of India",
+      "ratio": "Held that confiscation of smuggled gold by Sea Customs authorities is not a \"prosecution\" and \"punishment\" by a court or judicial tribunal, so a subsequent criminal prosecution for the same conduct under the Foreign Exchange Regulation Act does not violate the double-jeopardy protection in Article 20(2), which applies only to proceedings before a court of law or a judicial tribunal.",
+      "url": "https://indiankanoon.org/doc/1815080/",
+      "kanoonQuery": "Maqbool Hussain v. State of Bombay AIR 1953 SC 325",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c063",
+      "sections": [
+        "21"
+      ],
+      "name": "Olga Tellis v. Bombay Municipal Corporation",
+      "cite": "(1985) 3 SCC 545",
+      "year": 1985,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to life under Article 21 includes the right to livelihood, since a person cannot live without the means of livelihood, so evicting pavement and slum dwellers without any opportunity to be heard, and without alternative resettlement, deprives them of their livelihood in violation of Article 21; the eviction itself was upheld as being authorised by law, but only with due process and prior notice.",
+      "url": "https://indiankanoon.org/doc/709776/",
+      "kanoonQuery": "Olga Tellis v. Bombay Municipal Corporation (1985) 3 SCC 545",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c064",
+      "sections": [
+        "21"
+      ],
+      "name": "Francis Coralie Mullin v. Administrator, Union Territory of Delhi",
+      "cite": "(1981) 1 SCC 608",
+      "year": 1981,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to life under Article 21 is not confined to mere animal existence but includes the right to live with human dignity, encompassing adequate nutrition, clothing, shelter, and facilities for reading, writing and expressing oneself; struck down restrictions denying a detenu regular interviews with family, friends and a lawyer as violating this dignified conception of life.",
+      "url": "https://indiankanoon.org/doc/78536/",
+      "kanoonQuery": "Francis Coralie Mullin v. Administrator, Union Territory of Delhi (1981) 1 SCC 608",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c065",
+      "sections": [
+        "21",
+        "39A"
+      ],
+      "name": "Hussainara Khatoon v. Home Secretary, State of Bihar",
+      "cite": "(1980) 1 SCC 81",
+      "year": 1979,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to a speedy trial is an integral and essential part of the fundamental right to life and personal liberty under Article 21; ordered the release of thousands of undertrial prisoners in Bihar who had already been in jail longer than the maximum sentence for their alleged offence, and directed provision of free legal aid to indigent accused persons as part of a fair procedure under Article 21.",
+      "url": "https://indiankanoon.org/doc/1373215/",
+      "kanoonQuery": "Hussainara Khatoon v. Home Secretary, State of Bihar (1980) 1 SCC 81",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c066",
+      "sections": [
+        "21",
+        "39A"
+      ],
+      "name": "M.H. Hoskot v. State of Maharashtra",
+      "cite": "(1978) 3 SCC 544",
+      "year": 1978,
+      "court": "Supreme Court of India",
+      "ratio": "Held that free legal aid at State expense for an indigent accused, and the right to be supplied a copy of the judgment to enable an appeal, are part of the fair, just and reasonable procedure guaranteed by Article 21 -- read together with the right to appeal, since an unrepresented poor prisoner cannot meaningfully exercise the right of appeal.",
+      "url": "https://indiankanoon.org/doc/513169/",
+      "kanoonQuery": "M.H. Hoskot v. State of Maharashtra (1978) 3 SCC 544",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c067",
+      "sections": [
+        "21"
+      ],
+      "name": "Sunil Batra v. Delhi Administration",
+      "cite": "(1978) 4 SCC 494",
+      "year": 1978,
+      "court": "Supreme Court of India",
+      "ratio": "Rejected the \"hands-off\" doctrine for prisoners and held that fundamental rights, including Article 21, do not stop at the prison gates, though they may suffer reasonable restriction necessitated by incarceration; de facto solitary confinement of a death-row convict without judicial sanction, and other forms of custodial torture, violate Article 21.",
+      "url": "https://indiankanoon.org/doc/162242/",
+      "kanoonQuery": "Sunil Batra v. Delhi Administration (1978) 4 SCC 494",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c068",
+      "sections": [
+        "21",
+        "22"
+      ],
+      "name": "D.K. Basu v. State of West Bengal",
+      "cite": "(1997) 1 SCC 416",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "Laid down detailed, binding procedural safeguards (identification of arresting officers, a memo of arrest attested by a witness, medical examination of the arrestee, intimation to a relative or friend, and other requirements) to prevent custodial violence and death, holding these to be implicit in Articles 21 and 22 and binding until Parliament enacts legislation on the subject.",
+      "url": "https://indiankanoon.org/doc/501198/",
+      "kanoonQuery": "D.K. Basu v. State of West Bengal (1997) 1 SCC 416",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c069",
+      "sections": [
+        "21",
+        "22"
+      ],
+      "name": "Joginder Kumar v. State of Uttar Pradesh",
+      "cite": "(1994) 4 SCC 260",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the power to arrest is distinct from the justification for exercising it; an arrest cannot be made merely because it is lawful to do so, and the police officer must be satisfied that arrest is genuinely necessary, since an unjustified arrest is a serious encroachment on personal liberty causing incalculable harm to reputation and self-esteem. Also directed that an arrested person's relative or friend be informed and the fact of arrest be entered in a register.",
+      "url": "https://indiankanoon.org/doc/768175/",
+      "kanoonQuery": "Joginder Kumar v. State of Uttar Pradesh (1994) 4 SCC 260",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c070",
+      "sections": [
+        "21",
+        "22"
+      ],
+      "name": "Arnesh Kumar v. State of Bihar",
+      "cite": "(2014) 8 SCC 273",
+      "year": 2014,
+      "court": "Supreme Court of India",
+      "ratio": "Held that arrest is not to be automatic or routine; for offences punishable with up to seven years, police must first test the case against the necessity-of-arrest conditions in Section 41 CrPC, record reasons in writing, and issue a notice of appearance where arrest is not needed, and a Magistrate must not authorise detention mechanically.",
+      "url": "https://indiankanoon.org/doc/2982624/",
+      "kanoonQuery": "Arnesh Kumar v. State of Bihar (2014) 8 SCC 273",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c071",
+      "sections": [
+        "21",
+        "32"
+      ],
+      "name": "Rudul Sah v. State of Bihar",
+      "cite": "(1983) 4 SCC 141",
+      "year": 1983,
+      "court": "Supreme Court of India",
+      "ratio": "For the first time, awarded monetary compensation directly in a habeas corpus petition under Article 32 to a man illegally detained in prison for over 14 years after his acquittal, holding that the Court's power under Article 32 is not confined merely to ordering release, and can extend to compensatory relief for violation of the fundamental right to life and liberty where that is the only effective remedy.",
+      "url": "https://indiankanoon.org/doc/810491/",
+      "kanoonQuery": "Rudul Sah v. State of Bihar (1983) 4 SCC 141",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c072",
+      "sections": [
+        "21"
+      ],
+      "name": "Bachan Singh v. State of Punjab",
+      "cite": "(1980) 2 SCC 684",
+      "year": 1980,
+      "court": "Supreme Court of India",
+      "ratio": "By a 4:1 majority, upheld the constitutional validity of the death penalty for murder under Section 302 IPC and the \"special reasons\" requirement in Section 354(3) CrPC, holding it does not violate Articles 14, 19 or 21; laid down that the death penalty should be imposed only in the \"rarest of rare\" cases, after giving full weight to both aggravating and mitigating circumstances.",
+      "url": "https://indiankanoon.org/doc/1235094/",
+      "kanoonQuery": "Bachan Singh v. State of Punjab (1980) 2 SCC 684",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c073",
+      "sections": [
+        "21"
+      ],
+      "name": "Common Cause v. Union of India",
+      "cite": "(2018) 5 SCC 1",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to die with dignity is part of the right to life under Article 21, and recognised passive euthanasia (withdrawal of life-sustaining treatment) and advance medical directives (\"living wills\") as legally permissible under strict procedural safeguards, while active euthanasia remains unlawful.",
+      "url": "https://indiankanoon.org/doc/184449972/",
+      "kanoonQuery": "Common Cause v. Union of India (2018) 5 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c074",
+      "sections": [
+        "21",
+        "48A",
+        "51A"
+      ],
+      "name": "Vellore Citizens Welfare Forum v. Union of India",
+      "cite": "(1996) 5 SCC 647",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the \"precautionary principle\" and the \"polluter pays\" principle are part of Indian environmental law and of the right to life under Article 21, and directed action against tanneries discharging untreated effluent, ordering compensation for the resulting environmental damage and harm to affected villagers.",
+      "url": "https://indiankanoon.org/doc/1934103/",
+      "kanoonQuery": "Vellore Citizens Welfare Forum v. Union of India (1996) 5 SCC 647",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c075",
+      "sections": [
+        "21",
+        "32"
+      ],
+      "name": "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+      "cite": "(1987) 1 SCC 395",
+      "year": 1986,
+      "court": "Supreme Court of India",
+      "ratio": "Evolved the principle of \"absolute liability\" (stricter than the English rule in Rylands v. Fletcher) for enterprises engaged in inherently hazardous or dangerous activities: such an enterprise is absolutely liable, without any exception, for harm caused by an accident in the course of that activity, and the measure of compensation must be proportional to the enterprise's capacity to pay so as to act as a deterrent.",
+      "url": "https://indiankanoon.org/doc/1486949/",
+      "kanoonQuery": "M.C. Mehta v. Union of India (Oleum Gas Leak case) (1987) 1 SCC 395",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c076",
+      "sections": [
+        "21"
+      ],
+      "name": "Subhash Kumar v. State of Bihar",
+      "cite": "(1991) 1 SCC 598",
+      "year": 1991,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to life under Article 21 includes the right to enjoyment of pollution-free water and air, and a citizen suffering from pollution can maintain a petition under Article 32 to enforce this right -- though on the facts, the petition was dismissed for want of evidence directly linking the pollution to the respondents, and for being an abuse of process.",
+      "url": "https://indiankanoon.org/doc/1646284/",
+      "kanoonQuery": "Subhash Kumar v. State of Bihar (1991) 1 SCC 598",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c077",
+      "sections": [
+        "21",
+        "41"
+      ],
+      "name": "Consumer Education and Research Centre v. Union of India",
+      "cite": "(1995) 3 SCC 42",
+      "year": 1995,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to health and medical care of a worker, to protect their health during and after employment, is a fundamental right under Article 21, and directed asbestos industries to maintain health records of workers, provide compensation for asbestos-related diseases, and follow international safety standards.",
+      "url": "https://indiankanoon.org/doc/1657323/",
+      "kanoonQuery": "Consumer Education and Research Centre v. Union of India (1995) 3 SCC 42",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c078",
+      "sections": [
+        "21",
+        "41"
+      ],
+      "name": "Paschim Banga Khet Mazdoor Samity v. State of West Bengal",
+      "cite": "(1996) 4 SCC 37",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to life under Article 21 includes the right to emergency medical treatment, and a government hospital's failure to provide timely treatment to a person suffering serious injuries (because it lacked capacity or beds) violates Article 21; the State cannot cite financial constraints to avoid this constitutional obligation, and awarded compensation.",
+      "url": "https://indiankanoon.org/doc/1743022/",
+      "kanoonQuery": "Paschim Banga Khet Mazdoor Samity v. State of West Bengal (1996) 4 SCC 37",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c079",
+      "sections": [
+        "21",
+        "72",
+        "161"
+      ],
+      "name": "Shatrughan Chauhan v. Union of India",
+      "cite": "(2014) 3 SCC 1",
+      "year": 2014,
+      "court": "Supreme Court of India",
+      "ratio": "Held that supervening circumstances, including an unconscionably long and unexplained delay in deciding a mercy petition, insanity, or physical/mental illness of the convict, are valid grounds for commuting a death sentence to life imprisonment under Article 21, and commuted the sentences of fifteen death-row convicts on this basis.",
+      "url": "https://indiankanoon.org/doc/59968841/",
+      "kanoonQuery": "Shatrughan Chauhan v. Union of India (2014) 3 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c080",
+      "sections": [
+        "21",
+        "21A",
+        "41",
+        "45"
+      ],
+      "name": "Unni Krishnan, J.P. v. State of Andhra Pradesh",
+      "cite": "(1993) 1 SCC 645",
+      "year": 1993,
+      "court": "Supreme Court of India",
+      "ratio": "Held that the right to education up to age 14 flows from the right to life under Article 21, read with the Directive Principle in Article 45, and is thus a fundamental right, though the right to higher education is subject to the State's economic capacity; this reasoning directly led to the insertion of Article 21A by the 86th Amendment, which superseded Unni Krishnan's constitutional basis for the right below age 14.",
+      "url": "https://indiankanoon.org/doc/1775396/",
+      "kanoonQuery": "Unni Krishnan, J.P. v. State of Andhra Pradesh (1993) 1 SCC 645",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c081",
+      "sections": [
+        "21A",
+        "15",
+        "30"
+      ],
+      "name": "Pramati Educational and Cultural Trust v. Union of India",
+      "cite": "(2014) 8 SCC 1",
+      "year": 2014,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of Articles 15(5) and 21A (inserted by the 86th and 93rd Amendments) and the Right of Children to Free and Compulsory Education Act, 2009, but held that the RTE Act's 25% reservation requirement does not apply to unaided minority educational institutions, since that would violate their special right under Article 30(1) to establish and administer institutions of their choice.",
+      "url": "https://indiankanoon.org/doc/32468867/",
+      "kanoonQuery": "Pramati Educational and Cultural Trust v. Union of India (2014) 8 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c082",
+      "sections": [
+        "21A",
+        "19",
+        "30"
+      ],
+      "name": "Society for Unaided Private Schools of Rajasthan v. Union of India",
+      "cite": "(2012) 6 SCC 1",
+      "year": 2012,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the Right of Children to Free and Compulsory Education Act, 2009 (including its 25% reservation for economically weaker sections in private schools) as a valid, reasonable restriction on the right to carry on an occupation under Article 19(1)(g) for government, government-aided, and private unaided non-minority schools, but held it could not be applied to unaided minority schools protected by Article 30(1).",
+      "url": "https://indiankanoon.org/doc/154958944/",
+      "kanoonQuery": "Society for Unaided Private Schools of Rajasthan v. Union of India (2012) 6 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c083",
+      "sections": [
+        "22"
+      ],
+      "name": "A.K. Roy v. Union of India",
+      "cite": "(1982) 1 SCC 271",
+      "year": 1981,
+      "court": "Supreme Court of India",
+      "ratio": "Upheld the constitutional validity of the National Security Act, 1980 (preventive detention legislation) and the President's power to promulgate the National Security Ordinance, while reading in procedural safeguards under Article 22 -- including that the detenu be given the earliest opportunity to make a representation and the right, in appropriate cases, to be assisted (though not necessarily by a lawyer) before the Advisory Board.",
+      "url": "https://indiankanoon.org/doc/875590/",
+      "kanoonQuery": "A.K. Roy v. Union of India (1982) 1 SCC 271",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c084",
+      "sections": [
+        "23"
+      ],
+      "name": "People's Union for Democratic Rights v. Union of India",
+      "cite": "(1982) 3 SCC 235",
+      "year": 1982,
+      "court": "Supreme Court of India",
+      "ratio": "Held that paying workers less than the statutory minimum wage amounts to \"forced labour\" within the meaning of Article 23, since a person forced by economic necessity to work for less than the minimum wage cannot be said to be working voluntarily; also held that \"equal pay for equal work,\" though not an expressly enumerated fundamental right, is deducible from Article 14 and enforceable against the State and its contractors.",
+      "url": "https://indiankanoon.org/doc/496663/",
+      "kanoonQuery": "People's Union for Democratic Rights v. Union of India (1982) 3 SCC 235",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c085",
+      "sections": [
+        "23",
+        "21",
+        "32"
+      ],
+      "name": "Bandhua Mukti Morcha v. Union of India",
+      "cite": "(1984) 3 SCC 161",
+      "year": 1983,
+      "court": "Supreme Court of India",
+      "ratio": "Held that bonded labour violates Article 23's prohibition on forced labour and the right to live with dignity under Article 21, accepted a letter alleging bonded labour in stone quarries as a maintainable public interest petition under Article 32, and directed the State to identify, release and rehabilitate bonded labourers, laying down that once forced labour is shown, the burden shifts to the employer/State to prove it is not bonded labour.",
+      "url": "https://indiankanoon.org/doc/595099/",
+      "kanoonQuery": "Bandhua Mukti Morcha v. Union of India (1984) 3 SCC 161",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c086",
+      "sections": [
+        "23"
+      ],
+      "name": "Sanjit Roy v. State of Rajasthan",
+      "cite": "(1983) 1 SCC 525",
+      "year": 1983,
+      "court": "Supreme Court of India",
+      "ratio": "Struck down a State law exempting famine-relief workers from the Minimum Wages Act as violating Article 14, holding that paying less than the minimum wage for work performed under the compulsion of extreme poverty or a famine amounts to \"forced labour\" prohibited by Article 23, regardless of whether the work was nominally \"voluntary\".",
+      "url": "https://indiankanoon.org/doc/1150530/",
+      "kanoonQuery": "Sanjit Roy v. State of Rajasthan (1983) 1 SCC 525",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c087",
+      "sections": [
+        "24"
+      ],
+      "name": "M.C. Mehta v. State of Tamil Nadu",
+      "cite": "(1996) 6 SCC 756",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "Addressing child labour in hazardous industries (the Sivakasi matchbox and fireworks industry), held that employing children below 14 in hazardous occupations violates Article 24, and directed a survey to identify child labourers, their withdrawal from hazardous work and enrolment in education, and a welfare fund funded by contributions from offending employers to support the affected children's families.",
+      "url": "https://indiankanoon.org/doc/212829/",
+      "kanoonQuery": "M.C. Mehta v. State of Tamil Nadu (1996) 6 SCC 756",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c088",
+      "sections": [
+        "25",
+        "26"
+      ],
+      "name": "Commissioner, Hindu Religious Endowments, Madras v. Sri Lakshmindra Thirtha Swamiar of Sri Shirur Mutt",
+      "cite": "AIR 1954 SC 282",
+      "year": 1954,
+      "court": "Supreme Court of India",
+      "ratio": "Religious freedom under Articles 25-26 protects not just belief but practices that are essential and integral to a religion; courts, not the legislature, decide what is essential. The State may regulate secular activities associated with religious institutions (like financial administration) but cannot take over their religious management.",
+      "url": "https://indiankanoon.org/doc/1430396/",
+      "kanoonQuery": "Commissioner, Hindu Religious Endowments, Madras v. Sri Lakshmindra Thirtha Swamiar of Sri Shirur Mutt AIR 1954 SC 282",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c089",
+      "sections": [
+        "25",
+        "26"
+      ],
+      "name": "Ratilal Panachand Gandhi v. State of Bombay",
+      "cite": "AIR 1954 SC 388",
+      "year": 1954,
+      "court": "Supreme Court of India",
+      "ratio": "The right to manage a religious denomination's own affairs in matters of religion under Article 26(b) is absolute and cannot be taken over by a secular authority; provisions of the Bombay Public Trusts Act letting a Charity Commissioner assume management functions of religious trusts were struck down as unconstitutional.",
+      "url": "https://indiankanoon.org/doc/1307370/",
+      "kanoonQuery": "Ratilal Panachand Gandhi v. State of Bombay AIR 1954 SC 388",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c090",
+      "sections": [
+        "25"
+      ],
+      "name": "M. Ismail Faruqui v. Union of India",
+      "cite": "(1994) 6 SCC 360",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "A mosque is not an essential part of the practice of Islam, so offering namaz can be performed anywhere, including in the open; the State can therefore acquire land on which a mosque stands without violating Article 25. The Court upheld the Acquisition of Certain Area at Ayodhya Act, 1993 while keeping the title dispute itself open for adjudication.",
+      "url": "https://indiankanoon.org/doc/37494799/",
+      "kanoonQuery": "M. Ismail Faruqui v. Union of India (1994) 6 SCC 360",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c091",
+      "sections": [
+        "30"
+      ],
+      "name": "In re Kerala Education Bill, 1957",
+      "cite": "AIR 1958 SC 956",
+      "year": 1958,
+      "court": "Supreme Court of India",
+      "ratio": "Answering a Presidential reference under Article 143, the Court held that the right of minorities under Article 30(1) to establish and administer educational institutions is not absolute and is subject to reasonable regulatory measures (such as academic standards or conditions attached to state aid) that do not destroy the minority character of the institution.",
+      "url": "https://indiankanoon.org/doc/161666/",
+      "kanoonQuery": "In re Kerala Education Bill, 1957 AIR 1958 SC 956",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c092",
+      "sections": [
+        "30"
+      ],
+      "name": "St. Stephen's College v. University of Delhi",
+      "cite": "(1992) 1 SCC 558",
+      "year": 1992,
+      "court": "Supreme Court of India",
+      "ratio": "A minority educational institution under Article 30(1) may follow its own admission procedure, including preference for students of its own community up to a reasonable extent (the Court permitted up to 50%), even while remaining affiliated to and receiving aid from a state university.",
+      "url": "https://indiankanoon.org/doc/1545248/",
+      "kanoonQuery": "St. Stephen's College v. University of Delhi (1992) 1 SCC 558",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c093",
+      "sections": [
+        "30"
+      ],
+      "name": "P.A. Inamdar v. State of Maharashtra",
+      "cite": "(2005) 6 SCC 537",
+      "year": 2005,
+      "court": "Supreme Court of India",
+      "ratio": "Unaided private professional educational institutions, whether minority or non-minority, cannot be compelled by the State to reserve seats or follow a state-run common entrance test and fee structure; imposing such a scheme on them infringes Articles 19(1)(g) and 30, though reasonable regulation to ensure merit and prevent profiteering remains permissible.",
+      "url": "https://indiankanoon.org/doc/1390531/",
+      "kanoonQuery": "P.A. Inamdar v. State of Maharashtra (2005) 6 SCC 537",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c094",
+      "sections": [
+        "30"
+      ],
+      "name": "S. Azeez Basha v. Union of India",
+      "cite": "AIR 1968 SC 662",
+      "year": 1967,
+      "court": "Supreme Court of India",
+      "ratio": "Aligarh Muslim University, having been established and incorporated by an Act of the Central Legislature (not established administratively by the Muslim minority itself), is not a minority educational institution under Article 30(1); amendments to the AMU Act altering its administration therefore did not violate that Article. (Note: the premise that AMU was not 'established' by the minority was later revisited by the Allahabad High Court and is the subject of ongoing litigation before the Supreme Court.)",
+      "url": "https://indiankanoon.org/doc/1801897/",
+      "kanoonQuery": "S. Azeez Basha v. Union of India AIR 1968 SC 662",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c095",
+      "sections": [
+        "44"
+      ],
+      "name": "Mohd. Ahmed Khan v. Shah Bano Begum",
+      "cite": "(1985) 2 SCC 556",
+      "year": 1985,
+      "court": "Supreme Court of India",
+      "ratio": "A divorced Muslim woman unable to maintain herself is entitled to maintenance under the secular provision of Section 125 CrPC, which applies to all citizens regardless of personal law; the Court noted this outcome illustrated the desirability of a uniform civil code under Article 44. (Note: Parliament's Muslim Women (Protection of Rights on Divorce) Act, 1986 later altered the statutory position for maintenance claims by Muslim divorcees, though subsequent case law has read it compatibly with the Shah Bano principle.)",
+      "url": "https://indiankanoon.org/doc/823221/",
+      "kanoonQuery": "Mohd. Ahmed Khan v. Shah Bano Begum (1985) 2 SCC 556",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c096",
+      "sections": [
+        "44"
+      ],
+      "name": "Sarla Mudgal v. Union of India",
+      "cite": "(1995) 3 SCC 635",
+      "year": 1995,
+      "court": "Supreme Court of India",
+      "ratio": "A Hindu husband who converts to Islam cannot solemnize a second marriage without first legally dissolving his first marriage; doing so renders the second marriage void and makes him liable for bigamy under Section 494 IPC. The Court reiterated that a uniform civil code under Article 44 would help address such conflicts between personal laws.",
+      "url": "https://indiankanoon.org/doc/733037/",
+      "kanoonQuery": "Sarla Mudgal v. Union of India (1995) 3 SCC 635",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c097",
+      "sections": [
+        "42",
+        "39"
+      ],
+      "name": "Municipal Corporation of Delhi v. Female Workers (Muster Roll)",
+      "cite": "(2000) 3 SCC 224",
+      "year": 2000,
+      "court": "Supreme Court of India",
+      "ratio": "Women employed on a daily-wage or muster-roll basis are entitled to maternity benefits under the Maternity Benefit Act on the same footing as regularly employed women; denying them this benefit defeats the purpose of Article 42, which directs the State to secure just and humane conditions of work and maternity relief.",
+      "url": "https://indiankanoon.org/doc/808569/",
+      "kanoonQuery": "Municipal Corporation of Delhi v. Female Workers (Muster Roll) (2000) 3 SCC 224",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c098",
+      "sections": [
+        "48"
+      ],
+      "name": "State of Gujarat v. Mirzapur Moti Kureshi Kassab Jamat",
+      "cite": "(2005) 8 SCC 534",
+      "year": 2005,
+      "court": "Supreme Court of India",
+      "ratio": "A total ban on the slaughter of cows, bulls and bullocks of all ages is a reasonable restriction on the fundamental right to trade under Article 19(1)(g) and is consistent with the directive in Article 48 to preserve and improve breeds and prohibit the slaughter of cows and calves and other milch and draught cattle; the ban was upheld as constitutionally valid.",
+      "url": "https://indiankanoon.org/doc/101278772/",
+      "kanoonQuery": "State of Gujarat v. Mirzapur Moti Kureshi Kassab Jamat (2005) 8 SCC 534",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c099",
+      "sections": [
+        "47",
+        "19"
+      ],
+      "name": "Khoday Distilleries Ltd. v. State of Karnataka",
+      "cite": "(1995) 1 SCC 574",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "There is no fundamental right to carry on trade or business in intoxicating liquor as a beverage; the State, consistent with the Article 47 directive to endeavour to bring about prohibition, may create a complete monopoly over the manufacture, possession, sale and distribution of liquor, or regulate it through a licensing and distribution system, without violating Article 19(1)(g).",
+      "url": "https://indiankanoon.org/doc/675008/",
+      "kanoonQuery": "Khoday Distilleries Ltd. v. State of Karnataka (1995) 1 SCC 574",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c100",
+      "sections": [
+        "48A",
+        "51A"
+      ],
+      "name": "Rural Litigation and Entitlement Kendra v. State of Uttar Pradesh",
+      "cite": "(1985) 2 SCC 431",
+      "year": 1985,
+      "court": "Supreme Court of India",
+      "ratio": "India's first major environmental public interest litigation: the Supreme Court ordered the closure of limestone quarries in the Mussoorie hills whose unauthorised and unscientific mining was causing serious ecological damage, giving practical effect to the State's duty under Article 48A to protect and improve the environment and the citizen's duty under Article 51A(g) to do the same.",
+      "url": "https://indiankanoon.org/doc/1949293/",
+      "kanoonQuery": "Rural Litigation and Entitlement Kendra v. State of Uttar Pradesh (1985) 2 SCC 431",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c101",
+      "sections": [
+        "53",
+        "73",
+        "154",
+        "162"
+      ],
+      "name": "Ram Jawaya Kapur v. State of Punjab",
+      "cite": "AIR 1955 SC 549",
+      "year": 1955,
+      "court": "Supreme Court of India",
+      "ratio": "The executive power of the Union and the States under Articles 53/73 and 154/162 is co-extensive with their legislative power and is not confined to matters on which the legislature has already made a law; the executive may carry on business or governmental activity within its legislative competence through an executive order alone, so long as it does not encroach on a citizen's fundamental rights or on a field occupied by an existing law.",
+      "url": "https://indiankanoon.org/doc/1446086/",
+      "kanoonQuery": "Ram Jawaya Kapur v. State of Punjab AIR 1955 SC 549",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c102",
+      "sections": [
+        "53",
+        "74",
+        "163",
+        "311"
+      ],
+      "name": "Shamsher Singh v. State of Punjab",
+      "cite": "(1974) 2 SCC 831",
+      "year": 1974,
+      "court": "Supreme Court of India",
+      "ratio": "A seven-judge bench held that the President and Governor are constitutional heads and, save in a few well-recognised exceptions, are bound to act on the aid and advice of their Council of Ministers under Articles 74 and 163; an order of the government issued in the name of the President or Governor is validly made without the head of State personally applying their mind to it.",
+      "url": "https://indiankanoon.org/doc/1382698/",
+      "kanoonQuery": "Shamsher Singh v. State of Punjab (1974) 2 SCC 831",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c103",
+      "sections": [
+        "72"
+      ],
+      "name": "Kehar Singh v. Union of India",
+      "cite": "(1989) 1 SCC 204",
+      "year": 1988,
+      "court": "Supreme Court of India",
+      "ratio": "The President's power to grant pardons under Article 72 is an exercise of an executive function distinct from a judicial one and is not subject to review on the merits already finally decided by the courts; the President may, however, examine the evidence and reach a different conclusion than the courts as to the guilt of, or the sentence awarded to, the accused, and the process for exercising this power is a matter for the President, not a judicially enforceable right to a personal hearing.",
+      "url": "https://indiankanoon.org/doc/1152284/",
+      "kanoonQuery": "Kehar Singh v. Union of India (1989) 1 SCC 204",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c104",
+      "sections": [
+        "72",
+        "161"
+      ],
+      "name": "Maru Ram v. Union of India",
+      "cite": "(1981) 1 SCC 107",
+      "year": 1980,
+      "court": "Supreme Court of India",
+      "ratio": "The clemency powers under Articles 72 and 161 are not unfettered or a private reserve of the executive: they must be exercised on the advice of the appropriate government, guided by relevant material and reason, and are subject to judicial review if exercised arbitrarily; Section 433A CrPC (mandating 14 years' actual imprisonment before remission for certain life convicts) does not impinge on the constitutional pardon power and was upheld.",
+      "url": "https://indiankanoon.org/doc/1222748/",
+      "kanoonQuery": "Maru Ram v. Union of India (1981) 1 SCC 107",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c105",
+      "sections": [
+        "72",
+        "161"
+      ],
+      "name": "Epuru Sudhakar v. Government of Andhra Pradesh",
+      "cite": "(2006) 8 SCC 161",
+      "year": 2006,
+      "court": "Supreme Court of India",
+      "ratio": "The Governor's power to grant remission under Article 161 is subject to limited judicial review where the exercise is shown to be mala fide, based on wholly irrelevant considerations, arbitrary, or where relevant material has been ignored; an order remitting the sentence of a convict for reasons unrelated to any legitimate penological purpose was set aside on this ground.",
+      "url": "https://indiankanoon.org/doc/758562/",
+      "kanoonQuery": "Epuru Sudhakar v. Government of Andhra Pradesh (2006) 8 SCC 161",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c106",
+      "sections": [
+        "75",
+        "164"
+      ],
+      "name": "Manoj Narula v. Union of India",
+      "cite": "(2014) 9 SCC 1",
+      "year": 2014,
+      "court": "Supreme Court of India",
+      "ratio": "Articles 75(1) and 164(1) do not expressly disqualify a person facing serious criminal charges from being appointed a Minister, and the Court declined to read in such a disqualification by judicial fiat; it held instead that constitutional trust and propriety require the Prime Minister/Chief Minister, while exercising discretion under these Articles, to avoid choosing individuals with a criminal background as far as possible.",
+      "url": "https://indiankanoon.org/doc/199141576/",
+      "kanoonQuery": "Manoj Narula v. Union of India (2014) 9 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c107",
+      "sections": [
+        "155",
+        "156",
+        "361"
+      ],
+      "name": "B.P. Singhal v. Union of India",
+      "cite": "(2010) 6 SCC 331",
+      "year": 2010,
+      "court": "Supreme Court of India",
+      "ratio": "A Governor holds office during the pleasure of the President under Article 156 and no reasons need be assigned or communicated for removal, nor are such reasons justiciable; however, this pleasure doctrine is not unlimited, and removal for reasons unconnected with governance (such as a change in central government or the Governor's own political views) or on arbitrary/whimsical grounds would be a colourable exercise of power open to being struck down, though the petitioner must produce material to establish such a case.",
+      "url": "https://indiankanoon.org/doc/1471968/",
+      "kanoonQuery": "B.P. Singhal v. Union of India (2010) 6 SCC 331",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c108",
+      "sections": [
+        "356",
+        "355",
+        "365"
+      ],
+      "name": "S.R. Bommai v. Union of India",
+      "cite": "(1994) 3 SCC 1; AIR 1994 SC 1918",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "A Proclamation under Article 356 is subject to judicial review, and the Union must show that there was relevant material. A State's majority must be tested on the floor of the Assembly, not by the Governor's opinion. Secularism is part of the basic structure, and the federal structure is basic to the Constitution. The President also cannot dissolve the State Assembly before Parliament has approved the Proclamation.",
+      "url": "https://indiankanoon.org/doc/60799/",
+      "kanoonQuery": "S.R. Bommai v. Union of India (1994) 3 SCC 1",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c109",
+      "sections": [
+        "356"
+      ],
+      "name": "State of Rajasthan v. Union of India",
+      "cite": "(1977) 3 SCC 592",
+      "year": 1977,
+      "court": "Supreme Court of India",
+      "ratio": "Several States challenged the Union's direction to dissolve their Legislative Assemblies under Article 356 after the ruling party's rout in the 1977 Lok Sabha elections; the suits were dismissed, but the Court held that the President's satisfaction under Article 356, though subjective and largely a political question, is not wholly immune from judicial review and could be examined if shown to be based on mala fide or wholly extraneous grounds.",
+      "url": "https://indiankanoon.org/doc/174974/",
+      "kanoonQuery": "State of Rajasthan v. Union of India (1977) 3 SCC 592",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c110",
+      "sections": [
+        "356",
+        "361",
+        "174"
+      ],
+      "name": "Rameshwar Prasad v. Union of India",
+      "cite": "(2006) 2 SCC 1",
+      "year": 2006,
+      "court": "Supreme Court of India",
+      "ratio": "Dissolution of a newly elected State Legislative Assembly before its first sitting, on the Governor's report of horse-trading and an unproven claim of impending defections, was held unconstitutional; the majority to form a government must be tested on the floor of the House, not pre-empted on the Governor's subjective assessment, and Article 356 action founded on such speculative material is not immune from judicial review merely because of Article 361 immunity for the Governor personally.",
+      "url": "https://indiankanoon.org/doc/79280249/",
+      "kanoonQuery": "Rameshwar Prasad v. Union of India (2006) 2 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c111",
+      "sections": [
+        "163",
+        "174",
+        "175"
+      ],
+      "name": "Nabam Rebia and Bamang Felix v. Deputy Speaker, Arunachal Pradesh Legislative Assembly",
+      "cite": "(2016) 8 SCC 1",
+      "year": 2016,
+      "court": "Supreme Court of India",
+      "ratio": "A Governor's discretion to summon, prorogue or dissolve the Assembly, or to fix its sitting dates, is not unfettered: it must ordinarily be exercised on the aid and advice of the Council of Ministers, and a Governor cannot use these powers to pre-empt a floor test or interfere in the internal proceedings of the House, such as a pending motion to remove the Speaker; the Governor's actions advancing the Assembly session here were held unconstitutional and the status quo ante was restored.",
+      "url": "https://indiankanoon.org/doc/183968125/",
+      "kanoonQuery": "Nabam Rebia and Bamang Felix v. Deputy Speaker, Arunachal Pradesh Legislative Assembly (2016) 8 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c112",
+      "sections": [
+        "163",
+        "174",
+        "356",
+        "sch10-6"
+      ],
+      "name": "Subhash Desai v. Principal Secretary, Governor of Maharashtra",
+      "cite": "(2023) 13 SCC 1",
+      "year": 2023,
+      "court": "Supreme Court of India",
+      "ratio": "A Governor's discretionary power to call for a floor test under Article 163/174 must rest on objective material showing the government has lost the confidence of the House, and cannot be used to resolve or pre-empt an intra-party or defection dispute that is properly the Speaker's function under the Tenth Schedule; on the facts, the Governor's call for a floor test was held not justified, though the Court declined to restore the earlier government because the Chief Minister had resigned before the trust vote.",
+      "url": "https://indiankanoon.org/doc/12168609/",
+      "kanoonQuery": "Subhash Desai v. Principal Secretary, Governor of Maharashtra (2023) 13 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c113",
+      "sections": [
+        "80",
+        "84"
+      ],
+      "name": "Kuldip Nayar v. Union of India",
+      "cite": "(2006) 7 SCC 1",
+      "year": 2006,
+      "court": "Supreme Court of India",
+      "ratio": "Removing the requirement that a candidate for the Rajya Sabha must be a domiciled resident of the State they seek to represent, and introducing an open ballot for Rajya Sabha elections, do not violate the basic structure or any express constitutional provision; the secrecy of the ballot is not itself a basic feature, and Parliament's power to determine the manner of election under Article 80 read with ordinary legislation was upheld.",
+      "url": "https://indiankanoon.org/doc/1281413/",
+      "kanoonQuery": "Kuldip Nayar v. Union of India (2006) 7 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c114",
+      "sections": [
+        "102",
+        "191"
+      ],
+      "name": "Lily Thomas v. Union of India",
+      "cite": "(2013) 7 SCC 653",
+      "year": 2013,
+      "court": "Supreme Court of India",
+      "ratio": "Section 8(4) of the Representation of the People Act, 1951, which allowed a sitting MP or MLA convicted of certain offences to continue in office pending appeal, was struck down as beyond Parliament's competence under Articles 102(1)(e) and 191(1)(e); a member convicted and sentenced to two years or more is disqualified with immediate effect from the date of conviction, with no protection during the pendency of an appeal.",
+      "url": "https://indiankanoon.org/doc/63158859/",
+      "kanoonQuery": "Lily Thomas v. Union of India (2013) 7 SCC 653",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c115",
+      "sections": [
+        "102",
+        "191",
+        "sch10-2",
+        "sch10-6",
+        "sch10-7"
+      ],
+      "name": "Kihoto Hollohon v. Zachillhu",
+      "cite": "1992 Supp (2) SCC 651",
+      "year": 1992,
+      "court": "Supreme Court of India",
+      "ratio": "By a 3 to 2 majority the Tenth Schedule was held valid, but paragraph 7, which barred courts from reviewing decisions on disqualification, was declared invalid for want of ratification by half the States. The Speaker's decision acts as a tribunal and is subject to judicial review on limited grounds.",
+      "url": "https://indiankanoon.org/doc/1686885/",
+      "kanoonQuery": "Kihoto Hollohon v. Zachillhu 1992 Supp (2) SCC 651",
+      "citeConfidence": "verified",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c116",
+      "sections": [
+        "sch10-2"
+      ],
+      "name": "Ravi S. Naik v. Union of India",
+      "cite": "1994 Supp (2) SCC 641",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "'Voluntarily giving up membership' of a political party under paragraph 2(1)(a) of the Tenth Schedule is broader than formal resignation and can be inferred from a member's conduct; the Speaker, while deciding a disqualification petition under the Tenth Schedule, acts as a tribunal and such a decision is subject to judicial review, though on limited grounds akin to those applicable to other tribunal decisions.",
+      "url": "https://indiankanoon.org/doc/53927266/",
+      "kanoonQuery": "Ravi S. Naik v. Union of India 1994 Supp (2) SCC 641",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c117",
+      "sections": [
+        "sch10-2"
+      ],
+      "name": "G. Viswanathan v. Speaker, Tamil Nadu Legislative Assembly",
+      "cite": "(1996) 2 SCC 353",
+      "year": 1996,
+      "court": "Supreme Court of India",
+      "ratio": "A member expelled from their political party remains, for the purposes of the Tenth Schedule, a member belonging to that political party (their 'original political party') and cannot claim to have become unattached; the Speaker declaring such an expelled member as 'unattached' was held erroneous, since expulsion from the party does not sever the statutory link for anti-defection purposes.",
+      "url": "https://indiankanoon.org/doc/1093980/",
+      "kanoonQuery": "G. Viswanathan v. Speaker, Tamil Nadu Legislative Assembly (1996) 2 SCC 353",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c118",
+      "sections": [
+        "105",
+        "122",
+        "194",
+        "212"
+      ],
+      "name": "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha",
+      "cite": "(2007) 3 SCC 184",
+      "year": 2007,
+      "court": "Supreme Court of India",
+      "ratio": "Parliament's power and privilege under Article 105 include the power to expel a member for conduct unbecoming, such as accepting money to raise questions in the House; while the internal proceedings of the House enjoy protection from ordinary judicial scrutiny under Articles 122/212, courts retain a narrow power of judicial review over parliamentary/legislative action where there is substantive illegality or unconstitutionality, though not over mere procedural irregularity.",
+      "url": "https://indiankanoon.org/doc/61480953/",
+      "kanoonQuery": "Raja Ram Pal v. Hon'ble Speaker, Lok Sabha (2007) 3 SCC 184",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c119",
+      "sections": [
+        "105",
+        "194",
+        "226"
+      ],
+      "name": "Special Reference No. 1 of 1964 (Keshav Singh)",
+      "cite": "AIR 1965 SC 745",
+      "year": 1964,
+      "court": "Supreme Court of India",
+      "ratio": "Answering a Presidential reference arising from a standoff between the UP Legislative Assembly and the Allahabad High Court, the Supreme Court held that a legislature's privileges under Article 194 are subject to the Constitution and do not oust the High Court's power under Article 226 to examine, on habeas corpus, whether a citizen's detention for contempt of the House was within constitutional limits; neither organ is superior to the other, and each must function within its own constitutional sphere.",
+      "url": "https://indiankanoon.org/doc/1481910/",
+      "kanoonQuery": "Special Reference No. 1 of 1964 (Keshav Singh) AIR 1965 SC 745",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c120",
+      "sections": [
+        "123",
+        "213"
+      ],
+      "name": "D.C. Wadhwa v. State of Bihar",
+      "cite": "(1987) 1 SCC 378",
+      "year": 1986,
+      "court": "Supreme Court of India",
+      "ratio": "Repeatedly re-promulgating an ordinance under Article 213, without placing it before the Legislature or letting it lapse and re-enacting it as a law, is a fraud on the Constitution and a colourable exercise of the ordinance-making power; the ordinance power is meant to meet an urgent, temporary need and cannot be used as a parallel, permanent law-making mechanism bypassing the legislature.",
+      "url": "https://indiankanoon.org/doc/504006/",
+      "kanoonQuery": "D.C. Wadhwa v. State of Bihar (1987) 1 SCC 378",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c121",
+      "sections": [
+        "123",
+        "213"
+      ],
+      "name": "Krishna Kumar Singh v. State of Bihar",
+      "cite": "(2017) 3 SCC 1",
+      "year": 2017,
+      "court": "Supreme Court of India",
+      "ratio": "A seven-judge bench reaffirmed D.C. Wadhwa and held that unlimited re-promulgation of ordinances under Articles 123/213, without being placed before the legislature, is unconstitutional; it further held that an ordinance which is allowed to lapse does not automatically undo rights, liabilities or obligations already created under it, and that the President's or Governor's satisfaction in issuing an ordinance is itself justiciable, though on limited grounds.",
+      "url": "https://indiankanoon.org/doc/3040654/",
+      "kanoonQuery": "Krishna Kumar Singh v. State of Bihar (2017) 3 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c122",
+      "sections": [
+        "124",
+        "217"
+      ],
+      "name": "Supreme Court Advocates-on-Record Association v. Union of India (Second Judges case)",
+      "cite": "(1993) 4 SCC 441",
+      "year": 1993,
+      "court": "Supreme Court of India",
+      "ratio": "In appointing judges of the Supreme Court and High Courts under Articles 124 and 217, 'consultation' with the Chief Justice of India means the CJI's recommendation, formed in consultation with senior colleagues, has primacy, and the executive can decline it only for cogent reasons disclosed to the CJI; this judgment overruled the executive-primacy view taken in S.P. Gupta and laid the foundation of the collegium system.",
+      "url": "https://indiankanoon.org/doc/753224/",
+      "kanoonQuery": "Supreme Court Advocates-on-Record Association v. Union of India (Second Judges case) (1993) 4 SCC 441",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c123",
+      "sections": [
+        "124",
+        "143"
+      ],
+      "name": "Special Reference No. 1 of 1998 (Third Judges case)",
+      "cite": "(1998) 7 SCC 739",
+      "year": 1998,
+      "court": "Supreme Court of India",
+      "ratio": "Answering a Presidential reference under Article 143 seeking clarification of the Second Judges case, a nine-judge bench held that 'consultation' for Supreme Court appointments means a collegium of the Chief Justice of India and the four senior-most judges (two senior-most judges for High Court appointments/transfers), and that the executive can send a recommendation back only once; if reiterated by the collegium it is binding.",
+      "url": "https://indiankanoon.org/doc/173571889/",
+      "kanoonQuery": "Special Reference No. 1 of 1998 (Third Judges case) (1998) 7 SCC 739",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c124",
+      "sections": [
+        "124A",
+        "124B",
+        "124C",
+        "217",
+        "222",
+        "224A"
+      ],
+      "name": "Supreme Court Advocates-on-Record Association v. Union of India (NJAC case)",
+      "cite": "(2016) 5 SCC 1",
+      "year": 2015,
+      "court": "Supreme Court of India",
+      "ratio": "The 99th Constitutional Amendment and the National Judicial Appointments Commission Act, 2014 -- which would have replaced the judicial collegium with a commission including the Law Minister and eminent persons for appointing judges -- were struck down as unconstitutional for violating the independence of the judiciary, a basic feature of the Constitution; the pre-existing collegium system under the Second and Third Judges cases was accordingly restored.",
+      "url": "https://indiankanoon.org/doc/66970168/",
+      "kanoonQuery": "Supreme Court Advocates-on-Record Association v. Union of India (NJAC case) (2016) 5 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c125",
+      "sections": [
+        "222"
+      ],
+      "name": "Union of India v. Sankalchand Himatlal Sheth",
+      "cite": "(1977) 4 SCC 193",
+      "year": 1977,
+      "court": "Supreme Court of India",
+      "ratio": "The President's power to transfer a High Court judge to another High Court under Article 222 can be exercised even without the judge's consent, but 'consultation' with the Chief Justice of India before such a transfer must be full, effective and meaningful consultation; it does not, however, mean the CJI's view is binding on the executive (a position later revised by the Second and Third Judges cases).",
+      "url": "https://indiankanoon.org/doc/1302865/",
+      "kanoonQuery": "Union of India v. Sankalchand Himatlal Sheth (1977) 4 SCC 193",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c126",
+      "sections": [
+        "1",
+        "131",
+        "246"
+      ],
+      "name": "State of West Bengal v. Union of India",
+      "cite": "AIR 1963 SC 1241",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "Parliament has the legislative competence under the Union List to authorise the Union to compulsorily acquire land and property vested in a State (here, for coal-bearing areas), and a State has no sovereignty of its own against the Union; the Constitution, though it distributes powers between Union and States under Article 246, is not a compact between sovereign units and does not make the states unqualified equal partners with the Centre. (Note: this unitary-bias reading was later balanced by S.R. Bommai, which recognised federalism as part of the basic structure.)",
+      "url": "https://indiankanoon.org/doc/603736/",
+      "kanoonQuery": "State of West Bengal v. Union of India AIR 1963 SC 1241",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c127",
+      "sections": [
+        "136"
+      ],
+      "name": "Pritam Singh v. State",
+      "cite": "AIR 1950 SC 169",
+      "year": 1950,
+      "court": "Supreme Court of India",
+      "ratio": "The discretionary power to grant special leave to appeal under Article 136 is exceptional and is to be exercised sparingly and only in special circumstances, such as where there is a substantial question of law of general importance or where grave and substantial injustice has been done; it is not to be treated as an ordinary further avenue of appeal.",
+      "url": "https://indiankanoon.org/doc/743851/",
+      "kanoonQuery": "Pritam Singh v. State AIR 1950 SC 169",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c128",
+      "sections": [
+        "137",
+        "142"
+      ],
+      "name": "Rupa Ashok Hurra v. Ashok Hurra",
+      "cite": "(2002) 4 SCC 388",
+      "year": 2002,
+      "court": "Supreme Court of India",
+      "ratio": "A curative petition -- beyond a review under Article 137 -- may be entertained by the Supreme Court in exercise of its inherent power to prevent abuse of process and cure a gross miscarriage of justice, but only where the petitioner shows a violation of natural justice or bias, that the same ground was taken in the review petition and dismissed without detailed reasons, and the petition carries a senior advocate's certification; it is to be considered first by the three senior-most judges together with the original bench where feasible.",
+      "url": "https://indiankanoon.org/doc/1201968/",
+      "kanoonQuery": "Rupa Ashok Hurra v. Ashok Hurra (2002) 4 SCC 388",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c129",
+      "sections": [
+        "141"
+      ],
+      "name": "Union of India v. Raghubir Singh",
+      "cite": "(1989) 2 SCC 754",
+      "year": 1989,
+      "court": "Supreme Court of India",
+      "ratio": "Under Article 141, the law declared by the Supreme Court binds all courts, and a Bench of a certain strength is ordinarily bound by the decision of a Bench of co-equal or larger strength; a smaller Bench cannot disagree with the view of a larger Bench, but doctrine of binding precedent does not prevent the Court itself, sitting in an appropriately constituted larger Bench, from reconsidering an earlier view for the organic development of the law.",
+      "url": "https://indiankanoon.org/doc/505842/",
+      "kanoonQuery": "Union of India v. Raghubir Singh (1989) 2 SCC 754",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c130",
+      "sections": [
+        "142"
+      ],
+      "name": "Union Carbide Corporation v. Union of India",
+      "cite": "(1991) 4 SCC 584",
+      "year": 1991,
+      "court": "Supreme Court of India",
+      "ratio": "Upholding the 1989 Bhopal gas-tragedy settlement, the Court held that its power under Article 142 to do 'complete justice' is not confined by statutory limits and can be used to fashion remedies not otherwise expressly provided by law, including approving an overall compensation settlement, though this residuary power cannot be used to override express statutory prohibitions on a subject specifically dealt with by law.",
+      "url": "https://indiankanoon.org/doc/27098883/",
+      "kanoonQuery": "Union Carbide Corporation v. Union of India (1991) 4 SCC 584",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c131",
+      "sections": [
+        "142"
+      ],
+      "name": "Supreme Court Bar Association v. Union of India",
+      "cite": "(1998) 4 SCC 409",
+      "year": 1998,
+      "court": "Supreme Court of India",
+      "ratio": "The Supreme Court's power under Article 142 to do complete justice cannot be used to award a punishment -- such as suspending an advocate's licence to practise -- that is not within its contempt jurisdiction and is instead exclusively vested in the Bar Councils under the Advocates Act; complete-justice power supplements but does not supplant an existing specific statutory regime.",
+      "url": "https://indiankanoon.org/doc/1666530/",
+      "kanoonQuery": "Supreme Court Bar Association v. Union of India (1998) 4 SCC 409",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c132",
+      "sections": [
+        "32",
+        "226",
+        "227",
+        "323A"
+      ],
+      "name": "L. Chandra Kumar v. Union of India",
+      "cite": "(1997) 3 SCC 261",
+      "year": 1997,
+      "court": "Supreme Court of India",
+      "ratio": "Articles 323A and 323B (which allow Parliament/State legislatures to set up administrative tribunals) are constitutionally valid, but any provision in them or their enabling statutes that excludes the power of judicial review of the High Courts under Articles 226/227 or the Supreme Court under Article 32 over tribunal decisions is unconstitutional, since that power is part of the basic structure; a litigant aggrieved by a tribunal's order must first approach the relevant High Court's Division Bench before the Supreme Court under Article 136.",
+      "url": "https://indiankanoon.org/doc/1152518/",
+      "kanoonQuery": "L. Chandra Kumar v. Union of India (1997) 3 SCC 261",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c133",
+      "sections": [
+        "226"
+      ],
+      "name": "Whirlpool Corporation v. Registrar of Trade Marks",
+      "cite": "(1998) 8 SCC 1",
+      "year": 1998,
+      "court": "Supreme Court of India",
+      "ratio": "The existence of an alternative statutory remedy is not an absolute bar to the High Court's writ jurisdiction under Article 226; it may still be exercised where the impugned order is wholly without jurisdiction, where there is a violation of the principles of natural justice, or where the vires of an Act is under challenge.",
+      "url": "https://indiankanoon.org/doc/1885496/",
+      "kanoonQuery": "Whirlpool Corporation v. Registrar of Trade Marks (1998) 8 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c134",
+      "sections": [
+        "227"
+      ],
+      "name": "Waryam Singh v. Amarnath",
+      "cite": "AIR 1954 SC 215",
+      "year": 1954,
+      "court": "Supreme Court of India",
+      "ratio": "The power of superintendence conferred on the High Court by Article 227 extends to all courts and tribunals throughout the territory over which it exercises jurisdiction and is not confined merely to administrative superintendence; it includes the power to keep subordinate courts and tribunals within the bounds of their authority, exercisable to correct gross errors of jurisdiction.",
+      "url": "https://indiankanoon.org/doc/1740954/",
+      "kanoonQuery": "Waryam Singh v. Amarnath AIR 1954 SC 215",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c135",
+      "sections": [
+        "233"
+      ],
+      "name": "Chandra Mohan v. State of Uttar Pradesh",
+      "cite": "AIR 1966 SC 1987",
+      "year": 1966,
+      "court": "Supreme Court of India",
+      "ratio": "Under Article 233, appointments to the post of District Judge must be made by the Governor only from among persons already in the judicial service or advocates/pleaders of at least seven years' standing recommended by the High Court; a State rule allowing 'judicial officers' from the executive branch to be appointed District Judges outside these two sources was struck down as unconstitutional.",
+      "url": "https://indiankanoon.org/doc/806713/",
+      "kanoonQuery": "Chandra Mohan v. State of Uttar Pradesh AIR 1966 SC 1987",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c136",
+      "sections": [
+        "239AA"
+      ],
+      "name": "State (NCT of Delhi) v. Union of India",
+      "cite": "(2018) 8 SCC 501",
+      "year": 2018,
+      "court": "Supreme Court of India",
+      "ratio": "Under Article 239AA, the Lieutenant Governor of Delhi has no independent decision-making power over matters within the Delhi Legislative Assembly's competence (i.e., matters other than police, public order and land) and is bound to act on the aid and advice of the Council of Ministers headed by the Chief Minister; the LG's power to refer a matter to the President is not a general veto and must be used sparingly, on genuine difference of opinion, not as a matter of course.",
+      "url": "https://indiankanoon.org/doc/144413017/",
+      "kanoonQuery": "State (NCT of Delhi) v. Union of India (2018) 8 SCC 501",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c137",
+      "sections": [
+        "239AA"
+      ],
+      "name": "Government of NCT of Delhi v. Union of India (Services case)",
+      "cite": "(2023) 9 SCC 1",
+      "year": 2023,
+      "court": "Supreme Court of India",
+      "ratio": "Continuing the 2018 ruling, a five-judge bench held that the Government of NCT of Delhi has legislative and executive control over 'services' (administrative officers posted to Delhi) under Article 239AA, except in respect of public order, police and land, which remain with the Union; control over services otherwise vests with the elected Delhi government, not the Lieutenant Governor acting independently.",
+      "url": "https://indiankanoon.org/doc/196253171/",
+      "kanoonQuery": "Government of NCT of Delhi v. Union of India (Services case) (2023) 9 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c138",
+      "sections": [
+        "243D",
+        "243T"
+      ],
+      "name": "K. Krishna Murthy v. Union of India",
+      "cite": "(2010) 7 SCC 202",
+      "year": 2010,
+      "court": "Supreme Court of India",
+      "ratio": "Reservation of seats and chairperson posts for backward classes in Panchayats and Municipalities under Articles 243D and 243T is constitutionally permissible, but such reservation (combined with SC/ST reservation) cannot ordinarily exceed the 50% ceiling laid down in Indra Sawhney, and States must collect empirical data on backwardness and inadequacy of representation specific to local bodies before providing for it, rather than mechanically extending state-level OBC lists.",
+      "url": "https://indiankanoon.org/doc/1451338/",
+      "kanoonQuery": "K. Krishna Murthy v. Union of India (2010) 7 SCC 202",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c139",
+      "sections": [
+        "243ZH",
+        "243ZI",
+        "243ZR"
+      ],
+      "name": "Union of India v. Rajendra N. Shah",
+      "cite": "(2021) 7 SCC 1",
+      "year": 2021,
+      "court": "Supreme Court of India",
+      "ratio": "The 97th Constitutional Amendment inserting Part IXB (cooperative societies) dealt with an entry falling exclusively within the State List, so it required ratification by at least one-half of State Legislatures under the proviso to Article 368(2); since it was not so ratified, Part IXB was struck down as unconstitutional insofar as it applied to State cooperative societies, though the parts of it governing multi-State cooperative societies were severed and upheld.",
+      "url": "https://indiankanoon.org/doc/117721227/",
+      "kanoonQuery": "Union of India v. Rajendra N. Shah (2021) 7 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c140",
+      "sections": [
+        "246",
+        "248",
+        "245"
+      ],
+      "name": "Union of India v. H.S. Dhillon",
+      "cite": "(1971) 2 SCC 779",
+      "year": 1971,
+      "court": "Supreme Court of India",
+      "ratio": "Parliament's 1969 amendment including agricultural land within the definition of 'assets' for wealth tax was upheld: since the tax was a tax on the net wealth of a person and not a tax on land as such, it fell outside Entry 49 of the State List and was validly enacted under Parliament's residuary power (Entry 97, List I and Article 248); to test Parliament's competence under the residuary power, a law need only be shown to be outside all three lists, not shown to be affirmatively within a specific Union List entry.",
+      "url": "https://indiankanoon.org/doc/1235907/",
+      "kanoonQuery": "Union of India v. H.S. Dhillon (1971) 2 SCC 779",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c141",
+      "sections": [
+        "254"
+      ],
+      "name": "M. Karunanidhi v. Union of India",
+      "cite": "(1979) 3 SCC 431",
+      "year": 1979,
+      "court": "Supreme Court of India",
+      "ratio": "Repugnancy under Article 254 arises only where the provisions of a Central law and a State law on a Concurrent List subject are so directly inconsistent that both cannot stand together, or where the Central law is intended to be a complete and exhaustive code occupying the field; the mere possibility of overlap or similarity in language, without a real and irreconcilable conflict, does not make the State law repugnant and void.",
+      "url": "https://indiankanoon.org/doc/1716282/",
+      "kanoonQuery": "M. Karunanidhi v. Union of India (1979) 3 SCC 431",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c142",
+      "sections": [
+        "254"
+      ],
+      "name": "Deep Chand v. State of Uttar Pradesh",
+      "cite": "AIR 1959 SC 648",
+      "year": 1959,
+      "court": "Supreme Court of India",
+      "ratio": "Where a State law on a Concurrent List subject (nationalising road transport) is directly repugnant to a subsequently enacted Central law occupying the same field, the State law becomes void to the extent of the repugnancy under Article 254(1); being a post-Constitution law, it is void ab initio to that extent rather than merely 'eclipsed', a doctrine that applies only to pre-Constitution laws inconsistent with fundamental rights.",
+      "url": "https://indiankanoon.org/doc/570453/",
+      "kanoonQuery": "Deep Chand v. State of Uttar Pradesh AIR 1959 SC 648",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c143",
+      "sections": [
+        "254"
+      ],
+      "name": "Zaverbhai Amaidas v. State of Bombay",
+      "cite": "AIR 1954 SC 752",
+      "year": 1954,
+      "court": "Supreme Court of India",
+      "ratio": "Where Parliament, after a State Act was enacted with Presidential assent, itself legislates on the same matter and prescribes a different (here, lesser) punishment for the same offence, the two enactments become repugnant under Article 254 to the extent of the inconsistency and the State provision must yield, because Parliament's later, comprehensive treatment of the subject shows an intention to be the sole law on the field.",
+      "url": "https://indiankanoon.org/doc/345466/",
+      "kanoonQuery": "Zaverbhai Amaidas v. State of Bombay AIR 1954 SC 752",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c144",
+      "sections": [
+        "253",
+        "3"
+      ],
+      "name": "Maganbhai Ishwarbhai Patel v. Union of India",
+      "cite": "(1970) 3 SCC 400",
+      "year": 1969,
+      "court": "Supreme Court of India",
+      "ratio": "Implementing an international arbitral award that merely settles a disputed/undefined boundary (as opposed to ceding defined Indian territory to a foreign state) does not require a constitutional amendment under Article 368 or legislation under Article 3, and can be given effect to by the Union executive under Article 253/73; cession of clearly Indian territory, by contrast, does require a constitutional amendment.",
+      "url": "https://indiankanoon.org/doc/1310955/",
+      "kanoonQuery": "Maganbhai Ishwarbhai Patel v. Union of India (1970) 3 SCC 400",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c145",
+      "sections": [
+        "1",
+        "3",
+        "368",
+        "preamble"
+      ],
+      "name": "In re Berubari Union and Exchange of Enclaves",
+      "cite": "AIR 1960 SC 845",
+      "year": 1960,
+      "court": "Supreme Court of India",
+      "ratio": "Answering a Presidential reference under Article 143, an eight-judge bench held that implementing the India-Pakistan agreement to transfer the Berubari Union and exchange enclaves amounts to cession of Indian territory, which cannot be done merely by ordinary legislation under Article 3; it requires a constitutional amendment under Article 368. The Court also observed, in passing, that the Preamble is not a part of the Constitution and is not by itself a source of substantive power (a view later revisited by Kesavananda Bharati, which held the Preamble is part of the Constitution and reflects its basic structure).",
+      "url": "https://indiankanoon.org/doc/1120103/",
+      "kanoonQuery": "In re Berubari Union and Exchange of Enclaves AIR 1960 SC 845",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c146",
+      "sections": [
+        "3"
+      ],
+      "name": "Babulal Parate v. State of Bombay",
+      "cite": "AIR 1960 SC 51",
+      "year": 1960,
+      "court": "Supreme Court of India",
+      "ratio": "The proviso to Article 3 requires that a State Legislature be given the opportunity to express its views on a Bill affecting its area/boundaries as originally introduced, but if Parliament later amends the Bill, there is no further constitutional requirement to send it back to the State Legislature for fresh views on the amended proposal; the States Reorganisation Act, 1956 was accordingly upheld as validly enacted.",
+      "url": "https://indiankanoon.org/doc/690805/",
+      "kanoonQuery": "Babulal Parate v. State of Bombay AIR 1960 SC 51",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c147",
+      "sections": [
+        "3",
+        "4"
+      ],
+      "name": "Mangal Singh v. Union of India",
+      "cite": "AIR 1967 SC 944",
+      "year": 1966,
+      "court": "Supreme Court of India",
+      "ratio": "Parliament's power under Article 3 to form a new State or alter boundaries includes ancillary power under Article 4 to make supplemental and incidental provisions -- including giving the new States of Punjab and Haryana different legislative structures (bicameral and unicameral respectively) -- and such incidental provisions in a reorganisation Act are not open to challenge merely because they create some difference in the new States' constitutional setup.",
+      "url": "https://indiankanoon.org/doc/1672729/",
+      "kanoonQuery": "Mangal Singh v. Union of India AIR 1967 SC 944",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c148",
+      "sections": [
+        "356",
+        "355"
+      ],
+      "name": "Sarbananda Sonowal v. Union of India",
+      "cite": "(2005) 5 SCC 665",
+      "year": 2005,
+      "court": "Supreme Court of India",
+      "ratio": "The Illegal Migrants (Determination by Tribunals) Act, 1983, which applied only to Assam and made it disproportionately difficult to identify and deport illegal migrants compared to the Foreigners Act, 1946 applicable elsewhere, was struck down as unconstitutional; the influx of illegal migrants into Assam was held to constitute 'external aggression and internal disturbance' under Article 355, casting a duty on the Union to protect the State, which the IMDT Act's weak procedure defeated.",
+      "url": "https://indiankanoon.org/doc/907725/",
+      "kanoonQuery": "Sarbananda Sonowal v. Union of India (2005) 5 SCC 665",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c149",
+      "sections": [
+        "301",
+        "303",
+        "304"
+      ],
+      "name": "Automobile Transport (Rajasthan) Ltd. v. State of Rajasthan",
+      "cite": "AIR 1962 SC 1406",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "A tax that is compensatory or regulatory in nature -- that is, one that is a fair recompense for the use of facilities like roads that the State provides to traders and carriers -- does not amount to a restriction on the freedom of trade, commerce and intercourse under Article 301, even without complying with the safeguards in Article 304(b); the Rajasthan Motor Vehicles Taxation Act was upheld on this basis. (Note: the separate 'compensatory tax' category this case created was later overruled by the nine-judge Jindal Stainless bench in 2016, which held ordinary non-discriminatory taxation does not need to meet a special compensatory test at all.)",
+      "url": "https://indiankanoon.org/doc/304499/",
+      "kanoonQuery": "Automobile Transport (Rajasthan) Ltd. v. State of Rajasthan AIR 1962 SC 1406",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c150",
+      "sections": [
+        "301"
+      ],
+      "name": "Atiabari Tea Co. Ltd. v. State of Assam",
+      "cite": "AIR 1961 SC 232",
+      "year": 1960,
+      "court": "Supreme Court of India",
+      "ratio": "A tax that directly and immediately restricts the free movement of trade, commerce and intercourse across State lines -- here, a tax on goods carried by road or inland waterway, levied simply because the goods crossed the State -- falls within Article 301's guarantee and is invalid unless it satisfies Article 304(b)'s conditions (previous Presidential sanction and reasonableness); a tax that only indirectly or remotely affects trade is not caught by Article 301.",
+      "url": "https://indiankanoon.org/doc/514162/",
+      "kanoonQuery": "Atiabari Tea Co. Ltd. v. State of Assam AIR 1961 SC 232",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c151",
+      "sections": [
+        "301",
+        "303",
+        "304"
+      ],
+      "name": "Jindal Stainless Ltd. v. State of Haryana",
+      "cite": "(2017) 12 SCC 1",
+      "year": 2016,
+      "court": "Supreme Court of India",
+      "ratio": "A nine-judge bench overruled the 'compensatory tax' doctrine created in Atiabari and Automobile Transport: a non-discriminatory tax (such as an entry tax on goods brought from other States, so long as it does not discriminate against imported goods in favour of similar local goods) does not per se violate Article 301, and States need not separately prove the tax is compensatory to justify it; Article 304(a) permits such non-discriminatory taxation without the Article 304(b)/Presidential-sanction route.",
+      "url": "https://indiankanoon.org/doc/141946357/",
+      "kanoonQuery": "Jindal Stainless Ltd. v. State of Haryana (2017) 12 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c152",
+      "sections": [
+        "299"
+      ],
+      "name": "Bhikraj Jaipuria v. Union of India",
+      "cite": "AIR 1962 SC 113",
+      "year": 1961,
+      "court": "Supreme Court of India",
+      "ratio": "A contract made on behalf of the Government must comply with the formal requirements now in Article 299(1) -- expressed to be made in the name of the President/Governor and executed by a duly authorised person -- and a contract that does not comply with these mandatory formalities is not enforceable against the Government, even if the Government has in substance agreed to its terms.",
+      "url": "https://indiankanoon.org/doc/132533/",
+      "kanoonQuery": "Bhikraj Jaipuria v. Union of India AIR 1962 SC 113",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c153",
+      "sections": [
+        "300"
+      ],
+      "name": "State of Rajasthan v. Vidhyawati",
+      "cite": "AIR 1962 SC 933",
+      "year": 1962,
+      "court": "Supreme Court of India",
+      "ratio": "The State is vicariously liable, like any other employer, for the tortious acts of its servants committed in the course of and incidental to their employment -- here, a government driver's negligent driving of an official jeep -- even though the old immunity for acts done in exercise of 'sovereign functions' inherited from the East India Company era might otherwise have been claimed; Article 300 allows the State to be sued in the same manner as it could have been before the Constitution, subject to this ordinary vicarious liability.",
+      "url": "https://indiankanoon.org/doc/1765956/",
+      "kanoonQuery": "State of Rajasthan v. Vidhyawati AIR 1962 SC 933",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c154",
+      "sections": [
+        "300"
+      ],
+      "name": "Kasturilal Ralia Ram Jain v. State of Uttar Pradesh",
+      "cite": "AIR 1965 SC 1039",
+      "year": 1964,
+      "court": "Supreme Court of India",
+      "ratio": "The State is not liable in tort for the negligence of its police officers where the negligent act (here, misappropriation of goods seized and held in police custody) was done in the exercise of a sovereign function -- the power of arrest and seizure -- even though the individual officers may be personally liable; this narrower sovereign-immunity exception has been much criticised and increasingly confined in later cases, but Kasturilal itself was never formally overruled.",
+      "url": "https://indiankanoon.org/doc/1199558/",
+      "kanoonQuery": "Kasturilal Ralia Ram Jain v. State of Uttar Pradesh AIR 1965 SC 1039",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c155",
+      "sections": [
+        "300A"
+      ],
+      "name": "Jilubhai Nanbhai Khachar v. State of Gujarat",
+      "cite": "1995 Supp (1) SCC 596",
+      "year": 1994,
+      "court": "Supreme Court of India",
+      "ratio": "The right to property under Article 300A is only a constitutional/legal right, not a fundamental right and not part of the basic structure; a person can be deprived of property only by authority of a validly enacted law, but once such a law exists and is followed, the adequacy of compensation is not open to the same judicial scrutiny as it would be for a fundamental right.",
+      "url": "https://indiankanoon.org/doc/1515136/",
+      "kanoonQuery": "Jilubhai Nanbhai Khachar v. State of Gujarat 1995 Supp (1) SCC 596",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c156",
+      "sections": [
+        "300A"
+      ],
+      "name": "K.T. Plantation Pvt. Ltd. v. State of Karnataka",
+      "cite": "(2011) 9 SCC 1",
+      "year": 2011,
+      "court": "Supreme Court of India",
+      "ratio": "Even though Article 300A does not guarantee a fixed quantum of compensation as a fundamental right, a law depriving a person of property must still provide for some determination of compensation through a fair and reasonable procedure and cannot be arbitrary or illusory; total exclusion of any right to compensation or an utterly whimsical amount could render the deprivation unconstitutional as violating Article 14 or the rule of law, even where Article 300A itself is satisfied.",
+      "url": "https://indiankanoon.org/doc/1524072/",
+      "kanoonQuery": "K.T. Plantation Pvt. Ltd. v. State of Karnataka (2011) 9 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c157",
+      "sections": [
+        "300A",
+        "21"
+      ],
+      "name": "Vidya Devi v. State of Himachal Pradesh",
+      "cite": "(2020) 2 SCC 569",
+      "year": 2020,
+      "court": "Supreme Court of India",
+      "ratio": "The State cannot take possession of a citizen's land for a public purpose (here, road construction) for decades without initiating formal acquisition proceedings or paying compensation, and cannot rely on adverse possession to defeat the owner's title; such a taking without following due process violates Article 300A (and implicates Article 21's due-process guarantee), and the right to property, though no longer a fundamental right, remains a basic human and constitutional right.",
+      "url": "https://indiankanoon.org/doc/127924004/",
+      "kanoonQuery": "Vidya Devi v. State of Himachal Pradesh (2020) 2 SCC 569",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c158",
+      "sections": [
+        "310",
+        "311"
+      ],
+      "name": "Union of India v. Tulsiram Patel",
+      "cite": "(1985) 3 SCC 398",
+      "year": 1985,
+      "court": "Supreme Court of India",
+      "ratio": "The second proviso to Article 311(2), added by the 42nd Amendment, validly dispenses with the ordinary requirement of a disciplinary inquiry before dismissal, removal or reduction in rank in three defined situations -- conviction on a criminal charge, where it is not reasonably practicable to hold an inquiry, or where the President/Governor is satisfied that holding one is not expedient in the interest of State security; these exceptions do not violate natural justice as a constitutional matter because Article 311(2) itself carves them out.",
+      "url": "https://indiankanoon.org/doc/1134697/",
+      "kanoonQuery": "Union of India v. Tulsiram Patel (1985) 3 SCC 398",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c159",
+      "sections": [
+        "311"
+      ],
+      "name": "Parshotam Lal Dhingra v. Union of India",
+      "cite": "AIR 1958 SC 36",
+      "year": 1957,
+      "court": "Supreme Court of India",
+      "ratio": "Whether an order terminating or reverting a government servant attracts the protection of Article 311(2) depends not on its form but on whether it is founded on misconduct and visits the servant with evil consequences (a punitive dismissal/removal/reduction in rank), or is a bona fide exercise of an ordinary power such as termination during probation or reversion from an officiating post, which does not require a prior inquiry even though it may incidentally cause loss of the higher post.",
+      "url": "https://indiankanoon.org/doc/1270113/",
+      "kanoonQuery": "Parshotam Lal Dhingra v. Union of India AIR 1958 SC 36",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c160",
+      "sections": [
+        "315",
+        "316",
+        "320"
+      ],
+      "name": "Ashok Kumar Yadav v. State of Haryana",
+      "cite": "(1985) 4 SCC 417",
+      "year": 1985,
+      "court": "Supreme Court of India",
+      "ratio": "A Public Service Commission's assessment of candidates at a viva voce interview under Article 320 is not ordinarily open to judicial review merely because the marks allotted seem low, and will be interfered with only if the assessment is patently arbitrary; the Court also recommended, as good practice, that the number of candidates called for interview after a written exam should not exceed twice or thrice the number of vacancies, to keep the interview's weight in proportion.",
+      "url": "https://indiankanoon.org/doc/634160/",
+      "kanoonQuery": "Ashok Kumar Yadav v. State of Haryana (1985) 4 SCC 417",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c161",
+      "sections": [
+        "324"
+      ],
+      "name": "Mohinder Singh Gill v. Chief Election Commissioner",
+      "cite": "(1978) 1 SCC 405",
+      "year": 1977,
+      "court": "Supreme Court of India",
+      "ratio": "Article 324 vests the Election Commission with wide residuary power to take all necessary steps -- including cancelling a poll and ordering a fresh one -- to ensure free and fair elections, in situations not expressly covered by the Representation of the People Act or rules made under it, so long as the power is exercised in good faith and consistently with the Act's provisions rather than in conflict with them.",
+      "url": "https://indiankanoon.org/doc/1831036/",
+      "kanoonQuery": "Mohinder Singh Gill v. Chief Election Commissioner (1978) 1 SCC 405",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c162",
+      "sections": [
+        "324"
+      ],
+      "name": "Anoop Baranwal v. Union of India",
+      "cite": "(2023) 6 SCC 161",
+      "year": 2023,
+      "court": "Supreme Court of India",
+      "ratio": "Until Parliament enacts a law under Article 324(2), the Chief Election Commissioner and Election Commissioners shall be appointed by the President on the advice of a committee comprising the Prime Minister, the Leader of the Opposition (or the leader of the largest opposition party) in the Lok Sabha, and the Chief Justice of India, so as to insulate the Election Commission's independence from unilateral executive control. (Note: Parliament subsequently enacted the CEC and Other ECs Act, 2023, replacing the CJI on the selection committee with a Union Cabinet Minister, which is itself under further constitutional challenge.)",
+      "url": "https://indiankanoon.org/doc/56882156/",
+      "kanoonQuery": "Anoop Baranwal v. Union of India (2023) 6 SCC 161",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c163",
+      "sections": [
+        "326",
+        "19"
+      ],
+      "name": "People's Union for Civil Liberties v. Union of India (NOTA)",
+      "cite": "(2013) 10 SCC 1",
+      "year": 2013,
+      "court": "Supreme Court of India",
+      "ratio": "The right to cast a negative vote by choosing 'None of the Above' (NOTA) is part of a voter's right to freedom of expression under Article 19(1)(a), exercised through the electoral process under Article 326; the Election Commission was directed to provide a NOTA option on EVMs and ballot papers, while preserving the voter's right to secrecy about how they voted.",
+      "url": "https://indiankanoon.org/doc/58263027/",
+      "kanoonQuery": "People's Union for Civil Liberties v. Union of India (NOTA) (2013) 10 SCC 1",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c164",
+      "sections": [
+        "326",
+        "329"
+      ],
+      "name": "Jyoti Basu v. Debi Ghosal",
+      "cite": "(1982) 1 SCC 691",
+      "year": 1982,
+      "court": "Supreme Court of India",
+      "ratio": "The right to vote or stand for election is not a common-law or fundamental right but a special statutory right created by the Representation of the People Act, to be exercised strictly within the limits that Act sets; an election dispute is accordingly a creature of and confined to the statute, and non-candidate individuals (such as ministers impleaded in an election petition on allegations of corrupt practice) can be made parties only as the statute permits.",
+      "url": "https://indiankanoon.org/doc/46932/",
+      "kanoonQuery": "Jyoti Basu v. Debi Ghosal (1982) 1 SCC 691",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c165",
+      "sections": [
+        "329"
+      ],
+      "name": "N.P. Ponnuswami v. Returning Officer, Namakkal",
+      "cite": "AIR 1952 SC 64",
+      "year": 1952,
+      "court": "Supreme Court of India",
+      "ratio": "Article 329(b) bars any court, including under Article 226, from interfering with an election -- including the wrongful rejection of a nomination paper -- while the election process is underway; the word 'election' is used in a wide sense covering the entire process from the notification of the election to the declaration of the result, and any grievance about that process must be raised only through an election petition after the election is over.",
+      "url": "https://indiankanoon.org/doc/1612935/",
+      "kanoonQuery": "N.P. Ponnuswami v. Returning Officer, Namakkal AIR 1952 SC 64",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c166",
+      "sections": [
+        "342A",
+        "338B",
+        "15",
+        "16"
+      ],
+      "name": "Jaishri Laxmanrao Patil v. Chief Minister",
+      "cite": "(2021) 8 SCC 1",
+      "year": 2021,
+      "court": "Supreme Court of India",
+      "ratio": "Maharashtra's law granting a separate 16% reservation to the Maratha community, over and above existing quotas, was struck down as unconstitutional for breaching the 50% ceiling from Indra Sawhney without any extraordinary circumstance justifying an exception; the Court also held that after the 102nd Amendment (inserting Articles 338B and 342A), only the President (through a notification, with Parliament able to amend the list) -- not the States -- can identify socially and educationally backward classes for the purposes of the Central list, though this holding on State power was later reversed by the 105th Amendment restoring States' power to maintain their own SEBC lists.",
+      "url": "https://indiankanoon.org/doc/189806642/",
+      "kanoonQuery": "Jaishri Laxmanrao Patil v. Chief Minister (2021) 8 SCC 1",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c167",
+      "sections": [
+        "341",
+        "342"
+      ],
+      "name": "State of Maharashtra v. Milind",
+      "cite": "(2001) 1 SCC 4",
+      "year": 2000,
+      "court": "Supreme Court of India",
+      "ratio": "Only communities specifically and expressly notified in the President's Order under Articles 341/342 (as later amended by Parliament) are recognised as Scheduled Castes or Scheduled Tribes; courts, State authorities and tribunals cannot hold an inquiry to include a sub-caste or sub-tribe (such as 'Halba Koshti' under the notified 'Halba/Halbi' entry) that is not itself expressly named in the Order, however similar it may be to a notified community.",
+      "url": "https://indiankanoon.org/doc/678652/",
+      "kanoonQuery": "State of Maharashtra v. Milind (2001) 1 SCC 4",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c168",
+      "sections": [
+        "350A",
+        "29",
+        "19"
+      ],
+      "name": "State of Karnataka v. Associated Management of English Medium Primary and Secondary Schools",
+      "cite": "(2014) 9 SCC 485",
+      "year": 2014,
+      "court": "Supreme Court of India",
+      "ratio": "A State government order compelling all recognised primary schools to use the mother tongue or the regional language (Kannada) as the sole medium of instruction was struck down as unconstitutional; the choice of medium of instruction is part of the right of a student (through the parent) to receive information and express themselves under Article 19(1)(a), and of a linguistic minority's rights, and cannot be dictated by the State, though the State can regulate curriculum and standards.",
+      "url": "https://indiankanoon.org/doc/178117024/",
+      "kanoonQuery": "State of Karnataka v. Associated Management of English Medium Primary and Secondary Schools (2014) 9 SCC 485",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c169",
+      "sections": [
+        "358",
+        "359"
+      ],
+      "name": "Makhan Singh v. State of Punjab",
+      "cite": "AIR 1964 SC 381",
+      "year": 1963,
+      "court": "Supreme Court of India",
+      "ratio": "A Presidential Order under Article 359 suspending the right to move any court for enforcement of specified fundamental rights (here, Articles 21 and 22) during a proclaimed Emergency bars a detenu from challenging their detention on the ground that it contravenes those specific rights, but does not bar a challenge on grounds outside the Order altogether, such as that the detaining authority acted mala fide, outside its statutory power, or under a law not made in good faith.",
+      "url": "https://indiankanoon.org/doc/109655125/",
+      "kanoonQuery": "Makhan Singh v. State of Punjab AIR 1964 SC 381",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c170",
+      "sections": [
+        "370"
+      ],
+      "name": "Sampat Prakash v. State of Jammu and Kashmir",
+      "cite": "AIR 1969 SC 1153",
+      "year": 1968,
+      "court": "Supreme Court of India",
+      "ratio": "The power under Article 370(1) to apply provisions of the Constitution to Jammu and Kashmir with modifications, exercised through Presidential Orders, continues to be validly exercisable even after the State's Constituent Assembly (contemplated by the proviso to Article 370(3)) had dissolved; the Article did not become spent or inoperable merely because the body originally meant to be consulted no longer existed, since Article 370 itself remained part of the Constitution.",
+      "url": "https://indiankanoon.org/doc/1573666/",
+      "kanoonQuery": "Sampat Prakash v. State of Jammu and Kashmir AIR 1969 SC 1153",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c171",
+      "sections": [
+        "370",
+        "app2",
+        "app3"
+      ],
+      "name": "In re Article 370 of the Constitution",
+      "cite": "2023 INSC 1058",
+      "year": 2023,
+      "court": "Supreme Court of India",
+      "ratio": "A five-judge Constitution Bench unanimously upheld the President's 2019 orders abrogating the special status of Jammu and Kashmir under Article 370 and applying the entire Constitution of India to the former State; it held that Article 370 was always a temporary/transitional provision meant to facilitate integration, that the President could exercise the power under Article 370(3) even without the Constituent Assembly's concurrence once that body had ceased to exist, and it did not rule on the separate legal challenge to bifurcating the State into two Union Territories, treating that as a distinct issue.",
+      "url": "https://indiankanoon.org/doc/77326406/",
+      "kanoonQuery": "In re Article 370 of the Constitution 2023 INSC 1058",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c172",
+      "sections": [
+        "13",
+        "372"
+      ],
+      "name": "Keshav Madhav Menon v. State of Bombay",
+      "cite": "AIR 1951 SC 128",
+      "year": 1951,
+      "court": "Supreme Court of India",
+      "ratio": "Article 13(1) operates prospectively: a pre-Constitution law inconsistent with a fundamental right becomes void only from the date the Constitution commenced (26 January 1950) and only to the extent of the inconsistency, and does not retroactively wipe out things done, or proceedings validly initiated, under that law before the Constitution came into force; a criminal prosecution begun before that date under such a law could therefore continue.",
+      "url": "https://indiankanoon.org/doc/656658/",
+      "kanoonQuery": "Keshav Madhav Menon v. State of Bombay AIR 1951 SC 128",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c173",
+      "sections": [
+        "13"
+      ],
+      "name": "Bhikaji Narain Dhakras v. State of Madhya Pradesh",
+      "cite": "AIR 1955 SC 781",
+      "year": 1955,
+      "court": "Supreme Court of India",
+      "ratio": "Established the doctrine of eclipse: a pre-Constitution law inconsistent with a fundamental right is not wiped out but becomes unenforceable ('eclipsed') only against citizens to the extent of the inconsistency; if the relevant fundamental right is later removed or amended (here, by nationalising motor transport, taking the law's operation into a field no longer protected as a citizen's right), the law is freed from the shadow and becomes fully operative again without needing to be re-enacted.",
+      "url": "https://indiankanoon.org/doc/762155/",
+      "kanoonQuery": "Bhikaji Narain Dhakras v. State of Madhya Pradesh AIR 1955 SC 781",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c174",
+      "sections": [
+        "sch5-5",
+        "244"
+      ],
+      "name": "Samatha v. State of Andhra Pradesh",
+      "cite": "(1997) 8 SCC 191",
+      "year": 1997,
+      "court": "Supreme Court of India",
+      "ratio": "Government land, forest land and tribal-owned land in Scheduled Areas under the Fifth Schedule cannot be leased to non-tribal persons or private companies for mining; such leases were declared null and void, and mining in these Scheduled Areas may be carried on only through State-run corporations or tribal cooperatives, in order to protect tribal ownership and self-governance over land as intended by the Fifth Schedule and Article 244.",
+      "url": "https://indiankanoon.org/doc/1969682/",
+      "kanoonQuery": "Samatha v. State of Andhra Pradesh (1997) 8 SCC 191",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c175",
+      "sections": [
+        "preamble"
+      ],
+      "name": "Life Insurance Corporation of India v. Consumer Education and Research Centre",
+      "cite": "(1995) 5 SCC 482",
+      "year": 1995,
+      "court": "Supreme Court of India",
+      "ratio": "LIC, as a State instrumentality under Article 12, must exercise its power to frame insurance policy terms consistently with the constitutional goals of social and economic justice reflected in the Preamble and the Directive Principles; a policy condition (Table 58) that arbitrarily excluded persons not in organised-sector employment from a low-premium policy was struck down as unreasonable, discriminatory and violative of Article 14.",
+      "url": "https://indiankanoon.org/doc/1513693/",
+      "kanoonQuery": "Life Insurance Corporation of India v. Consumer Education and Research Centre (1995) 5 SCC 482",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c176",
+      "sections": [
+        "12",
+        "32"
+      ],
+      "name": "Zee Telefilms Ltd. v. Union of India",
+      "cite": "(2005) 4 SCC 649",
+      "year": 2005,
+      "court": "Supreme Court of India",
+      "ratio": "The Board of Control for Cricket in India (BCCI), despite enjoying a de facto monopoly over cricket and performing functions with a public character, is not financially, functionally or administratively controlled by the government and is therefore not 'State' or 'other authority' under Article 12; it is not amenable to writ jurisdiction under Article 32, though its public functions may still be challengeable before a High Court under the wider Article 226.",
+      "url": "https://indiankanoon.org/doc/404603/",
+      "kanoonQuery": "Zee Telefilms Ltd. v. Union of India (2005) 4 SCC 649",
+      "citeConfidence": "check",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    },
+    {
+      "id": "c177",
+      "sections": [
+        "32",
+        "124",
+        "222"
+      ],
+      "name": "S.P. Gupta v. Union of India (First Judges case)",
+      "cite": "1981 Supp SCC 87",
+      "year": 1981,
+      "court": "Supreme Court of India",
+      "ratio": "'Consultation' with the Chief Justice of India under Articles 124 and 222 for judicial appointments and transfers does not mean 'concurrence'; the executive's view prevails in case of disagreement, giving the government primacy over the judiciary in appointments (a position overruled by the Second Judges case in 1993). The judgment separately liberalised locus standi, holding that any public-spirited citizen or group can invoke Article 32 on behalf of persons unable to approach the Court themselves, laying the foundation for public interest litigation in India.",
+      "url": "https://indiankanoon.org/doc/112850760/",
+      "kanoonQuery": "S.P. Gupta v. Union of India (First Judges case) 1981 Supp SCC 87",
+      "citeConfidence": "high",
+      "status": "verified",
+      "verifiedOn": "2026-09-21"
+    }
+  ],
+  "verifiedCount": 177
+}
