@@ -1436,6 +1436,36 @@ Acts convention (there never has been one for HMA/HMGA/HSA/etc. either) — inte
 checked manually: a duplicate/missing-id script confirmed all 30 `HAMA-1`…`HAMA-30` ids
 are present exactly once before the build was run.
 
+## Previous/Next section navigation
+Added a `SectionNavigation` bar (top and bottom of the section view) that steps to the
+adjacent section in display order, plus Left/Right arrow-key shortcuts (disabled while
+typing in the notes textarea or any input). Delivered as a standalone `SectionNavigation.jsx`
+component file with no accompanying instructions; adapted and merged inline into `App.jsx`
+(as `useAdjacentSections` + `SectionNavigation`, right before `BareActNavigator`) rather
+than kept as a separate file, matching how every other UI piece in this app lives in the
+one file — only the data layer (Constitution) has ever used separate files here.
+
+Works by array position, not by parsing the id, so it handles every id shape already in
+this app (`"21A"`, `"243ZH"`, `"sch7-I"`, `"HAMA-9"`) without special-casing. For the
+BNS-style acts it's fed `actSections` (already scoped to the selected act and in display
+order); for the Constitution it's fed `CONSTITUTION_SECTIONS` directly, calling
+`goToConstitution`/`goTo` respectively so it reuses the app's existing navigation
+handlers rather than adding a new code path.
+
+One real bug caught before shipping: the component's own default label function reused
+this app's `sectionNumber()` helper, which strips everything up to the first `-` in an id
+— correct for stripping an act prefix like `"HAMA-"`, but wrong for a Constitution id
+like `"sch7-I"`, which would have shown as just "I" instead of "Seventh Schedule — List
+I". Fixed by adding a `defaultSectionNavLabel` that uses the Constitution's own `label`
+field (`"Article 21"`, `"Seventh Schedule — List I (Union List)"`, etc.) when present,
+falling back to `sectionNumber()` + title only for the acts that don't have one.
+
+Verified with Playwright against a production build (`vite preview`): both nav bars
+render, Previous is disabled on the first section of an act and Next on the last, click
+navigation and ArrowLeft/ArrowRight both advance and update the visible heading, and
+Constitution labels render correctly across Preamble → Article 1 → Article 2 → Article
+2A → Article 3 (confirming both array-order correctness and the label fix above).
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

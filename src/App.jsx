@@ -7088,6 +7088,75 @@ function renderWithDefs(text, onOpenDef) {
   });
 }
 
+/* Finds the previous/next section in an act's section list relative to the one
+ * currently being viewed. Works by array position, not by parsing the id as a
+ * number, so it correctly handles ids like "21A", "243ZH", "sch1-I", "app2",
+ * and act-prefixed ids like "HAMA-9" without any special-casing. */
+function useAdjacentSections(sections, currentId, skip) {
+  return useMemo(() => {
+    const index = sections.findIndex((s) => s.id === currentId);
+    if (index === -1) return { prev: null, next: null };
+    const shouldSkip = skip || (() => false);
+    let p = index - 1;
+    while (p >= 0 && shouldSkip(sections[p])) p--;
+    let n = index + 1;
+    while (n < sections.length && shouldSkip(sections[n])) n++;
+    return { prev: p >= 0 ? sections[p] : null, next: n < sections.length ? sections[n] : null };
+  }, [sections, currentId, skip]);
+}
+
+// Constitution sections already carry a display-ready `label` (e.g. "Article 21",
+// "Seventh Schedule — List I (Union List)") which sectionNumber() would mangle
+// (it strips everything up to the first "-", turning "sch7-I" into just "I"),
+// so use it directly when present; the BNS-style acts only ever have `title`.
+function defaultSectionNavLabel(s) {
+  if (s.label) return s.label;
+  return s.title ? `${sectionNumber(s.id)}. ${s.title}` : sectionNumber(s.id);
+}
+
+// Previous/Next bar for moving through a section list without going back to the
+// sidebar. `sections` must already be scoped to the current act (actSections for
+// the BNS-style acts, CONSTITUTION_SECTIONS for the Constitution) and in display
+// order. Left/Right arrow keys also move between sections, unless the person is
+// typing in the notes box or another input.
+function SectionNavigation({ sections, currentId, onNavigate, skip, labelFor = defaultSectionNavLabel }) {
+  const { prev, next } = useAdjacentSections(sections, currentId, skip);
+
+  useEffect(() => {
+    function handleKey(e) {
+      const tag = (e.target && e.target.tagName) || "";
+      if (tag === "TEXTAREA" || tag === "INPUT") return;
+      if (e.key === "ArrowLeft" && prev) onNavigate(prev.id);
+      if (e.key === "ArrowRight" && next) onNavigate(next.id);
+    }
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, [prev, next, onNavigate]);
+
+  return (
+    <div className="section-nav" role="navigation" aria-label="Section navigation">
+      <button
+        type="button"
+        className="section-nav-btn section-nav-prev"
+        disabled={!prev}
+        onClick={() => prev && onNavigate(prev.id)}
+        title={prev ? `Previous: ${labelFor(prev)}` : "This is the first section"}
+      >
+        ← {prev ? labelFor(prev) : "Previous"}
+      </button>
+      <button
+        type="button"
+        className="section-nav-btn section-nav-next"
+        disabled={!next}
+        onClick={() => next && onNavigate(next.id)}
+        title={next ? `Next: ${labelFor(next)}` : "This is the last section"}
+      >
+        {next ? labelFor(next) : "Next"} →
+      </button>
+    </div>
+  );
+}
+
 export default function BareActNavigator() {
   const [selectedAct, setSelectedAct] = useState("BNS");
   const [selectedId, setSelectedId] = useState(14);
@@ -7469,6 +7538,18 @@ export default function BareActNavigator() {
           border-radius: 7px; padding: 6px 13px; cursor: pointer; margin-bottom: 20px;
         }
         .export-btn:hover { background: rgba(124,34,51,0.08); }
+        .section-nav {
+          display: flex; justify-content: space-between; gap: 10px; margin: 0 0 20px;
+        }
+        .section-nav-btn {
+          font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 12.5px; font-weight: 700;
+          background: none; border: 1px solid var(--line); color: var(--ink);
+          border-radius: 7px; padding: 7px 13px; cursor: pointer; max-width: 48%;
+          overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+        }
+        .section-nav-btn:not(:disabled):hover { border-color: var(--gold); color: var(--oxblood-deep); background: rgba(165,129,60,0.08); }
+        .section-nav-btn:disabled { color: var(--ink-soft); opacity: 0.4; cursor: not-allowed; }
+        .section-nav-next { text-align: right; }
         .ingredients-box {
           background: rgba(37,99,80,0.06); border: 1px solid #8ed7bc; border-radius: 10px;
           padding: 14px 16px; margin-bottom: 20px;
@@ -7733,6 +7814,11 @@ export default function BareActNavigator() {
         {isDesktop && <div className="thread" />}
 
         <main className="main" ref={mainRef}>
+          <SectionNavigation
+            sections={isConstitution ? CONSTITUTION_SECTIONS : actSections}
+            currentId={selectedId}
+            onNavigate={isConstitution ? goToConstitution : goTo}
+          />
           {isConstitution ? (
             <ConstitutionSectionView
               s={constitutionSection}
@@ -7929,6 +8015,11 @@ export default function BareActNavigator() {
           </p>
             </>
           )}
+          <SectionNavigation
+            sections={isConstitution ? CONSTITUTION_SECTIONS : actSections}
+            currentId={selectedId}
+            onNavigate={isConstitution ? goToConstitution : goTo}
+          />
         </main>
       </div>
 
