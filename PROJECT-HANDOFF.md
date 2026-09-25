@@ -1466,6 +1466,32 @@ navigation and ArrowLeft/ArrowRight both advance and update the visible heading,
 Constitution labels render correctly across Preamble → Article 1 → Article 2 → Article
 2A → Article 3 (confirming both array-order correctness and the label fix above).
 
+## BNSS plain-English explanation sweep — complete, all 531 of 531 sections
+Added `simpleExplanation` to every BNSS section that lacked one. At the start of this
+pass only 5 of 531 sections had an explanation (from an earlier "enrichment batch 1"
+that also added case law to §§35, 47, 187, 479, 482); by the end all 531 do, across all
+39 chapters (`BNSS-I` through `BNSS-XXXIX`).
+
+Worked chapter by chapter in original statute order: for each chapter, extracted the
+section `text` fields directly from `SECTIONS` in `src/App.jsx` (via a Node one-liner
+that locates the array with bracket-depth matching and evaluates it, rather than
+regex-scraping the file), wrote a plain-English `simpleExplanation` for each section
+grounded strictly in that extracted text (no outside research, no invented facts — where
+a section cross-referenced specific BNS offence-section ranges, e.g. §§33–34's citizen
+reporting-duty list, the actual BNS section titles already in this app's data were looked
+up rather than guessed from memory), validated the batch as parseable JSON, then injected
+it into `App.jsx` with a small reusable script that locates each target section object by
+id and inserts a `simpleExplanation:` field immediately after `text:` — never touching
+`id`, `category`, `title`, `text`, `cases`, or `repealed`. `npm run build` was run after
+every chapter and passed cleanly on the first attempt every time (33 chapters, zero
+build failures, zero data corruption), confirming section counts and spot-checking that
+`text` fields remained byte-identical throughout.
+
+Case law for BNSS was deliberately out of scope for this pass — it remains at 6 case
+objects across 5 sections (the original enrichment batch). Explanation coverage and
+case-law coverage are tracked and delivered as separate passes in this project, the same
+way they were for the Constitution and for HAMA.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
