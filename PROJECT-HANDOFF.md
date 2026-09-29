@@ -1520,6 +1520,55 @@ computed directly from the merged data rather than taken from that description.
 
 `npm run build` passed cleanly after the merge on the first attempt.
 
+## The Registration Act, 1908 (RA) — complete, all 96 of 96 section slots
+Delivered as a standalone `registrationActData.js` module (exporting `REGISTRATION_ACT_META`,
+`REGISTRATION_ACT_PARTS`, `REGISTRATION_ACT_SECTIONS`) plus its own integrity verifier and a
+parse report, the same delivery pattern used for HAMA. As with HAMA, the module-based shape
+in the delivery was not followed as-is — it was merged into the shared `ACTS` / `CHAPTERS` /
+`CATEGORIES` / `SECTIONS` schema in `App.jsx`, matching how every other Act in this app is
+wired (own maps and separate files exist only for the Constitution).
+
+Mapped fields onto this app's established naming: the delivery's `part` → `category` (via a
+per-Part category, `ra-preliminary` … `ra-miscellaneous`, id-prefixed `RA-` to avoid any
+collision with the bare-numbered BNS ids), `explanation` → `simpleExplanation`, and
+`status: "repealed"` → this app's boolean `repealed: true` flag with the title rendered as
+`"[Repealed]"`, mirroring the convention already used for TPA/LA/HMA/HAMA's own repealed
+sections. The delivery's `amendments` array (mostly amending-Act footnote provenance, plus
+Maharashtra-only notes) has no equivalent field anywhere else in this app and was dropped as
+a separate field — same as every prior Act — since the substantively important amendment
+history (in particular the 2019 J&K fix) is already narrated in the prose `explanation`/
+`simpleExplanation` text itself. Case objects were trimmed to this app's non-BNSS/BSA shape
+(`name`, `cite`, `year`, `ratio`, `url` only) — the delivered `decidedUnder`/`continuityNote`
+fields exist elsewhere in this app only for Acts that replaced an older code (BSA replacing
+the Evidence Act, BNSS replacing the CrPC); since the Registration Act hasn't been replaced,
+those fields aren't meaningful here and several of the delivered case objects left them
+null/absent anyway.
+
+One structural wrinkle handled during the merge: 20 sections in Part XI (§§51–70) carry a
+finer-grained sub-heading in the source data (`"XI-A"` through `"XI-E"`, reflecting the
+Act's own internal subdivision of that Part into "Registers and Indexes," "Communications,"
+etc.) that isn't reflected in the delivery's own 15-Part `REGISTRATION_ACT_PARTS` structure.
+Since this app has no sub-Part display mechanism, all of Part XI's sections were mapped to
+the single `ra-duties-powers-registering-officers` category, matching the granularity the
+delivery's own Parts list uses everywhere else.
+
+Verified with Playwright against a production build: the Registration Act appears in the
+sidebar act list, Section 17 (compulsory registration) renders its breadcrumb (`The
+Registration Act, 1908 › Part II — Of the Registration-Establishment › Section 4` for the
+repealed-section check; `Part III — Of Registrable Documents` for §17), its plain-English
+box, and a landmark-case chip; Section 4 renders the `[Repealed]` title and repealed badge
+correctly. A duplicate/missing-id script confirmed all 96 `RA-1`…`RA-96` ids are present
+exactly once, with no collisions against the rest of `SECTIONS`, before the build was run.
+
+Left for a follow-up pass, per the delivery's own notes: case-law coverage is thin (10 cases
+across only 4 of the Act's 90 in-force sections, 6 of those 10 on §17 alone); Maharashtra's
+state amendments to §§7, 17 and 89 are recorded as notes only, since the app has no
+state-variant display; a pending Registration Bill (2025/2026) intended to replace this Act
+had not been enacted as of the source material and should be rechecked before publishing if
+time has passed; and whether §§81–82's prison-term penalties were touched by the Jan Vishwas
+(Amendment of Provisions) Act, 2023 or 2026 was checked and not found, but not confirmed
+excluded either way.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
