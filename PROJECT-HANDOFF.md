@@ -1487,10 +1487,38 @@ every chapter and passed cleanly on the first attempt every time (33 chapters, z
 build failures, zero data corruption), confirming section counts and spot-checking that
 `text` fields remained byte-identical throughout.
 
-Case law for BNSS was deliberately out of scope for this pass — it remains at 6 case
-objects across 5 sections (the original enrichment batch). Explanation coverage and
-case-law coverage are tracked and delivered as separate passes in this project, the same
-way they were for the Constitution and for HAMA.
+Case law for BNSS was deliberately out of scope for this pass — it remained at 6 case
+objects across 5 sections (the original enrichment batch) when this pass finished.
+Explanation coverage and case-law coverage are tracked and delivered as separate passes
+in this project, the same way they were for the Constitution and for HAMA.
+
+## BNSS enrichment batch 2 — 13 externally pre-verified cases merged, 19 sections total
+Merged 13 landmark case objects supplied as a pre-verified JSON file (name, citation,
+ratio and Indian Kanoon URL already checked against the judgment text by the source of
+the file before it was handed over) into `cases` arrays on 15 BNSS sections. Unlike every
+other case-law batch in this project, these were **not independently re-verified here**
+— the user explicitly instructed not to re-check them, so they carry the same
+verification status the delivered file claimed rather than this project's own Indian
+Kanoon check.
+
+Mechanically, a small reusable script (`inject_cases.mjs`) located each target section by
+id, then either appended to an existing `cases` array (only §187 already had one, from
+enrichment batch 1) or created a fresh `cases: [...]` array matching the exact object
+shape and field order already used across the app (`name`, `cite`, `year`, `ratio`,
+`url`, `decidedUnder`, `continuityNote`). Three of the 13 cases target more than one
+section (D.K. Basu → §§36, 48; Prafulla Kumar Samal → §§250, 262, 268; Gian Singh →
+§§359, 528), so the same case object was copied into each of its listed sections, giving
+17 section-attachments from 13 distinct cases.
+
+Combined with the original enrichment batch 1 (6 cases across 5 sections, one of which
+— §187 — overlaps with this batch), BNSS now carries **19 distinct verified cases (23
+case-object entries) across 19 sections**: §§35, 36, 47, 48, 173, 175, 187, 194, 218,
+250, 262, 268, 341, 359, 413, 479, 480, 482, 528. Note: the source file's own summary
+described this batch as covering "16 sections," which undercounts by 3 — the actual
+section total (19, following the overlap at §187 and the multi-section cases above) was
+computed directly from the merged data rather than taken from that description.
+
+`npm run build` passed cleanly after the merge on the first attempt.
 
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
