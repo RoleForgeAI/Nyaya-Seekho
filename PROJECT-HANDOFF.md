@@ -1569,6 +1569,77 @@ time has passed; and whether §§81–82's prison-term penalties were touched by
 (Amendment of Provisions) Act, 2023 or 2026 was checked and not found, but not confirmed
 excluded either way.
 
+## Cross-act global search (LegalSearch)
+Delivered as four standalone files (`LegalSearch.jsx`, `buildSearchIndex.js`, `actAliases.js`,
+`sectionSynonyms.js`) with no accompanying integration instructions this time — unlike every
+prior delivery in this project. Added `fuse.js` (^7.0.0) as a new dependency (it wasn't
+previously used anywhere in this app). `buildSearchIndex.js`, `actAliases.js` and
+`sectionSynonyms.js` were kept as separate files under `src/search/`, matching how
+`src/data/constitutionData.js` and `src/lib/storage.js` are the only other non-`App.jsx`
+source in this app; the actual `LegalSearch` React component was merged into `App.jsx`
+instead of kept as its own file, matching the established convention that UI pieces live in
+the one file (the same call made for `SectionNavigation` earlier in this project).
+
+Three real adaptations were needed, none of which were flagged in the delivery (there was no
+instructions file to flag them):
+
+1. **Two different field-name conventions in this app's own data**, which the delivered
+   normalizer didn't know about: the Constitution's own `CONSTITUTION_SECTIONS` uses
+   `explanation` and a `status` string (`"in-force"` / `"omitted"`), while every other Act's
+   entries in the shared `SECTIONS` array use `simpleExplanation` and a boolean `repealed`
+   flag. `buildSearchIndex.js` now reads whichever pair of fields a given section actually
+   has (`section.simpleExplanation || section.explanation`, and
+   `section.repealed === true || (section.status && section.status !== "in-force")`) rather
+   than assuming one shape for every act.
+
+2. **Real `actId` values, not the delivery's lowercase guesses.** `actAliases.js` and
+   `sectionSynonyms.js` both arrived with a lowercase `"bns"` / `"hama"` / `"registration"`
+   style and an explicit warning in their own comments that these were unverified guesses to
+   double-check. Rewritten throughout to this app's real `ACTS` ids (`BNS`, `HAMA`, `RA`,
+   `CONSTITUTION`, etc., all uppercase) — and every section id named in `sectionSynonyms.js`
+   (`BNS-103`, `RA-17`, `HAMA-18`, `CONSTITUTION-21`, `NIA-138`, and the rest) was individually
+   checked against this app's own `SECTIONS`/`CONSTITUTION_SECTIONS` data before being kept,
+   confirming each one actually resolves to the claimed topic.
+
+3. **A silent double-prefixing bug caught by testing, not by inspection.** The index builder
+   computes a lookup key as `` `${actId}-${sectionId}` `` to find each section's hand-curated
+   tags. That's correct for BNS and the Constitution, whose own ids are bare numbers ("103",
+   "21") — but every other Act's ids in this app are *already* act-prefixed ("RA-17",
+   "HAMA-18", "NIA-138"), so the naive formula produced "RA-RA-17", which never matches
+   `sectionSynonyms.js`'s actual key "RA-17". This silently disabled the tag-boost for 14 of
+   this app's 16 acts while *looking* like it worked, because Fuse's ordinary fuzzy matching
+   on `explanation`/`title` text happened to still surface the right result for some test
+   queries (e.g. "cheque bounce" ranked NIA-138 first through fuzzy text matching alone, not
+   the tag). It only became visible when a query whose correct answer *wasn't* also the
+   fuzziest text match was tested — "compulsory registration" ranked RA-50 above RA-17 until
+   this was fixed. The fix: only prepend `actId` when the section's own id doesn't already
+   start with `` `${actId}-` ``. Re-tested after the fix: "compulsory registration" → RA-17,
+   "wife maintenance" → HAMA-18, "writ petition" → Article 32, all first.
+
+Wired into the topbar as a new full-width bar below the existing header (visible on every
+act, not just a per-act filter — the existing sidebar search box, which only filters within
+the currently selected act, was left untouched). Selecting a result calls `goTo()` for any
+shared-`SECTIONS` act (which already resolves the target act from the section id) or
+explicitly sets `selectedAct` to `"CONSTITUTION"` before calling `goToConstitution()` (which,
+unlike `goTo()`, never touches `selectedAct` itself — every existing call site for it only
+ever fires while already inside the Constitution view, so this was a real gap for a feature
+that can jump in from any act).
+
+Verified with Playwright against a production build, using fresh page loads per query after
+an initial test run gave inconsistent results from input-typing races: bare cross-act number
+lookup ("103" → both BNS §103 and Constitution Article 103, exact), act-qualified lookup
+("21 bns" → BNS §21 pinned as the exact match), synonym-tag boost (after the fix, "compulsory
+registration" / "wife maintenance" / "writ petition" each rank their tagged section first),
+fuzzy concept search ("right to life" → Article 21 first), and full navigation both into and
+out of the Constitution (BNS → Article 21 → Registration Act §17, confirming the topbar
+title, active sidebar button, and rendered section all update correctly on each jump).
+
+Left as-is, matching the delivered design rather than changing it further: an act-qualified
+exact match (e.g. "21 bns") also runs a full fuzzy search on the whole typed phrase, which can
+surface a page of only loosely-related fuzzy results below the correct pinned exact match —
+this is inherent to the delivered Fuse threshold/gating logic, not something introduced during
+integration, and wasn't judged worth redesigning without being asked to.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
