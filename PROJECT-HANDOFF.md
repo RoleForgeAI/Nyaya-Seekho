@@ -1640,6 +1640,25 @@ surface a page of only loosely-related fuzzy results below the correct pinned ex
 this is inherent to the delivered Fuse threshold/gating logic, not something introduced during
 integration, and wasn't judged worth redesigning without being asked to.
 
+### Follow-up fix: the fuzzy-noise issue above was resolved in a later delivery
+An updated `buildSearchIndex.js` arrived afterward, changing `searchLegal()`'s fallback
+condition from "run fuzzy search unless the whole query is itself a bare id" to "run fuzzy
+search only when there are no exact matches at all." This directly fixes the "left as-is"
+item above: "21 bns" now returns only its one correct exact match, with no fuzzy noise
+underneath, while a recognised-but-nonexistent reference (e.g. "section 999 bns") still falls
+back to fuzzy search rather than returning nothing.
+
+Only this one behavioral change was merged in — the delivered file's own `items.push(...)`
+result objects dropped the `label` field this project added (for Constitution display names
+like "Article 21" instead of a bare id), so rather than overwrite the file wholesale, just the
+`haveExactMatches` gating change was applied on top of this project's existing adapted version,
+keeping the field-shape normalization, the double-prefix fix, and the `label` passthrough
+intact. Re-verified with Playwright against a production build: "21 bns" → exactly one result;
+"art 47" (the scenario the fix's own comment names) → two legitimate exact matches, BNS §47
+and Constitution Article 47, no fuzzy pollution; "section 999 bns" → still falls back to fuzzy
+results rather than showing nothing; "cheque bounce" → unaffected, still ranks NIA §138 first
+via the tag boost.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

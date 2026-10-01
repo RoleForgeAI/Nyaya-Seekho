@@ -171,10 +171,17 @@ export function searchLegal(index, query, { limit = 15 } = {}) {
     }
   }
 
-  // Only run fuzzy search if the query is more than just a bare number --
-  // searching "138" against full statute text tends to surface noise
-  // (page numbers, other incidental digits) once exact matches exist.
-  if (!(ref && BARE_ID_PATTERN.test(trimmed)) && trimmed.length >= 3) {
+  // Skip the fuzzy fallback once we already have real exact matches.
+  // Without this, a query like "art 47" (which correctly finds Article 47
+  // as an exact match) would ALSO run "art 47" through fuzzy search as
+  // free text -- and since "art" is a literal substring of "part", that
+  // fuzzy-matches things like "part performance" or "part delivery",
+  // polluting good exact results with unrelated noise underneath them.
+  // If a ref was recognised but nothing actually matched it (e.g. "section
+  // 999 bns" for a section that doesn't exist), we still fall back to
+  // fuzzy search so the person isn't left with zero results.
+  const haveExactMatches = results.length > 0;
+  if (!haveExactMatches && trimmed.length >= 3) {
     const fuzzy = index.fuse.search(trimmed, { limit: limit + results.length });
     for (const r of fuzzy) {
       if (seenKeys.has(r.item.key)) continue;
