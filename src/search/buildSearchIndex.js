@@ -155,7 +155,17 @@ export function searchLegal(index, query, { limit = 15 } = {}) {
   const actHint = ref ? extractActHint(trimmed) : null;
   if (ref) {
     let exactMatches = index.byExactId.get(ref.toLowerCase()) || [];
-    if (actHint) exactMatches = exactMatches.filter((item) => item.actId === actHint.actId);
+    if (actHint) {
+      // Section ids are bare for some acts (BNS "103", Constitution "21")
+      // but act-prefixed for most others (RA "RA-17", NIA "NIA-138"). The
+      // bare ref alone only ever finds bare-id acts, so once an act hint
+      // narrows the search, also try the act-prefixed form of the id
+      // before filtering down to just that act.
+      const prefixedMatches = index.byExactId.get(`${actHint.actId}-${ref}`.toLowerCase()) || [];
+      const combined = [...exactMatches, ...prefixedMatches].filter((item) => item.actId === actHint.actId);
+      const seen = new Set();
+      exactMatches = combined.filter((item) => (seen.has(item.key) ? false : (seen.add(item.key), true)));
+    }
     for (const item of exactMatches) {
       results.push({
         actId: item.actId,

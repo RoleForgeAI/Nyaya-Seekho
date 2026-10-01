@@ -1659,6 +1659,31 @@ and Constitution Article 47, no fuzzy pollution; "section 999 bns" → still fal
 results rather than showing nothing; "cheque bounce" → unaffected, still ranks NIA §138 first
 via the tag boost.
 
+### Follow-up fix: act-qualified exact lookup never worked for prefixed-id acts
+Audited `actAliases.js`/`sectionSynonyms.js` against this app's real `ACTS` ids on request —
+both were already fully correct from the original integration (every alias's `actId` value
+matches an actual `ACTS` entry; every `sectionSynonyms.js` key was individually checked
+against this app's own data). No changes were needed there.
+
+But testing three sample queries ("sec 12 bnss", "21 bns", "138 ni act") surfaced a real bug
+in `searchLegal()`'s exact-match lookup, separate from the tag-key double-prefix bug fixed
+earlier: `index.byExactId` is keyed by each section's own raw id, which is bare for BNS and
+the Constitution ("103", "21") but act-prefixed for every other act ("NIA-138", "BNSS-12").
+The lookup only ever tried the bare extracted number, even after an act hint narrowed the
+act -- so "138 ni act" extracted ref "138", hinted actId "NIA", looked up `byExactId.get("138")`
+(which only contains bare-id acts' entries), found nothing belonging to NIA, and fell through
+to a pure fuzzy search that top-matched something unrelated (Constitution Article 279A, on
+GST, which happens to mention "138" as a cross-reference). "sec 12 bnss" failed the same way,
+returning zero results.
+
+Fixed by also trying the act-prefixed form of the id (`` `${actHint.actId}-${ref}` ``) once an
+act hint is present, unioning both lookups before filtering to that act, with key-based
+dedup. Re-verified with Playwright against a production build: "sec 12 bnss" → BNSS §12
+(Local Jurisdiction of Judicial Magistrates); "21 bns" → BNS §21 (unaffected, still works);
+"138 ni act" → NIA §138 (Dishonour of cheque), and clicking each result now actually
+navigates to the correct act and section. Re-ran the full prior regression set ("21 bns" noise
+check, "art 47", "section 999 bns" fallback, "cheque bounce" tag boost) — all still pass.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
