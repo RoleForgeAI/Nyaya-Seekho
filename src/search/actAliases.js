@@ -71,6 +71,11 @@ export const ACT_ALIASES = {
   "hindu minority": "HMGA",
   guardianship: "HMGA",
   "guardianship act": "HMGA",
+
+  ita: "ITA",
+  "it act": "ITA",
+  "information technology act": "ITA",
+  "information technology": "ITA",
 };
 
 // Longer phrases first, so "ni act" is tried before a bare "ni" would

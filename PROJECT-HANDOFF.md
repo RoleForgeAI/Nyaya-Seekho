@@ -1744,6 +1744,59 @@ entries were added for this Act (e.g. no "it act" nickname, no hand-picked tags 
 → §66), since that wasn't asked for and this project's standing rule is to only add hand-tags
 that have actually been checked against the data — worth a quick follow-up if wanted.
 
+### Follow-up: IT Act registered in global search
+That gap was closed on request. Added `ita`, `it act`, `information technology act`, and
+`information technology` to `actAliases.js`, all routing to `actId: "ITA"` (the real id,
+confirmed against the `ACTS` array). No `sectionSynonyms.js` hand-picked tags were added
+(e.g. "hacking" → §66) — still not asked for, and still subject to the standing rule of only
+adding tags actually checked against the data.
+
+Verified live with Playwright against a production build: "ita 43a" → ITA §43A (Compensation
+for failure to protect data); "information technology act 66" → ITA §66 (Computer related
+offences); "21 bns" and "138 ni act" still work (no regression). A query for a *repealed*
+ITA section via its act nickname -- "sec 66a it act" -- correctly returns zero results. That
+is not the double-prefix bug from before: `buildSearchIndex.js` deliberately excludes every
+repealed/omitted section, in every act, from the search index entirely (its own comment:
+"nothing useful to search for there"), so §66A (repealed, text literally "[Omitted.]") was
+never indexed in the first place, the same as any other act's repealed sections (e.g. RA
+§4). Confirmed with "sec 66 it act" (the in-force neighbour) and "sec 43a ita", both of which
+return the correct section, showing the alias wiring itself has no gap — only repealed
+sections are (by design, app-wide) unsearchable.
+
+### Confirming the act-prefixed-id search fix actually landed
+Asked to verify directly rather than from memory, since it had gone unconfirmed. Checked two
+ways: `grep` on the current `src/search/buildSearchIndex.js` shows the fix's code
+(`haveExactMatches`, `prefixedMatches`, and the explanatory comment) is present on disk; and
+`git log -- src/search/buildSearchIndex.js` shows it was committed at `f7d5de9` ("Fix
+act-qualified exact lookup for act-prefixed section ids"), confirmed via `git show
+HEAD:src/search/buildSearchIndex.js`. The fix is real and landed, not just a reported claim.
+
+### A more fundamental search bug, found while chasing a user report ("IT Act sections aren't showing up")
+The user reported that searching for IT Act sections wasn't working, despite the alias fix
+above. Testing a broad spread of plain queries ("66", "section 43", with no act hint at all)
+found the real cause: `byExactId` was keyed by each section's raw `id`, which is bare for BNS
+and the Constitution ("103", "21") but act-prefixed for every other act ("ITA-66", "RA-17").
+A hint-less bare-number query like "66" only ever matched the bare-id acts, so every
+prefixed-id act — not just ITA — was invisible to a plain number search. This is the same
+underlying id-shape mismatch as the earlier two fixes (the tag-key double-prefix, and the
+act-hinted exact lookup), but in the one remaining place it hadn't yet been addressed: the
+*hint-less* case, which is how a user is likely to search most of the time.
+
+Fixed properly this time, rather than patched again: `byExactId` now indexes every item under
+its own **bare** section number (each item's own act prefix stripped once, at index-build
+time), so a bare query finds the right section in every act uniformly, hinted or not. This
+also let the act-hinted lookup in `searchLegal()` simplify back down to a single lookup +
+filter, replacing the two-lookup `prefixedMatches` patch from the previous fix (now
+redundant, since the base index already covers both bare- and prefixed-id acts the same way).
+
+Verified with Playwright against a production build: bare "66" now returns 11 results (up
+from 2) — cross-checked directly against the data (`SECTIONS.filter` for every in-force
+section whose bare number is "66") to confirm the count is exactly right, including `ITA-66`.
+"art 47" similarly now returns one exact match per act with a section 47 (12 acts, all
+genuine, no fuzzy noise) rather than just 2. Re-ran the entire prior regression set --
+`"21 bns"`, `"138 ni act"`, `"section 999 bns"` fallback, `"cheque bounce"` tag boost,
+`"ita 43a"`, `"information technology act 66"` -- all still pass.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

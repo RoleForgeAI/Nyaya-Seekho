@@ -75,11 +75,19 @@ export function buildLegalSearchIndex(acts) {
     ],
   });
 
-  // Index items by exact section id for instant lookup -- used by the
-  // "section 138" / bare-number shortcut in searchLegal() below.
+  // Index items by their BARE section number for instant lookup -- used by
+  // the "section 138" / bare-number shortcut in searchLegal() below. Most
+  // acts' own ids are already act-prefixed ("RA-17", "ITA-66"), unlike BNS
+  // ("103") and the Constitution ("21"), which are bare. Indexing by the
+  // raw sectionId alone would mean a bare query like "66" only ever finds
+  // BNS/Constitution-style acts -- every prefixed-id act would be invisible
+  // to a plain number search with no act hint. Stripping each item's own
+  // act prefix before indexing fixes that uniformly, with or without a hint.
   const byExactId = new Map();
   for (const item of items) {
-    const idKey = String(item.sectionId).toLowerCase();
+    const rawId = String(item.sectionId);
+    const bareId = rawId.startsWith(`${item.actId}-`) ? rawId.slice(item.actId.length + 1) : rawId;
+    const idKey = bareId.toLowerCase();
     if (!byExactId.has(idKey)) byExactId.set(idKey, []);
     byExactId.get(idKey).push(item);
   }
@@ -154,18 +162,12 @@ export function searchLegal(index, query, { limit = 15 } = {}) {
   const ref = extractSectionRef(trimmed);
   const actHint = ref ? extractActHint(trimmed) : null;
   if (ref) {
+    // byExactId is keyed by each item's BARE section number (its own act
+    // prefix already stripped at index-build time), so this finds matches
+    // across every act uniformly -- no hint needed. An act hint, when
+    // present, just narrows the (possibly multi-act) result down to one.
     let exactMatches = index.byExactId.get(ref.toLowerCase()) || [];
-    if (actHint) {
-      // Section ids are bare for some acts (BNS "103", Constitution "21")
-      // but act-prefixed for most others (RA "RA-17", NIA "NIA-138"). The
-      // bare ref alone only ever finds bare-id acts, so once an act hint
-      // narrows the search, also try the act-prefixed form of the id
-      // before filtering down to just that act.
-      const prefixedMatches = index.byExactId.get(`${actHint.actId}-${ref}`.toLowerCase()) || [];
-      const combined = [...exactMatches, ...prefixedMatches].filter((item) => item.actId === actHint.actId);
-      const seen = new Set();
-      exactMatches = combined.filter((item) => (seen.has(item.key) ? false : (seen.add(item.key), true)));
-    }
+    if (actHint) exactMatches = exactMatches.filter((item) => item.actId === actHint.actId);
     for (const item of exactMatches) {
       results.push({
         actId: item.actId,
