@@ -1684,6 +1684,66 @@ dedup. Re-verified with Playwright against a production build: "sec 12 bnss" →
 navigates to the correct act and section. Re-ran the full prior regression set ("21 bns" noise
 check, "art 47", "section 999 bns" fallback, "cheque bounce" tag boost) — all still pass.
 
+## The Information Technology Act, 2000 (ITA) — complete, all 129 of 129 section slots
+Delivered as a single JSON array (`it_act_2000_complete.json`, 129 entries: 125 section slots
++ Schedules I–IV) plus its own integrity verifier (`verify_it_act.mjs`) and instructions —
+the same delivery pattern used for HAMA and the Registration Act. `node verify_it_act.mjs
+it_act_2000_complete.json` passed cleanly before any integration work started.
+
+Mapped onto this app's established conventions exactly as for every prior Act: the delivery's
+`chapter` (roman numerals I–XIII, XIIA, plus a `SCHEDULES` chapter) → a per-chapter
+`category`, id-prefixed `ITA-*` section ids (`ITA-3A`, `ITA-66A`, `ITA-Sch1`, ...),
+`explanation` → `simpleExplanation`, `status: "repealed"` → this app's `repealed: true` flag
+with title `"[Repealed]"`, and the delivery's `amendments` array dropped as a separate field
+(not used anywhere else in this app; the substantively important amendment history is already
+narrated in the prose `explanation`/`simpleExplanation`, same as every prior Act). Case
+objects kept the standard `name`/`cite`/`year`/`ratio`/`url` shape, except the two cases the
+delivery specifically flagged to carry `decidedUnder`/`continuityNote` — Awadhesh Kumar Paras
+Nath Pathak (§66, decided with reference to the IPC) and Google India v. Visaka (§79, decided
+under the section's pre-2009 wording) — rendered the same way pre-BSA/pre-BNSS cases are
+elsewhere in this app.
+
+**Schedules.** No other Act in this app's shared schema stores Schedules as their own
+renderable section entries (the Constitution's 12 Schedules exist, but in its own entirely
+separate data model) — so per the delivery's own fallback instruction ("if no act stores
+schedules yet, keep these ids"), the four Schedules were kept as `ITA-Sch1`–`ITA-Sch4` under
+a new `ITA-SCHEDULES` chapter/`ita-schedules` category, placed after §94 in sidebar order,
+confirmed by the production-build screenshot.
+
+**A real bug caught in the conversion script, not in the delivered data.** The first
+conversion attempt dropped `cases` entirely for every repealed section, on the assumption
+that a repealed section has nothing worth attaching a case to. That's wrong here: §66A is
+itself repealed (struck down by *Shreya Singhal v. Union of India*, then formally omitted by
+the Jan Vishwas Act 2023), and the delivered data correctly keeps that case attached to the
+very section the judgment struck down — dropping it would have silently lost one of the 11
+verified cases and produced "9 cases across 8 sections" instead of the expected "11 across 9".
+Caught by an integrity check against the generated output (counting sections-with-cases
+before vs. after) rather than by reading the conversion script alone. Fixed by only skipping
+`cases` generation when a repealed section's source data has none, matching how this app's
+renderer already displays `cases` unconditionally regardless of `repealed` status.
+
+**Verifying the integration didn't alter content.** Since the delivery's verifier checks a
+specific JSON shape this app doesn't use directly (bare ids, a `chapter` field holding a bare
+roman numeral, `status` as a string, `amendments` as a required array), a small re-export
+script (`reexport_ita.mjs`) was written to reconstruct that exact shape from the now-merged
+`App.jsx` data — stripping the `ITA-` id prefix, resolving each section's chapter back to its
+bare roman numeral via the category→chapter lookup, and pulling `amendments` back from the
+original source file by id (since this app doesn't store that field, but the verifier
+requires its presence and content-checks one entry's prospective-DPDP note). Running
+`verify_it_act.mjs` against that re-export gave `ALL CHECKS PASSED (0 warnings)` with the
+exact expected summary (`Cases: 11 across 9 sections ...; In force: 111 | Repealed/omitted:
+18`), confirming no `text`, `status`, or case content was altered during conversion.
+
+Verified with Playwright against a production build: the Act appears in the sidebar app list;
+§66A renders with the `[Repealed]` title, the repealed badge, and (correctly, per the fix
+above) its landmark-case chip; §66 renders its own case chip; global search picks up the new
+Act automatically with no extra wiring needed (it's derived live from `ACTS`/`SECTIONS` at
+module load) — "computer related offences" and "computer related" both rank §66 first via
+ordinary fuzzy matching on its title/explanation. No `sectionSynonyms.js`/`actAliases.js`
+entries were added for this Act (e.g. no "it act" nickname, no hand-picked tags like "hacking"
+→ §66), since that wasn't asked for and this project's standing rule is to only add hand-tags
+that have actually been checked against the data — worth a quick follow-up if wanted.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
