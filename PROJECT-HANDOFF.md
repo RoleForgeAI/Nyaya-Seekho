@@ -1797,6 +1797,80 @@ genuine, no fuzzy noise) rather than just 2. Re-ran the entire prior regression 
 `"21 bns"`, `"138 ni act"`, `"section 999 bns"` fallback, `"cheque bounce"` tag boost,
 `"ita 43a"`, `"information technology act 66"` -- all still pass.
 
+## The Code of Civil Procedure, 1908 (CPC) — complete, all 916 of 916 entries
+The largest, structurally most novel integration in this project so far: 171 section slots
+(Preliminary + Parts I–XI), 732 Order/Rule entries across 58 Orders (I–LI, including lettered
+variants like XIII-A and the commercial version of Order XI), 9 Appendices (A–I), and the
+repealed Second–Fifth Schedules — 877 in force, 39 repealed, 1 verified case (*Dhulabhai v.
+State of Madhya Pradesh*, §9). Delivered as a single JSON array plus its own verifier
+(`verify_cpc.mjs`, which passed cleanly before any integration work started) and detailed
+instructions — the first delivery in this project to introduce genuinely new structure this
+app hadn't held before (Orders and Rules, a second numbering scheme alongside plain Sections).
+
+**Mapping Orders/Rules onto the existing schema.** Rather than building a bespoke two-level
+navigator, this reused the existing generic Chapter→Category→Section drill-down that every
+other Act already uses — just with far more chapter/category groups than before (72, one per
+Part or Order, versus 15 for the largest prior Act). This worked without any structural change
+to the sidebar or navigation code. `id`s are prefixed `CPC-` as usual (`CPC-9`, `CPC-O39R1`,
+`CPC-AppA`, `CPC-Sch2`); `chapter` (`"ORDER XXXIX"`, `"PART I"`, `"APPENDICES"`, `"SCHEDULES"`)
+maps to one category per chapter, derived programmatically from the chapter string rather than
+hand-listed, given the volume.
+
+**New fields, minimally and narrowly added to the schema.** Two genuinely new per-section flags
+were needed, both requested explicitly and both simple enough not to need new UI machinery:
+- `commercialOnly: true` (31 entries) — a new "Commercial Courts only" badge, styled and placed
+  exactly like the existing `repealed`/`struckDown` badges in the meta-chips row.
+- `textType: "summary"` (8 entries, Appendices A–H) — swaps the usual "Official Bare Act Text"
+  block label for "Summary of Forms", since those Appendices' `text` is a description of the
+  forms rather than the forms themselves (the delivery's own choice, not reproduced here either).
+
+**State/Commercial-Courts amendment notes — same precedent as the Registration Act.** The
+delivery's own instructions suggested a new collapsible-note UI for `STATE/UT AMENDMENTS` and
+`COMMERCIAL COURTS ACT VERSION` notes inside the `amendments` array. Rather than build that from
+scratch, this followed the exact precedent already set for the Registration Act's Maharashtra
+notes: `amendments` is dropped as a separate field (as for every Act in this app), and nothing
+new was built to surface those specific notes in the UI. This is a deliberate match to existing
+practice, not an oversight — flagged here the same way the Registration Act's equivalent gap was.
+
+**Display labels — a new, small, generalizable renderer change.** The delivery asked for rules
+to display as "Order XXXIX, Rule 2A" rather than a bare id. Rather than hard-code this for CPC
+alone, a `label` field (precomputed for every rule/appendix/schedule entry, derived from its
+`chapter` + rule number, or `App`/`Sch` id prefix) was added, and the breadcrumb, the "Your Notes
+on ..." heading, and the exported-text header were all changed to prefer `section.label` when
+present, falling back to the existing `"Section " + sectionNumber(id)` pattern otherwise — so no
+other Act's rendering changed at all (none of them set this field). Plain CPC sections (no rule)
+still correctly show "Section 11" via the unchanged fallback, verified live.
+
+**Search: a new Order/Rule citation parser.** This required real new logic, not just data or
+aliases — nothing in this app previously parsed a two-number citation style. Added
+`extractOrderRuleRef()` to `buildSearchIndex.js`: a dedicated regex recognises the "order ...
+rule ..." shape (accepting "order"/"o", optional "."; "rule"/"r", optional "."), a small
+roman-numeral converter (`romanToArabic`, I/V/X/L, subtractive notation) handles roman order
+numbers, and `normalizeOrderToken()` reduces either arabic or roman input — with an optional
+lettered or "(Commercial)"/"Commercial" suffix — to the bare order-number form this app's rule
+ids already use ("39", "13A", "11C"). This runs *before* the existing `extractSectionRef()`,
+since that function's own keyword list already included a bare "rule"/"order" alternative (for
+other acts' incidental use of those words) which would otherwise grab only the order number and
+silently drop the rule number. Added `cpc`/`code of civil procedure`/`civil procedure code` to
+`actAliases.js`.
+
+Verified with Playwright against a production build, with every query the delivery's own test
+list named: `"order 7 rule 11"` → §O7R11 (Rejection of plaint); `"o 39 r 2a"` → §O39R2A;
+`"section 11 cpc"` → §11 (Res judicata); `"order 21 rule 97"` → §O21R97; `"o.13a r.3"` →
+§O13AR3 — plus extra stress tests beyond the required list: `"order xxxix rule 1"` (roman form)
+and `"o 11c r 4"` (commercial-order form), both correct. All eight queries returned exactly one
+result each and navigated to the right section on click, with the result/breadcrumb/notes-header
+label correctly showing "Order XXXIX, Rule 1" style text throughout. "21 bns" re-checked as an
+unrelated regression guard — still correct.
+
+**Verifying the integration didn't alter content**, the same way as for every prior JSON
+delivery: a re-export script (`reexport_cpc.mjs`) reconstructed the delivery's original schema
+from the merged `App.jsx` data (stripping the `CPC-` id prefix, pulling `amendments`/`chapter`/
+`orderTitle` back from the source file since this app doesn't store them in that shape), and
+`verify_cpc.mjs` run against that re-export gave `ALL CHECKS PASSED` with the exact expected
+summary (`Entries: 916 | in force: 877 | repealed: 39 | commercial-only: 31 | cases: 1`) both
+before and after integration.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

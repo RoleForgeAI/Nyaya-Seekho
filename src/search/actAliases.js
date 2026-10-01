@@ -76,6 +76,10 @@ export const ACT_ALIASES = {
   "it act": "ITA",
   "information technology act": "ITA",
   "information technology": "ITA",
+
+  cpc: "CPC",
+  "code of civil procedure": "CPC",
+  "civil procedure code": "CPC",
 };
 
 // Longer phrases first, so "ni act" is tried before a bare "ni" would

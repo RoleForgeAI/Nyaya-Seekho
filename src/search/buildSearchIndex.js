@@ -101,6 +101,55 @@ export function buildLegalSearchIndex(acts) {
 const SECTION_REF_PATTERN = /\b(?:section|sec\.?|s\.?|article|art\.?|rule|order)\s*[-:.]?\s*([0-9]+[A-Za-z]*)\b|§\s*([0-9]+[A-Za-z]*)/i;
 const BARE_ID_PATTERN = /^[0-9]+[A-Za-z]*$/;
 
+// Recognises the CPC's "Order X, Rule Y" citation style -- "order 39 rule 1",
+// "o 39 r 1", "o.39 r.1", "order xxxix rule 1", "o 13a r 3", "o.13a r.3",
+// "order xi (commercial) rule 4" -- and resolves it to a candidate bare rule
+// id ("O39R1", "O13AR3", "O11CR4"). The order number may be arabic or roman,
+// optionally with a lettered/commercial suffix; this is independent of the
+// plain SECTION_REF_PATTERN above (which also recognises a bare "order"/
+// "rule" keyword, but only for a single number -- not this two-part form).
+const ORDER_RULE_PATTERN = /\b(?:order|o)\.?\s*([a-z0-9][a-z0-9\s\-().]*?)\s*,?\s*(?:rule|r)\.?\s*(\d+[a-z]*)\b/i;
+
+function romanToArabic(s) {
+  const vals = { I: 1, V: 5, X: 10, L: 50 };
+  let num = 0;
+  for (let i = 0; i < s.length; i++) {
+    const cur = vals[s[i]];
+    if (!cur) return null;
+    const next = vals[s[i + 1]];
+    num += next && cur < next ? -cur : cur;
+  }
+  return num > 0 ? num : null;
+}
+
+// Normalises an order-number token -- arabic ("13a", "11c") or roman
+// ("xiii-a", "xi (commercial)", "xxxix") -- into the bare form used in this
+// app's rule ids ("13A", "11C", "39").
+function normalizeOrderToken(raw) {
+  const cleaned = raw.replace(/\s+/g, " ").trim().toUpperCase();
+  const arabicMatch = /^(\d+)[\s-]*\(?([A-Z]*)\)?$/.exec(cleaned);
+  if (arabicMatch) {
+    const suffix = arabicMatch[2] === "COMMERCIAL" ? "C" : arabicMatch[2];
+    return arabicMatch[1] + suffix;
+  }
+  const romanMatch = /^([IVXL]+)[\s-]*\(?([A-Z]*)\)?$/.exec(cleaned);
+  if (romanMatch) {
+    const num = romanToArabic(romanMatch[1]);
+    if (num == null) return null;
+    const suffix = romanMatch[2] === "COMMERCIAL" ? "C" : romanMatch[2];
+    return String(num) + suffix;
+  }
+  return null;
+}
+
+function extractOrderRuleRef(query) {
+  const m = ORDER_RULE_PATTERN.exec(query);
+  if (!m) return null;
+  const orderToken = normalizeOrderToken(m[1]);
+  if (!orderToken) return null;
+  return `O${orderToken}R${m[2].toUpperCase()}`;
+}
+
 // Looks for an act nickname anywhere in the query ("21 bns", "138 ni act",
 // "article 21 of the constitution") and returns { actId, matchedText }, or
 // null if none of the known aliases appear. Checked longest-alias-first so
@@ -159,7 +208,11 @@ export function searchLegal(index, query, { limit = 15 } = {}) {
   const results = [];
   const seenKeys = new Set();
 
-  const ref = extractSectionRef(trimmed);
+  // The Order/Rule form ("order 39 rule 1") is checked first since it's more
+  // specific than the plain section/rule-number pattern extractSectionRef
+  // also recognises (which would otherwise grab just "order"'s number and
+  // silently ignore the "rule N" part).
+  const ref = extractOrderRuleRef(trimmed) || extractSectionRef(trimmed);
   const actHint = ref ? extractActHint(trimmed) : null;
   if (ref) {
     // byExactId is keyed by each item's BARE section number (its own act
