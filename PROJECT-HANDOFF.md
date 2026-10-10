@@ -1871,6 +1871,80 @@ from the merged `App.jsx` data (stripping the `CPC-` id prefix, pulling `amendme
 summary (`Entries: 916 | in force: 877 | repealed: 39 | commercial-only: 31 | cases: 1`) both
 before and after integration.
 
+## BNSS case-law batch 3 — 26 cases merged, 10 correctly skipped as duplicates
+Delivered as `bnss_cases_batch.json` (a flat array of `{ section, case }` pairs, every case
+carrying `decidedUnder`/`continuityNote` since all 26 were decided under the CrPC 1973) plus its
+own verifier, `verify_bnss_cases.mjs`, which supports an optional second argument to check a
+merge was done correctly. `cases_pending.json` (three near-miss cases where no correct Indian
+Kanoon link could be found) was explicitly reference-only and nothing from it was added.
+
+Before merging, the app's actual current BNSS case data was checked directly rather than
+trusting the instructions' own claim of "16 earlier verified cases" — the real figure was 19
+sections / 23 case objects (confirmed by a direct script run against `App.jsx`, not assumed).
+This is the second time a delivered summary's own case/section count has been off in this
+project (the Registration Act case-law batch's "16 sections" claim was similarly corrected
+earlier) — worth treating every delivered summary number as a claim to verify, not a fact to
+copy into the docs.
+
+A small script (`inject_bnss_batch.mjs`) computed the merge plan programmatically rather than by
+hand: for each of the 26 batch entries, it checked whether that case's exact Indian Kanoon URL
+was already present under the *same* target section (the duplicate rule is per-section, not
+global — the same case under two different sections, e.g. Satender Kumar Antil under both §35
+and §480, or Sanjay Chandra under both §480 and §483, is intentional and both copies were kept).
+10 of 26 were exact-URL duplicates of cases already in the app under the same section (Arnesh
+Kumar §35, D.K. Basu §36, Vihaan Kumar §47, Lalita Kumari §173, Sakiri Vasu §175, M. Ravindran
+§187, Gurbaksh Singh Sibbia and Sushila Aggarwal both under §482, Bhajan Lal and Gian Singh both
+under §528) and were skipped, each reported by name; the other 16 were genuinely new and merged,
+creating a `cases` array for the first time on 7 sections that had none before (§§43, 144, 190,
+193, 358, 395, 483).
+
+Final tally: BNSS now carries 32 distinct verified cases (39 case-object entries, since several
+apply to more than one section) across 26 sections — up from 19/23/19 before this batch.
+Verified by running `verify_bnss_cases.mjs` twice: once against the raw batch file alone (passed
+before any integration work started), and once with a second argument — an export of the app's
+post-merge BNSS entries as `{ id, cases }` — which re-confirmed every locked case is present
+exactly once and no section carries the same case twice. `npm run build` passed cleanly.
+
+The actual CPC case-law batch in this same delivery (`cpc_1908_complete.json`, replacing the
+CPC data already in the app with 47 cases filled in) could not be processed yet — the user's
+message named it but said it would be attached in a follow-up upload, so this was BNSS-only at
+the time. The CPC-side `verify_cpc.mjs` (updated to lock 47 cases) and the file's own integrity
+rules were read and understood in advance of that follow-up, which landed shortly after (see the
+next section).
+
+## CPC case-law batch 2 — 46 cases merged, 1 correctly skipped
+The follow-up file arrived: a replacement `cpc_1908_complete.json`. Rather than trust the
+delivery's own claim that "only `cases` arrays were filled in," a field-by-field diff was run
+against the previously-integrated file (every field except `cases`, across all 916 entries) —
+zero differences, confirming the claim was accurate this time. (It wasn't the first time a
+delivered summary turned out to need correcting in this project — see the BNSS batch above and
+the Registration Act case-law batch earlier — so checking rather than trusting was the right
+default again, even though this particular check came back clean.)
+
+A small script (`inject_cpc_cases.mjs`), the same per-entry duplicate-URL-within-the-same-section
+approach used for the BNSS batch, merged the new cases: 46 of the file's 47 total cases were new
+(Dhulabhai under §9, the only case in the prior file, was correctly recognised as already present
+by URL and skipped rather than duplicated). Unlike the BNSS batch, CPC case objects use the plain
+`name`/`cite`/`year`/`ratio`/`url` shape with no `decidedUnder`/`continuityNote` — correct, since
+the CPC (unlike the CrPC→BNSS case) hasn't been replaced by a new code, matching the convention
+already established for the Registration Act's case law.
+
+Final tally: CPC now carries 47 verified cases across 36 sections/rules, up from 1/1 before this
+batch — spanning 16 plain sections (§§10, 11, 13, 16, 20, 21, 25, 35, 47, 80, 89, 96, 100, 115,
+144, 151) and 19 Orders (I, II, VI, VII, VIII, IX, XII, XVIII, XXI, XXII, XXIII, XXXVII, XXXVIII,
+XXXIX, XLI, XLIII, XLVII, plus the two already covered). Verified by running the delivery's
+updated `verify_cpc.mjs` (now locking exactly 47 cases, each by `entry id | Indian Kanoon URL`)
+against the raw delivered file first (passed before any integration work started), then again
+against a re-export of the merged app data via the same `reexport_cpc.mjs` built for the first
+CPC batch — `ALL CHECKS PASSED` with the exact expected summary both times. Spot-checked live
+with Playwright: §O7R11 (now 3 cases: T. Arivandandam, Saleem Bhai, Dahiben) and §9 (still just
+Dhulabhai, unchanged) both render their case chip correctly. `npm run build` passed cleanly.
+
+`cases_pending.json` (three cases the source couldn't find a correct Indian Kanoon link for —
+Kamlesh Verma and Haridas Das under O47R1, Vadiraj Naggappa Vernekar under O18R17) was explicitly
+reference-only per the delivery's instructions; nothing from it was added, consistent with this
+project's standing rule never to add a case without a verified Indian Kanoon link.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
