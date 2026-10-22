@@ -1945,6 +1945,75 @@ Kamlesh Verma and Haridas Das under O47R1, Vadiraj Naggappa Vernekar under O18R1
 reference-only per the delivery's instructions; nothing from it was added, consistent with this
 project's standing rule never to add a case without a verified Indian Kanoon link.
 
+## Targeted website-fixes batch (F1/F2/F3)
+Delivered as `website_fixes_now.json` + `WEBSITE_FIXES_NOW_CLAUDE_CODE_INSTRUCTIONS.md`,
+specifying exactly three fixes and nothing else. All three were applied, verified against the
+app's own live data (not just the delivery's claims), and confirmed live with Playwright.
+
+**F1 — broken case link, ICA §56.** The Satyabrata Ghose v. Mugneeram Bangur & Co. case under
+Indian Contract Act §56 pointed to `https://indiankanoon.org/doc/1155974/`, an unrelated
+document. Corrected to the actual judgment at `https://indiankanoon.org/doc/1214064/`.
+
+**F2 — recalled judgment removed, SRA §10.** Katta Sujatha Reddy v. Siddamsetty Infra Projects
+Pvt. Ltd. was removed from Specific Relief Act §10's case list because the underlying Supreme
+Court judgment was later recalled/withdrawn. §10 now carries its other two cases (Chand Rani,
+Saradamani Kandappan) only.
+
+**F3 — pre-NJAC constitutional text restored, 11 Articles.** The Constitution (Ninety-ninth
+Amendment) Act, 2014 — which created the National Judicial Appointments Commission (NJAC) — was
+struck down in its entirety by the Supreme Court in *Supreme Court Advocates-on-Record
+Association v. Union of India* (judgment dated 16-10-2015, AIR 2016 SC 117), restoring the
+pre-2015 collegium system. The app's Constitution data had been left showing the struck-down
+2014 wording on 8 Articles. Each of the 10 affected passages was checked to occur exactly once
+within its own article's `text` field (not file-wide — some articles' NJAC phrasing is a literal
+substring of another article's longer phrasing, so a file-wide count gave false positives before
+this was scoped correctly) before being replaced with the verified pre-amendment text:
+
+- Art. 124(2) — Supreme Court Judge appointments: "recommendation of the NJAC" → "consultation
+  with such of the Judges of the Supreme Court and of the High Court...as the President may deem
+  necessary", plus the original consultation proviso restored.
+- Art. 127, 128 — ad hoc / retired Supreme Court judges: NJAC reference → Chief Justice of India.
+- Art. 217(1) — High Court Judge appointments: "recommendation of the NJAC" → "consultation with
+  the Chief Justice of India" (re-joined carefully so the surrounding "...and the Governor of the
+  State, and...the Chief Justice of the High Court, shall/and shall hold office" clause still
+  reads grammatically — this was the join flagged as a risk spot before applying, and was
+  confirmed correct by direct inspection of the restored text).
+- Art. 222, 224(1), 224(2), 224A — judge transfers, additional/acting judges, retired judges
+  sitting again: NJAC references → Chief Justice of India (of the relevant court).
+- Art. 231 — common High Courts: restored clause (a) defining how "Governor of the State" reads
+  when a High Court serves multiple States, previously blanked to `* * * * *`.
+
+Each of these 8 Articles' `amendments` array now opens with a new note explaining that the 99th
+Amendment was struck down and that the shown text is the pre-amendment text, which continues to
+operate — the restoration is documented in-app, not silent.
+
+Articles 124A, 124B and 124C (which exist only to establish the NJAC itself — composition,
+functions, and Parliament's power to legislate for it) have no "pre-amendment" text to restore,
+since they were wholly inserted in 2014. The delivery's own instructions offered two fallback
+treatments (`notInForce`, used elsewhere in the Constitution data only for *future*, not-yet-
+commenced amendments — confirmed by checking its only other live uses, on Art. 22 and Art. 100 —
+or `status: "omitted"`, which blanks a section's text entirely) and flagged both as uncertain
+fits, asking for a decision before saving. Neither matched "struck down, currently void, but
+historically real and worth showing in full," so instead: extended the Constitution's own section
+renderer (`ConstitutionSectionView` in `src/App.jsx`) with the same `struckDown` / `struckDownNote`
+mechanism already used by the shared Acts renderer for an identical real case (Arbitration and
+Conciliation Act §87) — a `struck-down` badge chip plus a gold-bordered note box, reusing the
+existing `.struck-down-badge` / `.struck-down-note` / `.struck-down-note-title` CSS with no new
+styles needed. All three articles keep `status: "in-force"` (so `articlesInForce` stays correct)
+and their full text stays visible underneath the note. This was presented to the user as an
+explicit judgment call before implementing, and approved.
+
+`scripts/constitution.expected.json` (the build-time integrity fixture) was regenerated for the
+11 affected articles' amendment counts and the overall content-hash fingerprint — a deliberate,
+sourced correction, which is exactly the case the fixture's own check message says to regenerate
+for (`node scripts/verify-constitution.mjs` previously flagged this as a hard failure, since
+Constitution text isn't normally supposed to change at all).
+
+Verified: `npm run build` (prebuild `verify:constitution` passes cleanly); live with Playwright —
+ICA §56 now links to the correct judgment; SRA §10 shows only its two remaining cases; a search
+for "124A constitution" shows the "struck down" badge and note; Art. 124's and Art. 217's restored
+text read grammatically correct end-to-end, including at both flagged join points.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
