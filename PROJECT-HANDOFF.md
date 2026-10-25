@@ -2014,6 +2014,59 @@ ICA §56 now links to the correct judgment; SRA §10 shows only its two remainin
 for "124A constitution" shows the "struck down" badge and note; Art. 124's and Art. 217's restored
 text read grammatically correct end-to-end, including at both flagged join points.
 
+## BNS verbatim text + plain-English explanations for all 358 sections, plus fix F4
+Delivered as three files chained together by `BNS_BATCH1_CLAUDE_CODE_INSTRUCTIONS.md`:
+`bns_official_text.json` (verbatim India Code text, Step 1 — itself specified in a separate
+`BNS_TEXT_CLAUDE_CODE_INSTRUCTIONS.md`), `bns_explanations_batch1.json` (Step 2), and
+`website_fix_F4_madhegowda_1.json` + its own instructions file (Step 3), with a combined
+verifier `verify_bns_explanations.mjs` to check all three together.
+
+**Step 1 — verbatim text.** Every one of the 358 BNS sections had its `title`, `text` and
+`illustrations` replaced with the India Code's own consolidated wording (as on 6 October 2025),
+in place of this project's earlier paraphrase. Before merging, the new JSON was checked directly
+(not just taken on the instructions' word) for the three specific paraphrase errors the
+instructions flagged, and all three were confirmed real: §103(2) (mob lynching) now correctly
+reads "death or imprisonment for life, and fine" rather than the old "not less than seven years"
+(which came from the withdrawn Bill, not the enacted Act); §4(b) no longer glosses life
+imprisonment as "the remainder of natural life"; §22 uses the Act's actual term "unsoundness of
+mind" rather than "mental illness". The old paraphrased `explanations` and `provisos` arrays were
+removed from every section (not just `explanations`, as the instructions' bulleted steps literally
+said) — confirmed by direct inspection that the official text already embeds that same content
+verbatim inside `text` itself (e.g. §27's "Provided that this exception shall not extend to—"
+clause, previously held in a separate `provisos` array, is now part of the statute text), so
+keeping the old arrays would have rendered the same content twice on the page. Section 2's
+clickable-definitions feature (the `DEFINITIONS` glossary and `renderWithDefs`) was confirmed to
+be a fully independent data structure that doesn't read section 2's own `explanations` field at
+all, so removing it there is safe and needed no special-casing.
+
+**Step 2 — plain-English explanations.** `bns_explanations_batch1.json` supplied a
+`simpleExplanation` for the 315 of 358 BNS sections that had none and also had no `cases` or
+`ingredients` (the app's own data was checked directly to confirm this was exactly 315, not
+assumed from the delivery's claim) — bringing plain-English coverage to all 358 BNS sections for
+the first time. Each explanation was inserted immediately after `text`, matching the field order
+already used on the 43 sections that had one beforehand (e.g. §§63, 100, 101).
+
+**Step 3 — fix F4 (Madhegowda v. Ankegowda).** This case was sitting under HSA §6 (daughter
+coparcenary rights) with a ratio about a Karta's management powers — the wrong provision; the
+actual 2001 Supreme Court judgment is about HMGA §11 (a non-guardian, here the minor's elder
+sister, selling a minor's property is void since she is at most a de facto guardian, barred by
+§11 from dealing with it). The case object was moved from HSA-6's `cases` array to a newly
+created `cases` array on HMGA-11, with the corrected ratio supplied in the fix file, same `name`/
+`cite`/`year`/`url` kept throughout.
+
+All three steps were done as one pass over `src/App.jsx` using a small script
+(`merge_bns_batch.mjs`) that parses each BNS object's top-level fields (string/array/nesting-aware,
+not a naive regex) so only the targeted fields were touched and every other field's original
+formatting was preserved untouched. Verified with the delivered `verify_bns_explanations.mjs`
+— `ALL CHECKS PASSED` (358 sections, 315 explanations present and unchanged, verbatim text
+applied to all 358, Madhegowda present only under HMGA-11, and no BNS section left bare).
+`npm run build` passed cleanly. Spot-checked live with Playwright: §103 shows the corrected
+murder punishment and its explanation block; §22 shows "unsoundness of mind" in the actual
+statute text; §303's illustrations render; §2's "good faith" term is still clickable; HMGA
+§11 now shows a "Landmark case available" chip with the Madhegowda case, and HSA §6 no longer
+mentions it. Fixes F1–F3 (the earlier Satyabrata Ghose URL fix, Katta Sujatha Reddy removal, and
+the NJAC constitutional-text restoration) were confirmed still in place and untouched.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
