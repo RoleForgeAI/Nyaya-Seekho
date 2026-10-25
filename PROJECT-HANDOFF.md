@@ -2067,6 +2067,44 @@ statute text; §303's illustrations render; §2's "good faith" term is still cli
 mentions it. Fixes F1–F3 (the earlier Satyabrata Ghose URL fix, Katta Sujatha Reddy removal, and
 the NJAC constitutional-text restoration) were confirmed still in place and untouched.
 
+## Specific Relief Act verbatim text + plain-English explanations for all BSA and SRA sections
+Delivered as `sra_official_text.json` (46 verbatim SRA entries), `bsa_sra_explanations.json`
+(132 plain-English explanations: 97 BSA + 35 SRA), and `verify_bsa_sra_batch.mjs`, chained via
+`BSA_SRA_BATCH_CLAUDE_CODE_INSTRUCTIONS.md` as two parts.
+
+**Part A — SRA verbatim text.** All 46 SRA section slots (§§1–42, including the lettered
+insertions §14A, §20A, §20B, §20C and the renumbered §20) had their `title` and `text` replaced
+with the India Code's own wording (Act 47 of 1963, as on 30 August 2026, amended up to Act 18 of
+2018). The old paraphrased `explanations` arrays (on §§7, 8, 12, 16, 21, 27, 34) and `provisos`
+arrays (on §§34, 42) were removed, since that content is now folded into the verbatim `text`
+itself — confirmed directly rather than assumed: §34's text now ends "...Provided that no court
+shall make any such declaration where the plaintiff...omits to do so", and §42's ends "...Provided
+that the plaintiff has not failed to perform the contract so far as it is binding on him",
+matching what the separate arrays used to hold. `cases` on sections that already had one (e.g.
+§42's Gujarat Bottling Co. case) were left completely untouched, since Part A only ever targets
+`title`/`text`/`explanations`/`provisos`.
+
+**Part B — plain-English explanations.** `simpleExplanation` was added to the 97 BSA sections and
+35 SRA sections that had none (and no `cases` or `ingredients` either) — confirmed by checking the
+app's own data directly before merging, which matched the delivery's 97+35 claim exactly. This
+brings plain-English coverage to all 170 BSA sections and all 46 SRA sections for the first time.
+Each explanation was inserted immediately after `text`, matching the existing field-order
+convention. Sections that already had a `simpleExplanation` (e.g. SRA §34, which keeps its
+earlier explanation about the declaratory-relief proviso) were left untouched, since the batch
+file's own keys were confirmed to be exactly the sections lacking one — not assumed.
+
+Both parts were applied with one script (`merge_bsa_sra_batch.mjs`), the same field-aware parser
+built for the BNS batch, so only the targeted fields were touched and every other field (ids,
+categories, cross-refs, existing cases) kept its original formatting untouched. Verified with the
+delivered `verify_bsa_sra_batch.mjs` — `ALL CHECKS PASSED` (132 explanations present and
+unchanged, all 46 SRA sections carry verbatim text, old explanations/provisos arrays gone, no BSA
+or SRA section left bare). `npm run build` passed cleanly. Spot-checked live with Playwright:
+SRA §10, §34 (proviso text + its earlier explanation both intact) and §42 (proviso text + its
+existing Gujarat Bottling case both intact) render correctly, SRA §7's two "Explanation" clauses
+read as part of the statute text, and BSA §2 shows its new explanation. The earlier F1–F4 fixes
+and the BNS batch were confirmed still in place (SRA §10's cases array is unchanged, still missing
+Katta Sujatha Reddy and carrying only Chand Rani and Saradamani Kandappan).
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
