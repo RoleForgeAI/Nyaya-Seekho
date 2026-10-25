@@ -2105,6 +2105,27 @@ read as part of the statute text, and BSA §2 shows its new explanation. The ear
 and the BNS batch were confirmed still in place (SRA §10's cases array is unchanged, still missing
 Katta Sujatha Reddy and carrying only Chand Rani and Saradamani Kandappan).
 
+## Final explanations batch — plain-English coverage on every section of every Act
+Delivered as `final_acts_explanations.json` (193 explanations) and `verify_final_acts_batch.mjs`,
+the last of a chain of four explanation/text batches (BNS batch → BSA+SRA batch → this one). This
+batch targeted the 193 sections, across 10 Acts, that were still bare (no `simpleExplanation`, no
+`cases`, no `ingredients`): NIA 54, ICA 37, ACA 26, TPA 25, IPA 22, SGA 14, HSA 8, LA 4, HMA 2,
+HMGA 1. The app's own data was checked directly before merging — the live bare-section count per
+Act matched the delivery's claim exactly, and the batch file's 193 keys matched that exact set
+(no extra keys, none missing) — so nothing was taken on trust that wasn't independently confirmed.
+
+Unlike the three earlier batches, this one makes no text or title changes at all — purely adding
+`simpleExplanation` to each section's object, inserted right after `text` to match the convention
+used everywhere else, using the same field-aware script pattern as the previous batches so no
+other field (including each section's own `text`, `cases` if any, `crossRefs`) was touched.
+
+Verified with the delivered `verify_final_acts_batch.mjs` — `ALL CHECKS PASSED`, including its
+whole-site check that every one of the 3023 live (non-repealed) sections across every Act now has
+a `simpleExplanation`, `cases`, or `ingredients` — the first time this has been true for the whole
+app. `npm run build` passed cleanly. Spot-checked live with Playwright: NIA §126 (cheque crossing),
+ICA §15 (coercion), TPA §60A (mortgage redemption to a third party), SGA §24 (sale or return), and
+HSA §26 (convert's descendants) all show their new explanation.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
