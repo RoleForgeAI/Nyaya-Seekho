@@ -2126,6 +2126,44 @@ app. `npm run build` passed cleanly. Spot-checked live with Playwright: NIA §12
 ICA §15 (coercion), TPA §60A (mortgage redemption to a third party), SGA §24 (sale or return), and
 HSA §26 (convert's descendants) all show their new explanation.
 
+## Old IPC, CrPC and Evidence Act section numbers on every BNS, BNSS and BSA section
+Delivered as `old_section_numbers.json` (a map of every BNS/BNSS/BSA section id to its old-law
+section number(s), sourced from CAPT Bhopal (MHA) correspondence tables and cross-checked against
+other tables), `verify_old_sections.mjs`, and an instructions file covering one data change and
+three small UI spots, all in `src/App.jsx`.
+
+**Data.** For BNS, the existing `ipc` field (already present on every section) was updated to the
+official correspondence number, character for character, on the 348 sections where it changes
+(e.g. §133 "355" not the old value, §219 "184", §189 "141–145, 150, 151, 157 & 158") — and removed
+outright on 2 sections (§152, §226) that the official tables identify as genuinely new provisions
+with no IPC original (the other 8 null-mapped BNS sections already had `ipc: null` and needed no
+change). For BNSS, a new `crpc` field was added to the 522 of 531 sections that have a CrPC
+original (9 are new provisions and get nothing). For BSA, a new `iea` field was added to the 168
+of 170 sections that have an Evidence Act original (2 are new provisions). No other field on any
+section was touched. The merge script inserts `crpc`/`iea` immediately after `id`, mirroring where
+`ipc` already sits on every BNS section, so the three Acts now share one consistent field order.
+
+**UI (three spots, all in `App.jsx`).**
+1. The section-number tag under the heading, previously BNS-only (`≈ IPC Section N` / "New
+   provision — no direct IPC equivalent"), now has matching BNSS and BSA variants (`≈ CrPC
+   Section N` / "New provision — no direct CrPC equivalent", and the Evidence Act equivalent),
+   each gated on its own Act and reusing the existing `.ipc-tag` style — no new CSS needed.
+2. `exportSection`'s header line, which already appended `(≈ IPC §N)`, now also appends `(≈ CrPC
+   §N)` and `(≈ Evidence Act §N)` when those fields are present.
+3. The within-act sidebar section search (placeholder "Search section, number, IPC §…") — the one
+   a student uses after picking an Act from the Library list, distinct from the global cross-act
+   search box — now also matches against `crpc` and `iea`, alongside the `ipc` check it already had.
+
+Verified with the delivered `verify_old_sections.mjs` — `ALL CHECKS PASSED` (BNS ipc 348/348, BNSS
+crpc 522/522, BSA iea 168/168, plus checks that the UI tag text, export line and search field
+names are all present in the source). `npm run build` passed cleanly. Spot-checked live with
+Playwright exactly as the instructions listed: BNS §103 shows "≈ IPC Section 302", §115 shows
+"321 & 323", §152 shows the new-provision text; BNSS §173 shows "≈ CrPC Section 154", §398 shows
+the new-provision text; BSA §23 shows "25, 26 & 27", §63 shows "65B"; and, in the within-act
+sidebar search (not the global search box, which has no old-number awareness and was correctly
+left untouched), "436A" narrows the BNSS list down to exactly section 479 (confirmed by opening it
+and seeing "≈ CrPC Section 436A"), and "498A" narrows the BNS list down to sections 85 and 86.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
