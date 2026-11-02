@@ -77,6 +77,13 @@ export const ACT_ALIASES = {
   "information technology act": "ITA",
   "information technology": "ITA",
 
+  pocso: "POCSO",
+  posco: "POCSO",
+  "pocso act": "POCSO",
+  "posco act": "POCSO",
+  "protection of children from sexual offences": "POCSO",
+  "protection of children from sexual offences act": "POCSO",
+
   cpc: "CPC",
   "code of civil procedure": "CPC",
   "civil procedure code": "CPC",

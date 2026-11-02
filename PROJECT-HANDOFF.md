@@ -2258,6 +2258,38 @@ section with its URL unchanged. (The search-result heading and empty-state text 
 to be case-insensitive — a test-script gotcha, not an app bug, confirmed by reading the raw data
 and re-testing case-insensitively.)
 
+## The Protection of Children from Sexual Offences Act, 2012 (POCSO) added
+Delivered as a self-contained hand-off: `pocso_2012_complete.json` (the data), `add-pocso.mjs` (a
+supplied script that inserts it into `src/App.jsx` and `src/search/actAliases.js`), and
+`verify_pocso.mjs` (checks the data file, then the live site once built) — the first batch in this
+project delivered as a ready-to-run script rather than instructions to apply by hand.
+
+POCSO is now the first Act added after the section-links/sitemap/old-law-search batch, and the
+first Act added since that feature existed — it automatically got its own pre-rendered pages
+(`/pocso/1/` … `/pocso/46/`, `/pocso/42a/`, `/pocso/sch/`) and sitemap entries with no extra work,
+confirming `getSitePages()` generalises correctly to a newly-added Act.
+
+All 47 sections (§§1–46, §42A) plus the Schedule, across 9 chapters (Chapter II split into its own
+Parts A–E as categories: penetrative sexual assault, aggravated penetrative, sexual assault,
+aggravated sexual assault, sexual harassment) — verbatim India Code text (Act 32 of 2012, including
+the 2019 Amendment), plain-English explanation for every section, reading the Act's IPC/CrPC cross-
+references as their BNS/BNSS equivalents (e.g. CrPC 164 → BNSS 183). No cases or crossRefs added,
+per the delivery's own scope. The Arunachal Pradesh state amendment to §42 is recorded only in the
+explanation, not the text, following this project's standing state-variant rule. Search aliases
+`pocso`, `posco`, `pocso act`, `posco act` and two longer phrases all route to the new Act.
+
+Run exactly as specified: `verify_pocso.mjs` against the raw data file first (29 data-only checks
+passed cleanly; the same run's site-wiring checks failed, but only because POCSO didn't exist in
+`App.jsx` yet at that point — not a data defect, so this was treated as expected and not a stop
+condition); `add-pocso.mjs` (exact expected output: "Added POCSO: 10 chapters, 14 categories, 48
+sections, 6 search aliases"); `npm run build` (prerender: exactly 3728 section pages, as the
+instructions predicted); `verify_pocso.mjs` again — now `ALL CHECKS PASSED`, including the
+site-wiring and built-page checks. Spot-checked live with Playwright beyond what the instructions
+required: a direct link to `/pocso/4/` opens with the correct title and shows its plain-English
+box, the search alias "pocso 4" surfaces the section, and POCSO appears in the Library sidebar.
+The three hand-off files were deleted from the repo root before committing, so only `src/App.jsx`
+and `src/search/actAliases.js` changed.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
