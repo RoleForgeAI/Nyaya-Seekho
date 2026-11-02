@@ -2164,6 +2164,43 @@ sidebar search (not the global search box, which has no old-number awareness and
 left untouched), "436A" narrows the BNSS list down to exactly section 479 (confirmed by opening it
 and seeing "≈ CrPC Section 436A"), and "498A" narrows the BNS list down to sections 85 and 86.
 
+## "What changed" notes on every BNS, BNSS and BSA section
+Delivered as `what_changed_all.json` (1059 entries: 358 BNS, 531 BNSS, 170 BSA), with instructions
+covering one data field and four code spots, all in `src/App.jsx`. This batch replaced two earlier
+separate planned packages (one for BNS, one for BSA+BNSS) with a single combined one.
+
+**Data.** Added a `whatChanged` field — a short plain-text note on what changed compared with the
+old law (IPC for BNS, CrPC for BNSS, Evidence Act for BSA) — to every one of the 1059 sections in
+the delivered map, confirmed 1:1 against the app's live section ids before merging (358+531+170 =
+1059, no extras, no gaps). Inserted right after `simpleExplanation` when present (else right after
+`text`), so the data's own field order matches the order these boxes render on the page.
+
+**Display.** A new box, directly below "In Plain English" and above "Essential Ingredients" (per
+the instructions' exact placement), shown only when `section.whatChanged` exists. Its title is
+Act-specific — "What changed from IPC" / "CrPC" / "Evidence Act" — chosen from `chapterOf(section)
+?.act`. Styled with a new `.changed-box`/`.changed-title` class pair, deliberately parallel to the
+existing `.plain-box`/`.plain-title` (same padding, radius and font sizing) but with a gold accent
+(`var(--gold)` border, `var(--oxblood-deep)` title colour) instead of blue, so it reads as related
+but distinct — reusing the same CSS variable system every other box in the app already uses (the
+app doesn't currently have a separate dark-mode stylesheet, so there was nothing extra to account
+for there).
+
+**Search and export.** The within-act sidebar section search (placeholder "Search section, number,
+IPC §…") now also matches `whatChanged`, alongside the `simpleExplanation` check it already had.
+`exportSection` now adds a `What changed from IPC/CrPC/Evidence Act: <note>` line, placed right
+after the statute text (the same relative position as the on-page box), when the field is present.
+
+Verified with the delivered `verify_what_changed_all.mjs` — `ALL CHECKS PASSED` (BNS 358/358, BNSS
+531/531, BSA 170/170, plus checks that the box title, the three Act-specific label strings, and
+the `section.whatChanged`/`s.whatChanged` code references are all present). `npm run build` passed
+cleanly. Spot-checked live with Playwright on all 12 sections named in the instructions (BNS §103,
+152, 303, 7; BNSS §173, 187, 479, 5; BSA §57, 63, 138, 8) — each correctly shows its own
+Act-labelled box. The two search-term checks were run against the within-act sidebar search (the
+one actually extended by this batch — the global cross-act search box was correctly left
+untouched, since it has no concept of `whatChanged` or old-law numbers and the instructions never
+asked for that): "community service" on BNS narrows to §§4, 8, 202, 209 (sections discussing the
+new community-service punishment), and "zero FIR" on BNSS narrows to exactly §173.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
