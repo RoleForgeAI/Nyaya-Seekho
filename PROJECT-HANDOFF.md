@@ -2201,6 +2201,63 @@ untouched, since it has no concept of `whatChanged` or old-law numbers and the i
 asked for that): "community service" on BNS narrows to §§4, 8, 202, 209 (sections discussing the
 new community-service punishment), and "zero FIR" on BNSS narrows to exactly §173.
 
+## Section links, sitemap, and old-number search
+Delivered as `prerender-sections.mjs` (a new build script), `verify_routes_sitemap.mjs`, and a
+step-by-step instructions file specifying exact code blocks for `src/App.jsx`, applied verbatim.
+
+**Old-number search.** Typing "IPC 302", "302 IPC", "CrPC 438" or "Evidence Act 65B" in the global
+search box now shows the BNS/BNSS/BSA section that replaced it ("IPC Section 302 is now → BNS
+103"), instead of opening whatever section happens to share that bare number in the new law. Built
+from a module-level `OLD_LAW_INDEX`, populated once from the `ipc`/`crpc`/`iea` fields already on
+every section (added in two earlier batches) — no new data file. `lookupOldLaw()` recognises both
+word orders ("IPC s.302" and "s.302 IPC") and expands old-law ranges like "141–145, 150, 151, 157
+& 158" into individual lookup keys. `LegalSearch`'s `runSearch` tries this before the normal fuzzy
+search; a recognised-but-unmatched old number (e.g. a provision genuinely dropped in the new law)
+shows an explanatory message instead of silently falling through to fuzzy noise.
+
+**A web address for every section.** Every section now has its own route, e.g. `/bns/103/`,
+`/bnss/482/`, `/cpc/o39r1/`, `/constitution/21/`, computed from each section's own id via
+`sectionPath()`/`sectionSlug()` — no separate slug table. Opening a link lands directly on that
+section (`readInitialRoute()` parses `window.location.pathname` once at mount); the address bar,
+tab title (`document.title`) and meta description update as the reader moves between sections
+(`history.pushState`, with `replaceState` on the very first sync so the home page's own URL isn't
+immediately overwritten); Back/Forward move between sections via `popstate`. A "Copy link to this
+section/article" button sits next to "Export section as text" in both the shared-Acts renderer and
+`ConstitutionSectionView` (which needed its own `copySectionLink`/`linkCopied` props threaded in).
+
+**Pre-rendered, crawlable pages + sitemap.** `scripts/prerender-sections.mjs` runs as a new
+`postbuild` npm script (wired into `package.json`, picked up automatically by the existing GitHub
+Pages workflow with no further change). It esbuild-bundles just enough of `App.jsx` to call the
+new exported `getSitePages()` in Node, then writes a real static HTML page — its own `<title>`,
+meta description, canonical link, and the section text inside `#root` (React takes over once the
+bundle loads) — at every section's address, plus `sitemap.xml` (omitting repealed/omitted
+sections), `robots.txt`, and a `404.html` that still boots the app for any unrecognised deep link.
+
+**One-word text fix.** HSA §2 Explanation (a) read "one of whose parents are Hindus..." — the Act
+actually says "**both** of whose parents" (clause (b), not (a), is the one-parent case). Corrected
+to match the Act; verified it occurred exactly once in the file before changing it.
+
+Applied by following the instructions' exact code blocks (helper functions inserted after
+`LEGAL_SEARCH_INDEX`, the `LegalSearch` and `BareActNavigator` edits, the two button additions,
+copying the supplied `prerender-sections.mjs` into `scripts/`, and the one-line `postbuild` add to
+`package.json`) rather than reimplementing from a description, since the delivery specified
+working code directly. `npm run build` ends with `postbuild` printing `prerender: 3680 section
+pages, sitemap with 3556 URLs` — matching the instructions' own estimate exactly. The delivered
+`verify_routes_sitemap.mjs` — `ALL CHECKS PASSED` (every named source-code marker present, the
+HSA fix confirmed both ways, sitemap/robots.txt/404.html all present with 3556 URLs, all 358 BNS
+section pages exist, and the 6 named sample pages — BNS 103, BNSS 482, BSA 63, CPC O39R1,
+Constitution Art. 21, ICA 10 — all have correct titles, canonical links and body text).
+
+Spot-checked live with Playwright exactly as instructed: a direct link to `/bns/103/` opens that
+section with the correct tab title; "ipc 302", "crpc 438" and "evidence act 65b" all show the
+"... is now →" result, "ipc 497" shows the not-listed message, and "bns 103"/"cheque bounce" still
+behave as before; clicking between sections updates the address bar and Back correctly returns to
+the previous section; the Copy-link button is present; and the home page still opens on its usual
+section with its URL unchanged. (The search-result heading and empty-state text use
+`text-transform: uppercase` in CSS, so a case-sensitive string check against rendered text needs
+to be case-insensitive — a test-script gotcha, not an app bug, confirmed by reading the raw data
+and re-testing case-insensitively.)
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

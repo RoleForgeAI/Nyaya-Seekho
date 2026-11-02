@@ -33,7 +33,7 @@ const ACTS = [
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "active" },
 ];
 
-const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); plain-English explanation added for all 532 in-force sections; case-law verification complete — 177 of 177 candidate landmark cases independently checked against Indian Kanoon (324 verified case objects across the Constitution's sections); The Hindu Adoptions and Maintenance Act, 1956 (HAMA) complete — all 30 of 30 sections, 4 chapters (§29 itself a spent 1960 repeal provision, rendered distinctly; 29 of 30 sections substantively in force), plain-English explanation for every in-force section, 5 landmark case objects across 4 sections (§§5, 6, 8, 9) — verified against a consolidated official-style text current as amended by Act 45 of 1962, Act 30 of 2010, the Personal Laws (Amendment) Act, 2019, and the J&K Reorganisation Act, 2019, catching two errors common to uncorrected web copies (the pre-2010 text of §8, and the leprosy ground still present in uncorrected §18(2)(c)); BNSS plain-English explanation sweep complete — simpleExplanation added for all 531 of 531 BNSS sections across all 39 chapters (case-law coverage for BNSS remains a separate follow-up pass, currently 6 case objects across 5 sections from enrichment batch 1); BNSS enrichment batch 2 — 13 externally pre-verified landmark cases merged in (name, citation, ratio and Indian Kanoon URL checked against the judgment text before delivery, not independently re-verified in this project), 3 of which apply to more than one section, bringing BNSS's total to 19 distinct verified cases (23 case-object entries, since a few cases are attached to more than one section) across 19 sections (§§35, 36, 47, 48, 173, 175, 187, 194, 218, 250, 262, 268, 341, 359, 413, 479, 480, 482, 528); The Registration Act, 1908 (RA) complete — all 96 of 96 section slots (90 in force), 15 Parts, 6 sections repealed/omitted (§§4, 9, 56, 67, 92, 93, rendered distinctly), plain-English explanation for every in-force section, including a 2019 Jammu and Kashmir Reorganisation Act fix (removing the stale \"except the State of Jammu and Kashmir\" exclusion from §1(2) and §2(6A)'s definition of \"India\") — verified against a consolidated central-law text cross-checked against a Maharashtra state-applicable edition (Maharashtra's own state amendments to §§7, 17 and 89 recorded as notes only, not merged into the main text, per this project's standing state-variant limitation); 10 landmark case objects across 4 sections (§17 ×6, §47, §49 ×2, §60) — case-law coverage remains thin across the Act's other 86 in-force sections and is flagged as a follow-up pass; cross-act global search added — a LegalSearch box in the topbar (Fuse.js fuzzy search over every act's title/plain-English explanation/case names, plus hand-curated phrase tags for high-traffic sections and an exact section/article-number lookup with optional act-name narrowing, e.g. \"21 bns\" or \"section 138\"), built once at module load from this app's own already-verified content, no external calls or AI generation involved; search follow-up fix — an act-qualified exact match (e.g. \"21 bns\") no longer also runs a full fuzzy search on the raw query text, which previously could surface a page of loosely-related noise underneath a correct pinned result (the earlier \"art 47\" issue, where \"art\" fuzzy-matched \"part performance\" etc.); fuzzy search still runs as a fallback when a section reference is recognised but doesn't actually exist (e.g. \"section 999 bns\"); search bug fix — act-qualified exact lookups (e.g. \"138 ni act\", \"sec 12 bnss\") now correctly find act-prefixed section ids; previously the lookup only tried the bare number, which silently worked for BNS/Constitution (bare ids) but returned zero or wrong-act results for every other act (ids like \"NIA-138\", \"BNSS-12\"), now fixed by also trying the act-prefixed id form once an act hint narrows the search; The Information Technology Act, 2000 (ITA) complete — all 129 of 129 section slots (111 in force), 15 chapters/parts (I–XIII, XIIA, plus Schedules I–IV after §94), 18 sections repealed/omitted (incl. §66A, struck down by Shreya Singhal v. Union of India then formally omitted by the Jan Vishwas Act 2023), plain-English explanation for every in-force section — text reflects the IT (Amendment) Act 2008, the Finance Act 2017 (TDSAT replacing the Cyber Appellate Tribunal), and the Jan Vishwas (Amendment of Provisions) Act 2023 (in force from 30-11-2023: §§33, 44, 45, 46, 66A omitted, 67C, 68, 69B, 70B, 72, 72A), plus a prospective, not-yet-commenced DPDP Act 2023 note on §43A (commences on or about 13-05-2027); 11 landmark case objects across 9 sections (§§65, 66, 66A, 67, 67B, 69A, 79 ×3, 81, 85), incl. Shreya Singhal v. Union of India (cited under §§66A, 69A and 79, each with a section-specific ratio) and Sharat Babu Digumarti (§§67 and 81) — verified against the delivered data's own integrity script (ids/order/content spot-checks), re-run successfully against the integrated data after conversion; IT Act registered in global search — actAliases.js entries added (\"it act\", \"ita\", \"information technology act\", \"information technology\" all route to actId \"ITA\"), verified live (\"ita 43a\", \"information technology act 66\" both jump to the correct section; a query for a repealed section like \"sec 66a it act\" correctly returns nothing, since this app's search index excludes repealed sections for every act, not an ITA-specific gap); search bug fix — a bare number search with NO act hint (e.g. just \"66\" or \"section 43\") previously only ever found acts with naturally bare ids (BNS, Constitution), since the lookup index was keyed by each section's raw id and every other act's ids are already act-prefixed (\"ITA-66\", \"RA-17\"); this made every prefixed-id act's sections invisible to a plain number search, which is almost certainly why IT Act sections weren't appearing — now fixed by indexing every section under its own bare number (prefix stripped at index-build time) regardless of act, so a hint-less query correctly returns every act's matching section (verified: bare \"66\" now returns all 11 in-force acts with a section 66, including ITA-66, up from 2 before the fix), while an act-hinted query like \"66 ita\" still narrows to just that one act as before; The Code of Civil Procedure, 1908 (CPC) complete — all 916 of 916 entries (171 section slots across Preliminary + Parts I–XI, 732 Order/Rule entries across 58 Orders I–LI incl. lettered/commercial variants, 9 Appendices A–I, the repealed Second to Fifth Schedules), 877 in force, 39 repealed, 31 Commercial Courts–only entries (new \"Commercial Courts only\" badge), 8 Appendices (A–H) labelled \"Summary of Forms\" instead of statute text (forms intentionally not reproduced) — this Act introduces the app's first Order/Rule two-level structure, using the existing generic Chapter→Category→Section drill-down (72 categories, one per Part/Order) rather than a bespoke navigator; rule/appendix/schedule entries carry a precomputed display label (\"Order XXXIX, Rule 1\", \"Appendix A\") that the breadcrumb, section-notes heading and exported-text header now prefer over the generic \"Section N\" pattern; 1 landmark case (Dhulabhai v. State of Madhya Pradesh, under §9) — verified against the delivered data's own integrity script both before and after conversion (re-exported from the merged data back into the delivery's schema, ALL CHECKS PASSED with the exact expected summary both times); search extended with a new Order/Rule citation parser (recognising \"order 39 rule 1\", \"o 39 r 1\", \"o.39 r.1\", \"order xxxix rule 1\", \"o 13a r 3\", \"o.13a r.3\", \"o 11c r 4\" — arabic or roman order numbers, with lettered/commercial suffixes) plus \"cpc\"/\"code of civil procedure\"/\"civil procedure code\" aliases, confirmed the existing bare-number and act-hinted lookup fixes already cover this Act with no further changes needed; BNSS case-law batch 3 — 26 externally pre-verified cases (all decided under the CrPC 1973, each carrying decidedUnder/continuityNote) merged across 18 sections; 16 were new (10 were exact-URL duplicates of cases already present under the same section and were correctly skipped, e.g. Arnesh Kumar under §35, D.K. Basu under §36, M. Ravindran under §187), bringing BNSS to 32 distinct verified cases (39 case-object entries, since several apply to more than one section) across 26 sections — verified against the delivered batch's own integrity script both as a standalone batch and as an integration check against the merged app data (ALL CHECKS PASSED both times); CPC case-law batch 2 — the CPC data file was replaced with an updated version whose only change (confirmed by a field-by-field diff against the prior file before merging) was filling in case arrays: 46 new Supreme Court cases merged across 35 sections/rules (§§10, 11, 13, 16, 20, 21, 25, 35, 47, 80, 89, 96, 100, 115, 144, 151, Orders I, II, VI, VII, VIII, IX, XII, XVIII, XXI, XXII, XXIII, XXXVII, XXXVIII, XXXIX, XLI, XLIII, XLVII), with Dhulabhai under §9 (already present) correctly skipped as a duplicate rather than re-added, bringing CPC to 47 verified cases across 36 sections/rules — verified against the delivered verify_cpc.mjs (updated to lock exactly 47 cases) both as the raw delivered file and against a re-export of the merged app data, ALL CHECKS PASSED with the exact expected summary both times; targeted website-fixes batch — (1) corrected a broken Indian Kanoon case link under ICA §56 (Satyabrata Ghose v. Mugneeram Bangur & Co. now points to the correct judgment, not an unrelated document); (2) removed a Specific Relief Act §10 case citation (Katta Sujatha Reddy v. Siddamsetty Infra Projects) after the underlying Supreme Court judgment was recalled/withdrawn; (3) restored the pre-2015 (pre-NJAC) constitutional text on 8 Articles — 124, 127, 128, 217, 222, 224, 224A, 231 — each of which had been left showing its struck-down 99th Amendment wording; each now carries a note (new, prepended to its amendments list) explaining the restoration and citing Supreme Court Advocates-on-Record Association v. Union of India (16-10-2015, AIR 2016 SC 117); and marked the three NJAC-created Articles 124A, 124B and 124C as struck down — extending the Constitution's own section renderer with the same struckDown/struckDownNote mechanism already used elsewhere in the app (for ACA §87) rather than the mismatched notInForce (reserved for amendments not yet commenced) or status:\"omitted\" (which blanks the text) fields, so their full historical text stays visible under a \"Struck Down by the Supreme Court\" note and badge; constitution.expected.json integrity fixture regenerated (amendment counts + content fingerprint) to match this intentional, sourced text correction; BNS verbatim India Code text + plain-English explanations for all 358 sections — replaced the previous paraphrased title/text/illustrations on every BNS section with verbatim text from the India Code consolidated BNS 2023 (as on 6 Oct 2025), correcting several paraphrase errors along the way (§103(2) mob-lynching punishment is death or life imprisonment, not a 7-year minimum from the withdrawn Bill; §4(b) life imprisonment is not redefined as \"the remainder of natural life\"; §22 uses \"unsoundness of mind\", not \"mental illness\"), removed the old paraphrased explanations/provisos arrays since that content now lives inside the verbatim text itself, and added simpleExplanation to the 315 of 358 BNS sections that previously had no simpleExplanation, cases or ingredients, bringing plain-English coverage to all 358 BNS sections; fix F4 — moved the Madhegowda v. Ankegowda case from HSA §6 (where its ratio, about coparcenary birthright and the Karta's powers, did not match the judgment) to HMGA §11 (de facto guardians and minors' property, which the judgment is actually about), with a corrected ratio; Specific Relief Act verbatim India Code text (as on 30-08-2026) — replaced the previous paraphrased title/text on all 46 SRA section slots (§§1–42, incl. §14A, §20, §20A, §20B, §20C) with the India Code's own wording, removing the old paraphrased explanations arrays (SRA §§7, 8, 12, 16, 21, 27, 34) and provisos arrays (SRA §§34, 42) since that content (e.g. §34's and §42's provisos) now lives inside the verbatim text itself; plain-English explanations for all BSA and SRA sections — added simpleExplanation to the 97 BSA sections and 35 SRA sections that previously had none, bringing plain-English coverage to all 170 BSA sections and all 46 SRA sections; plain-English explanations now on every section of every Act — added simpleExplanation to the last 193 bare sections across 10 Acts (NIA 54, ICA 37, ACA 26, TPA 25, IPA 22, SGA 14, HSA 8, LA 4, HMA 2, HMGA 1), so every live (non-repealed) section across the whole site now carries a simpleExplanation, cases, or ingredients — confirmed by the project's own verifier across all 3023 live sections; Old IPC, CrPC and Evidence Act section numbers on every BNS, BNSS and BSA section (checked against official correspondence tables) — updated the ipc field on 348 of 358 BNS sections (the other 10 are new provisions with no IPC equivalent) and added crpc to 522 of 531 BNSS sections and iea to 168 of 170 BSA sections, each tagged under the section number (≈ CrPC Section … / ≈ Evidence Act Section …, or “New provision” for the few with none), included in the export/copy line, and included in the within-act section search so a student can look up a section by its old CrPC or Evidence Act number; \"What changed\" notes on all BNS (vs IPC), BNSS (vs CrPC) and BSA (vs Evidence Act) sections — added a whatChanged field to all 358 BNS, all 531 BNSS and all 170 BSA sections (1059 total) summarising what changed from the old law, shown in its own box directly below \"In Plain English\", included in the within-act section search, and appended as a line in the exported/copied section text";
+const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); plain-English explanation added for all 532 in-force sections; case-law verification complete — 177 of 177 candidate landmark cases independently checked against Indian Kanoon (324 verified case objects across the Constitution's sections); The Hindu Adoptions and Maintenance Act, 1956 (HAMA) complete — all 30 of 30 sections, 4 chapters (§29 itself a spent 1960 repeal provision, rendered distinctly; 29 of 30 sections substantively in force), plain-English explanation for every in-force section, 5 landmark case objects across 4 sections (§§5, 6, 8, 9) — verified against a consolidated official-style text current as amended by Act 45 of 1962, Act 30 of 2010, the Personal Laws (Amendment) Act, 2019, and the J&K Reorganisation Act, 2019, catching two errors common to uncorrected web copies (the pre-2010 text of §8, and the leprosy ground still present in uncorrected §18(2)(c)); BNSS plain-English explanation sweep complete — simpleExplanation added for all 531 of 531 BNSS sections across all 39 chapters (case-law coverage for BNSS remains a separate follow-up pass, currently 6 case objects across 5 sections from enrichment batch 1); BNSS enrichment batch 2 — 13 externally pre-verified landmark cases merged in (name, citation, ratio and Indian Kanoon URL checked against the judgment text before delivery, not independently re-verified in this project), 3 of which apply to more than one section, bringing BNSS's total to 19 distinct verified cases (23 case-object entries, since a few cases are attached to more than one section) across 19 sections (§§35, 36, 47, 48, 173, 175, 187, 194, 218, 250, 262, 268, 341, 359, 413, 479, 480, 482, 528); The Registration Act, 1908 (RA) complete — all 96 of 96 section slots (90 in force), 15 Parts, 6 sections repealed/omitted (§§4, 9, 56, 67, 92, 93, rendered distinctly), plain-English explanation for every in-force section, including a 2019 Jammu and Kashmir Reorganisation Act fix (removing the stale \"except the State of Jammu and Kashmir\" exclusion from §1(2) and §2(6A)'s definition of \"India\") — verified against a consolidated central-law text cross-checked against a Maharashtra state-applicable edition (Maharashtra's own state amendments to §§7, 17 and 89 recorded as notes only, not merged into the main text, per this project's standing state-variant limitation); 10 landmark case objects across 4 sections (§17 ×6, §47, §49 ×2, §60) — case-law coverage remains thin across the Act's other 86 in-force sections and is flagged as a follow-up pass; cross-act global search added — a LegalSearch box in the topbar (Fuse.js fuzzy search over every act's title/plain-English explanation/case names, plus hand-curated phrase tags for high-traffic sections and an exact section/article-number lookup with optional act-name narrowing, e.g. \"21 bns\" or \"section 138\"), built once at module load from this app's own already-verified content, no external calls or AI generation involved; search follow-up fix — an act-qualified exact match (e.g. \"21 bns\") no longer also runs a full fuzzy search on the raw query text, which previously could surface a page of loosely-related noise underneath a correct pinned result (the earlier \"art 47\" issue, where \"art\" fuzzy-matched \"part performance\" etc.); fuzzy search still runs as a fallback when a section reference is recognised but doesn't actually exist (e.g. \"section 999 bns\"); search bug fix — act-qualified exact lookups (e.g. \"138 ni act\", \"sec 12 bnss\") now correctly find act-prefixed section ids; previously the lookup only tried the bare number, which silently worked for BNS/Constitution (bare ids) but returned zero or wrong-act results for every other act (ids like \"NIA-138\", \"BNSS-12\"), now fixed by also trying the act-prefixed id form once an act hint narrows the search; The Information Technology Act, 2000 (ITA) complete — all 129 of 129 section slots (111 in force), 15 chapters/parts (I–XIII, XIIA, plus Schedules I–IV after §94), 18 sections repealed/omitted (incl. §66A, struck down by Shreya Singhal v. Union of India then formally omitted by the Jan Vishwas Act 2023), plain-English explanation for every in-force section — text reflects the IT (Amendment) Act 2008, the Finance Act 2017 (TDSAT replacing the Cyber Appellate Tribunal), and the Jan Vishwas (Amendment of Provisions) Act 2023 (in force from 30-11-2023: §§33, 44, 45, 46, 66A omitted, 67C, 68, 69B, 70B, 72, 72A), plus a prospective, not-yet-commenced DPDP Act 2023 note on §43A (commences on or about 13-05-2027); 11 landmark case objects across 9 sections (§§65, 66, 66A, 67, 67B, 69A, 79 ×3, 81, 85), incl. Shreya Singhal v. Union of India (cited under §§66A, 69A and 79, each with a section-specific ratio) and Sharat Babu Digumarti (§§67 and 81) — verified against the delivered data's own integrity script (ids/order/content spot-checks), re-run successfully against the integrated data after conversion; IT Act registered in global search — actAliases.js entries added (\"it act\", \"ita\", \"information technology act\", \"information technology\" all route to actId \"ITA\"), verified live (\"ita 43a\", \"information technology act 66\" both jump to the correct section; a query for a repealed section like \"sec 66a it act\" correctly returns nothing, since this app's search index excludes repealed sections for every act, not an ITA-specific gap); search bug fix — a bare number search with NO act hint (e.g. just \"66\" or \"section 43\") previously only ever found acts with naturally bare ids (BNS, Constitution), since the lookup index was keyed by each section's raw id and every other act's ids are already act-prefixed (\"ITA-66\", \"RA-17\"); this made every prefixed-id act's sections invisible to a plain number search, which is almost certainly why IT Act sections weren't appearing — now fixed by indexing every section under its own bare number (prefix stripped at index-build time) regardless of act, so a hint-less query correctly returns every act's matching section (verified: bare \"66\" now returns all 11 in-force acts with a section 66, including ITA-66, up from 2 before the fix), while an act-hinted query like \"66 ita\" still narrows to just that one act as before; The Code of Civil Procedure, 1908 (CPC) complete — all 916 of 916 entries (171 section slots across Preliminary + Parts I–XI, 732 Order/Rule entries across 58 Orders I–LI incl. lettered/commercial variants, 9 Appendices A–I, the repealed Second to Fifth Schedules), 877 in force, 39 repealed, 31 Commercial Courts–only entries (new \"Commercial Courts only\" badge), 8 Appendices (A–H) labelled \"Summary of Forms\" instead of statute text (forms intentionally not reproduced) — this Act introduces the app's first Order/Rule two-level structure, using the existing generic Chapter→Category→Section drill-down (72 categories, one per Part/Order) rather than a bespoke navigator; rule/appendix/schedule entries carry a precomputed display label (\"Order XXXIX, Rule 1\", \"Appendix A\") that the breadcrumb, section-notes heading and exported-text header now prefer over the generic \"Section N\" pattern; 1 landmark case (Dhulabhai v. State of Madhya Pradesh, under §9) — verified against the delivered data's own integrity script both before and after conversion (re-exported from the merged data back into the delivery's schema, ALL CHECKS PASSED with the exact expected summary both times); search extended with a new Order/Rule citation parser (recognising \"order 39 rule 1\", \"o 39 r 1\", \"o.39 r.1\", \"order xxxix rule 1\", \"o 13a r 3\", \"o.13a r.3\", \"o 11c r 4\" — arabic or roman order numbers, with lettered/commercial suffixes) plus \"cpc\"/\"code of civil procedure\"/\"civil procedure code\" aliases, confirmed the existing bare-number and act-hinted lookup fixes already cover this Act with no further changes needed; BNSS case-law batch 3 — 26 externally pre-verified cases (all decided under the CrPC 1973, each carrying decidedUnder/continuityNote) merged across 18 sections; 16 were new (10 were exact-URL duplicates of cases already present under the same section and were correctly skipped, e.g. Arnesh Kumar under §35, D.K. Basu under §36, M. Ravindran under §187), bringing BNSS to 32 distinct verified cases (39 case-object entries, since several apply to more than one section) across 26 sections — verified against the delivered batch's own integrity script both as a standalone batch and as an integration check against the merged app data (ALL CHECKS PASSED both times); CPC case-law batch 2 — the CPC data file was replaced with an updated version whose only change (confirmed by a field-by-field diff against the prior file before merging) was filling in case arrays: 46 new Supreme Court cases merged across 35 sections/rules (§§10, 11, 13, 16, 20, 21, 25, 35, 47, 80, 89, 96, 100, 115, 144, 151, Orders I, II, VI, VII, VIII, IX, XII, XVIII, XXI, XXII, XXIII, XXXVII, XXXVIII, XXXIX, XLI, XLIII, XLVII), with Dhulabhai under §9 (already present) correctly skipped as a duplicate rather than re-added, bringing CPC to 47 verified cases across 36 sections/rules — verified against the delivered verify_cpc.mjs (updated to lock exactly 47 cases) both as the raw delivered file and against a re-export of the merged app data, ALL CHECKS PASSED with the exact expected summary both times; targeted website-fixes batch — (1) corrected a broken Indian Kanoon case link under ICA §56 (Satyabrata Ghose v. Mugneeram Bangur & Co. now points to the correct judgment, not an unrelated document); (2) removed a Specific Relief Act §10 case citation (Katta Sujatha Reddy v. Siddamsetty Infra Projects) after the underlying Supreme Court judgment was recalled/withdrawn; (3) restored the pre-2015 (pre-NJAC) constitutional text on 8 Articles — 124, 127, 128, 217, 222, 224, 224A, 231 — each of which had been left showing its struck-down 99th Amendment wording; each now carries a note (new, prepended to its amendments list) explaining the restoration and citing Supreme Court Advocates-on-Record Association v. Union of India (16-10-2015, AIR 2016 SC 117); and marked the three NJAC-created Articles 124A, 124B and 124C as struck down — extending the Constitution's own section renderer with the same struckDown/struckDownNote mechanism already used elsewhere in the app (for ACA §87) rather than the mismatched notInForce (reserved for amendments not yet commenced) or status:\"omitted\" (which blanks the text) fields, so their full historical text stays visible under a \"Struck Down by the Supreme Court\" note and badge; constitution.expected.json integrity fixture regenerated (amendment counts + content fingerprint) to match this intentional, sourced text correction; BNS verbatim India Code text + plain-English explanations for all 358 sections — replaced the previous paraphrased title/text/illustrations on every BNS section with verbatim text from the India Code consolidated BNS 2023 (as on 6 Oct 2025), correcting several paraphrase errors along the way (§103(2) mob-lynching punishment is death or life imprisonment, not a 7-year minimum from the withdrawn Bill; §4(b) life imprisonment is not redefined as \"the remainder of natural life\"; §22 uses \"unsoundness of mind\", not \"mental illness\"), removed the old paraphrased explanations/provisos arrays since that content now lives inside the verbatim text itself, and added simpleExplanation to the 315 of 358 BNS sections that previously had no simpleExplanation, cases or ingredients, bringing plain-English coverage to all 358 BNS sections; fix F4 — moved the Madhegowda v. Ankegowda case from HSA §6 (where its ratio, about coparcenary birthright and the Karta's powers, did not match the judgment) to HMGA §11 (de facto guardians and minors' property, which the judgment is actually about), with a corrected ratio; Specific Relief Act verbatim India Code text (as on 30-08-2026) — replaced the previous paraphrased title/text on all 46 SRA section slots (§§1–42, incl. §14A, §20, §20A, §20B, §20C) with the India Code's own wording, removing the old paraphrased explanations arrays (SRA §§7, 8, 12, 16, 21, 27, 34) and provisos arrays (SRA §§34, 42) since that content (e.g. §34's and §42's provisos) now lives inside the verbatim text itself; plain-English explanations for all BSA and SRA sections — added simpleExplanation to the 97 BSA sections and 35 SRA sections that previously had none, bringing plain-English coverage to all 170 BSA sections and all 46 SRA sections; plain-English explanations now on every section of every Act — added simpleExplanation to the last 193 bare sections across 10 Acts (NIA 54, ICA 37, ACA 26, TPA 25, IPA 22, SGA 14, HSA 8, LA 4, HMA 2, HMGA 1), so every live (non-repealed) section across the whole site now carries a simpleExplanation, cases, or ingredients — confirmed by the project's own verifier across all 3023 live sections; Old IPC, CrPC and Evidence Act section numbers on every BNS, BNSS and BSA section (checked against official correspondence tables) — updated the ipc field on 348 of 358 BNS sections (the other 10 are new provisions with no IPC equivalent) and added crpc to 522 of 531 BNSS sections and iea to 168 of 170 BSA sections, each tagged under the section number (≈ CrPC Section … / ≈ Evidence Act Section …, or “New provision” for the few with none), included in the export/copy line, and included in the within-act section search so a student can look up a section by its old CrPC or Evidence Act number; \"What changed\" notes on all BNS (vs IPC), BNSS (vs CrPC) and BSA (vs Evidence Act) sections — added a whatChanged field to all 358 BNS, all 531 BNSS and all 170 BSA sections (1059 total) summarising what changed from the old law, shown in its own box directly below \"In Plain English\", included in the within-act section search, and appended as a line in the exported/copied section text; corrected HSA §2 Explanation (a) to read 'both of whose parents' as in the Act; every section now has its own web address (e.g. /bns/103/) with a pre-rendered page, sitemap.xml and robots.txt, plus old-number search (IPC/CrPC/Evidence Act section → the BNS/BNSS/BSA section that replaced it)";
 
 const CHAPTERS = [
   { id: "I", act: "BNS", label: "Chapter I — Preliminary", range: "1–3" },
@@ -5793,7 +5793,7 @@ const SECTIONS = [
     text: "(1) This Act may be called the Hindu Succession Act, 1956.\n(2) It extends to the whole of India except the State of Jammu and Kashmir." ,
     simpleExplanation: "Names the Act: the Hindu Succession Act, 1956, which codified the law of intestate succession among Hindus, Buddhists, Jains and Sikhs, and gave women full ownership rights in property. The old words excluding Jammu and Kashmir no longer have effect, since the Jammu and Kashmir Reorganisation Act, 2019 extended central laws to Jammu and Kashmir and Ladakh."},
   { id: "HSA-2", category: "hsa-preliminary", title: "Application of Act",
-    text: "(1) This Act applies--\n(a) to any person, who is a Hindu by religion in any of its forms or developments including a Virashaiva, a Lingayat or follower of the Brahmo, Prarthana or Arya Samaj;\n(b) to any person who is Buddhist, Jaina or Sikh by religion; and\n(c) to any other person who is not a Muslim, Christian, Parsi or Jew by religion unless it is proved that any such person would not have been governed by the Hindu Law or by any custom or usage as part of that law in respect of any of the matters dealt with herein if this Act had not been passed.\nExplanation.--The following persons are Hindus, Buddhists, Jainas or Sikhs by religion, as the case may be:--\n(a) any child, legitimate or illegitimate, one of whose parents are Hindus, Buddhists, Jainas or Sikhs by religion;\n(b) any child, legitimate or illegitimate, one of whose parents is a Hindu, Buddhist, Jaina or Sikh by religion and who is brought up as a member of the tribe, community, group or family to which such parent belongs or belonged;\n(c) any person who is convert or re-convert to the Hindu, Buddhist, Jaina or Sikh religion.\n(2) Notwithstanding anything contained in sub-section (1) nothing contained in this Act shall apply to the members of any Scheduled Tribe within the meaning of clause (25) of article 366 of the Constitution unless the Central Government, by notification in the Official Gazette, otherwise directs.\n(3) The expression \"Hindu\" in any portion of this Act shall be construed as if it included a person who, though not a Hindu by religion, is, nevertheless, a person to whom this Act applies by virtue of the provisions contained in this section.",
+    text: "(1) This Act applies--\n(a) to any person, who is a Hindu by religion in any of its forms or developments including a Virashaiva, a Lingayat or follower of the Brahmo, Prarthana or Arya Samaj;\n(b) to any person who is Buddhist, Jaina or Sikh by religion; and\n(c) to any other person who is not a Muslim, Christian, Parsi or Jew by religion unless it is proved that any such person would not have been governed by the Hindu Law or by any custom or usage as part of that law in respect of any of the matters dealt with herein if this Act had not been passed.\nExplanation.--The following persons are Hindus, Buddhists, Jainas or Sikhs by religion, as the case may be:--\n(a) any child, legitimate or illegitimate, both of whose parents are Hindus, Buddhists, Jainas or Sikhs by religion;\n(b) any child, legitimate or illegitimate, one of whose parents is a Hindu, Buddhist, Jaina or Sikh by religion and who is brought up as a member of the tribe, community, group or family to which such parent belongs or belonged;\n(c) any person who is convert or re-convert to the Hindu, Buddhist, Jaina or Sikh religion.\n(2) Notwithstanding anything contained in sub-section (1) nothing contained in this Act shall apply to the members of any Scheduled Tribe within the meaning of clause (25) of article 366 of the Constitution unless the Central Government, by notification in the Official Gazette, otherwise directs.\n(3) The expression \"Hindu\" in any portion of this Act shall be construed as if it included a person who, though not a Hindu by religion, is, nevertheless, a person to whom this Act applies by virtue of the provisions contained in this section.",
     simpleExplanation: "Notice the deliberately broad reach here -- despite its name, this Act genuinely governs Hindus, Buddhists, Jains, and Sikhs alike (clause (b)), and even extends by default to anyone not otherwise falling under Muslim, Christian, Parsi, or Jewish personal law (clause (c)), unless shown they'd never actually have been governed by Hindu law anyway. Scheduled Tribe members are excluded by default (sub-section 2), unless the Central Government specifically directs otherwise for a particular tribe." },
   { id: "HSA-3", category: "hsa-preliminary", title: "Definitions and interpretations",
     text: "(1) In this Act, unless the context otherwise requires--\n(a) \"agnate\"--one person is said to be an \"agnate\" of another if the two are related by blood or adoption wholly through males;\n(b) \"Aliyasantana law\" means the system of law applicable to persons who, if this Act had not been passed, would have been governed by the Madras Aliyasantana Act, 1949, or by the customary Aliyasantana law with respect to the matters for which provision is made in this Act;\n(c) \"cognate\"--one person is said to be a cognate of another if the two are related by blood or adoption but not wholly through males;\n(d) the expressions \"custom\" and \"usage\" signify any rule which having been continuously and uniformly observed for a long time, has obtained the force of law among Hindus in any local area, tribe, community, group or family:\nProvided that the rule is certain and not unreasonable or opposed to public policy:\nProvided further that in case of a rule applicable only to a family it has not been discontinued by the family;\n(e) \"full blood\", \"half blood\" and \"uterine blood\"--\n(i) two persons are said to be related to each other by full blood when they are descended from a common ancestor by the same wife, and by half blood when they are descended from a common ancestor but by different wives;\n(ii) two persons are said to be related to each other by uterine blood when they are descended from a common ancestress but by different husbands;\nExplanation.--In this clause \"ancestor\" includes the father and \"ancestress\" the mother.\n(f) \"heir\" means any person, male or female, who is entitled to succeed to the property of an intestate under this Act;\n(g) \"intestate\"--a person is deemed to die intestate in respect of property of which he or she has not made a testamentary disposition capable of taking effect;\n(h) \"marumakkattayam law\" means the system of law applicable to persons--\n(a) who, if this Act had not been passed, would have been governed by the Madras Marumakkattayam Act, 1932; the Travancore Nayar Act; the Travancore Ezhava Act; the Travancore Nanjinad Vellala Act; the Travancore Kshatriya Act; the Travancore Krishnanvaka Marumakkathayyee Act; the Cochin Marumakkathayam Act; or the Cochin Nayar Act with respect to the matters for which provision is made in this Act; or\n(b) who belong to any community, the members of which are largely domiciled in the State of Travancore-Cochin or Madras as it existed immediately before the 1st November, 1956, and who, if this Act had not been passed, would have been governed with respect to the matters for which provision is made in this Act by any system of inheritance in which descent is traced through the female line; but does not include the Aliyasantana law;\n(i) \"Nambudri law\" means the system of law applicable to persons who if this Act had not been passed, would have been governed by the Madras Nambudri Act, 1932; the Cochin Nambudri Act; or the Travancore Malayala Brahmin Act with respect to the matters for which provision is made in this Act;\n(j) \"related\" means related by legitimate kinship:\nProvided that illegitimate children shall be deemed to be related to their mother and to one another, and their legitimate descendants shall be deemed to be related to them and to one another; and any word expressing relationship or denoting a relative shall be construed accordingly.\n(2) In this Act, unless the context otherwise requires, words imparting the masculine gender shall not be taken to include females.",
@@ -13333,6 +13333,221 @@ const LEGAL_SEARCH_ACTS = (() => {
 })();
 const LEGAL_SEARCH_INDEX = buildLegalSearchIndex(LEGAL_SEARCH_ACTS);
 
+// ---------------------------------------------------------------------------
+// OLD-LAW LOOKUP — "IPC 302" → BNS 103, "CrPC 438" → BNSS 482, "Evidence Act
+// 65B" → BSA 63. Built once at module load from the ipc / crpc / iea fields
+// already on every BNS / BNSS / BSA section (no separate table to maintain).
+// ---------------------------------------------------------------------------
+const OLD_LAWS = {
+  IPC: { field: "ipc", newAct: "BNS", name: "IPC" },
+  CRPC: { field: "crpc", newAct: "BNSS", name: "CrPC" },
+  IEA: { field: "iea", newAct: "BSA", name: "Evidence Act" },
+};
+
+// "141–145, 150, 151, 157 & 158" → ["141","142","143","144","145","150","151","157","158"]
+function expandOldSectionList(str) {
+  const out = [];
+  for (const raw of String(str).split(/,|&|\band\b/)) {
+    const part = raw.trim().toUpperCase();
+    if (!part) continue;
+    const range = part.match(/^(\d+)\s*[–—-]\s*(\d+)$/);
+    if (range) {
+      const a = Number(range[1]);
+      const b = Number(range[2]);
+      if (b >= a && b - a < 200) {
+        for (let n = a; n <= b; n++) out.push(String(n));
+        continue;
+      }
+    }
+    const single = part.match(/^(\d+[A-Z]*)/);
+    if (single) out.push(single[1]);
+  }
+  return out;
+}
+
+const OLD_LAW_INDEX = (() => {
+  const map = new Map(); // "IPC:302" → [section, ...]
+  for (const s of SECTIONS) {
+    const act = chapterOf(s)?.act;
+    for (const [law, cfg] of Object.entries(OLD_LAWS)) {
+      if (act !== cfg.newAct || !s[cfg.field]) continue;
+      for (const num of expandOldSectionList(s[cfg.field])) {
+        const key = `${law}:${num}`;
+        if (!map.has(key)) map.set(key, []);
+        map.get(key).push(s);
+      }
+    }
+  }
+  return map;
+})();
+
+const OLD_LAW_NAME_PATTERN =
+  "indian\\s+penal\\s+code|penal\\s+code|i\\.?\\s*p\\.?\\s*c\\.?|code\\s+of\\s+criminal\\s+procedure|criminal\\s+procedure\\s+code|cr\\.?\\s*p\\.?\\s*c\\.?|indian\\s+evidence\\s+act|evidence\\s+act|i\\.?\\s*e\\.?\\s*a\\.?";
+const OLD_LAW_NUM_PATTERN = "(?:section|sec\\.?|s\\.?|§)?\\s*(\\d+\\s*[a-z]{0,3})(?:\\s*\\([^)]*\\))*";
+const OLD_LAW_QUERY_A = new RegExp(`^\\s*(${OLD_LAW_NAME_PATTERN})\\s*,?\\s*${OLD_LAW_NUM_PATTERN}\\s*$`, "i");
+const OLD_LAW_QUERY_B = new RegExp(`^\\s*${OLD_LAW_NUM_PATTERN}\\s*(?:of\\s+(?:the\\s+)?)?(${OLD_LAW_NAME_PATTERN})\\s*$`, "i");
+
+function oldLawKey(name) {
+  const n = name.toLowerCase().replace(/[\s.]/g, "");
+  if (n.includes("evidence") || n === "iea") return "IEA";
+  if (n.includes("procedure") || n === "crpc") return "CRPC";
+  return "IPC";
+}
+
+// Returns null when the query isn't an old-law reference at all; otherwise
+// { law, lawName, num, newAct, results } (results may be empty).
+function lookupOldLaw(query) {
+  const q = String(query || "");
+  let law = null;
+  let num = null;
+  let m = q.match(OLD_LAW_QUERY_A);
+  if (m) { law = oldLawKey(m[1]); num = m[2]; }
+  else if ((m = q.match(OLD_LAW_QUERY_B))) { law = oldLawKey(m[2]); num = m[1]; }
+  if (!law) return null;
+  num = num.replace(/\s+/g, "").toUpperCase();
+  const cfg = OLD_LAWS[law];
+  const newActMeta = ACTS.find((a) => a.id === cfg.newAct);
+  const sections = OLD_LAW_INDEX.get(`${law}:${num}`) || [];
+  return {
+    law,
+    lawName: cfg.name,
+    num,
+    newAct: cfg.newAct,
+    results: sections.map((s) => ({
+      actId: cfg.newAct,
+      actName: newActMeta?.label || cfg.newAct,
+      sectionId: s.id,
+      title: s.title,
+      label: `${cfg.newAct} ${sectionNumber(s.id)}`,
+      snippet: { text: `Was ${cfg.name} Section ${s[cfg.field]}`, highlights: [] },
+      score: 0,
+      exact: true,
+    })),
+  };
+}
+
+// ---------------------------------------------------------------------------
+// PER-SECTION WEB ADDRESSES — every section has its own shareable URL, e.g.
+//   /Nyaya-Seekho/bns/103/   /Nyaya-Seekho/bnss/482/   /Nyaya-Seekho/cpc/o39r1/
+//   /Nyaya-Seekho/constitution/21/
+// scripts/prerender-sections.mjs writes a real HTML page at each of these
+// paths after `vite build` (so Google can index them) plus sitemap.xml.
+// ---------------------------------------------------------------------------
+const ROUTE_BASE = (import.meta.env && import.meta.env.BASE_URL) || "/";
+const SITE_NAME = "Nyaya Seekho";
+
+function sectionSlug(actId, id) {
+  return (actId === "CONSTITUTION" ? String(id) : sectionNumber(id)).toLowerCase();
+}
+
+function sectionPath(actId, id) {
+  return `${ROUTE_BASE}${String(actId).toLowerCase()}/${encodeURIComponent(sectionSlug(actId, id))}/`;
+}
+
+const ROUTE_TABLE = (() => {
+  const map = new Map(); // "bns/103" → { act, id }
+  const firstOfAct = new Map(); // "bns" → { act, id }
+  for (const s of SECTIONS) {
+    const act = chapterOf(s)?.act;
+    if (!act) continue;
+    map.set(`${act.toLowerCase()}/${sectionSlug(act, s.id)}`, { act, id: s.id });
+    if (!firstOfAct.has(act.toLowerCase())) firstOfAct.set(act.toLowerCase(), { act, id: s.id });
+  }
+  for (const s of CONSTITUTION_SECTIONS) {
+    map.set(`constitution/${sectionSlug("CONSTITUTION", s.id)}`, { act: "CONSTITUTION", id: s.id });
+  }
+  firstOfAct.set("constitution", { act: "CONSTITUTION", id: "preamble" });
+  return { map, firstOfAct };
+})();
+
+// Path → { act, id } or null (null = home page or an unknown path).
+function parseSectionPath(pathname) {
+  let p = String(pathname || "");
+  try { p = decodeURIComponent(p); } catch (e) { /* keep raw */ }
+  if (p.startsWith(ROUTE_BASE)) p = p.slice(ROUTE_BASE.length);
+  p = p.replace(/index\.html$/i, "").replace(/^\/+|\/+$/g, "").toLowerCase();
+  if (!p) return null;
+  return ROUTE_TABLE.map.get(p) || ROUTE_TABLE.firstOfAct.get(p) || null;
+}
+
+function readInitialRoute() {
+  if (typeof window === "undefined") return null;
+  return parseSectionPath(window.location.pathname);
+}
+
+function sectionDisplayRef(actId, s) {
+  if (actId === "CONSTITUTION") return s.label || s.title;
+  const short = ACTS.find((a) => a.id === actId)?.short || actId;
+  return s.label ? `${s.label}, ${short}` : `Section ${sectionNumber(s.id)} ${short}`;
+}
+
+function sectionPageTitle(actId, s) {
+  if (actId === "CONSTITUTION") {
+    const head = s.title && s.title !== s.label ? `${s.label}: ${s.title}` : s.label;
+    return `${head} | Constitution of India | ${SITE_NAME}`;
+  }
+  return `${sectionDisplayRef(actId, s)}: ${s.title} | ${SITE_NAME}`;
+}
+
+function oldLawTag(actId, s) {
+  if (actId === "BNS" && s.ipc) return `IPC Section ${s.ipc}`;
+  if (actId === "BNSS" && s.crpc) return `CrPC Section ${s.crpc}`;
+  if (actId === "BSA" && s.iea) return `Evidence Act Section ${s.iea}`;
+  return "";
+}
+
+function sectionPageDescription(actId, s) {
+  const act = ACTS.find((a) => a.id === actId);
+  const plain = actId === "CONSTITUTION" ? s.explanation : s.simpleExplanation;
+  const old = oldLawTag(actId, s);
+  const lead = `${sectionDisplayRef(actId, s)} (${act?.label || ""})${old ? `, earlier ${old}` : ""}: ${s.title}.`;
+  const body = String(plain || s.text || "").replace(/\s+/g, " ").trim();
+  const full = `${lead} ${body}`;
+  return full.length > 300 ? full.slice(0, 297).replace(/\s+\S*$/, "") + "…" : full;
+}
+
+// Used by scripts/prerender-sections.mjs at build time (never by the browser UI).
+export function getSitePages() {
+  const pages = [];
+  for (const s of SECTIONS) {
+    const act = chapterOf(s)?.act;
+    if (!act) continue;
+    pages.push({
+      act,
+      id: String(s.id),
+      path: sectionPath(act, s.id),
+      title: sectionPageTitle(act, s),
+      description: sectionPageDescription(act, s),
+      heading: `${sectionDisplayRef(act, s)}: ${s.title}`,
+      actLabel: ACTS.find((a) => a.id === act)?.label || act,
+      chapterLabel: chapterOf(s)?.label || "",
+      oldLaw: oldLawTag(act, s),
+      text: s.text || "",
+      plain: s.simpleExplanation || "",
+      whatChanged: s.whatChanged || "",
+      inSitemap: !s.repealed,
+    });
+  }
+  for (const s of CONSTITUTION_SECTIONS) {
+    pages.push({
+      act: "CONSTITUTION",
+      id: String(s.id),
+      path: sectionPath("CONSTITUTION", s.id),
+      title: sectionPageTitle("CONSTITUTION", s),
+      description: sectionPageDescription("CONSTITUTION", s),
+      heading: s.title && s.title !== s.label ? `${s.label}: ${s.title}` : s.label,
+      actLabel: "Constitution of India",
+      chapterLabel: s.chapterTitle || s.part || "",
+      oldLaw: "",
+      text: s.status === "omitted" ? (s.omission || "Omitted.") : (s.text || ""),
+      plain: s.explanation || "",
+      whatChanged: "",
+      inSitemap: s.status !== "omitted",
+    });
+  }
+  return pages;
+}
+
 // Strips an act-namespace prefix (e.g. "SRA-14A" -> "14A") for compact display;
 // plain numeric ids (BNS) pass through unchanged since they have no "-" prefix.
 function sectionNumber(id) {
@@ -13468,10 +13683,16 @@ function LegalSearch({ index, onSelect, placeholder = "Search any act… e.g. \"
   const debounceRef = useRef(null);
   const [results, setResults] = useState([]);
 
+  const [oldLaw, setOldLaw] = useState(null);
+
   const runSearch = useCallback(
     (q) => {
       if (!index) return;
-      setResults(searchLegal(index, q));
+      // "IPC 302" / "CrPC 438" / "Evidence Act 65B" → the BNS / BNSS / BSA section that
+      // replaced it, instead of the unrelated section that happens to share the number.
+      const old = lookupOldLaw(q);
+      setOldLaw(old);
+      setResults(old ? old.results : searchLegal(index, q));
     },
     [index]
   );
@@ -13521,6 +13742,7 @@ function LegalSearch({ index, onSelect, placeholder = "Search any act… e.g. \"
     } else if (e.key === "Escape") {
       setQuery("");
       setResults([]);
+      setOldLaw(null);
     }
   }
 
@@ -13541,13 +13763,17 @@ function LegalSearch({ index, onSelect, placeholder = "Search any act… e.g. \"
         <div className="legal-search__results" role="listbox">
           {flatResults.length === 0 ? (
             <p className="legal-search__empty">
-              No matching sections found. Try different words, or search for a section number directly.
+              {oldLaw
+                ? `${oldLaw.lawName} Section ${oldLaw.num} isn't listed as the source of any ${oldLaw.newAct} section. It may have been dropped from the new law, or the number may be wrong. Try the main section number (e.g. 376, not 376(2)).`
+                : "No matching sections found. Try different words, or search for a section number directly."}
             </p>
           ) : (
             <>
               {exactResults.length > 0 && (
                 <div className="legal-search__group legal-search__group--exact">
-                  <h4 className="legal-search__act-name">Exact match</h4>
+                  <h4 className="legal-search__act-name">
+                    {oldLaw ? `${oldLaw.lawName} Section ${oldLaw.num} is now` : "Exact match"}
+                  </h4>
                   {exactResults.map((r) => (
                     <LegalSearchResult
                       key={`${r.actId}-${r.sectionId}`}
@@ -13624,8 +13850,11 @@ function renderHighlighted(snippet) {
 }
 
 export default function BareActNavigator() {
-  const [selectedAct, setSelectedAct] = useState("BNS");
-  const [selectedId, setSelectedId] = useState(14);
+  // A deep link like /Nyaya-Seekho/bns/103/ opens straight on that section.
+  const [initialRoute] = useState(readInitialRoute);
+  const [selectedAct, setSelectedAct] = useState(initialRoute ? initialRoute.act : "BNS");
+  const [selectedId, setSelectedId] = useState(initialRoute ? initialRoute.id : 14);
+  const [linkCopied, setLinkCopied] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isDesktop, setIsDesktop] = useState(true);
   const [query, setQuery] = useState("");
@@ -13656,6 +13885,55 @@ export default function BareActNavigator() {
     if (mainRef.current) mainRef.current.scrollTop = 0;
     window.scrollTo(0, 0);
   }, [selectedId]);
+
+  // Keep the address bar, tab title and meta description in step with the open
+  // section, so every section has its own shareable link. The home page keeps its
+  // plain URL until the reader actually picks a section.
+  const routeSyncedOnce = useRef(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const s = selectedAct === "CONSTITUTION" ? CONSTITUTION_SECTION_MAP[selectedId] : SECTION_MAP[selectedId];
+    if (!s) return;
+    const path = sectionPath(selectedAct, selectedId);
+    const firstRun = !routeSyncedOnce.current;
+    routeSyncedOnce.current = true;
+    setLinkCopied(false);
+    if (firstRun && !initialRoute) return; // landed on the home page: leave its URL and title alone
+    if (window.location.pathname !== path) {
+      if (firstRun) window.history.replaceState(null, "", path);
+      else window.history.pushState(null, "", path);
+    }
+    document.title = sectionPageTitle(selectedAct, s);
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", sectionPageDescription(selectedAct, s));
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.setAttribute("href", window.location.origin + path);
+  }, [selectedAct, selectedId, initialRoute]);
+
+  // Browser Back / Forward buttons move between sections.
+  useEffect(() => {
+    function onPopState() {
+      const r = parseSectionPath(window.location.pathname);
+      if (r) {
+        setSelectedAct(r.act);
+        setSelectedId(r.id);
+        setDrawer(null);
+      }
+    }
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
+
+  async function copySectionLink() {
+    const url = window.location.origin + sectionPath(selectedAct, selectedId);
+    try {
+      await navigator.clipboard.writeText(url);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch (e) {
+      window.prompt("Copy this link:", url);
+    }
+  }
 
   const [noteError, setNoteError] = useState("");
   const storageAvailable = typeof window !== "undefined" && !!window.localStorage;
@@ -14374,6 +14652,8 @@ export default function BareActNavigator() {
               noteError={noteError}
               storageAvailable={storageAvailable}
               exportConstitutionSection={exportConstitutionSection}
+              copySectionLink={copySectionLink}
+              linkCopied={linkCopied}
             />
           ) : (
             <>
@@ -14408,6 +14688,7 @@ export default function BareActNavigator() {
           </div>
 
           <button className="export-btn" onClick={exportSection}>Export section as text ↓</button>
+          <button className="export-btn" style={{ marginLeft: 8 }} onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this section"}</button>
 
           {section.struckDown && (
             <div className="struck-down-note">
@@ -14845,7 +15126,7 @@ function ConstitutionRows({ rows }) {
   );
 }
 
-function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteStatus, noteError, storageAvailable, exportConstitutionSection }) {
+function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteStatus, noteError, storageAvailable, exportConstitutionSection, copySectionLink, linkCopied }) {
   if (!s) return null;
   const isOmitted = s.status === "omitted";
   const part = constitutionPartOf(s);
@@ -14876,6 +15157,9 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
       </div>
 
       <button className="export-btn" onClick={exportConstitutionSection}>Export section as text ↓</button>
+      {copySectionLink && (
+        <button className="export-btn" style={{ marginLeft: 8 }} onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this article"}</button>
+      )}
 
       {s.struckDown && (
         <div className="struck-down-note">

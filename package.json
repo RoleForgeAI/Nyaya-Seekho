@@ -8,6 +8,7 @@
     "dev": "vite",
     "prebuild": "npm run verify:constitution",
     "build": "vite build",
+    "postbuild": "node scripts/prerender-sections.mjs dist",
     "preview": "vite preview",
     "verify:constitution": "node scripts/verify-constitution.mjs src/data/constitutionData.js scripts/constitution.expected.json",
     "smoke:constitution": "node scripts/smoke-constitution-build.mjs dist"
