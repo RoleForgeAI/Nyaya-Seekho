@@ -35,6 +35,9 @@ const ACTS = [
   { id: "CONSTITUTION", label: "Constitution of India", short: "Constitution", status: "active" },
 ];
 
+// Short date shown to readers in the footer. Update it whenever content changes.
+const CONTENT_LAST_UPDATED = "November 2026";
+// Internal change log (not shown on the site).
 const CONTENT_LAST_VERIFIED = "29 August 2026 — all 358 BNS sections + all 42 Specific Relief Act sections complete; BSA complete — all 170 of 170 sections, all 12 chapters; Indian Contract Act, 1872 (ICA) complete — all 190 of 190 active sections (§§1–75 and §§124–238), 10 chapters, §§76–123 and §§239–266 repealed (moved to the Sale of Goods Act, 1930 and the Indian Partnership Act, 1932 respectively), 19 landmark case objects across 15 sections; Indian Partnership Act, 1932 (IPA) complete — all 74 of 74 sections, 8 chapters (§73 is itself a spent 1938 repeal provision, rendered distinctly, not as operative text), 6 landmark case objects across 5 sections; The Sale of Goods Act, 1930 (SGA) complete — all 66 of 66 sections (§§1–64, §64A, §66; §65 is itself a spent 1938 repeal provision, rendered distinctly), 7 chapters, 3 landmark case objects across 3 sections (incl. 2 foreign persuasive-authority cases); The Negotiable Instruments Act, 1881 (NIA) complete — all 148 of 148 sections (incl. §§45A, 75A, 85A, 104A, 131A, 142A, 143A; §2 is itself a spent 1891 repeal provision, rendered distinctly), 17 chapters, 8 landmark case objects across 6 sections; The Arbitration and Conciliation Act, 1996 (ACA) complete — all numbered sections (86 objects, Parts I, IA, II, III, IV; Part III reduced to just §§61–62 by the Mediation Act, 2023; §87 remains textually present but was struck down as unconstitutional by the Supreme Court, rendered distinctly), 15 chapters, 1 landmark case object; The Hindu Succession Act, 1956 (HSA) complete — all 31 of 31 sections (§§23 and 24 omitted by the 2005 Amendment, §31 itself spent per the Repealing and Amending Act, 1960, all three rendered distinctly), 4 chapters, current post-2005 text throughout (incl. §6's daughter-coparcenary reform and §30's gender-neutral wording); The Limitation Act, 1963 (LA) complete — all 32 of 32 sections (§§28 and 32 repealed by the Repealing and Amending Act, 1974, rendered distinctly; 30 of 32 sections substantively active), 5 Parts; The Transfer of Property Act, 1882 (TPA) complete — all 137 numbered sections plus 11 lettered insertions (148 objects total), 8 chapters, 17 categories, 13 sections repealed (§§74, 75, 80, 85–90, 97, 99, 130A, 135A, rendered distinctly; 135 of 148 objects substantively active) — verified against India Code Act No. 9 of 1872, India Code Act No. 9 of 1932, Act No. 3 of 1930, Act No. 26 of 1881, Act No. 26 of 1996, Act No. 30 of 1956 (as amended by Act No. 39 of 2005), Act No. 36 of 1963, Act No. 4 of 1882, and Act No. 25 of 1955; The Hindu Marriage Act, 1955 (HMA) complete — all 30 numbered sections plus 7 lettered insertions (37 objects total), 6 chapters, 6 categories, 2 sections repealed (§§6 and 30, rendered distinctly), current text throughout (incl. §13(1)(iv)'s leprosy ground omitted by the 2019 Amendment and §18(a)'s 2007-amended penalty for underage marriage); case-law pass across LA, HSA, HMA and TPA — 11 landmark case objects added across 8 previously-uncased sections (LA §§3, 5, 27; HSA §6; HMA §§13, 17; TPA §§14, 53A); The Hindu Minority and Guardianship Act, 1956 (HMGA) complete — all 13 of 13 sections, genuinely flat with no chapter divisions in the source Act itself, set up as a single chapter and single category (guardianship), the third of the four Hindu Code Bills in this project — verified against the official India Code text (Act No. 32 of 1956); Bharatiya Nagarik Suraksha Sanhita, 2023 (BNSS) complete — all 531 of 531 sections, 39 chapters, 56 categories, 8 sections carry the Act's own illustrations (§§234, 236, 238, 241, 243, 244, 245, 337) — verified against the Gazette of India Extraordinary, Part II Sec. 1, No. 54 (25 Dec 2023), Act No. 46 of 2023, the enacted Act (not the withdrawn Bill No. 122 of 2023); BNSS enrichment batch 1 — simpleExplanation and 6 landmark case objects added across 5 sections (§§35, 47, 187, 479, 482), incl. a code fix so pre-BNSS cases correctly show \"pre-BNSS\" rather than the previously hard-coded \"pre-BSA\" label; The Constitution of India complete — all 570 of 570 sections (506 article slots: 471 in force, 35 omitted), 26 Part slots (25 in force), 12 Schedules, 3 Appendices, kept structurally separate from every other Act's data model (own maps, own sidebar tree, own section renderer) rather than forced into the shared ACTS/CHAPTERS/CATEGORIES/SECTIONS schema — verified against the official Constitution of India (pocket size edition, as on 1 May 2026, amended up to the 106th Amendment Act, 2023); plain-English explanation added for all 532 in-force sections; case-law verification complete — 177 of 177 candidate landmark cases independently checked against Indian Kanoon (324 verified case objects across the Constitution's sections); The Hindu Adoptions and Maintenance Act, 1956 (HAMA) complete — all 30 of 30 sections, 4 chapters (§29 itself a spent 1960 repeal provision, rendered distinctly; 29 of 30 sections substantively in force), plain-English explanation for every in-force section, 5 landmark case objects across 4 sections (§§5, 6, 8, 9) — verified against a consolidated official-style text current as amended by Act 45 of 1962, Act 30 of 2010, the Personal Laws (Amendment) Act, 2019, and the J&K Reorganisation Act, 2019, catching two errors common to uncorrected web copies (the pre-2010 text of §8, and the leprosy ground still present in uncorrected §18(2)(c)); BNSS plain-English explanation sweep complete — simpleExplanation added for all 531 of 531 BNSS sections across all 39 chapters (case-law coverage for BNSS remains a separate follow-up pass, currently 6 case objects across 5 sections from enrichment batch 1); BNSS enrichment batch 2 — 13 externally pre-verified landmark cases merged in (name, citation, ratio and Indian Kanoon URL checked against the judgment text before delivery, not independently re-verified in this project), 3 of which apply to more than one section, bringing BNSS's total to 19 distinct verified cases (23 case-object entries, since a few cases are attached to more than one section) across 19 sections (§§35, 36, 47, 48, 173, 175, 187, 194, 218, 250, 262, 268, 341, 359, 413, 479, 480, 482, 528); The Registration Act, 1908 (RA) complete — all 96 of 96 section slots (90 in force), 15 Parts, 6 sections repealed/omitted (§§4, 9, 56, 67, 92, 93, rendered distinctly), plain-English explanation for every in-force section, including a 2019 Jammu and Kashmir Reorganisation Act fix (removing the stale \"except the State of Jammu and Kashmir\" exclusion from §1(2) and §2(6A)'s definition of \"India\") — verified against a consolidated central-law text cross-checked against a Maharashtra state-applicable edition (Maharashtra's own state amendments to §§7, 17 and 89 recorded as notes only, not merged into the main text, per this project's standing state-variant limitation); 10 landmark case objects across 4 sections (§17 ×6, §47, §49 ×2, §60) — case-law coverage remains thin across the Act's other 86 in-force sections and is flagged as a follow-up pass; cross-act global search added — a LegalSearch box in the topbar (Fuse.js fuzzy search over every act's title/plain-English explanation/case names, plus hand-curated phrase tags for high-traffic sections and an exact section/article-number lookup with optional act-name narrowing, e.g. \"21 bns\" or \"section 138\"), built once at module load from this app's own already-verified content, no external calls or AI generation involved; search follow-up fix — an act-qualified exact match (e.g. \"21 bns\") no longer also runs a full fuzzy search on the raw query text, which previously could surface a page of loosely-related noise underneath a correct pinned result (the earlier \"art 47\" issue, where \"art\" fuzzy-matched \"part performance\" etc.); fuzzy search still runs as a fallback when a section reference is recognised but doesn't actually exist (e.g. \"section 999 bns\"); search bug fix — act-qualified exact lookups (e.g. \"138 ni act\", \"sec 12 bnss\") now correctly find act-prefixed section ids; previously the lookup only tried the bare number, which silently worked for BNS/Constitution (bare ids) but returned zero or wrong-act results for every other act (ids like \"NIA-138\", \"BNSS-12\"), now fixed by also trying the act-prefixed id form once an act hint narrows the search; The Information Technology Act, 2000 (ITA) complete — all 129 of 129 section slots (111 in force), 15 chapters/parts (I–XIII, XIIA, plus Schedules I–IV after §94), 18 sections repealed/omitted (incl. §66A, struck down by Shreya Singhal v. Union of India then formally omitted by the Jan Vishwas Act 2023), plain-English explanation for every in-force section — text reflects the IT (Amendment) Act 2008, the Finance Act 2017 (TDSAT replacing the Cyber Appellate Tribunal), and the Jan Vishwas (Amendment of Provisions) Act 2023 (in force from 30-11-2023: §§33, 44, 45, 46, 66A omitted, 67C, 68, 69B, 70B, 72, 72A), plus a prospective, not-yet-commenced DPDP Act 2023 note on §43A (commences on or about 13-05-2027); 11 landmark case objects across 9 sections (§§65, 66, 66A, 67, 67B, 69A, 79 ×3, 81, 85), incl. Shreya Singhal v. Union of India (cited under §§66A, 69A and 79, each with a section-specific ratio) and Sharat Babu Digumarti (§§67 and 81) — verified against the delivered data's own integrity script (ids/order/content spot-checks), re-run successfully against the integrated data after conversion; IT Act registered in global search — actAliases.js entries added (\"it act\", \"ita\", \"information technology act\", \"information technology\" all route to actId \"ITA\"), verified live (\"ita 43a\", \"information technology act 66\" both jump to the correct section; a query for a repealed section like \"sec 66a it act\" correctly returns nothing, since this app's search index excludes repealed sections for every act, not an ITA-specific gap); search bug fix — a bare number search with NO act hint (e.g. just \"66\" or \"section 43\") previously only ever found acts with naturally bare ids (BNS, Constitution), since the lookup index was keyed by each section's raw id and every other act's ids are already act-prefixed (\"ITA-66\", \"RA-17\"); this made every prefixed-id act's sections invisible to a plain number search, which is almost certainly why IT Act sections weren't appearing — now fixed by indexing every section under its own bare number (prefix stripped at index-build time) regardless of act, so a hint-less query correctly returns every act's matching section (verified: bare \"66\" now returns all 11 in-force acts with a section 66, including ITA-66, up from 2 before the fix), while an act-hinted query like \"66 ita\" still narrows to just that one act as before; The Code of Civil Procedure, 1908 (CPC) complete — all 916 of 916 entries (171 section slots across Preliminary + Parts I–XI, 732 Order/Rule entries across 58 Orders I–LI incl. lettered/commercial variants, 9 Appendices A–I, the repealed Second to Fifth Schedules), 877 in force, 39 repealed, 31 Commercial Courts–only entries (new \"Commercial Courts only\" badge), 8 Appendices (A–H) labelled \"Summary of Forms\" instead of statute text (forms intentionally not reproduced) — this Act introduces the app's first Order/Rule two-level structure, using the existing generic Chapter→Category→Section drill-down (72 categories, one per Part/Order) rather than a bespoke navigator; rule/appendix/schedule entries carry a precomputed display label (\"Order XXXIX, Rule 1\", \"Appendix A\") that the breadcrumb, section-notes heading and exported-text header now prefer over the generic \"Section N\" pattern; 1 landmark case (Dhulabhai v. State of Madhya Pradesh, under §9) — verified against the delivered data's own integrity script both before and after conversion (re-exported from the merged data back into the delivery's schema, ALL CHECKS PASSED with the exact expected summary both times); search extended with a new Order/Rule citation parser (recognising \"order 39 rule 1\", \"o 39 r 1\", \"o.39 r.1\", \"order xxxix rule 1\", \"o 13a r 3\", \"o.13a r.3\", \"o 11c r 4\" — arabic or roman order numbers, with lettered/commercial suffixes) plus \"cpc\"/\"code of civil procedure\"/\"civil procedure code\" aliases, confirmed the existing bare-number and act-hinted lookup fixes already cover this Act with no further changes needed; BNSS case-law batch 3 — 26 externally pre-verified cases (all decided under the CrPC 1973, each carrying decidedUnder/continuityNote) merged across 18 sections; 16 were new (10 were exact-URL duplicates of cases already present under the same section and were correctly skipped, e.g. Arnesh Kumar under §35, D.K. Basu under §36, M. Ravindran under §187), bringing BNSS to 32 distinct verified cases (39 case-object entries, since several apply to more than one section) across 26 sections — verified against the delivered batch's own integrity script both as a standalone batch and as an integration check against the merged app data (ALL CHECKS PASSED both times); CPC case-law batch 2 — the CPC data file was replaced with an updated version whose only change (confirmed by a field-by-field diff against the prior file before merging) was filling in case arrays: 46 new Supreme Court cases merged across 35 sections/rules (§§10, 11, 13, 16, 20, 21, 25, 35, 47, 80, 89, 96, 100, 115, 144, 151, Orders I, II, VI, VII, VIII, IX, XII, XVIII, XXI, XXII, XXIII, XXXVII, XXXVIII, XXXIX, XLI, XLIII, XLVII), with Dhulabhai under §9 (already present) correctly skipped as a duplicate rather than re-added, bringing CPC to 47 verified cases across 36 sections/rules — verified against the delivered verify_cpc.mjs (updated to lock exactly 47 cases) both as the raw delivered file and against a re-export of the merged app data, ALL CHECKS PASSED with the exact expected summary both times; targeted website-fixes batch — (1) corrected a broken Indian Kanoon case link under ICA §56 (Satyabrata Ghose v. Mugneeram Bangur & Co. now points to the correct judgment, not an unrelated document); (2) removed a Specific Relief Act §10 case citation (Katta Sujatha Reddy v. Siddamsetty Infra Projects) after the underlying Supreme Court judgment was recalled/withdrawn; (3) restored the pre-2015 (pre-NJAC) constitutional text on 8 Articles — 124, 127, 128, 217, 222, 224, 224A, 231 — each of which had been left showing its struck-down 99th Amendment wording; each now carries a note (new, prepended to its amendments list) explaining the restoration and citing Supreme Court Advocates-on-Record Association v. Union of India (16-10-2015, AIR 2016 SC 117); and marked the three NJAC-created Articles 124A, 124B and 124C as struck down — extending the Constitution's own section renderer with the same struckDown/struckDownNote mechanism already used elsewhere in the app (for ACA §87) rather than the mismatched notInForce (reserved for amendments not yet commenced) or status:\"omitted\" (which blanks the text) fields, so their full historical text stays visible under a \"Struck Down by the Supreme Court\" note and badge; constitution.expected.json integrity fixture regenerated (amendment counts + content fingerprint) to match this intentional, sourced text correction; BNS verbatim India Code text + plain-English explanations for all 358 sections — replaced the previous paraphrased title/text/illustrations on every BNS section with verbatim text from the India Code consolidated BNS 2023 (as on 6 Oct 2025), correcting several paraphrase errors along the way (§103(2) mob-lynching punishment is death or life imprisonment, not a 7-year minimum from the withdrawn Bill; §4(b) life imprisonment is not redefined as \"the remainder of natural life\"; §22 uses \"unsoundness of mind\", not \"mental illness\"), removed the old paraphrased explanations/provisos arrays since that content now lives inside the verbatim text itself, and added simpleExplanation to the 315 of 358 BNS sections that previously had no simpleExplanation, cases or ingredients, bringing plain-English coverage to all 358 BNS sections; fix F4 — moved the Madhegowda v. Ankegowda case from HSA §6 (where its ratio, about coparcenary birthright and the Karta's powers, did not match the judgment) to HMGA §11 (de facto guardians and minors' property, which the judgment is actually about), with a corrected ratio; Specific Relief Act verbatim India Code text (as on 30-08-2026) — replaced the previous paraphrased title/text on all 46 SRA section slots (§§1–42, incl. §14A, §20, §20A, §20B, §20C) with the India Code's own wording, removing the old paraphrased explanations arrays (SRA §§7, 8, 12, 16, 21, 27, 34) and provisos arrays (SRA §§34, 42) since that content (e.g. §34's and §42's provisos) now lives inside the verbatim text itself; plain-English explanations for all BSA and SRA sections — added simpleExplanation to the 97 BSA sections and 35 SRA sections that previously had none, bringing plain-English coverage to all 170 BSA sections and all 46 SRA sections; plain-English explanations now on every section of every Act — added simpleExplanation to the last 193 bare sections across 10 Acts (NIA 54, ICA 37, ACA 26, TPA 25, IPA 22, SGA 14, HSA 8, LA 4, HMA 2, HMGA 1), so every live (non-repealed) section across the whole site now carries a simpleExplanation, cases, or ingredients — confirmed by the project's own verifier across all 3023 live sections; Old IPC, CrPC and Evidence Act section numbers on every BNS, BNSS and BSA section (checked against official correspondence tables) — updated the ipc field on 348 of 358 BNS sections (the other 10 are new provisions with no IPC equivalent) and added crpc to 522 of 531 BNSS sections and iea to 168 of 170 BSA sections, each tagged under the section number (≈ CrPC Section … / ≈ Evidence Act Section …, or “New provision” for the few with none), included in the export/copy line, and included in the within-act section search so a student can look up a section by its old CrPC or Evidence Act number; \"What changed\" notes on all BNS (vs IPC), BNSS (vs CrPC) and BSA (vs Evidence Act) sections — added a whatChanged field to all 358 BNS, all 531 BNSS and all 170 BSA sections (1059 total) summarising what changed from the old law, shown in its own box directly below \"In Plain English\", included in the within-act section search, and appended as a line in the exported/copied section text; corrected HSA §2 Explanation (a) to read 'both of whose parents' as in the Act; every section now has its own web address (e.g. /bns/103/) with a pre-rendered page, sitemap.xml and robots.txt, plus old-number search (IPC/CrPC/Evidence Act section → the BNS/BNSS/BSA section that replaced it); The Protection of Children from Sexual Offences Act, 2012 (POCSO) added — all 47 sections (§§1–46 plus §42A) and the Schedule, 9 chapters (Chapter II split into Parts A–E), verbatim India Code text incl. the POCSO (Amendment) Act, 2019, plain-English explanation for every section (IPC/CrPC references explained as their BNS/BNSS equivalents); The Indian Succession Act, 1925 (ISA) added — all 393 section slots (§§1–392 incl. §§33A and 236A; there is no §52, §§213 and 392 shown as omitted/repealed) and Schedules I–IX, 11 Parts, verbatim India Code text as on 19-06-2026 (incl. the Repealing and Amending Act, 2025 omitting §213, and the Jan Vishwas (Amendment of Provisions) Act, 2026), plain-English explanation for every section";
 
 const CHAPTERS = [
@@ -14751,8 +14754,36 @@ function constitutionSearchMatch(s, q) {
   return false;
 }
 
+// Lookup maps built once. chapterOf() used to scan CATEGORIES and CHAPTERS for every call,
+// and it is called for every section at start-up (search index, routes, old-number index),
+// which made the site take several seconds to open on phones.
+const CATEGORY_BY_ID = new Map(CATEGORIES.map((c) => [c.id, c]));
+const CHAPTER_BY_ID = new Map(CHAPTERS.map((c) => [c.id, c]));
+const ACT_BY_ID = new Map(ACTS.map((a) => [a.id, a]));
 function chapterOf(section) {
-  return CHAPTERS.find((ch) => ch.id === CATEGORIES.find((cat) => cat.id === section.category)?.chapter);
+  if (!section) return undefined;
+  const cat = CATEGORY_BY_ID.get(section.category);
+  return cat ? CHAPTER_BY_ID.get(cat.chapter) : undefined;
+}
+// Every act's sections in statutory order, and its first section, computed once.
+const SECTIONS_BY_ACT = (() => {
+  const m = new Map();
+  for (const s of SECTIONS) {
+    const act = chapterOf(s)?.act;
+    if (!act) continue;
+    if (!m.has(act)) m.set(act, []);
+    m.get(act).push(s);
+  }
+  return m;
+})();
+// Each category's sections, so the sidebar does not re-scan every section for every category.
+function groupByCategory(list) {
+  const m = new Map();
+  for (const s of list) {
+    if (!m.has(s.category)) m.set(s.category, []);
+    m.get(s.category).push(s);
+  }
+  return m;
 }
 
 // Global cross-act search index, built once at module load from this app's
@@ -15012,7 +15043,7 @@ function actStats(actId) {
     if (nums.length === 0) return sum;
     return sum + (Math.max(...nums) - Math.min(...nums) + 1);
   }, 0);
-  const sections = SECTIONS.filter((s) => chapterOf(s)?.act === actId);
+  const sections = SECTIONS_BY_ACT.get(actId) || [];
   const liveChapterIds = [...new Set(sections.map((s) => chapterOf(s)?.id))];
   return {
     chapters,
@@ -15024,10 +15055,11 @@ function actStats(actId) {
 }
 
 const BNS_CHAPTERS = CHAPTERS.filter((c) => c.act === "BNS");
-const BNS_TOTAL_SECTIONS = actStats("BNS").totalSections;
-const BNS_LIVE_SECTION_COUNT = actStats("BNS").liveSectionCount;
-const BNS_LIVE_CHAPTER_COUNT = actStats("BNS").liveChapterCount;
-const BNS_REMAINING_CHAPTERS = actStats("BNS").remainingChapters;
+const BNS_STATS = actStats("BNS");
+const BNS_TOTAL_SECTIONS = BNS_STATS.totalSections;
+const BNS_LIVE_SECTION_COUNT = BNS_STATS.liveSectionCount;
+const BNS_LIVE_CHAPTER_COUNT = BNS_STATS.liveChapterCount;
+const BNS_REMAINING_CHAPTERS = BNS_STATS.remainingChapters;
 
 /* ------------------------------------------------------------------ */
 
@@ -15509,19 +15541,13 @@ export default function BareActNavigator() {
     return CONSTITUTION_SECTIONS.filter((s) => constitutionSearchMatch(s, q));
   }, [query]);
 
-  const actSections = useMemo(() => {
-    return SECTIONS.filter((s) => {
-      const cat = CATEGORIES.find((c) => c.id === s.category);
-      const chap = CHAPTERS.find((ch) => ch.id === cat?.chapter);
-      return chap?.act === selectedAct;
-    });
-  }, [selectedAct]);
+  const actSections = useMemo(() => SECTIONS_BY_ACT.get(selectedAct) || [], [selectedAct]);
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     if (!q) return actSections;
     return actSections.filter((s) => {
-      const chap = CHAPTERS.find((ch) => ch.id === CATEGORIES.find((c) => c.id === s.category)?.chapter);
+      const chap = chapterOf(s);
       return (
         String(s.id).includes(q) ||
         s.title.toLowerCase().includes(q) ||
@@ -15553,20 +15579,18 @@ export default function BareActNavigator() {
     if (!isDesktop) setSidebarOpen(false);
   }
 
-  function switchAct(actId) {
+  function switchAct(actId, opts = {}) {
     setSelectedAct(actId);
     if (actId === "CONSTITUTION") {
       setSelectedId("preamble");
     } else {
-      const firstSection = SECTIONS.find((s) => {
-        const cat = CATEGORIES.find((c) => c.id === s.category);
-        const chap = CHAPTERS.find((ch) => ch.id === cat?.chapter);
-        return chap?.act === actId;
-      });
+      const firstSection = (SECTIONS_BY_ACT.get(actId) || [])[0];
       if (firstSection) setSelectedId(firstSection.id);
     }
     setDrawer(null);
-    if (!isDesktop) setSidebarOpen(false);
+    setQuery("");
+    // On phones, picking an Act from the menu keeps the menu open so the student can pick a section next.
+    if (!isDesktop && !opts.keepOpen) setSidebarOpen(false);
   }
 
   // Result from the global LegalSearch box: switch to the result's act (if
@@ -15989,11 +16013,45 @@ export default function BareActNavigator() {
           padding: 14px 12px 40px; box-shadow: 6px 0 24px rgba(0,0,0,0.3);
         }
 
+        .action-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+        .action-row .export-btn { margin-bottom: 0; }
+        .act-select-wrap { display: block; margin: 0 4px 14px; }
+        .act-select-label {
+          display: block; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 11px;
+          font-weight: 700; color: var(--ink-soft); margin-bottom: 4px;
+        }
+        .act-select {
+          width: 100%; font-family: -apple-system, 'Segoe UI', sans-serif; font-size: 16px; font-weight: 600;
+          color: var(--ink); background: var(--parchment); border: 1.5px solid var(--oxblood);
+          border-radius: 8px; padding: 10px 12px;
+        }
+
         @media (max-width: 879px) {
-          .topbar .menu-btn { display: inline-flex; }
+          .topbar .menu-btn { display: inline-flex; padding: 9px; }
           .sidebar { display: none; }
           .thread { display: none; }
-          .main { padding: 20px 16px 70px; }
+          .main { padding: 18px 16px 70px; }
+          /* Compact header that stays on screen, so the menu is always one tap away */
+          .topbar { position: sticky; top: 0; z-index: 35; padding: 10px 14px; }
+          .eyebrow { display: none; }
+          .topbar h1 { font-size: 16px; line-height: 1.25; }
+          .topbar .sub { font-size: 11px; }
+          .global-search-bar { padding: 10px 14px; }
+          /* 16px stops iPhones from zooming in when a search box is tapped */
+          .legal-search__input, .search-box input, .notes-box textarea { font-size: 16px; }
+          .legal-search__results { max-height: 70vh; }
+          .legal-search__result { padding: 10px 12px; }
+          .sec-heading { font-size: 20px; }
+          .body-text { font-size: 16.5px; line-height: 1.7; }
+          .section-nav-btn { padding: 10px 12px; font-size: 13px; }
+          .export-btn { padding: 9px 14px; font-size: 13px; }
+          .sec-btn { padding: 10px 8px; }
+          .sec-title { font-size: 14px; }
+          .sec-num { font-size: 14px; }
+          .chapter-heading { font-size: 13.5px; }
+          .side-mobile-drawer { width: 88%; max-width: 380px; padding-top: 16px; }
+          .drawer { max-height: 75vh; }
+          .save-btn { padding: 10px 18px; font-size: 14px; }
         }
         @media (min-width: 880px) {
           .drawer { left: auto; right: 40px; bottom: 40px; width: 380px;
@@ -16076,7 +16134,7 @@ export default function BareActNavigator() {
             <div className="overlay" onClick={() => setSidebarOpen(false)} />
             <nav className="side-mobile-drawer">
               <button className="drawer-close" onClick={() => setSidebarOpen(false)}><X size={18} /></button>
-              <SidebarContents query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={switchAct} isConstitution={isConstitution} constitutionFiltered={constitutionFiltered} goToConstitution={goToConstitution} />
+              <SidebarContents compactActs query={query} setQuery={setQuery} filtered={filtered} selectedId={selectedId} goTo={goTo} selectedAct={selectedAct} setSelectedAct={(id) => switchAct(id, { keepOpen: true })} isConstitution={isConstitution} constitutionFiltered={constitutionFiltered} goToConstitution={goToConstitution} />
             </nav>
           </>
         )}
@@ -16122,7 +16180,7 @@ export default function BareActNavigator() {
           <h2 className="sec-heading">{section.title}</h2>
 
           <div className="meta-chips">
-            <span className="meta-chip">{CATEGORIES.find((c) => c.id === section.category)?.label}</span>
+            <span className="meta-chip">{CATEGORY_BY_ID.get(section.category)?.label}</span>
             {section.repealed && <span className="meta-chip"><span className="repealed-badge">repealed</span></span>}
             {section.struckDown && <span className="meta-chip"><span className="struck-down-badge">struck down</span></span>}
             {section.commercialOnly && <span className="meta-chip"><span className="commercial-badge">Commercial Courts only</span></span>}
@@ -16134,8 +16192,10 @@ export default function BareActNavigator() {
             )}
           </div>
 
+          <div className="action-row">
           <button className="export-btn" onClick={exportSection}>Export section as text ↓</button>
-          <button className="export-btn" style={{ marginLeft: 8 }} onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this section"}</button>
+          <button className="export-btn" onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this section"}</button>
+          </div>
 
           {section.struckDown && (
             <div className="struck-down-note">
@@ -16295,12 +16355,7 @@ export default function BareActNavigator() {
           </div>
 
           <p className="disclaimer">
-            Content last verified against source: <strong>{CONTENT_LAST_VERIFIED}</strong>. Live scope: {currentActStats.liveSectionCount} of {currentActStats.totalSections} {currentActMeta?.short} sections
-            across {currentActStats.liveChapterCount} of {currentActStats.chapters.length} chapters.
-            {currentActStats.remainingChapters.length > 0 && ` Remaining: Chapters ${currentActStats.remainingChapters.map((c) => c.id).join(", ")}.`}
-            {" "}Landmark cases are curated only for a deliberately small set of sections as a demonstration of the accuracy bar —
-            statute text takes priority, cases are being enriched progressively. Statutes and case law can change after this
-            date — if you know of an amendment or a newer ruling on a section here, flag it so it can be re-verified.
+            Last updated: <strong>{CONTENT_LAST_UPDATED}</strong>.
           </p>
             </>
           )}
@@ -16341,12 +16396,13 @@ export default function BareActNavigator() {
   );
 }
 
-function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selectedAct, setSelectedAct, isConstitution, constitutionFiltered, goToConstitution }) {
+function SidebarContents({ compactActs = false, query, setQuery, filtered, selectedId, goTo, selectedAct, setSelectedAct, isConstitution, constitutionFiltered, goToConstitution }) {
+  const byCat = groupByCategory(filtered);
   const chapterGroups = CHAPTERS.filter((ch) => ch.act === selectedAct).map((ch) => {
     if (ch.repealed) return { ...ch, cats: [] };
     const cats = CATEGORIES.filter((c) => c.chapter === ch.id).map((cat) => ({
       ...cat,
-      items: filtered.filter((s) => s.category === cat.id),
+      items: byCat.get(cat.id) || [],
     })).filter((c) => c.items.length > 0);
     return { ...ch, cats };
   }).filter((ch) => ch.repealed || ch.cats.length > 0);
@@ -16354,6 +16410,16 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
   return (
     <>
       <div className="lib-label">Library</div>
+      {compactActs ? (
+        <label className="act-select-wrap">
+          <span className="act-select-label">Bare Act</span>
+          <select className="act-select" value={selectedAct} onChange={(e) => setSelectedAct(e.target.value)}>
+            {ACTS.filter((a) => a.status === "active").map((a) => (
+              <option key={a.id} value={a.id}>{a.label}</option>
+            ))}
+          </select>
+        </label>
+      ) : (
       <div className="act-list">
         {ACTS.map((a) => (
           <button
@@ -16367,6 +16433,7 @@ function SidebarContents({ query, setQuery, filtered, selectedId, goTo, selected
           </button>
         ))}
       </div>
+      )}
       <div className="search-box">
         <span style={{ color: "#a5813c", fontSize: 16 }}>⌕</span>
         <input
@@ -16603,10 +16670,12 @@ function ConstitutionSectionView({ s, noteDraft, setNoteDraft, saveNote, noteSta
         {s.cases && s.cases.length > 0 && <span className="meta-chip gold">Landmark case available</span>}
       </div>
 
+      <div className="action-row">
       <button className="export-btn" onClick={exportConstitutionSection}>Export section as text ↓</button>
       {copySectionLink && (
-        <button className="export-btn" style={{ marginLeft: 8 }} onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this article"}</button>
+        <button className="export-btn" onClick={copySectionLink}>{linkCopied ? "Link copied ✓" : "Copy link to this article"}</button>
       )}
+      </div>
 
       {s.struckDown && (
         <div className="struck-down-note">

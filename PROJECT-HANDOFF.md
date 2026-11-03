@@ -2324,6 +2324,56 @@ correctly shows as repealed/omitted, "isa 63" and "hsa 8" both resolve as exact 
 Library sidebar lists the new Act. The three hand-off files were deleted before committing, so
 only `src/App.jsx` and `src/search/actAliases.js` changed.
 
+## Speed fix + phone layout fix + short footer
+Delivered as a git patch (`speed_and_mobile_fix.patch`, against `src/App.jsx` only) plus
+`verify_speed_mobile.mjs` — the first batch in this project delivered as a patch rather than a
+script or manual instructions. Applied with `git apply --check` (printed nothing, confirming no
+conflict) then `git apply`, exactly as instructed, rather than hand-editing.
+
+**Speed.** `chapterOf()` was re-scanning the full `CATEGORIES` array and then the full `CHAPTERS`
+array on every call — and it's called once per section at module load (building the search index,
+the route table, and the old-law index) plus repeatedly on every render. With ~5,000 sections
+across 23 Acts after POCSO and the ISA, that's millions of linear scans, which is what made the
+site take several seconds (reportedly up to ~29s on a throttled phone CPU) just to open. Fixed by
+building `CATEGORY_BY_ID`/`CHAPTER_BY_ID`/`ACT_BY_ID` lookup Maps once at module load, and a
+`SECTIONS_BY_ACT` Map (each Act's sections in order, computed once) that `actStats()`,
+`actSections`/`filtered` in `BareActNavigator`, and `switchAct()`'s "jump to the Act's first
+section" logic all now read from directly, instead of re-filtering `SECTIONS` by scanning
+`chapterOf()` for every section on every Act switch. The sidebar's `SidebarContents` also now
+groups the current Act's filtered sections by category once (`groupByCategory()`) instead of
+re-filtering the whole list once per category in a `.map()`.
+
+**Phone layout (below 880px).** The menu's Act list (21 names) is replaced by a `<select>` dropdown
+(`.act-select`), and picking an Act no longer closes the menu (`switchAct(id, { keepOpen: true })`
+from the phone drawer only — desktop's `switchAct(id)` keeps its original close-on-pick behaviour
+since it has no mobile drawer to keep open). The dark header (`.topbar`) is now `position: sticky`
+and hides the "Bare Act & Statute Navigator" subtitle line on phones, so the menu button stays
+reachable without scrolling back up. All text inputs (`.legal-search__input`, `.search-box input`,
+`.notes-box textarea`) are forced to `font-size: 16px` on phones specifically to stop iOS Safari's
+auto-zoom-on-focus behaviour. Section buttons, nav buttons and headings get slightly larger
+tap targets and text. The Export/Copy-link buttons moved from an inline `marginLeft: 8` pair into
+a proper `.action-row` flex-wrap container (used identically in both the shared-Acts renderer and
+`ConstitutionSectionView`), so they wrap onto a second line on narrow screens instead of
+overlapping or overflowing.
+
+**Footer.** The per-section footer used to print the entire `CONTENT_LAST_VERIFIED` log (by this
+point several thousand characters of internal changelog) under every single section — brutal on a
+phone. It's replaced by one line, `Last updated: {CONTENT_LAST_UPDATED}`, driven by a new short
+constant (`"November 2026"`, to be hand-updated whenever content changes). `CONTENT_LAST_VERIFIED`
+itself is kept in the code, unused by the UI, since the add-Act scripts (POCSO's, ISA's, and any
+future one) still append to it — deleting it would break those scripts' `findLine` anchor.
+
+Verified with the delivered `verify_speed_mobile.mjs` — `ALL CHECKS PASSED` (lookup maps present,
+`chapterOf()` uses them, no leftover `CATEGORIES.find`/`CHAPTERS.find` scans, the compact Act
+picker and sticky header markers present, 16px inputs, exactly 2 `action-row` usages, the short
+footer present and the long one gone, build output present). `npm run build` completed with the
+expected `prerender: 4130 section pages, sitemap with 4003 URLs` line (unchanged count from before
+this batch, confirming no section data was touched — the patch's own stated scope). Spot-checked
+live with Playwright beyond what the instructions required: the footer shows the short line and
+not the old changelog; switching to BNSS from the desktop sidebar is near-instant; on a 390px-wide
+viewport the dropdown Act picker appears, selecting BNSS updates the chapter list while the drawer
+stays open, and the Export/Copy-link buttons both render on a section page.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
