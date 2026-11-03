@@ -50,7 +50,6 @@ export const ACT_ALIASES = {
   "transfer of property act": "TPA",
 
   "hindu succession": "HSA",
-  "succession act": "HSA",
 
   limitation: "LA",
   "limitation act": "LA",
@@ -76,6 +75,13 @@ export const ACT_ALIASES = {
   "it act": "ITA",
   "information technology act": "ITA",
   "information technology": "ITA",
+
+  isa: "ISA",
+  "indian succession act": "ISA",
+  "indian succession": "ISA",
+  "succession act": "ISA",
+  hsa: "HSA",
+  "hindu succession act": "HSA",
 
   pocso: "POCSO",
   posco: "POCSO",

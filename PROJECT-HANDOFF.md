@@ -2290,6 +2290,40 @@ box, the search alias "pocso 4" surfaces the section, and POCSO appears in the L
 The three hand-off files were deleted from the repo root before committing, so only `src/App.jsx`
 and `src/search/actAliases.js` changed.
 
+## The Indian Succession Act, 1925 (ISA) added
+Another self-contained hand-off, same pattern as POCSO: `isa_1925_complete.json`, `add-isa.mjs`,
+`verify_isa.mjs`. Added after POCSO (the script detects whichever of POCSO/IT Act is the current
+last Act and inserts right after it, so Act order in the site stays stable regardless of which
+batches have already landed).
+
+402 entries — 393 section slots (§§1–392, including §§33A and 236A; there is genuinely no §52,
+since §§51–52 were replaced by a single new §51 in 1991) plus Schedules I–IX — across 11 Parts (12
+chapters incl. Schedules), 56 categories. Verbatim India Code text as on 19-06-2026, including the
+Repealing and Amending Act, 2025 (omitting §213) and the Jan Vishwas (Amendment of Provisions)
+Act, 2026 (raised fines in §§296, 389 to ₹10,000). §213, §392 and Schedule IX are `repealed: true`.
+§118 stays in the text but its explanation notes it was struck down in John Vallamattom v. Union
+of India (2003). Karnataka's state-amendment omission of §265/§388 is recorded in the explanation
+only, not the text, per this project's standing state-variant rule. 56 misprint corrections from
+the India Code PDF (listed in the delivery's own instructions) were already applied in the data,
+not something I needed to fix — confirmed a sample (§3's "212 and 215", not "212, 213") directly.
+
+Search aliases: `isa`, `indian succession act`, `indian succession` and `succession act` now route
+to the ISA — `succession act` previously routed to HSA and was removed from that mapping, since it
+now unambiguously means this Act. Two new HSA aliases (`hsa`, `hindu succession act`) were added
+at the same time, fixing a pre-existing gap where `hindu succession act 6` or `hsa 8` didn't give
+an exact match — confirmed live.
+
+Run exactly as specified: `verify_isa.mjs` against the raw data file first (27 data-only checks
+passed; the 7 site-wiring failures were expected pre-add, as with POCSO, not a stop condition);
+`add-isa.mjs` (exact expected output: "Added the Indian Succession Act: 12 chapters, 56
+categories, 402 sections, 6 search aliases"); `npm run build` (prerender: 4130 section pages, up
+from 3728 before POCSO+ISA); `verify_isa.mjs` again — `ALL CHECKS PASSED`, including the
+alias-routing and built-page checks. Spot-checked live with Playwright beyond what the
+instructions required: `/isa/63/` opens with the correct title and plain-English box, `/isa/213/`
+correctly shows as repealed/omitted, "isa 63" and "hsa 8" both resolve as exact matches, and the
+Library sidebar lists the new Act. The three hand-off files were deleted before committing, so
+only `src/App.jsx` and `src/search/actAliases.js` changed.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage
