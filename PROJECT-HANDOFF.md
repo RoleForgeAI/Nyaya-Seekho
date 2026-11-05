@@ -2374,6 +2374,41 @@ not the old changelog; switching to BNSS from the desktop sidebar is near-instan
 viewport the dropdown Act picker appears, selecting BNSS updates the chapter list while the drawer
 stays open, and the Export/Copy-link buttons both render on a section page.
 
+## Indian Stamp Act, Dowry Prohibition Act and Domestic Violence Act added
+A single combined hand-off (`add-stamp-dowry-dv.mjs` + `verify_stamp_dowry_dv.mjs`, taking all
+three data files at once) adding three Acts in one script run, inserted after the ISA in this
+exact order: Indian Stamp Act (STAMP) → Dowry Prohibition Act (DPA) → Domestic Violence Act (DVA).
+
+- **Indian Stamp Act, 1899 (STAMP)**: 99 entries — §§1–79 incl. lettered sections, §3A shown as
+  omitted, §79 repealed, Schedule I (an index of its articles — rates are State-specific and not
+  reproduced) and Schedule II (repealed). 9 chapters, Chapter II split into Parts A/AA/B/C/D/E.
+- **Dowry Prohibition Act, 1961 (DPA)**: all 13 sections (§§1–10 incl. §§4A, 8A, 8B). The delivery
+  itself documented 24 misprint corrections made against the official India Code text (checked
+  line-by-line against two printed copies) — already applied in the data, not something to redo.
+  State amendments (several States had substituted their own 1970s versions of some sections) are
+  recorded in the explanations only, consistent with this project's standing state-variant rule.
+- **Protection of Women from Domestic Violence Act, 2005 (DVA)**: all 37 sections, 5 chapters.
+
+All three verbatim India Code text, plain-English explanation for every section, no cases or
+crossRefs (per the delivery's own scope). New search aliases added for all three (`stamp`/`stamp
+act`/`indian stamp act`/`stamp duty`/`ista`; `dpa`/`dowry`/`dowry act`/`dowry prohibition`/`dowry
+prohibition act`; `dva`/`dv act`/`domestic violence`/`domestic violence act`/`pwdva`/`protection
+of women from domestic violence act`).
+
+Run exactly as specified: `verify_stamp_dowry_dv.mjs` against the three raw data files first —
+`ALL CHECKS PASSED — STAMP 99, DPA 13, DVA 37 entries` (this verifier, unlike the POCSO/ISA ones,
+only runs the app-wiring checks when `--app` is explicitly passed, so the pre-add run doesn't
+produce the "expected failures" noise seen in those two earlier batches); `add-stamp-dowry-dv.mjs`
+(exact expected output for all three Acts); `npm run build` (prerender: exactly 4279 section
+pages, sitemap with 4149 URLs, matching the instructions' prediction precisely); the verifier
+again with `--app` — `ALL CHECKS PASSED — ... all present in the app` (including its own check
+that ACTS order is ISA, STAMP, DPA, DVA, CPC). Spot-checked live with Playwright exactly as the
+instructions' own "already tested" section named: Stamp §35, Stamp Schedule I, Dowry §3, and DV
+§12 all render with correct titles and both the statute-text and plain-English blocks; the new
+search aliases ("stamp duty 35", "dva 12", "pwdva 18") all resolve; and the Library sidebar lists
+all three new Acts. The five hand-off files were deleted before committing, so only `src/App.jsx`
+and `src/search/actAliases.js` changed.
+
 ## Known limitations
 - Notes persistence uses `localStorage` (via `src/lib/storage.js`) — personal/per-browser,
   not synced across devices. A real backend is intentionally deferred until real usage

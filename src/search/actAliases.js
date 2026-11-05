@@ -90,6 +90,25 @@ export const ACT_ALIASES = {
   "protection of children from sexual offences": "POCSO",
   "protection of children from sexual offences act": "POCSO",
 
+  stamp: "STAMP",
+  "stamp act": "STAMP",
+  "indian stamp act": "STAMP",
+  "stamp duty": "STAMP",
+  ista: "STAMP",
+
+  dpa: "DPA",
+  dowry: "DPA",
+  "dowry act": "DPA",
+  "dowry prohibition": "DPA",
+  "dowry prohibition act": "DPA",
+
+  dva: "DVA",
+  "dv act": "DVA",
+  "domestic violence": "DVA",
+  "domestic violence act": "DVA",
+  pwdva: "DVA",
+  "protection of women from domestic violence act": "DVA",
+
   cpc: "CPC",
   "code of civil procedure": "CPC",
   "civil procedure code": "CPC",
